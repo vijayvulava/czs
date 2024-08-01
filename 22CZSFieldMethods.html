@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2.2 Field and Lab Analyses &#8212; Critical Zone Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '22CZSFieldMethods';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3 CZ Architecture and Evolution" href="3CZArchitectureEvolution.html" />
+    <link rel="prev" title="2.1 Basic Tools and Analysis" href="21BasicToolsAnalysis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Critical Zone Science - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Critical Zone Science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Background</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1CZBackground.html">1 CZ Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11CZOverview.html">1.1 CZ Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12SoilOverview.html">1.2 The Role of Soil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13SystemsOverview.html">1.3 Systems Approach</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Science Methods</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2CZSMethods.html">2 Methods in CZ Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21BasicToolsAnalysis.html">2.1 Basic Tools and Analysis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.2 Field and Lab Analyses</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Architecture &amp; Evolution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3CZArchitectureEvolution.html">3 CZ Architecture and Evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31Geomorphology.html">3.1 Geology and Geomorphology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LandformsRemoteSensing.html">3.2 Landforms and Remote Sensing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Land Atmosphere Exchange</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4LandAtmosphere.html">4 Land-Atmosphere Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41EnergyBudget.html">4.1 Energy Budget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42CarbonBudget.html">4.2 Carbon Budget</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Water Transfer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5WaterTransfer.html">5 Water Transfer Through the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51WaterBalanceTree.html">5.1 Water Balance of a Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52WaterBalanceImpacts.html">5.2 Water Balance Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Biogeochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Biogeochem.html">6 Geochemistry and Biogeochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Biogeochemistry.html">6.1 Biogeochemistry in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62BiogeochemicalCycles.html">6.2 Biogeochemical Cycles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Humans and the CZ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7HumansCZ.html">7 Humans in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71HumanWatershed.html">7.1 Watershed Impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72ClimateCZ.html">7.2 Climate Change Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="91papers.html">Literature Review</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/22CZSFieldMethods.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2.2 Field and Lab Analyses</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#land-atmosphere-interface">Land-Atmosphere Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vegetation-and-associated-microbiota">Vegetation and Associated Microbiota</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carbon-stored-in-soil">Carbon stored in soil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carbon-balance-within-soil">Carbon balance within soil</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soil-and-vadose-zone">Soil and Vadose Zone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saprolite-and-bedrock">Saprolite and Bedrock</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-water">Surface water</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="field-and-lab-analyses">
+<h1>2.2 Field and Lab Analyses<a class="headerlink" href="#field-and-lab-analyses" title="Link to this heading">#</a></h1>
+<p>Studying the CZ requires pursuing unique research questions, hypotheses testing, and experimental designs. A common aim for researchers is to use common measurements that can be used to compare CZ processes and function across all CZ study sites. In effect, common measurements mean the sum of the network is greater than its parts. The methods include the use of carbon isotopes, rock and soil profile weathering rates, stream discharge, demographics, and soil carbon. In addition, research activities include data analysis and communication while using real data to interpret CZ processes and begin to think about human interactions in the CZ.</p>
+<p>CZ scientists seek to quantify, through a common set of measurements:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>CZ structure and evolution</p></li>
+<li><p>Event-based and continuous fluxes across CZ interfaces</p></li>
+<li><p>Changes in budgets, including energy, water, solutes and sediment</p></li>
+</ol>
+</div></blockquote>
+<figure class="margin-caption align-default" id="cz-infrastructure">
+<img alt="https://nsf-gov-resources.nsf.gov/styles/_inline_image_full_width/s3/2020-10/2_critical_zone_observatory_eaf5ec54-ce22-4251-ad25-84debc86a0b0.jpg?VersionId=mKEyy.boVF7.VyB4nu.xwpmFzOXkTh7T&amp;itok=uitNNBqC" src="https://nsf-gov-resources.nsf.gov/styles/_inline_image_full_width/s3/2020-10/2_critical_zone_observatory_eaf5ec54-ce22-4251-ad25-84debc86a0b0.jpg?VersionId=mKEyy.boVF7.VyB4nu.xwpmFzOXkTh7T&amp;itok=uitNNBqC" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Infrastructure used to study the Earth’s CZ—the layer between the forest canopy and the base of weathered bedrock. Image source: <a class="reference external" href="https://beta.nsf.gov/science-matters/no-soils-no-life?linkId=102003605">No soils, no life | NSF</a></span><a class="headerlink" href="#cz-infrastructure" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Below are examples of the methods used to collect various types of data.</p>
+<section id="land-atmosphere-interface">
+<h2>Land-Atmosphere Interface<a class="headerlink" href="#land-atmosphere-interface" title="Link to this heading">#</a></h2>
+<p>Energy and materials in different forms are exchanged between land and the atmosphere.  The primary materials include carbon and water in many different forms. An advanced research instrument that’s incorporated in many CZOs is an eddy covariance or eddy flux tower.</p>
+<p>An eddy covariance tower is a type of atmospheric measurement device that is used to quantify the exchange of carbon dioxide, water vapor, and energy between the land surface and the atmosphere. It typically consists of a tall tower equipped with various instruments, including sensors for measuring wind speed and direction, temperature, humidity, and atmospheric pressure. The data collected by an eddy flux tower provides insights into the processes controlling the exchange of energy, water, and carbon between the land and atmosphere, which is important for understanding the Earth’s carbon cycle and the effects of climate change.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/CR4Anc8Mkas" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>The NSF-funded NEON (National Ecological Observatory Network) has several eddy covariance towers installed across the US based on “ecoclimatic domains that represent distinct regions of vegetation, landforms, and ecosystem dynamics to capture the full range of U.S. ecological and climatic diversity” (<a class="reference external" href="https://www.neonscience.org/">NSF NEON | Open Data to Understand our Ecosystems</a>).  The data from these observatories are available at <a class="reference external" href="https://www.neonscience.org/data">Data Portal | NSF NEON</a>. Data from these sites can be an excellent supplement to data from nearby CZOs.</p>
+<figure class="margin-caption align-default" id="neon-sites">
+<img alt="https://www.neonscience.org/sites/default/files/styles/max_1300x1300/public/2021-04/2021_04_Graphic_Domain_Map%20Field%20sites_w_rivers_png.png?itok=0_oMxQB8" src="https://www.neonscience.org/sites/default/files/styles/max_1300x1300/public/2021-04/2021_04_Graphic_Domain_Map%20Field%20sites_w_rivers_png.png?itok=0_oMxQB8" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Field sites operated by NSF-funded NEON across the US. Image source: <a class="reference external" href="https://www.neonscience.org/field-sites">Field Sites | NSF NEON</a></span><a class="headerlink" href="#neon-sites" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The eddy covariance method is often deployed following a thorough evaluation of the landscape using remote sensing techniques including, LiDAR (light detection and ranging) techniques.  These techniques have applications in wide-ranging fields such as archeology, geomorphology, seismology, forestry, and self-driving automobile technologies.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/chSywRqgIGY" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+</section>
+<section id="vegetation-and-associated-microbiota">
+<h2>Vegetation and Associated Microbiota<a class="headerlink" href="#vegetation-and-associated-microbiota" title="Link to this heading">#</a></h2>
+<p>Carbon in a dead, rotting animal or rotting leaves eventually end up in the atmosphere. To understand this important carbon cycling process, we need to understand the following about soil—what lives in soil, what soil is made of, and how soil behaves under different environmental conditions.</p>
+<p>When we stand on soil, we are standing on an important reservoir of the carbon cycle, one that has great potential to add large amounts of carbon to the atmosphere if global climate continues to warm. Conversely, many ranchers, farmers and soil scientists now feel that soil may also be a solution to rising levels of atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>.</p>
+<p>Like oceans, soils are highly complex ecosystems where the carbon cycle interacts with other biogeochemical cycles such as nitrogen, phosphorus and sulfur. And, to add to soil’s complexity, microbes that live in the soil mediate many of these biogeochemical interactions in addition to driving important carbon cycle processes.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/NVhY4ssMtbI" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<section id="carbon-stored-in-soil">
+<h3>Carbon stored in soil<a class="headerlink" href="#carbon-stored-in-soil" title="Link to this heading">#</a></h3>
+<p>In soils, you can find carbon in both <strong>organic carbon compounds</strong> and <strong>inorganic carbon compounds</strong>. In most soils, carbon exists predominately in the form of <strong>soil organic carbon (SOC)</strong>.</p>
+<figure class="margin-caption align-default" id="soil-carbon">
+<img alt="https://d32ogoqmya1dw8.cloudfront.net/images/eslabs/carbon/soil_324.jpg" src="https://d32ogoqmya1dw8.cloudfront.net/images/eslabs/carbon/soil_324.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Carbon-rich humus can be seen in the dark uppermost level of soil. Image source: <a class="reference external" href="https://serc.carleton.edu/eslabs/carbon/5a.html">5A: Soil, Carbon and Microbes (carleton.edu)</a></span><a class="headerlink" href="#soil-carbon" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Soil organic carbon (SOC) is the main constituent of <strong>soil organic matter (SOM)</strong>. SOM is formed by the biological, chemical and physical decay of organic materials on the soil surface and below the ground. Basically, soil organic matter (SOM) is composed of anything that once lived, including:</p>
+<ul class="simple">
+<li><p><strong>organic bits and pieces of plant and animal remains</strong> in various stages of decomposition, sloughed off cells and tissues of soil organisms, and substances from plant roots and soil microbes.</p></li>
+<li><p><strong>living soil microbes</strong> (bacteria, fungi, archaea, nematodes and protozoa) and plant roots. If we weighed all of the organisms found in soil, soil microbes would comprise about 90-95% of that weight.</p></li>
+<li><p><strong>humus</strong>, a chemically stable type of organic matter composed of large, complex organic carbon compounds, minerals, and soil particles. Humus is resistant to further decomposition unless disturbed by a change in environmental conditions. If undisturbed, humus can store soil carbon for hundreds to thousands of years. This makes humus a very important carbon sink.</p></li>
+<li><p><strong>charcoal</strong> (biochar), incompletely burned plant material. Charcoal can remain undecomposed in the soil for decades to centuries.</p></li>
+</ul>
+</section>
+<section id="carbon-balance-within-soil">
+<h3>Carbon balance within soil<a class="headerlink" href="#carbon-balance-within-soil" title="Link to this heading">#</a></h3>
+<p>In <a class="reference internal" href="#soil-carbon-storage"><span class="std std-numref">Fig. 8</span></a> the flow of carbon into and out of soil is shown. If plants transfer more carbon into soil than is released via soil respiration, more carbon will get stored in humus via the process of <strong>humification</strong>.</p>
+<figure class="margin-caption align-default" id="soil-carbon-storage">
+<img alt="https://d32ogoqmya1dw8.cloudfront.net/images/eslabs/carbon/soil_carbon_storage_456.jpg" src="https://d32ogoqmya1dw8.cloudfront.net/images/eslabs/carbon/soil_carbon_storage_456.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Soil Carbon Storage: Carbon balance within the soil (brown box) is controlled by carbon inputs from photosynthesis and carbon losses by respiration. Image source: <a class="reference external" href="https://serc.carleton.edu/eslabs/carbon/5a.html">5A: Soil, Carbon and Microbes (carleton.edu)</a></span><a class="headerlink" href="#soil-carbon-storage" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For years, soil scientists and farmers have known that carbon can persist for long periods of time in carbon-rich humus. Humus is formed when soil organic material is degraded by soil microbes that reside in the soil. However, humus is a very complex substance and not fully understood. Current research indicates that the length of time soil carbon persists in humus and other SOM components depends on many ecosystem interactions between SOM and microbes, minerals, moisture and temperature. Scientists do not know yet how long this carbon will stayed stored in soil or if environmental disturbances will move large amounts into the atmosphere amplifying climate change.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/1EkkB8JaIzQ" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+</section>
+</section>
+<section id="soil-and-vadose-zone">
+<h2>Soil and Vadose Zone<a class="headerlink" href="#soil-and-vadose-zone" title="Link to this heading">#</a></h2>
+<p>The solid and unsaturated (vadose zone) phases inside of soils provide very useful information about the make-up of the soil and their specific functions within the CZ. The soil pit in the video below shows the vadose zone and the CZ.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/XzfFFNG5mnQ" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Geophysical techniques are used to study to the vadose zone in a noninvasive manner. See <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2014RG000465">Multiscale geophysical imaging of the CZ - Parsekian - 2015 - Reviews of Geophysics - Wiley Online Library</a></p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Wx6-zO9aNqw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Gas sensors are also deployed to study infiltration of water through the vadose zone.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/_16ZMVrSmMU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+</section>
+<section id="saprolite-and-bedrock">
+<h2>Saprolite and Bedrock<a class="headerlink" href="#saprolite-and-bedrock" title="Link to this heading">#</a></h2>
+<p>During soil formation, bedrock weathers into regolith – (includes weathered rock, saprolite, and soil) – porosity grows, guides fluid flow, and releases nutrients from minerals. These vital processes that transform bedrock into soil are poorly understood, especially in deep regolith, where direct observations are difficult. The previously mentioned geophysical techniques become useful to this part of the CZ.</p>
+<p>Hollow-bore coring of bedrock allows retrieval of rock and regolith samples for studying this part of the CZ. These samples provide information about porosity, permeability, fractures, faults, mineralogy, etc.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/jp9m2tUiktM" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/JAhdb7dKQpU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+</section>
+<section id="surface-water">
+<h2>Surface water<a class="headerlink" href="#surface-water" title="Link to this heading">#</a></h2>
+<p>Natural streams and irrigation channels move water across broad and varied landscapes. A variety of methods and infrastructure are often used to monitor and control stream behavior.</p>
+<p>USGS maintains an extraordinary network of stream monitoring stations across many streams systems in the US.  These monitoring efforts include measurement of stream levels and discharge, meteorology, groundwater, and water chemistry and health. In addition to information about water quantity and quality, we have information about flood status as well as water availability.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/UQlBR5vbqyw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/YkR79oDAgOg" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>To access and view data, see <a class="reference external" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/?region=lower48&amp;amp;aoi=default">USGS | National Water Dashboard</a>.</p>
+<p>More information about common measurements, including a matrix showing which observatories currently collect various measurements, can be found in the 2015 CZO common measurements white paper <a class="reference external" href="https://d32ogoqmya1dw8.cloudfront.net/files/integrate/teaching_materials/critical_zone/czo_common_measurements_white.pdf">CZO common measurements white paper</a>.</p>
+<div class="admonition-mini-project-3 admonition">
+<p class="admonition-title">Mini-Project #3</p>
+<p><strong>Part A:</strong></p>
+<p>Complete an annotated bibliography of the research topic you selected. Your bibliography should include the following:</p>
+<p>(1) Select a general, CZ related topic that you would like to investigate. This topic should be in the form of a question. For example, a reasonable question could be “How does vegetation affect soil formation in different ecosystems?”</p>
+<p>(2) Once you have selected a topic, you should find <strong>five</strong> research articles that relate to the topic you have selected. Once you have settled on the most appropriate sources that relate to your topic, you should complete these tasks for each of five sources, only where they relate directly to your topic:</p>
+<ul class="simple">
+<li><p>List the sources as you would in a bibliography using a consistent format such as the Chicago Manual of Style format.</p></li>
+<li><p>Identify and list the related research question(s) that the author(s) are investigating.</p></li>
+<li><p>Identify the related methods that are used to investigate the question and how do those methods relate to your research question?</p></li>
+<li><p>Identify the type of data that the authors generated and how did they interpret them? Identify what relevant conclusions the authors drew from their data?</p></li>
+</ul>
+<p>(3) Once you have completed this analysis, refine your research question. For example, based on the question above, you might ask: “How does vegetation litter affect the base status of soils in high-elevation coniferous forests?”</p>
+<p><strong>Part B:</strong></p>
+<p>Visit your assigned CZO site, select and download a time series data collected at this site.  Typically, they are available for a stream site.</p>
+<p>Use this link to go to your site and filter the different type of data available: <a class="reference external" href="https://data.cuahsi.org/">CUAHSI HydroClient</a></p>
+<p>Using data from the CZO database, produce:</p>
+<ul class="simple">
+<li><p>A simple line graph with best-fit slope trendline and the equation of slope</p></li>
+<li><p>A bar graph with a paired data set that calculates and plots the average and standard deviation.</p></li>
+<li><p>An XY graph with an appropriate trendline</p></li>
+<li><p>A data histogram</p></li>
+</ul>
+<p>Each graph should be clearly laid-out and labeled. Each data set should be at least 48 rows. Briefly summarize the source of the data, what your graph illustrates and what insight your graphical analysis has given you.</p>
+</div>
+</section>
+<section id="readings-and-resources-for-this-section">
+<h2>Readings and resources for this section<a class="headerlink" href="#readings-and-resources-for-this-section" title="Link to this heading">#</a></h2>
+<p>For examples of how these techniques were used to characterize the CZ, see:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://acsess.onlinelibrary.wiley.com/doi/10.2136/vzj2018.10.0194">Toward Better Understanding of Terrestrial Processes through Long‐Term Hydrological Observatories - Bogena - 2018 - Vadose Zone Journal - Wiley Online Library</a></p></li>
+<li><p><a class="reference external" href="https://acsess.onlinelibrary.wiley.com/doi/full/10.2136/vzj2018.04.0088">The Intensively Managed Landscape CZ Observatory: A Scientific Testbed for Understanding CZ Processes in Agroecosystems - Wilson - 2018 - Vadose Zone Journal - Wiley Online Library</a></p></li>
+<li><p><a class="reference external" href="https://acsess.onlinelibrary.wiley.com/doi/full/10.2136/vzj2018.07.0129">Reynolds Creek Experimental Watershed and CZ Observatory - Seyfried - 2018 - Vadose Zone Journal - Wiley Online Library</a></p></li>
+<li><p><a class="reference external" href="https://pubs.geoscienceworld.org/jeeg/article-abstract/26/4/255/611414/Geophysical-Reconnaissance-for-Siting-Dryland">Geophysical Reconnaissance for Siting Dryland Critical-Zone Monitoring Experiments in Southern New Mexico, USA | Journal of Environmental and Engineering Geophysics | GeoScienceWorld</a></p></li>
+<li><p><a class="reference external" href="https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.16410">Digging deeper: what the CZ perspective adds to the study of plant ecophysiology - Dawson - 2020 - New Phytologist - Wiley Online Library</a></p></li>
+<li><p><a class="reference external" href="https://pubs.geoscienceworld.org/msa/elements/article-abstract/3/5/321/137745/Soil-Biogeochemical-Processes-within-the-Critical">Soil Biogeochemical Processes within the CZ | Elements | GeoScienceWorld</a></p></li>
+<li><p><a class="reference external" href="https://bg.copernicus.org/articles/8/3531/2011/">BG - Where microorganisms meet rocks in the Earth’s CZ (copernicus.org)</a></p></li>
+<li><p><a class="reference external" href="https://www.annualreviews.org/doi/abs/10.1146/annurev-earth-063016-020544">Soil Functions: Connecting Earth’s CZ | Annual Review of Earth and Planetary Sciences (annualreviews.org)</a></p></li>
+<li><p><a class="reference external" href="https://www.nature.com/articles/s41598-019-40819-9">Links between physical and chemical weathering inferred from a 65-m-deep borehole through Earth’s CZ | Scientific Reports (nature.com)</a></p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="21BasicToolsAnalysis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">2.1 Basic Tools and Analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3CZArchitectureEvolution.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">3 CZ Architecture and Evolution</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#land-atmosphere-interface">Land-Atmosphere Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vegetation-and-associated-microbiota">Vegetation and Associated Microbiota</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carbon-stored-in-soil">Carbon stored in soil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carbon-balance-within-soil">Carbon balance within soil</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soil-and-vadose-zone">Soil and Vadose Zone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saprolite-and-bedrock">Saprolite and Bedrock</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-water">Surface water</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
