@@ -14,40 +14,40 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -75,27 +75,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -117,8 +113,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -142,6 +143,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="index.html">
   
@@ -154,8 +157,8 @@
       
     
     
-    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Critical Zone Science - Home"/>
-    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
+    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
   
   
 </a></div>
@@ -163,7 +166,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -241,7 +244,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -250,14 +253,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -335,10 +338,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -346,14 +349,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -501,11 +504,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p>In essence, PCA is a way to simplify data by identifying the most important patterns and relationships between variables, and reducing the complexity of the data. It is a powerful tool that is used in many different fields, including sciences, engineering, humanities, and finance.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Example of PCA Application in CZS<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Example of PCA Application in CZS</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Read <a class="reference external" href="https://onlinelibrary.wiley.com/doi/10.1002/hyp.8257">Groundwater–surface water interactions in a lowland watershed: source contribution to stream flow - Guinn Garrett - 2012 - Hydrological Processes - Wiley Online Library</a></p>
 <p class="sd-card-text">Consider the following questions:</p>
 <ol class="arabic simple">
@@ -539,11 +538,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Example of t-test in environmental applications<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Example of t-test in environmental applications</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Scenario:</strong> A geologist wants to investigate if there’s a difference in average lead concentration between roadside dust and soil samples collected further away from traffic in a city.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Null hypothesis (H₀):</strong> The average lead concentration in roadside dust is the same as the average lead concentration in soil further from traffic.</p></li>
@@ -559,11 +554,7 @@ Example of t-test in environmental applications<div class="sd-summary-down docut
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Example of t-test in critical zone sciences<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Example of t-test in critical zone sciences</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Scenario:</strong> CZ researchers are interested in studying the effects of different land-use practices on soil carbon content. They collect soil samples from two different sites: one site with a forested area (Site A) and another site with an agricultural field (Site B). They measure the soil carbon content (in <span class="math notranslate nohighlight">\(\pu{g kg-1}\)</span> of soil) at multiple locations within each site.</p>
 <p class="sd-card-text">The researchers want to determine if there is a significant difference in the mean soil carbon content between Site A and Site B. They can use a two-sample t-test to compare the means of the two independent samples.</p>
 <p class="sd-card-text">Let’s assume the following data:</p>
@@ -610,7 +601,7 @@ t &amp;=&amp; \frac{x_A-x_B}{\sqrt{{s_A}^2/n_A + {s_B}^2/n_B}}\\
 <h4>Stable Isotope Ratios<a class="headerlink" href="#stable-isotope-ratios" title="Link to this heading">#</a></h4>
 <p>Stable isotopes do not spontaneously break down to form other isotopes. Because of relative differences in masses of isotopes of an element, changes to isotopic ratios can be observed during various biogeochemical processes. Study of stable isotopes is useful in gaining better understanding in environmental and geological studies.</p>
 <p>Stable isotopes are especially useful in elements whose isotopes have large relative mass differences. Therefore, most of the elements used for stable isotope studies have a low atomic number and atomic mass (<a class="reference internal" href="#stable-isotopes"><span class="std std-numref">Table 1</span></a>). For isotopes with an atomic mass of greater than <span class="math notranslate nohighlight">\(40\)</span>, the relative mass differences are too small for any measurable isotopic fractionation. Most elements used in radiometric dating have high atomic mass, and mass fractionation is not significant.</p>
-<table class="table" id="stable-isotopes">
+<div class="pst-scrollable-table-container"><table class="table" id="stable-isotopes">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Distribution of stable isotopes of most commonly-used elements.</span><a class="headerlink" href="#stable-isotopes" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Element</p></th>
@@ -653,16 +644,13 @@ t &amp;=&amp; \frac{x_A-x_B}{\sqrt{{s_A}^2/n_A + {s_B}^2/n_B}}\\
 </tr>
 </tbody>
 </table>
+</div>
 <section id="stable-isotope-fractionation">
 <h5>Stable Isotope Fractionation<a class="headerlink" href="#stable-isotope-fractionation" title="Link to this heading">#</a></h5>
 <p>Isotopic fractionation is the partitioning of isotopes during physical (evaporation, condensation, melting, crystallization, absorption and desorption, diffusion), chemical, or biological processes. This partitioning is proportional to the difference in the masses of the isotopes. The processes can either be equilibrium reactions, in which forward and backward reaction rates are equal for each isotope, or kinetic reactions, which are unidirectional reactions in which reaction rates are dependent on the masses of the isotopes and their vibrational energies.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Example: Stable isotope fractionation of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span><div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Example: Stable isotope fractionation of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">During evaporation of  in a closed system, six isotope combinations of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> are possible: <span class="math notranslate nohighlight">\(\ce{^1H2^{16}O}, \ce{^1H^2H^{16}O}, \ce{^2H2^{16}O}, \ce{^1H2^{18}O}, \ce{^1H^2H^{18}O}, \ce{^2H2^{18}O}\)</span>.</p>
 <p class="sd-card-text">As a result of these different stable isotope combinations, the molecular masses are <span class="math notranslate nohighlight">\(18\)</span>, <span class="math notranslate nohighlight">\(19\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(21\)</span>, and <span class="math notranslate nohighlight">\(22\)</span> respectively. See the conceptulizations in the figure below.</p>
 <p class="sd-card-text"><img alt="# Water Isotopes Diagram - USGS" src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/Fig%201.Isotopes.web_.jpg" /></p>
@@ -677,11 +665,7 @@ Example: Stable isotope fractionation of <span class="math notranslate nohighlig
 <p>where, <span class="math notranslate nohighlight">\(R\)</span> is ratio of heavy to light isotope abundance (e.g., <span class="math notranslate nohighlight">\(\ce{^2 H}\)</span>/<span class="math notranslate nohighlight">\(\ce{^1 H}\)</span>  , <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16}O}\)</span> ). Generally, the isotope abundance ratio does not greatly vary in the environment, and so the fractionation factor, <span class="math notranslate nohighlight">\(\alpha\)</span>, generally has a value close to 1. However, this value can be precisely measured and so is expressed with a precision of 4-5 decimal places. The fractionation factor depends on the temperature and can be determined either experimentally or calculated from spectroscopic data.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Example: Isotope fractionation factor<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Example: Isotope fractionation factor</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Consider the evaporation of water. We can setup the fractionation ratio and factor as follows:</p>
 <div class="math notranslate nohighlight">
 \[R = \frac{\ce{^{18}O}}{\ce{^{16}O}}
@@ -716,7 +700,7 @@ Example: Isotope fractionation factor<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight" id="equation-delta">
 <span class="eqno">(9)<a class="headerlink" href="#equation-delta" title="Link to this equation">#</a></span>\[\delta = \left(\frac{R_\text{Sample}}{R_\text{Standard}} - 1\right) \times 1000\]</div>
 <p>Where the isotopic ratio, <span class="math notranslate nohighlight">\(R\)</span>, has been defined in the previous section. Note that the ratio is multiplied by a thousand and is expressed in “parts per thousand” or permille or permil or the symbol, <span class="math notranslate nohighlight">\(\pu{‰}\)</span>. As seen in Eqn. <a class="reference internal" href="#equation-delta">(9)</a>, <span class="math notranslate nohighlight">\(R_\text{Standard}\)</span> is required for the element of interest. Standards for most common elements of interest have been adopted worldwide for research purposes and shown in <a class="reference internal" href="#isotopestandards"><span class="std std-numref">Table 2</span></a>. Typically, V-SMOW (Vienna standard mean ocean water), and PDB (Pee Dee beleminite) are most commonly used for <span class="math notranslate nohighlight">\(\ce{H}\)</span>, <span class="math notranslate nohighlight">\(\ce{O}\)</span>, and <span class="math notranslate nohighlight">\(\ce{C}\)</span> ratios.</p>
-<table class="table" id="isotopestandards">
+<div class="pst-scrollable-table-container"><table class="table" id="isotopestandards">
 <caption><span class="caption-number">Table 2 </span><span class="caption-text">Isotope ratios and standards for most commonly-used elements in environmental geosciences.</span><a class="headerlink" href="#isotopestandards" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Isotope Ratio</p></th>
@@ -751,14 +735,11 @@ Example: Isotope fractionation factor<div class="sd-summary-down docutils">
 </tr>
 </tbody>
 </table>
+</div>
 <p>When <span class="math notranslate nohighlight">\(\delta\)</span> values are negative, <span class="math notranslate nohighlight">\(R_\text{Sample} &lt; R_\text{Standard}\)</span> in Eqn. <a class="reference internal" href="#equation-delta">(9)</a>, therefore, the sample is considered to be depleted compared with the standard. Similarly, when <span class="math notranslate nohighlight">\(\delta\)</span> values are positive, <span class="math notranslate nohighlight">\(R_\text{Sample} &gt; R_\text{Standard}\)</span>, therefore, the sample is considered to be enriched compared to the standard.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Example: <span class="math notranslate nohighlight">\(\delta\)</span> notation<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Example: <span class="math notranslate nohighlight">\(\delta\)</span> notation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">A rainwater sample collected in Boston, Massachusetts, has an <span class="math notranslate nohighlight">\(\ce{^{18} O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16} O}\)</span> ratio of <span class="math notranslate nohighlight">\(0.0019750\)</span>. Calculate <span class="math notranslate nohighlight">\(\delta\)</span> for this rainwater sample.</p>
 <p class="sd-card-text">From <a class="reference internal" href="#isotopestandards"><span class="std std-numref">Table 2</span></a>, we can read the isotopic ratio of <span class="math notranslate nohighlight">\(\ce{^{18} O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16} O}\)</span> in V-SMOW to be <span class="math notranslate nohighlight">\(0.0020052\)</span>. Substitute values in Eqn. <a class="reference internal" href="#equation-delta">(9)</a> as follows:</p>
 <div class="math notranslate nohighlight">
@@ -836,7 +817,7 @@ Example: <span class="math notranslate nohighlight">\(\delta\)</span> notation<d
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -941,8 +922,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
