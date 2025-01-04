@@ -16,19 +16,17 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -39,14 +37,13 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -71,7 +68,6 @@
     <link rel="prev" title="4 Land-Atmosphere Exchange" href="4LandAtmosphere.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,8 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -96,6 +103,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -103,8 +111,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +128,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,17 +158,21 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
-    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Critical Zone Science - Home"/>
+    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -226,14 +237,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -330,16 +336,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -389,16 +403,15 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="energy-budget">
 <h1>4.1 Energy Budget<a class="headerlink" href="#energy-budget" title="Link to this heading">#</a></h1>
-<p>We will analyze water and energy flux data collected from different biomes to enhance our understanding of the measurements, processes, and regional exchanges of water and energy. This analysis pertains to the grand challenges of grasping essential climate dynamics, boundary layer processes, Earth’s energy budget, and radiative forcing. It also aligns with the geoscience literacy themes of energy sources that drive Earth processes and the changes occurring in the Earth system at multiple scales, along with the interconnections between the water and energy cycles.</p>
-<p>Two primary learning goals of this module are to understand better how the conservation of mass and energy leads to the development of the water and energy budget equation and to explore and extract data from Critical Zone Observatory (CZO) flux databases.</p>
-<p>In this module, we will:</p>
+<p>We will analyze water and energy flux data collected in different biomes to better understand the measurements, processes, and regional exchanges of water and energy. This relates to the grand challenges of understanding basic climate and boundary layer dynamics and Earth’s energy budget and radiative forcing. This module also relates to the geoscience literacy themes of energy sources driving Earth processes and Earth system changes that occur at multiple scales and the interconnections between the water and energy cycles. Two of the primary learning goals are to better understand how the conservation of mass and energy result in the water and energy budget equation and to be able to explore and extract data from CZO flux databases.</p>
+<p>In this module we will:</p>
 <ul class="simple">
-<li><p>Use diagrams of the water and energy cycles to discuss how these elements are partitioned at the watershed scale.</p></li>
-<li><p>Learn about the instruments used to collect water and energy flux data.</p></li>
-<li><p>Examine radiative forcings gathered from various CZO sites to compare climatic and site-specific influences.</p></li>
-<li><p>Explore and visualize energy flux data from CZO and related databases.</p></li>
-<li><p>Calculate a measure of Effective Energy and Mass Transfer (<span class="math notranslate nohighlight">\(EEMT\)</span>) in relation to the potential for Critical Zone evolution.</p></li>
-<li><p>Use CZO micro-meteorological data to calculate reference evaporation at a chosen site.</p></li>
+<li><p>Use water and energy cycle diagrams to discuss how water and energy are partitioned at the watershed scale.</p></li>
+<li><p>Learn about the instrumentation used to collect water and energy flux data.</p></li>
+<li><p>Examine radiative forcings collected from various CZO sites to compare various climatic and site-specific influences.</p></li>
+<li><p>Explore and visualize energy flux data from CZO and related database.</p></li>
+<li><p>Calculate a measure of Effective Energy and Mass Transfer (EEMT) related to the potential for CZ evolution.</p></li>
+<li><p>Use CZO micro-meteorological data to calculate reference evaporation at a site of their choice.</p></li>
 </ul>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/U2CPwWgY_G4" 
@@ -406,80 +419,80 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 <section id="solar-energy">
 <h2>Solar Energy<a class="headerlink" href="#solar-energy" title="Link to this heading">#</a></h2>
-<p>The energy released by the Sun is known as <em>radiant energy</em>, which travels in waves through space. These <em>electromagnetic waves</em> possess electrical and magnetic properties that enable them to cover vast distances at the speed of light. Electromagnetic waves behave like ocean waves, featuring crests and troughs; however, they do not transport matter. When an object absorbs radiant energy, it is converted into heat.</p>
-<p>The term <em>electromagnetic energy</em> encompasses all forms of energy that travel in waves through space, including light, heat, X-rays, radar, and radio waves. Each type of wave has a specific <em>wavelength</em> and <em>frequency</em>. The complete range of all possible wavelengths of electromagnetic energy is referred to as the electromagnetic spectrum.</p>
-<p>The Sun emits radiant energy composed of 8% ultraviolet, X-ray, and gamma-ray wavelengths, 47% visible light wavelengths, and 45% infrared wavelengths.</p>
+<p>Energy released from the Sun is <em>radiant energy</em>, which travels in waves through space. These <em>electromagnetic waves</em> have electrical and magnetic properties that allow them to travel long distances at the speed of light. Electromagnetic waves move like ocean waves, with crests and troughs, but they do not move matter. Radiant energy is carried by atomic particles; when it is absorbed by an object, radiant energy is converted to heat.</p>
+<p>Electromagnetic energy is the term for all energy traveling in waves through space, including light, heat, X-rays, radar, and radio waves. Each type of wave has a specific <em>wavelength</em> and <em>frequency</em>. The spectrum of all possible wavelengths of electromagnetic energy is the electromagnetic spectrum.</p>
+<p>The Sun emits radiant energy composed of <span class="math notranslate nohighlight">\(\pu{8 \%}\)</span>  ultraviolet, X-ray, and gamma-ray wavelengths; <span class="math notranslate nohighlight">\(\pu{47 \%}\)</span> visible light wavelengths; and <span class="math notranslate nohighlight">\(\pu{45 \%}\)</span>  infrared wavelengths.</p>
 <figure class="margin-caption align-default" id="electromagnetic-spectrum">
 <img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/1920px-EM_Spectrum_Properties_edit.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/1920px-EM_Spectrum_Properties_edit.svg.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">The electromagnetic spectrum shows various properties across the range of frequencies and wavelengths. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Electromagnetic_spectrum">Electromagnetic spectrum - Wikipedia</a></span><a class="headerlink" href="#electromagnetic-spectrum" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">The electromagnetic spectrum showing various properties across the range of frequencies and wavelengths. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Electromagnetic_spectrum">Electromagnetic spectrum - Wikipedia</a></span><a class="headerlink" href="#electromagnetic-spectrum" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <blockquote>
-<div><p>An important physical law states that all objects radiate energy in wavelengths related to their surface temperatures: The hotter the object, the shorter the wavelengths emitted. This law holds for the Sun and Earth.</p>
+<div><p>An important physical law states that all objects radiate energy in wavelengths related to their individual surface temperatures: The hotter the object, the shorter the wavelengths emitted. This law holds true for the Sun and Earth.</p>
 </div></blockquote>
 <section id="heat-and-temperature">
 <h3>Heat and Temperature<a class="headerlink" href="#heat-and-temperature" title="Link to this heading">#</a></h3>
-<p>Temperature and heat are distinct yet interconnected concepts. Temperature measures the average kinetic energy, or average speed, of individual molecules in a substance. When molecular movement increases, the temperature rises. In contrast, heat is a form of energy that transfers between molecules and, consequently, between different bodies or substances. Heat is the flow of kinetic energy driven by a temperature difference.</p>
-<p>While heat is regarded as energy, temperature is related to the amount of energy in a substance. Heat crosses a system boundary in response to a temperature gradient. Since temperature reflects the average kinetic energy of molecules, it can also be understood as a measure of heat. An object with a “hot” temperature contains more heat energy, whereas an object with a “cold” temperature contains less.</p>
-<p>Heat always flows from matter at a higher temperature to matter at a lower temperature. This heat flow between objects or substances ceases once their temperatures, and thus their kinetic energy levels, equalize.</p>
-<p>When we apply these principles to the Sun and Earth, we observe that the hot Sun radiates shorter wavelengths of energy, primarily around 0.5 µm, with most radiation occurring in the visible region of the electromagnetic spectrum. In contrast, the cooler Earth emits energy at longer wavelengths, primarily in the infrared range, centered around 10 µm.</p>
-<p>As electromagnetic energy travels through Earth’s atmosphere, certain gases, such as water vapor and carbon dioxide, absorb specific wavelengths. These gases exhibit varying responses to radiation, being transparent to some wavelengths while absorbing others.</p>
+<p>Temperature and heat are different, but related, concepts. Temperature is a measure of the average kinetic energy (or average speed) of individual molecules in matter. If molecular movement increases, temperature increases. In contrast, heat is a form of energy that transfers between molecules and thus between bodies or substances. Heat is the flow of kinetic energy between molecules or from one body or substance to another ­resulting from a temperature difference between them.</p>
+<p>Heat is a form of energy, while temperature is related to the amount of energy in a substance. Heat is the energy that crosses a system boundary in response to a temperature gradient. Because temperature is a measure of the average kinetic energy of individual molecules in matter, temperature is a measure of heat. An object with a “hot” temperature contains more heat energy; an object with a “cold” temperature contains less heat energy.</p>
+<p>Heat always flows from matter at higher temperature to matter at lower temperature. Heat flow between objects or substances stops when the temperatures—that is, when the amounts of kinetic energy—become equal.</p>
+<p>Applying these concepts to the Sun and Earth, we see that the hot Sun radiates shorter wavelength energy, concentrated around <span class="math notranslate nohighlight">\(\pu{0.5 \mu m}\)</span>, with the majority falling in the visible region of the electromagnetic spectrum. Because Earth is a cooler radiating body, it emits longer wavelengths, mostly in the infrared portion of the spectrum, centered around <span class="math notranslate nohighlight">\(\pu{10 \mu m}\)</span>.</p>
+<p>As electromagnetic energy moves through Earth’s atmosphere, gases such as water vapor and carbon dioxide absorb certain wavelengths. These gases vary in their response to radiation received, being transparent to some wavelengths while absorbing others.</p>
 <figure class="margin-caption align-default" id="atmos-energy-budget">
 <img alt="https://earthobservatory.nasa.gov/ContentFeature/EnergyBalance/images/reflected_radiation.jpg" src="https://earthobservatory.nasa.gov/ContentFeature/EnergyBalance/images/reflected_radiation.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Of the <span class="math notranslate nohighlight">\(\pu{340 W m-2}\)</span> of solar energy that falls on the Earth, <span class="math notranslate nohighlight">\(\pu{29 \%}\)</span> is reflected into space, primarily by clouds, other bright surfaces, and the atmosphere itself. About <span class="math notranslate nohighlight">\(\pu{23 \%}\)</span> of incoming energy is absorbed in the atmosphere by atmospheric gases, dust, and other particles. The remaining <span class="math notranslate nohighlight">\(\pu{48 \%}\)</span> is absorbed at the surface. Image source: <a class="reference external" href="https://earthobservatory.nasa.gov/features/EnergyBalance/page1.php">Climate and Earth’s Energy Budget (nasa.gov)</a></span><a class="headerlink" href="#atmos-energy-budget" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Of the <span class="math notranslate nohighlight">\(\pu{340 W m-2}\)</span> of solar energy that falls on the Earth, <span class="math notranslate nohighlight">\(\pu{29 \%}\)</span> is reflected back into space, primarily by clouds, but also by other bright surfaces and the atmosphere itself. About <span class="math notranslate nohighlight">\(\pu{23 \%}\)</span> of incoming energy is absorbed in the atmosphere by atmospheric gases, dust, and other particles. The remaining <span class="math notranslate nohighlight">\(\pu{48 \%}\)</span> is absorbed at the surface. Image source: <a class="reference external" href="https://earthobservatory.nasa.gov/features/EnergyBalance/page1.php">Climate and Earth’s Energy Budget (nasa.gov)</a></span><a class="headerlink" href="#atmos-energy-budget" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>For more information, see <a class="reference external" href="https://earthobservatory.nasa.gov/features/EnergyBalance/page1.php">Climate and Earth’s Energy Budget (nasa.gov)</a>.</p>
+<p>For more information see <a class="reference external" href="https://earthobservatory.nasa.gov/features/EnergyBalance/page1.php">Climate and Earth’s Energy Budget (nasa.gov)</a>.</p>
 </section>
 </section>
 <section id="earth-atmosphere-energy">
 <h2>Earth-Atmosphere Energy<a class="headerlink" href="#earth-atmosphere-energy" title="Link to this heading">#</a></h2>
-<p>The inputs for the Earth–atmosphere energy budget consist of shortwave radiation, which includes ultraviolet light, visible light, and near-infrared wavelengths. Only a portion of the <em>insolation</em> (incoming solar radiation) that enters Earth’s atmosphere reaches its surface; the rest is either reflected into space or absorbed by the atmosphere. Insolation arrives at the Earth’s surface as either direct or diffuse radiation. Direct sunlight creates shadows, while diffuse radiation provides a shadowless light seen in shaded areas or on cloudy days. This energy is then absorbed by the Earth’s surface and converted into heat. The outputs of our energy budget include shortwave radiation (the light reflected before reaching the Earth’s surface) and longwave radiation in the thermal infrared wavelengths.</p>
+<p>The inputs for our Earth–atmosphere energy budget consist of shortwave radiation (ultraviolet light, ­visible light, and near-infrared wavelengths). Only a portion of the <em>insolation</em> (incoming solar radiation) that enters Earth’s atmosphere reaches Earth’s surface; the remainder is either reflected back out to space or absorbed by Earth’s atmosphere. Insolation arrives at Earth’s surface as either direct or diffuse radiation—the direct sunlight that causes shadows or the diffuse, shadowless light cast in shaded areas or on cloudy days. This energy is absorbed by Earth’s surface and converted to heat. The outputs of our energy budget consist of shortwave radiation (the light reflected before reaching Earth’s surface) and longwave radiation in thermal infrared wavelengths.</p>
 <figure class="margin-caption align-default" id="earth-energy-budget">
 <img alt="https://www.noaa.gov/media/image_download/60247be8-d80e-4d4d-a482-de49136b195f" src="https://www.noaa.gov/media/image_download/60247be8-d80e-4d4d-a482-de49136b195f" />
 <figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">The earth-atmosphere energy balance is the balance between incoming energy from the Sun and outgoing energy from the Earth. The energy released from the Sun is emitted as shortwave light and ultraviolet energy. When it reaches the Earth, some are reflected in space by clouds, some are absorbed by the atmosphere, and some are absorbed at the Earth’s surface. Image source: <a class="reference external" href="https://www.weather.gov/jetstream/energy">The Earth-Atmosphere Energy Balance (weather.gov)</a></span><a class="headerlink" href="#earth-energy-budget" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">The earth-atmosphere energy balance is the balance between incoming energy from the Sun and outgoing energy from the Earth. Energy released from the Sun is emitted as shortwave light and ultraviolet energy. When it reaches the Earth, some is reflected back to space by clouds, some is absorbed by the atmosphere, and some is absorbed at the Earth’s surface. Image source: <a class="reference external" href="https://www.weather.gov/jetstream/energy">The Earth-Atmosphere Energy Balance (weather.gov)</a></span><a class="headerlink" href="#earth-energy-budget" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="types-of-energy-transfers">
 <h3>Types of Energy Transfers<a class="headerlink" href="#types-of-energy-transfers" title="Link to this heading">#</a></h3>
-<p>Insolation, or incoming solar radiation, is the primary energy input driving the Earth-atmosphere system, but its intensity varies across different global locations. In the equatorial and tropical regions, there are only minor variations in day length and high sun altitude, resulting in relatively consistent insolation values ranging from approximately 180 to 220 W m². However, insolation decreases toward the poles, particularly around 25° latitude in the Northern and Southern Hemispheres. Generally, low-latitude deserts worldwide experience greater insolation at the surface due to frequently cloudless skies.</p>
-<p>As insolation travels toward the Earth’s surface, it encounters an increasing density of atmospheric molecules. These gases, dust, cloud droplets, water vapor, and pollutants interact with insolation, redirecting radiation without changing its wavelengths. This phenomenon is known as <em>scattering</em>, and it accounts for some of the insolation that does not reach Earth’s surface but is instead reflected into space. Diffuse radiation is the portion of incoming energy that successfully reaches Earth’s surface after scattering.</p>
-<p>Additionally, some of the arriving solar energy is directly reflected into space, a process called <em>reflection</em>. Over a year, clouds reflect about 20% of insolation, significantly more than what is reflected by Earth’s surface. Air pollutants, whether natural or man-made, also contribute to this reflection. The roles of clouds and aerosols in the Earth-atmosphere energy budget will be discussed further.</p>
-<p><em>Albedo</em> describes a surface’s reflective quality or intrinsic brightness. Albedo is an essential factor influencing the amount of insolation that reaches Earth, expressed as the percentage of insolation reflected: 0% indicates total absorption, while 100% signifies total reflectance.</p>
-<p>Insolation—both direct and diffuse—that is not part of the 31% reflected by Earth’s surface and atmosphere is absorbed either by the atmosphere or by Earth’s surface. Absorption involves the assimilation of radiation by molecules of matter, which converts radiation from one form of energy to another. Solar energy is absorbed by land and water surfaces (about 45% of insolation) and atmospheric gases, dust, clouds, and stratospheric ozone. Once at Earth’s surface, this absorbed energy is converted into either longwave radiation or chemical energy, such as the energy used by plants during photosynthesis. The absorption process raises the temperature of the absorbing surface.</p>
+<p>Insolation, or incoming solar radiation, is the single energy input driving the Earth–atmosphere system, yet it is not equal at all surfaces across the globe. Throughout the equatorial and tropical latitudes, minor variations in daylength and high Sun altitude produce fairly consistent insolation values (about <span class="math notranslate nohighlight">\(\pu{180–220 W m-2}\)</span>. Insolation decreases toward the poles, from about <span class="math notranslate nohighlight">\(\pu{25 ^\circ}\)</span> latitude in both the Northern and the Southern Hemispheres. In general, greater insolation at the surface occurs in ­low-latitude deserts worldwide because of frequently cloudless skies.</p>
+<p>Insolation encounters an increasing density of atmospheric molecules as it travels toward Earth’s surface. These gases, as well as dust, cloud droplets, water vapor, and pollutants, physically interact with insolation to redirect radiation, changing the direction of the light’s movement without altering its wavelengths. <em>Scattering</em> is the name for this phenomenon, which accounts for a percentage of the insolation that does not reach Earth’s surface but is instead reflected back to space. Incoming energy that reaches Earth’s surface after scattering occurs is diffuse radiation.</p>
+<p>A portion of the arriving solar energy bounces directly back into space—this is <em>reflection</em>. Clouds reflect about <span class="math notranslate nohighlight">\(\pu{20 \%}\)</span> of insolation over the course of a year, far more than is reflected by Earth’s surface. Air pollutants, either natural or anthropogenic, also reflect incoming energy. We discuss the role of clouds and aerosols in the Earth–atmosphere energy budget ahead.</p>
+<p>The reflective quality, or intrinsic brightness, of a surface is <em>albedo</em>, an important control over the amount of insolation that reaches Earth. We report albedo as the percentage of insolation that is reflected: <span class="math notranslate nohighlight">\(\pu{0 \%}\)</span> is total absorption; <span class="math notranslate nohighlight">\(\pu{100 \%}\)</span> is total reflectance.</p>
+<p>Insolation, both direct and diffuse, that is not part of the <span class="math notranslate nohighlight">\(\pu{31 \%}\)</span> reflected from Earth’s surface and atmosphere is absorbed, either in the atmosphere or by Earth’s surface. Absorption is the assimilation of radiation by molecules of matter, converting the radiation from one form of energy to another. Solar energy is absorbed by land and water surfaces (about <span class="math notranslate nohighlight">\(\pu{45 \%}\)</span> of insolation) as well as by atmospheric gases, dust, clouds, and stratospheric ozone. At Earth’s surface, it is converted into either longwave radiation or chemical energy, such as by plants during photosynthesis. The process of absorption raises the temperature of the absorbing surface.</p>
 </section>
 <section id="heat-transfer-at-earths-surface">
 <h3>Heat Transfer at Earth’s Surface<a class="headerlink" href="#heat-transfer-at-earths-surface" title="Link to this heading">#</a></h3>
-<p>Two types of heat energy are essential for understanding Earth’s and the atmosphere’s energy budgets. <em>Sensible heat</em> can be “sensed” as temperature because it comes from the kinetic energy of molecular motion. To feel this heat, radiant energy from the Sun must first be absorbed. <em>Latent heat</em>, or “hidden” heat, is the energy gained or lost when a substance changes from one state to another, from liquid water to water vapor or from liquid water to ice. Unlike sensible heat transfer, latent heat transfer occurs without a change in the substance’s temperature while it undergoes a physical change. However, the surroundings may gain or lose heat. The latent heat absorbed during evaporation is a significant component of the Earth-atmosphere energy system.</p>
-<p>Heat energy, called thermal energy, can be transferred throughout the Earth’s atmosphere, land, and water bodies through several processes. <em>Radiation</em> is the transfer of heat through electromagnetic waves.</p>
-<p><em>Conduction</em> involves the molecule-to-molecule transfer of heat energy as it diffuses through a substance. When molecules warm up, their vibration increases, causing them to collide with neighboring molecules, transferring heat from warmer to cooler areas.</p>
-<p>In gases and liquids, energy is also transferred through <em>convection</em>, which transfers heat by mixing or circulation. In the atmosphere or bodies of water, warmer (less dense) masses tend to rise, while cooler (denser) masses sink, establishing convection patterns. This physical mixing usually involves strong vertical motion. When horizontal motion predominates, this process is called <em>advection</em>.</p>
+<p>Two types of heat energy are important for understanding Earth–atmosphere energy budgets. <em>Sensible heat</em> can be “sensed” by humans as temperature because it comes from the kinetic energy of molecular motion. Radiant energy from the Sun must be absorbed before it can be felt as sensible heat. <em>Latent heat</em> (“hidden” heat) is the energy gained or lost when a substance changes from one state to another, such as from liquid water to water vapor or from liquid water to ice. Latent heat transfer differs from sensible heat transfer in that as long as a physical change in state is taking place, the substance itself does not change temperature (although the surroundings do gain or lose heat). The latent heat absorbed in the process of evaporation is an important output of the Earth–atmosphere energy system.</p>
+<p>Heat energy is known as thermal energy and can be transferred throughout Earth’s atmosphere, land, and water bodies by several processes. <em>Radiation</em> is the transfer of heat in electromagnetic waves.</p>
+<p><em>Conduction</em> is the molecule-to-molecule transfer of heat energy as it diffuses through a substance. As molecules warm, their vibration increases, causing collisions that produce motion in neighboring molecules, thus transferring heat from warmer to cooler material.</p>
+<p>Gases and liquids also transfer energy by <em>convection</em>, the transfer of heat by mixing or circulation. In the atmosphere or in bodies of water, warmer (less dense) masses tend to rise, and cooler (denser) masses tend to sink, establishing patterns of convection. This physical mixing usually involves a strong vertical motion. When horizontal motion dominates, the term <em>advection</em> applies.</p>
 <figure class="margin-caption align-default" id="heat-transfer">
 <img alt="https://upload.wikimedia.org/wikipedia/commons/f/f4/Heat-transmittance-means2.jpg" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Heat-transmittance-means2.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">The four fundamental modes of heat transfer processes are illustrated with a campfire. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Heat_transfer">Heat transfer - Wikipedia</a></span><a class="headerlink" href="#heat-transfer" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">The four fundamental modes of heat transfer processes illustrated with a campfire. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Heat_transfer">Heat transfer - Wikipedia</a></span><a class="headerlink" href="#heat-transfer" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="energy-balance-at-earths-surface">
 <h2>Energy Balance at Earth’s Surface<a class="headerlink" href="#energy-balance-at-earths-surface" title="Link to this heading">#</a></h2>
-<p>Energy and moisture are constantly exchanged with the lower atmosphere at the Earth’s surface, known as the boundary layer. Various characteristics of Earth’s surface, such as the presence or absence of vegetation and local topography, influence the energy balance within this boundary layer. Additionally, the height of the boundary layer varies over time and across different locations.</p>
-<p>In any given location, the surface receives and loses shortwave (SW) and longwave (LW) energy according to a straightforward scheme:</p>
-<p>Net radiation (<span class="math notranslate nohighlight">\(R_n\)</span>) is the total of all radiation gains and losses and fluctuates with the length of the day throughout the seasons, the amount of cloud cover, and latitude.</p>
+<p>Energy and moisture are continually exchanged with the lower atmosphere at Earth’s surface—this is the boundary layer. Specific characteristics of Earth’s surface, such as the presence or absence of vegetation and local topography, affect the energy balance in the boundary layer. The height of the boundary layer is not constant over time or space.</p>
+<p>The surface in any given location receives and loses shortwave (<span class="math notranslate nohighlight">\(SW\)</span>) and longwave (<span class="math notranslate nohighlight">\(LW\)</span>) energy according to the following simple scheme:</p>
+<p><em>Net radiation</em> (<span class="math notranslate nohighlight">\(R_n\)</span>) is the sum of all radiation gains and losses and varies with daylength through the seasons, the amount of cloud cover, and latitude.</p>
 <div class="math notranslate nohighlight">
 \[ 
 R_n = SW_{Insolation} \downarrow - SW_{Reflection} \uparrow + LW_{Infrared} \downarrow - LW_{Infrared} \uparrow
 \]</div>
-<p>Heat is transferred in and across most soil surfaces mainly through conduction. This transfer occurs predominantly downward during the day (or in summer), while heat moves toward the surface at night (or in winter). Generally, energy exchange with the surface or surrounding materials becomes minimal at a depth of less than a meter. Energy flowing from the atmosphere into the surface is considered a positive value (a gain), while energy moving outward through sensible and latent heat transfers is regarded as a negative value (a loss) in the surface account.</p>
+<p>In and over most soil surfaces, heat is transferred by conduction through the soil, predominantly downward during the day (or in summer) and toward the surface at night (or in winter). Energy exchange with the surface or with surrounding materials becomes negligible at a certain depth, usually less than a meter. Energy moving from the atmosphere into the surface is reported as a positive value (a gain), and energy moving outward from the surface, through sensible and latent heat transfers, is reported as a negative value (a loss) in the surface account.</p>
 </section>
 <section id="effective-energy-and-mass-transfer">
 <h2>Effective Energy and Mass Transfer<a class="headerlink" href="#effective-energy-and-mass-transfer" title="Link to this heading">#</a></h2>
-<p>An integrated framework based on thermodynamic theory characterizes the critical zone (CZ) as a system open to energy and mass fluxes, influenced by radiant, geochemical, and elevational gradients. <a class="reference external" href="https://doi.org/10.1007/s10533-010-9476-8">Rasmussen et al. (2011)</a> demonstrated the relative importance of solar radiation, water, carbon, and physical/chemical denudation mass fluxes in the CZ energy balance. They used rates of effective energy and mass transfer (<span class="math notranslate nohighlight">\(EEMT\)</span>, <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>) measured in watts per square meter (W m⁻²) to quantify the relevant flux-gradient relationships.</p>
-<p><span class="math notranslate nohighlight">\(EEMT\)</span> includes inputs of energy associated with reduced carbon from primary production (<span class="math notranslate nohighlight">\(E_{BIO}\)</span>) and heat influx to the soil from precipitation minus evapotranspiration and surface runoff (<span class="math notranslate nohighlight">\(E_{PPT}\)</span>):</p>
+<p>An integrated framework based on thermodynamic theory to characterize the CZ as a system open to energy and mass fluxes that are forced by radiant, geochemical, and elevational gradients. <a class="reference external" href="https://doi.org/10.1007/s10533-010-9476-8">Rasmussen et al (2011)</a> showed the relative importance of solar radiation, water, carbon, and physical/chemical denudation mass fluxes to the CZ energy balance by using rates of effective energy and mass transfer (<span class="math notranslate nohighlight">\(EEMT\)</span>, <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>) to quantify the relevant flux-gradient relations.</p>
+<p><span class="math notranslate nohighlight">\(EEMT\)</span> includes inputs of energy associated with reduced carbon from primary production (<span class="math notranslate nohighlight">\(E_{BIO}\)</span>) and heat influx to soil from precipitation minus evapotranspiration and surface runoff (<span class="math notranslate nohighlight">\(E_{PPT}\)</span>):</p>
 <div class="math notranslate nohighlight">
 \[
 EEMT = E_{BIO} + E_{PPT}
@@ -490,78 +503,52 @@ EEMT = E_{BIO} + E_{PPT}
 Λ = E_{ET}+E_{PPT}+E_{BIO}+E_{ELV}+E_{GEO}+ξ
 \]</div>
 <p>Each term is defined below:</p>
-<p>The energy and mass flux associated with evapotranspiration, denoted as <span class="math notranslate nohighlight">\(E_{ET}\)</span> (in <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>), can be expressed by the equation:</p>
-<div class="math notranslate nohighlight">
-\[
-E_{ET} = ET \cdot h_\nu
-\]</div>
-<p>In this equation, <span class="math notranslate nohighlight">\(ET\)</span> represents the mass flux of precipitation to evapotranspiration (in <span class="math notranslate nohighlight">\(\pu{kg m-2 s-1}\)</span>), and <span class="math notranslate nohighlight">\(h_\nu\)</span> is the latent heat of vaporization (in <span class="math notranslate nohighlight">\(\pu{J kg-1}\)</span>), which quantifies the fraction of radiant energy used to evaporate a given mass of water. This energy flux is primarily transferred from the Critical Zone (CZ) and returned to the atmosphere.</p>
-<p>The water mass flux converted to energy flux is represented as <span class="math notranslate nohighlight">\(E_{PPT}\)</span> (in <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>) and can be calculated using the formula:</p>
-<div class="math notranslate nohighlight">
-\[
-E_{PPT} = F \cdot c_w \cdot \Delta T
-\]</div>
-<p>Here, <span class="math notranslate nohighlight">\(F\)</span> is the mass flux of precipitation to base flow from the water balance (in <span class="math notranslate nohighlight">\(\pu{kg m-2 s-1}\)</span>), <span class="math notranslate nohighlight">\(c_w\)</span> is the specific heat of water (in <span class="math notranslate nohighlight">\(\pu{J kg-1 K-1}\)</span>), and <span class="math notranslate nohighlight">\(\Delta T = T_{ambient} - T_{ref}\)</span>, where <span class="math notranslate nohighlight">\(T_{ambient}\)</span> refers to the ambient water temperature at the time of water flux (assumed to be equal to the ambient air temperature), and <span class="math notranslate nohighlight">\(T_{ref}\)</span> is a reference temperature (273 K). When <span class="math notranslate nohighlight">\(T_{ref} &gt; T_{ambient}\)</span>, then $E_{PPT} = 0).</p>
-<p>The carbon mass flux, represented as <span class="math notranslate nohighlight">\(NPP\)</span>, can also be converted to energy flux and is denoted as <span class="math notranslate nohighlight">\(E_{BIO}\)</span> (in <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>):</p>
-<div class="math notranslate nohighlight">
-\[
-E_{BIO} = NPP \cdot h_{BIO}
-\]</div>
-<p>In this formula, <span class="math notranslate nohighlight">\(NPP\)</span> stands for net primary production (in <span class="math notranslate nohighlight">\(\pu{kg m-2 s-1}\)</span>), and <span class="math notranslate nohighlight">\(h_{BIO}\)</span> is the specific biomass enthalpy (in <span class="math notranslate nohighlight">\(\pu{J kg-1}\)</span>). We assume an average <span class="math notranslate nohighlight">\(h_{BIO} = \pu{22e6 J kg-1}\)</span> based on the average values for various organic materials derived from calorimetric analyses.</p>
-<p>Physical denudation can be expressed in energy flux units as <span class="math notranslate nohighlight">\(E_{ELV}\)</span> (in <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>), based on the change in the potential energy of uplifted sediment. It is calculated using the equation:</p>
-<div class="math notranslate nohighlight">
-\[
-E_{ELV} = m \cdot g \cdot U
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(m\)</span> is the mass of sediment per unit area (in <span class="math notranslate nohighlight">\(\pu{kg m-2}\)</span>), <span class="math notranslate nohighlight">\(g\)</span> is the gravitational constant (approximately <span class="math notranslate nohighlight">\(\pu{9.81 m s-2}\)</span>), and <span class="math notranslate nohighlight">\(U\)</span> is the uplift rate (in <span class="math notranslate nohighlight">\(\pu{m s-1}\)</span>). The mass of sediment available for transport can be approximated using rock density, <span class="math notranslate nohighlight">\(\rho\)</span> (in <span class="math notranslate nohighlight">\(\pu{kg m-3}\)</span>), and regolith depth, <span class="math notranslate nohighlight">\(H_S\)</span> (in <span class="math notranslate nohighlight">\(\pu{m}\)</span>), where <span class="math notranslate nohighlight">\(m = \rho \cdot H_S\)</span>, assuming that all soil and saprolite layers have the potential to be physically transported.</p>
-<p>The mass and energy flux associated with chemical denudation and specific mineral transformations can be approximated using the Gibbs free energy <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> (in <span class="math notranslate nohighlight">\(\pu{J mol-1}\)</span>) of a given mineral transformation reaction under the relevant environmental conditions, along with the associated mass flux:</p>
-<div class="math notranslate nohighlight">
-\[
-E_{GEO} = N \Delta_{rxn}G^\circ
-\]</div>
-<p>In this equation, <span class="math notranslate nohighlight">\(N\)</span> represents the mass flux per unit area (in <span class="math notranslate nohighlight">\(\pu{mol m-2 s-1}\)</span>), a function of reaction rate and stoichiometric coefficient.</p>
-<p>The term <span class="math notranslate nohighlight">\(\xi\)</span> encompasses the net energy flux associated with any additional material flux into the system, such as dust, atmospheric solutes, or anthropogenic inputs like fertilizers or other amendments.</p>
-<p>Generally, some energetic fluxes may be negligible relative to other terms but can be relevant for specific ecosystems. Over annual timescales, the relative magnitude of the individual fluxes indicates that latent heat transfer by evapotranspiration is the most significant energy flux. However, as noted, this energy is transferred mainly from the CZ back to the atmosphere, resulting in a less direct impact on subsurface development.</p>
-<p>Considering the range of values, the key parameters for quantifying the flux of energy into and through the subsurface CZ are <span class="math notranslate nohighlight">\(E_{PPT}\)</span> and <span class="math notranslate nohighlight">\(E_{BIO}\). These parameters describe the fraction of energy and mass effectively transferred into and through the subsurface CZ and are among the two parameters initially included in the \)</span>EEMT$ term.</p>
+<p>The energy and mass flux associated with evapotranspiration, <span class="math notranslate nohighlight">\(E_{ET}\)</span> (<span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>): <span class="math notranslate nohighlight">\(E_{ET} = ET \cdot h_\nu\)</span>, where <span class="math notranslate nohighlight">\(ET\)</span> is mass flux of precipitation to evapotranspiration (<span class="math notranslate nohighlight">\(\pu{kg m−2 s−1}\)</span>), and <span class="math notranslate nohighlight">\(h_\nu\)</span> is latent heat of vaporization (<span class="math notranslate nohighlight">\(\pu{J kg−1}\)</span>) and quantifies the fraction of radiant energy used to evaporate a mass of water. This energetic flux is largely fluxed out of the CZ and returned back to the atmosphere.</p>
+<p>Water mass flux converted to energy flux, <span class="math notranslate nohighlight">\(E_{PPT}\)</span> (<span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>): <span class="math notranslate nohighlight">\(E_{PPT} = F \cdot c_w \cdot  \Delta T\)</span>, where <span class="math notranslate nohighlight">\(F\)</span> is mass flux of precipitation to base flow from the water balance (<span class="math notranslate nohighlight">\(\pu{kg m−2 s−1}\)</span>), <span class="math notranslate nohighlight">\(c_w\)</span> is specific heat of water (<span class="math notranslate nohighlight">\(\pu{J kg−1 K−1}\)</span>), and <span class="math notranslate nohighlight">\(\Delta T = T_{ambient} − T_{ref}\)</span> where <span class="math notranslate nohighlight">\(T_{ambient}\)</span> is taken as the ambient water temperature at the time of water flux (assumed equal to the ambient air temperature) and <span class="math notranslate nohighlight">\(T_{ref}\)</span> is a reference temperature (<span class="math notranslate nohighlight">\(\pu{273 K}\)</span>). When <span class="math notranslate nohighlight">\(T_{ref} &gt; T_{ambient}\)</span>,  <span class="math notranslate nohighlight">\(E_{PPT} = 0\)</span>.</p>
+<p>Carbon mass flux (<span class="math notranslate nohighlight">\(NPP\)</span>) can be converted to energy flux, denoted as <span class="math notranslate nohighlight">\(E_{BIO}\)</span> (<span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>): <span class="math notranslate nohighlight">\(E_{BIO} = NPP \cdot  h_{BIO}\)</span> where, <span class="math notranslate nohighlight">\(NPP\)</span> is net primary production (<span class="math notranslate nohighlight">\(\pu{kg m−2 s−1}\)</span>), and <span class="math notranslate nohighlight">\(h_{BIO}\)</span> is the specific biomass enthalpy (<span class="math notranslate nohighlight">\(\pu{J kg−1}\)</span>). We assume an average <span class="math notranslate nohighlight">\(h_{BIO} = \pu{22e6 J kg−1}\)</span> biomass based on the average of values for a range of organic materials derived from calorimetric analyses.</p>
+<p>Physical denudation may be expressed in energy flux units as <span class="math notranslate nohighlight">\(E_{ELV}\)</span> (<span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>), based on the change in potential energy of uplifted sediment: <span class="math notranslate nohighlight">\(E_{ELV} = m · g · U\)</span>, where <span class="math notranslate nohighlight">\(m\)</span> is mass of sediment per unit area (<span class="math notranslate nohighlight">\(\pu{kg m−2}\)</span>), <span class="math notranslate nohighlight">\(g\)</span> is the gravitational constant (<span class="math notranslate nohighlight">\(\pu{9.81 m s−2}\)</span>), and <span class="math notranslate nohighlight">\(U\)</span> is uplift rate (<span class="math notranslate nohighlight">\(\pu{m s−1}\)</span>). The mass of sediment available for transport may be approximated using rock density, <span class="math notranslate nohighlight">\(\rho\)</span> (<span class="math notranslate nohighlight">\(\pu{kg m−3}\)</span>) and regolith depth, <span class="math notranslate nohighlight">\(H_S\)</span> (<span class="math notranslate nohighlight">\(\pu{m}\)</span>), where <span class="math notranslate nohighlight">\(m = ρ · H_S\)</span>, assuming all soil and saprolite layers have the potential to be physically transported.</p>
+<p>The mass and energy flux associated with chemical denudation and specific mineral transformations, <span class="math notranslate nohighlight">\(E_{GEO}\)</span> (<span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>), may be approximated using the Gibbs free energy (<span class="math notranslate nohighlight">\(Δ _{rxn}G^\circ,\  \pu{J mol−1}\)</span>) of a given mineral transformation reaction (determined for the relevant environmental conditions) and the associated mass flux: <span class="math notranslate nohighlight">\(E_{GEO} = N Δ_{rxn}G^\circ\)</span>, where <span class="math notranslate nohighlight">\(N\)</span>, the mass flux per unit area (<span class="math notranslate nohighlight">\(\pu{mol m−2 s−1}\)</span>), is a function of reaction rate and a stoichiometric coefficient.</p>
+<p><em>ξ</em> encompasses net energy flux associated with any additional material flux into the system such as dust, atmospheric solutes, or anthropogenic inputs such as fertilizers or other amendments.</p>
+<p>In general, some energetic fluxes are negligible relative to the other terms, but may be relevant for specific ecosystems. The relative magnitude of the individual fluxes over annual time scales indicate latent heat transfer by evapotranspiration is the largest energy flux; however, as noted above this energy is largely transferred out of the CZ back to the atmosphere and hence has a less direct impact on subsurface development.</p>
+<p>Given the range of values, the key parameters for quantifying the flux of energy into and through the subsurface CZ are <span class="math notranslate nohighlight">\(E_{PPT}\)</span> and <span class="math notranslate nohighlight">\(E_{BIO}\)</span>. These parameters describe the fraction of energy and mass effectively transferred into and through the subsurface CZ and are the two parameters originally included in the <span class="math notranslate nohighlight">\(EEMT\)</span> term.</p>
 </section>
 <section id="water-budget">
 <h2>Water Budget<a class="headerlink" href="#water-budget" title="Link to this heading">#</a></h2>
-<p>The hydrological cycle is crucial in transporting and cycling nutrients and energy. To manage water effectively and fairly, it’s essential to quantify the various components of the hydrological cycle, a process known as constructing a water budget for a specific area. Human activities have altered the hydrological cycle, impacting specific water budget components and the water movement between these components.</p>
+<p>The hydrological cycle is important to the transport and cycling of nutrients and energy. Quantifying the various components of the hydrological cycle, referred to as constructing water budget for a defined area, is an important framework for wise and equitable water management. The hydrological cycle has changed as the result of human activity affecting specific components of the water budget and the movement of water between the components.</p>
 <figure class="margin-caption align-default" id="water-cycle">
 <img alt="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/USGS_WaterCycle_English_ONLINE_20221013.png" src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/USGS_WaterCycle_English_ONLINE_20221013.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Global water cycle and how human water use affect where water is stored, how it moves, and how clean it is. Image source: <a class="reference external" href="https://www.usgs.gov/special-topics/water-science-school/science/water-cycle-diagrams">Water Cycle Diagrams | U.S. Geological Survey (usgs.gov)</a></span><a class="headerlink" href="#water-cycle" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Global water cycle, as well as how human water use affects where water is stored, how it moves, and how clean it is. Image source: <a class="reference external" href="https://www.usgs.gov/special-topics/water-science-school/science/water-cycle-diagrams">Water Cycle Diagrams | U.S. Geological Survey (usgs.gov)</a></span><a class="headerlink" href="#water-cycle" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>A water budget is a quantitative approach used to assess the availability and sustainability of water supply. It essentially states that the change in the amount of water stored in a specific area, such as a watershed, is balanced by the water inflow and outflow rate. Understanding the water budget and the associated hydrological processes is vital for effective water resource and environmental planning and management.</p>
-<p>Monitoring changes in the water budget over time can help evaluate the impacts of climate variability and human activities on water resources. Comparing water budgets from different regions allows quantifying how geology, soil, vegetation, and land use influence the hydrological cycle. Additionally, the water budget significantly quantifies energy and mass transfer within the Earth’s critical zone (CZ).</p>
+<p>Water budget provides a quantitative method for evaluating availability and sustainability of water supply. A water budget simply states that the rate of change in water stored in an area, such as a watershed, is balanced by the rate at which water flows into and out of the area. An understanding of water budget and the underlying hydrologic processes provides a foundation for effective water-resource and environmental planning and management. Observed changes in water budgets of an area over time can be used to assess the effects of climate variability and human activities on water resources. Comparison of water budgets from different areas allows the effects of factors such as geology, soils, vegetation, and land use on the hydrologic cycle to be quantified. Water budget also plays an important role in quantifying energy and mass transfer with the Earth’s CZ.</p>
 <p>The water balance equation in its most simple form is shown as:</p>
 <div class="math notranslate nohighlight">
 \[
 \Delta S = i - q
 \]</div>
-<p>In this equation, the change in water storage (<span class="math notranslate nohighlight">\(\Delta S\)</span>) in a system is equal to the difference in the inflow (<span class="math notranslate nohighlight">\(i\)</span>) and the outflow (<span class="math notranslate nohighlight">\(q\)</span>). This water balance equation can be expanded to be a little more informative as follows:</p>
+<p>In this equation, change in water storage (<span class="math notranslate nohighlight">\(\Delta S\)</span>) in a system and is equal to the difference in the inflow (<span class="math notranslate nohighlight">\(i\)</span>) and the outflow (<span class="math notranslate nohighlight">\(q\)</span>). This water balance equation can be expanded to be a little more informative as follows:</p>
 <div class="math notranslate nohighlight">
 \[
 P + Q_{In} = ET + Q_{Out} + \Delta S 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(Q\)</span> is water flow into (<span class="math notranslate nohighlight">\(Q_{In}\)</span>) or out (<span class="math notranslate nohighlight">\(Q_{Out}\)</span>) of a watershed (can be separated into groundwater and surface water components), <span class="math notranslate nohighlight">\(P\)</span> is precipitation, <span class="math notranslate nohighlight">\(ET\)</span> is evapotranspiration (sum of evaporation from soils, surface water bodies, and plants), and <span class="math notranslate nohighlight">\(\Delta S\)</span> is change in water storage within the system.</p>
-<p>Meteorological and stream data will be required to calculate an annual water budget for a specific location.</p>
-<p>Precipitation is typically measured using either automated or manual rain gauges. To calculate the total precipitation (<span class="math notranslate nohighlight">\(P\)</span>) for a watershed, multiple measurements are often taken across the area to estimate an average value. Additionally, identifying the watershed boundary is crucial for accurate calculations, known as watershed delineation. Automated tools, such as those available on <a class="reference external" href="https://streamstats.usgs.gov/ss/">StreamStats (usgs.gov)</a>, can assist in delineating the watershed of interest.</p>
-<p>Evapotranspiration (<span class="math notranslate nohighlight">\(ET\)</span>) plays a significant role in the water balance and influences soil moisture content, groundwater recharge, and streamflow. It is responsible for returning a substantial portion of the precipitation that falls on land to the atmosphere. Generally, <span class="math notranslate nohighlight">\(ET\)</span> is considered a loss in the water budget since it decreases streamflow, storage, and available groundwater. Various methods are available to measure <span class="math notranslate nohighlight">\(ET\)</span> (such as potted plants or lysimeters), but many research sites commonly employ the eddy covariance flux method. Due to the challenges in measuring <span class="math notranslate nohighlight">\(ET\)</span>, several estimation methods have been developed.</p>
-<p>Darcy’s law describes groundwater movement for saturated flow through porous media, expressed as follows:</p>
+<p>where, <span class="math notranslate nohighlight">\(Q\)</span> is water flow into (<span class="math notranslate nohighlight">\(Q_{In}\)</span>) or out (<span class="math notranslate nohighlight">\(Q_{Out}\)</span>) of a watershed (can be separated into groundwater and surface water components), <span class="math notranslate nohighlight">\(P\)</span> is precipitation, <span class="math notranslate nohighlight">\(ET\)</span> is evapotranspiration (sum of evaporation from soils, surface water bodies, and plants), and <span class="math notranslate nohighlight">\(\Delta S\)</span> is change in water storage within the system.</p>
+<p>To calculate an annual water budget for a specific location, meteorological and stream data will be required.</p>
+<p>Precipitation is commonly measured using a automated or a manual rain gage. To calculate <span class="math notranslate nohighlight">\(P\)</span> for a watershed, often multiple measurements are collected across the watershed and an average value is estimated. In order to estimate this value, the watershed boundary also needs to be identified (watershed delineation). There are now automated tools available that help in this process. Try <a class="reference external" href="https://streamstats.usgs.gov/ss/">StreamStats (usgs.gov)</a> to identify the delineate the watershed of your interest.</p>
+<p>Evapotranspiration (<span class="math notranslate nohighlight">\(ET\)</span>) is a process that dominates the water balance and controls soil moisture content, ground water recharge, and streamflow. Evapotranspiration is responsible for returning a significant portion of precipitation falling on the land back to the atmosphere. Generally, <span class="math notranslate nohighlight">\(ET\)</span> is viewed as a loss from the water budget in that it reduces the amount of streamflow, storage, and the available groundwater. There are multiple methods to measure <span class="math notranslate nohighlight">\(ET\)</span> (potted plants, lysimeters, etc.), but the eddy covariance flux method is commonly used at many research sites. Because <span class="math notranslate nohighlight">\(ET\)</span> is difficult to measure, several methods have been developed to estimate it.</p>
+<p>Ground water movement is explained using Darcy’s law for saturated flow
+through porous media as follows:</p>
 <div class="math notranslate nohighlight">
 \[
 Q_{GW}= k_s A \frac{dh}{dl}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(Q_{GW}\)</span> is groundwater discharge, <span class="math notranslate nohighlight">\(k_s\)</span> is saturated hydraulic conductivity (function of the type of rock or aquifer), <span class="math notranslate nohighlight">\(A\)</span> is an area of cross-section, and <span class="math notranslate nohighlight">\(dh/dl\)</span> is the hydraulic gradient (slope of the flow.)</p>
-<p>Streamflow in streams is commonly measured using the velocity-area method, as shown below:</p>
+<p>where, <span class="math notranslate nohighlight">\(Q_{GW}\)</span> is groundwater discharge, <span class="math notranslate nohighlight">\(k_s\)</span> is saturated hydraulic conductivity (function of type of rock or aquifer), <span class="math notranslate nohighlight">\(A\)</span> is area of cross-section and <span class="math notranslate nohighlight">\(dh/dl\)</span> is the hydraulic gradient (slope of the flow.)</p>
+<p>Streamflow in streams is commonly measured using the velocity-area method as shown below:</p>
 <div class="math notranslate nohighlight">
 \[
 Q_{SW}=AV
 \]</div>
-<p>where, <span class="math notranslate nohighlight">\(Q_{SW}\)</span> is stream discharge, <span class="math notranslate nohighlight">\(A\)</span> is cross-sectional area of a stream, and <span class="math notranslate nohighlight">\(V\)</span> is the average velocity at a given location. In smaller streams with diffuse flows, “flumes” are installed.  In large streams, complex methods are used to measure discharge. See <a class="reference external" href="https://www.usgs.gov/special-topics/water-science-school/science/how-streamflow-measured">How Streamflow is Measured | U.S. Geological Survey (usgs.gov)</a>.</p>
-<p>USGS measures streamflow and makes these data available in real-time at <a class="reference external" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/?region=lower48&amp;amp;aoi=default">USGS | National Water Dashboard</a>. For example, <a class="reference external" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/?region=lower48&amp;amp;aoi=default&amp;amp;view=%7B%22basemap%22%3A%22EsriTopo%22%2C%22bounds%22%3A%22-81.3917271935721%2C32.525034335310814%2C-79.05330756375152%2C33.55722732300874%22%2C%22insetMap%22%3Afalse%2C%22panel%22%3A%7B%22checkbox%22%3A%220%2C9%2C19%2C20%2C21%2C22%22%2C%22range%22%3A%220%3A1.0%2C1%3A1.0%2C2%3A1.0%2C3%3A1.0%2C4%3A1.0%2C5%3A1.0%2C6%3A1.0%2C7%3A0.8%2C8%3A0.3%2C9%3A0.5%2C10%3A0.5%2C11%3A0.5%2C12%3A0.5%2C13%3A0.5%2C14%3A0.5%2C15%3A0.5%2C16%3A1.0%2C17%3A1.0%2C18%3A1.0%2C19%3A1.0%22%2C%22select%22%3A%220%3A0%2C1%3A0%2C2%3A0%2C3%3A0%2C4%3A0%2C5%3A0%2C6%3A0%2C7%3A0%2C8%3A0%2C9%3A0%2C10%3A0%2C11%3A0%2C12%3A0%2C13%3A0%2C14%3A0%2C15%3A0%2C16%3A0%2C17%3A0%2C18%3A0%22%7D%7D">Click Here for stream data for the greater Charleston area.</a>
+<p>where, <span class="math notranslate nohighlight">\(Q_{SW}\)</span> is stream discharge, <span class="math notranslate nohighlight">\(A\)</span> is cross-sectional area of a stream, and <span class="math notranslate nohighlight">\(V\)</span> is the average velocity at a given location. In smaller streams with diffuse flows, “flumes” are installed  In large streams, complex methods are used to measure discharge. See <a class="reference external" href="https://www.usgs.gov/special-topics/water-science-school/science/how-streamflow-measured">How Streamflow is Measured | U.S. Geological Survey (usgs.gov)</a>. USGS measures streamflow and makes these data available in real time at <a class="reference external" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/?region=lower48&amp;amp;aoi=default">USGS | National Water Dashboard</a>. For example, <a class="reference external" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/?region=lower48&amp;amp;aoi=default&amp;amp;view=%7B%22basemap%22%3A%22EsriTopo%22%2C%22bounds%22%3A%22-81.3917271935721%2C32.525034335310814%2C-79.05330756375152%2C33.55722732300874%22%2C%22insetMap%22%3Afalse%2C%22panel%22%3A%7B%22checkbox%22%3A%220%2C9%2C19%2C20%2C21%2C22%22%2C%22range%22%3A%220%3A1.0%2C1%3A1.0%2C2%3A1.0%2C3%3A1.0%2C4%3A1.0%2C5%3A1.0%2C6%3A1.0%2C7%3A0.8%2C8%3A0.3%2C9%3A0.5%2C10%3A0.5%2C11%3A0.5%2C12%3A0.5%2C13%3A0.5%2C14%3A0.5%2C15%3A0.5%2C16%3A1.0%2C17%3A1.0%2C18%3A1.0%2C19%3A1.0%22%2C%22select%22%3A%220%3A0%2C1%3A0%2C2%3A0%2C3%3A0%2C4%3A0%2C5%3A0%2C6%3A0%2C7%3A0%2C8%3A0%2C9%3A0%2C10%3A0%2C11%3A0%2C12%3A0%2C13%3A0%2C14%3A0%2C15%3A0%2C16%3A0%2C17%3A0%2C18%3A0%22%7D%7D">Click Here to see stream data for greater Charleston area.</a>
 You can also create runoff simulations at <a class="reference external" href="https://wikiwatershed.org/model/">Model My Watershed® - WikiWatershed</a>.</p>
 </section>
 <section id="readings-and-resources-for-this-section">
@@ -630,8 +617,7 @@ You can also create runoff simulations at <a class="reference external" href="ht
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -704,8 +690,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
