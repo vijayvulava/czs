@@ -1,31 +1,31 @@
 # 1.2 The Role of Soil
 
-Soil consists of mineral and organic matter derived from a variety of sources and it is vitally important to sustaining life on Earth including human society. Soils are not randomly distributed about our planet, but instead occupy space determined by the overlapping domains of the state factors of soil formation. Ultimately, soil records the overlap of atmospheric, lithospheric, hydrologic, and biologic processes, the innermost workings of the CZ. 
+Soil comprises mineral and organic matter sourced from various origins, which are crucial in sustaining life on Earth, including human society. Soils are not randomly distributed; instead, they occupy spaces influenced by the overlapping factors of soil formation. Ultimately, soil demonstrates the interplay of atmospheric, lithospheric, hydrologic, and biological processes, reflecting the intricate workings of the Critical Zone (CZ).
 
-We will use online resources to consider the distribution of soils at a site chosen by you, and the implications of the distribution to understanding CZ processes and land use at the site.
+We will use online resources to examine the distribution of soils at a site of your choosing and consider how this distribution aids our understanding of CZ processes and land use at that location.
 
-CZ function is represented by coupled physical, biological, and chemical processes that involve study by experts in geology, soil science, biology, ecology, geochemistry, geomorphology, and hydrology, to name a few of the relevant sciences.
+The function of the CZ is characterized by interconnected physical, biological, and chemical processes, which are studied by experts in various fields such as geology, soil science, biology, ecology, geochemistry, geomorphology, and hydrology, among others.
 
 ```{figure} https://www.e-education.psu.edu/earth530/sites/www.e-education.psu.edu.earth530/files/image/SCZ.png
 ---
 figclass: margin
 name: soil-crit-zone
 ---
-The soil CZ concept is perhaps best illustrated by a four leaf clover-like emblem of yellow (at top, representing atmosphere), green (right, biosphere), blue (left, hydrosphere), and brown (bottom, lithosphere) arcs surrounding the acronym SoilCritZone; the design of the logo symbolizes how soil and the CZ exist within the overlapping region between the four arcs or "spheres."
+The soil CZ concept is perhaps best illustrated by a four-leaf clover-like emblem of yellow (at the top, representing atmosphere), green (right, biosphere), blue (left, hydrosphere), and brown (bottom, lithosphere) arcs surrounding the acronym SoilCritZone; the design of the logo symbolizes how soil and the CZ exist within the overlapping region between the four arcs or "spheres."
 ```
 
-While these various disciplines are equally important for understanding the CZ, they are linked by the presence of soil, considered by many to be the central component of the CZ. This concept is illustrated by a four leaf clover-like emblem in {numref}`soil-crit-zone`.  The spheres shown in {numref}`soil-crit-zone` closely overlap with the state factors of soil formation you will be introduced to later in this lesson: parent material, climate, topography, biota, and age.
+While these disciplines are equally crucial for understanding the CZ, they are linked by the presence of soil, which many consider the central component of the CZ. This concept is illustrated by a four-leaf clover-like emblem in {numref}`soil-crit-zone`.  The spheres shown in {numref}`soil-crit-zone` closely overlap with the state factors of soil formation you will be introduced to later in this lesson: parent material, climate, topography, biota, and age.
 
 ## Definitions of Soil
 
-Various aspects of soil should be considered, including the following four definitions of soil:
+When discussing soil, it is essential to consider various aspects, including the following four definitions:
 
-1. The upper layer of Earth that may be dug or plowed and in which plants grow; and, the superficial unconsolidated and usually weathered part of the mantle of a planet and especially of the Earth ([Soil Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/soil)).
-2. Earth material which has been so modified and acted upon by physical, chemical, and biological agents that it will support upright rooted plants. The term as used by engineers includes, in addition to the above, all regolith ([Glossary of Geology | American Geosciences Institute](https://www.americangeosciences.org/pubs/glossary#online)).
-3. (i) The unconsolidated mineral or organic material on the immediate surface of the Earth that serves as a natural medium for the growth of land plants. (ii) The unconsolidated mineral or organic matter on the surface of the Earth that has been subjected to and shows effects of genetic and environmental factors of: climate (including water and temperature effects), and macro- and microorganisms, conditioned by relief, acting on parent material over a period of time. A product-soil differs from the material from which it is derived in many physical, chemical, biological, and morphological properties and characteristics ([Glossary of Soil Science Terms | Soil Science Society of America](https://www.soils.org/publications/soils-glossary/)).
-4. The naturally occurring, unconsolidated or loose covering of broken rock particles and decaying organic matter (humus) on the surface of the Earth, capable of supporting life. In simple terms, soil has three components: solid, liquid, and gas. The solid phase is a mixture of mineral and organic matter. Soil particles pack loosely, forming a soil structure filled with voids. The solid phase occupies about half of the soil volume. The remaining void space contains water (liquid) and air (gas). Soil is also known as earth: it is the substance from which our planet takes its name ([Soil - Wikipedia](https://en.wikipedia.org/wiki/Soil)).
+1. Soil is the upper layer of the Earth that can be dug or plowed, where plants grow. It refers to the superficial, unconsolidated, and usually weathered part of a planet's mantle, especially on Earth ([Soil Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/soil)).   
+2. Soil is defined as earth material altered by physical, chemical, and biological agents, allowing it to support upright, rooted plants. Engineers include all regolith in this definition as well ([Glossary of Geology | American Geosciences Institute](https://www.americangeosciences.org/pubs/glossary#online)).
+3. (i) Soil refers to the unconsolidated mineral or organic material on the Earth's surface that is a natural medium for land plants' growth. (ii) It is also the unconsolidated mineral or organic matter that has been affected by various genetic and environmental factors, such as climate (including the effects of water and temperature) and macro- and microorganisms shaped by the landscape and acting on parent material over time. A product-soil exhibits different physical, chemical, biological, and morphological properties compared to the material from which it is derived ([Glossary of Soil Science Terms | Soil Science Society of America](https://www.soils.org/publications/soils-glossary/)).
+4. Soil is the naturally occurring, loose covering of broken rock particles and decaying organic matter (known as humus) on the Earth's surface, capable of supporting life. In simple terms, soil consists of three components: solid, liquid, and gas. The solid phase is a mixture of mineral and organic matter, which forms a loose structure filled with voids. The solid phase accounts for about half of the soil's volume, while the remaining space contains water (liquid) and air (gas). Soil is often referred to as earth, which is the substance from which our planet derives its name ([Soil - Wikipedia](https://en.wikipedia.org/wiki/Soil)).
 
-Though the four definitions share common attributes, they do differ. For example, agronomists and most soil scientists focus their studies of soil on the rooted zone, or rhizosphere (approximately to depths of one meter), while the geologist's perspective is much broader and deeper, encompassing the full thickness of material down to the original parent material (shallow, to depths up to one hundred meters or more). Nonetheless, most scientists agree that soil is a complex biomaterial that promotes the growth of terrestrial organisms, that it is crucial to life on Earth, and that it is the product of material derived from weathering of parent material, decomposing plant matter, and atmospheric deposition. Furthermore, as soil resources are finite, humanity should view them as non-sustainable and learn to care for and sustain these important resources. For these reasons and more, this unit focuses on soil, the "heart" of the CZ.
+While these four definitions share common elements, they also differ in focus. Agronomists and most soil scientists emphasize the study of the rooted zone or rhizosphere (approximately to a depth of one meter). In contrast, geologists take a broader and deeper view, examining material down to the original parent material, which can reach depths of up to one hundred meters or more. Most scientists agree that soil is a complex biomaterial that supports the growth of terrestrial organisms and is vital for life on Earth. It results from the weathering of parent material, the decomposition of plant matter, and atmospheric deposition. Since soil resources are finite, humanity must recognize their non-sustainable nature and learn to care for and sustain these essential resources. This unit focuses on soil, the "heart" of the Critical Zone (CZ).
 
 Watch the following video about soil and soil formation by Octavia Hopwood.
 
@@ -37,11 +37,11 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Soil Background
 
-If you look in a soil pit or on a roadside cut, you will see various layers in the soil. These layers are called **soil horizons**. The arrangement of these horizons in a soil is known as a **soil profile**. Soil scientists, who are also called pedologists, observe and describe soil profiles and soil horizons to classify and interpret the soil for various uses.
+When examining a soil pit or a roadside cut, you will notice different layers within the soil known as **soil horizons**. The arrangement of these horizons within a particular soil is referred to as a **soil profile**. Soil scientists, also known as pedologists, study and describe soil profiles and horizons to classify and interpret soil for various applications.
 
-Soil horizons differ in a number of easily seen soil properties such as color, texture, structure, and thickness. Other properties are less visible. Properties, such as chemical and mineral content, consistence, and reaction require special laboratory tests. All these properties are used to define types of soil horizons.
+Soil horizons vary in several observable properties, including color, texture, structure, and thickness. However, some properties are less visible. For instance, chemical and mineral content, consistency, and reactivity require specific laboratory tests. All of these properties are essential for defining different types of soil horizons.
 
-Soil scientists use the capital letters **O**, **A**, **B**, **C**, and **E** to identify the master horizons, and lowercase letters for distinctions of these horizons. Most soils have three major horizons -- the surface horizon (**A**), the subsoil (**B**), and the substratum (**C**). Some soils have an organic horizon (**O**) on the surface, but this horizon can also be buried. The master horizon, **E**, is used for subsurface horizons that have a significant loss of minerals (eluviation). Hard bedrock, which is not soil, uses the letter **R**.
+Soil scientists use capital letters **O**, **A**, **B**, **C**, and **E** to denote the master horizons, while lowercase letters are used for distinctions within these horizons. Most soils possess three main horizons: the surface horizon (**A**), the subsoil (**B**), and the substratum (**C**). Some soils may also feature an organic horizon (**O**) at the surface, although this horizon can sometimes be buried. The master horizon **E** signifies subsurface horizons that have experienced significant mineral loss, a process known as eluviation. Hard bedrock, classified separately from soil, is represented by the letter **R**.
 
 ```{figure} https://www.nrcs.usda.gov/sites/default/files/styles/side_image/public/2022-11/soil-profile.jpg?itok=N_IlYnDW
 ---
@@ -50,7 +50,7 @@ name: soil-horizon
 Basic sequence of soil horizons. Note that only some horizons may be present in any given location due to the soil formation factors specific to that location.  Image source: [A Soil Profile | Natural Resources Conservation Service (usda.gov)](https://www.nrcs.usda.gov/resources/education-and-teaching-materials/a-soil-profile)
 ```
 
-In the video below Rebecca Lybrand of the University of Arizona, Professor Ray Weil of University of Maryland, and Professor John Graveel of Purdue University presents different soil horizons on a soil outcrop and lab monoliths.
+In the video below, Rebecca Lybrand of the University of Arizona, Professor Ray Weil of the University of Maryland, and Professor John Graveel of Purdue University present different soil horizons on a soil outcrop and lab monoliths.
 
 
 <div class="container">
@@ -71,30 +71,29 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Soil Formation
 
-Soil formation, or pedogenesis, occurs over millennial time scales. The "mineral" components of soil is formed from physical and chemical weathering of rocks and minerals. Soil formation is controlled by five variables in nature represented by the equation below:
+Soil formation, or pedogenesis, occurs over millennial time scales. The "mineral" components of soil are formed from rocks and minerals' physical and chemical weathering. Soil formation is controlled by five variables in nature, represented by the equation below:
 
 $$
 \text{Soil/Ecosystems}=f(Cl,O,R,P,T,...)
 $$
-where, $Cl$ is climate, $O$ is organisms, $R$ is topographic relief, $P$ is parent material, and $T$ is time.   The soil-forming factors, have these important characteristics: (1) they are independent of the system (soil/ecosystems) being studied and (2) in many parts of the Earth, the state factors ($Cl$, $O$, $R$, $P$, $T$, etc.) vary independently of each other. 
+where, $Cl$ is climate, $O$ is organisms, $R$ is topographic relief, $P$ is parent material, and $T$ is time.   The soil-forming factors have these important characteristics: (1) they are independent of the system (soil/ecosystems) being studied, and (2) in many parts of the Earth, the state factors ($Cl$, $O$, $R$, $P$, $T$, etc.) vary independently of each other. 
 
-The rate of soil formation can be expressed differential form as
+The rate of soil formation can be expressed in differential form as
 
 $$
 dS=\frac{\partial S}{\partial Cl}dCl + \frac{\partial S}{\partial O}d O + \frac{\partial S}{\partial R}dR + \frac{\partial S}{\partial P}dP + \frac{\partial S}{\partial T}dT
 $$
 
-While this differential form is not exactly quantitative, it gives us an idea as to which variable(s) is likely dominant in any given setting. 
+While this differential form is not precisely quantitative, it gives us an idea of which variable(s) is likely dominant in any given setting. 
 ````{margin}
 See [Introduction to partial derivatives (article) | Khan Academy](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/partial-derivative-and-gradient-articles/a/introduction-to-partial-derivatives) for a simple introduction to partial derivatives and multivariate calculus.
 ````
 
-The rates of soil formation have not been as well characterized as soil erosion rates. This creates an interesting conundrum for scientists and land-use planners interested in the impacts of soil erosion. Though we know there are sites on Earth where soil is eroding at an unsustainable rate, do sites exist where soil is forming at a rate that equals or exceeds the rate of soil erosion? If so, soil erosion may not be an important consideration for these sites when considering land-use issues. Therefore, accurate determinations of soil formation rates under varying conditions are a key question in CZ science.
+The soil formation rates have not been as thoroughly characterized as erosion. This creates a challenging situation for scientists and land-use planners concerned about soil erosion's impacts. While we know that there are locations on Earth where soil is eroding at unsustainable rates, it raises the question: are there sites where soil forms at a rate that equals or exceeds the erosion rate? If such sites exist, soil erosion may not be a significant concern for land-use decisions in those areas. Therefore, accurately determining soil formation rates under various conditions is critical in critical zone science.
 
-In addition, most scientists also recognize that humanity, having influenced much of the CZ, represents a sixth factor in soil formation. The varying distribution of these variables in soil formation (also known as the state factors) on Earth's surface, and therefore the differing distribution of physical, chemical, and biological processes dependent upon the distribution and interplay of the state factors, plays a role in soil formation and the development of different types of soil.
+Additionally, many scientists recognize that human activity has greatly influenced much of the critical zone, representing a sixth factor in soil formation. The varying distribution of these factors, known as state factors, across the Earth’s surface leads to differences in soil development's physical, chemical, and biological processes. This variability plays a significant role in soil formation and the emergence of different soil types.
 
-In the videos below, Professor John Graveel of Purdue University presents information on soil formation and soil properties.
-
+In the videos below, Professor John Graveel of Purdue University discusses soil formation and properties.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/YIuGJhFSHgA" 
@@ -115,47 +114,48 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Soil Orders
 
-Given the diversity of climate, geography, and geology across the entire world, soils develop a distinctive character that reflects the local region.  Soil scientists developed a means to classify and name soils.  This soil classification is called ***soil taxonomy***.   Soils are classified as natural bodies on the basis of their profile characteristics.
+Due to the diverse climates, geography, and geology, soils develop unique characteristics that reflect their local regions. Soil scientists have created a system to classify and name soils, known as ***soil taxonomy***. Soils are classified as natural entities based on the characteristics of their profiles.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/BArbrfmsxeQ" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-There are 12 major soil orders across the world that reflect the broad climate and development process and within each order there are multiple suborders. To learn more about these major orders, visit [The Twelve Orders of Soil Taxonomy | Natural Resources Conservation Service (usda.gov)](https://www.nrcs.usda.gov/resources/education-and-teaching-materials/the-twelve-orders-of-soil-taxonomy). Soil suborders are subdivisions of soil orders based on certain characteristics that reflect the soil formation processes or the environmental conditions. Each order has several suborders. The name of a suborder usually ends with a suffix that indicates the order it belongs to. [For example, the suborders of Alfisols (soils with aluminum and iron) end with -alf, such as Aqualfs, Udalfs, Ustalfs, and Xeralfs](https://en.wikipedia.org/wiki/USDA_soil_taxonomy).
+There are 12 major soil orders worldwide represent broad climate types and soil development processes. Within each order, there are multiple suborders. To learn more about these major orders, visit [The Twelve Orders of Soil Taxonomy | Natural Resources Conservation Service (usda.gov)](https://www.nrcs.usda.gov/resources/education-and-teaching-materials/the-twelve-orders-of-soil-taxonomy). 
 
-The criteria for defining soil suborders vary depending on the order, but they generally include factors such as soil moisture regime, soil temperature regime, horizon development, clay mineralogy, organic matter content, and parent material. Some soil suborders are more common or widespread than others, depending on the geographic distribution of the soil orders and the environmental factors that influence soil formation. For example, Ultisols (soils with low base saturation and high weathering) are mostly found in humid regions of the world, such as the southeastern United States, parts of South America, Africa, and Asia. [They are divided into five suborders: Aquults, Humults, Udults, Ustults and Xerults](https://www.uidaho.edu/cals/soil-orders/ultisols). [Aquults are Ultisols that have a water table at or near the surface for long periods of the year, while Xerults are Ultisols that have a dry season of four to six months](https://www.uidaho.edu/cals/soil-orders/ultisols).
+Soil suborders are subdivisions of soil orders based on specific characteristics that reflect soil formation processes or environmental conditions. Each order comprises several suborders, and the name of a suborder typically ends with a suffix indicating the order it belongs to. For example, the suborders of Alfisols (soils rich in aluminum and iron) end with the suffix -alf, such as [Aqualfs, Udalfs, Ustalfs, and Xeralfs](https://en.wikipedia.org/wiki/USDA_soil_taxonomy). 
 
-**State soils** represent soil that has special significance to a particular state. Each state in the United States has selected a state soil, twenty of which have been legislatively established. To learn more see [State Soils | Natural Resources Conservation Service (usda.gov)](https://www.nrcs.usda.gov/resources/education-and-teaching-materials/state-soils).
+The criteria for defining soil suborders vary depending on the order. Still, we generally consider soil moisture regime, soil temperature regime, horizon development, clay mineralogy, organic matter content, and parent material. Some soil suborders are more widespread than others, depending on the geographic distribution of the soil orders and the environmental factors that influence soil formation. For instance, Ultisols (soils with low base saturation and high weathering) are primarily found in humid regions such as the southeastern United States, parts of South America, Africa, and Asia. They are divided into five suborders: [Aquults, Humults, Udults, Ustults, and Xerults](https://www.uidaho.edu/cals/soil-orders/ultisols). Aquults are Ultisols with a water table at or near the surface for extended periods during the year, while Xerults are Ultisols that experience a four to six months dry season. 
 
-USDA-NRCS maintains a soil map of the US at [Web Soil Survey (usda.gov)](https://websoilsurvey.nrcs.usda.gov/app/WebSoilSurvey.aspx). Navigate to this site to learn how to create a soil report for the area of your interest.  It's not the most intuitive site.  Watch the video below to learn how to use this site and create a soil report for the area of your interest.
+**State soils** are soils that hold special significance for particular states. Each state in the United States has designated a state soil, with twenty of these selections established legislatively. To learn more, visit [State Soils | Natural Resources Conservation Service (usda.gov)](https://www.nrcs.usda.gov/resources/education-and-teaching-materials/state-soils). 
+
+The USDA-NRCS maintains a soil map of the United States at [Web Soil Survey (usda.gov)](https://websoilsurvey.nrcs.usda.gov/app/WebSoilSurvey.aspx). Navigate to this site to learn how to generate a soil report for your area of interest. It's not the most intuitive site, so watch the video to help create a soil report for your specific location.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/lKFc_96UZ7Q" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-UC Davis has a nice map based interface, that allows you to navigate the NRCS data more easily.  Access this interface here: [SoilWeb](https://casoilresource.lawr.ucdavis.edu/gmap/) 
+UC Davis has a nice map-based interface that allows you to navigate the NRCS data more efficiently.  Access this interface here: [SoilWeb](https://casoilresource.lawr.ucdavis.edu/gmap/) 
 
 [USDA Soil Information ArcGIS Map](https://experience.arcgis.com/experience/914f8dbdc116482e83003e682ece8f10)
 ## Soil Erosion
 
-Soil erosion is the removal of the upper layers of soil due to a variety of natural and anthropogenic causes. Since the upper layers tend to have higher organic matter and nutrients, erosion can cause significant negative impacts on agriculture as well as water pollution. An inch of soil may take a thousand years to build, but could be removed in one rainstorm. Thin layers of soil on top of shallow bedrock and frequently tilled soils are particularly sensitive, as erosion may lead to a loss of agricultural productivity.  Excessive erosion leads to a environmental disaster called desertification [Desertification | UNCCD](https://www.unccd.int/land-and-life/desertification/overview). See the simple demonstration below on the soil health.
+Soil erosion is the removal of the upper layers of soil due to various natural and anthropogenic causes. Since the upper layers tend to have higher organic matter and nutrients, erosion can cause significant negative impacts on agriculture and water pollution. An inch of soil may take a thousand years to build but could be removed in one rainstorm. Thin layers of soil on top of shallow bedrock and frequently tilled soils are particularly sensitive, as erosion may lead to a loss of agricultural productivity.  Excessive erosion leads to an environmental disaster called desertification [Desertification | UNCCD](https://www.unccd.int/land-and-life/desertification/overview). See the simple demonstration below on soil health.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/R1nYaYShV_k" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-There is a growing movement focusing on holistic management of soil and regenerative agriculture as described in the video below.
+There is a growing movement focusing on holistic management of soil and regenerative agriculture, as described in the video below.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/NJhpoYwAqFA" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-What aspects of the CZ other than soil are impacted by soil erosion and other threats to soils, and are those impacts beneficial or deleterious? For example, while erosion of weathered material may deplete a soil, the transport and deposition of those particles leads to the sustained build-up of flood plains and deltas elsewhere. Soil erosion, in moderate amounts, introduces nutrients into the water cycle that various organisms rely on to survive and thrive.
-
+What aspects of the cultural zone (CZ), besides soil, are affected by soil erosion and other threats to soils? Are these impacts beneficial or harmful? For instance, while the erosion of weathered material can deplete the soil, the transport and deposition of those particles contribute to the gradual formation of floodplains and deltas in other areas. Additionally, moderate soil erosion can introduce nutrients into the water cycle, which various organisms depend on to survive and thrive.
 
 ## Readings and resources for this section
 
@@ -163,10 +163,10 @@ What aspects of the CZ other than soil are impacted by soil erosion and other th
 2. Amundson, R. Introduction to the Biogeochemistry of Soils. Chapter 1, Introduction to Soils. Available on OAKS.
 3. Weil, R. and Brady, N. The Nature and Properties of Soils. Chapter 2, Formation of soils from parent materials. Available on OAKS.
 4. [Anderson - Introduction to Soil Science -Iowa State University - basic introduction ](https://iastate.pressbooks.pub/introsoilscience/)
-5. [Blume et al., 2016. Soil Science - very nice reference book - PDF download on campus](https://link.springer.com/book/10.1007/978-3-642-30942-7)
+5. [Blume et al., 2016. Soil Science - good reference book - PDF download available on campus](https://link.springer.com/book/10.1007/978-3-642-30942-7)
 6. [Soil Science | Natural Resources Conservation Service (usda.gov)](https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/soil-science)
 7. [Technical References for Soils | Natural Resources Conservation Service (usda.gov)](https://www.nrcs.usda.gov/resources/guides-and-instructions/technical-references-for-soils)
-8. Schoeneberger, P.J., D.A. Wysocki, E.C. Benham, and Soil Survey Staff. 2012. Field book for describing and sampling soils, Version 3.0. Natural Resources Conservation Service, National Soil Survey Center, Lincoln, NE. [Download here.](https://www.nrcs.usda.gov/sites/default/files/2022-09/field-book.pdf) [Order your personal copy here.](https://nrcspad.sc.egov.usda.gov/DistributionCenter/product.aspx?ProductID=991)
+8. Schoeneberger, P.J., D.A. Wysocki, E.C. Benham, and Soil Survey Staff. 2012. Field book for describing and sampling soils, Version 3.0. Natural Resources Conservation Service, National Soil Survey Center, Lincoln, NE. [Download here.](https://www.nrcs.usda.gov/sites/default/files/2022-09/field-book.pdf) [Order your copy here.](https://nrcspad.sc.egov.usda.gov/DistributionCenter/product.aspx?ProductID=991)
 9. [Order your Soils-NRCS books or other materials at this link](https://nrcspad.sc.egov.usda.gov/DistributionCenter/search.aspx?keywords=lcp$)
 
 % Collaborate using this link: https://cofc-my.sharepoint.com/:wb:/g/personal/vulavav_cofc_edu/EcT_g2adfGZCsr5kTX1C-80BQmQxf5lez_YkzKTMA7ezrg?e=6HOtaJ

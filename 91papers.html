@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -65,6 +68,7 @@
     <link rel="prev" title="7.2 Climate Change Impacts" href="72ClimateCZ.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -125,7 +117,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -155,21 +148,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Critical Zone Science - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -234,9 +223,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -333,24 +327,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -399,7 +385,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="literature-review">
 <h1>Literature Review<a class="headerlink" href="#literature-review" title="Link to this heading">#</a></h1>
-<p>In this appendix, I will include basic information needed to be successful in this class.</p>
+<p>In this appendix, I will include the basic information needed to be successful in this class.</p>
 <section id="what-to-look-for-in-papers">
 <h2>What to look for in papers<a class="headerlink" href="#what-to-look-for-in-papers" title="Link to this heading">#</a></h2>
 <p><strong>Scientific Method</strong>:</p>
@@ -421,8 +407,8 @@ document.write(`
 <h2>Conducting Literature Review<a class="headerlink" href="#conducting-literature-review" title="Link to this heading">#</a></h2>
 <section id="what-is-a-literature-review">
 <h3>What is a literature review?<a class="headerlink" href="#what-is-a-literature-review" title="Link to this heading">#</a></h3>
-<p><strong>A literature review is an integrated analysis</strong>– not just a summary– of scholarly writings and other relevant evidence related directly to your research question.  That is, it represents a synthesis of the evidence that provides background information on your topic and shows a association between the evidence and your research question.</p>
-<p>A literature review may be a stand alone work or the introduction to a larger research paper, depending on the assignment.  Rely heavily on the guidelines your instructor has given you.</p>
+<p><strong>A literature review is an integrated analysis</strong>– not just a summary– of scholarly writings and other relevant evidence related directly to your research question.  It represents a synthesis of the evidence that provides background information on your topic and shows an association between the evidence and your research question.</p>
+<p>A literature review may be a stand-alone work or the introduction to a larger research paper, depending on the assignment.  Rely heavily on the guidelines your instructor has given you.</p>
 <p><strong>Why is it important?</strong></p>
 <p>A literature review is important because it:</p>
 <ul class="simple">
@@ -435,12 +421,12 @@ document.write(`
 </ul>
 <section id="choose-a-topic">
 <h4>Choose a topic<a class="headerlink" href="#choose-a-topic" title="Link to this heading">#</a></h4>
-<p>Define your research question.  Your literature review should be guided by your central research question.  the literature represents background and research developments related to a specific research question, interpreted and analyzed by you in a synthesized way.</p>
+<p>Define your research question.  Your central research question should guide your literature review.  The literature represents background and research developments related to a specific research question, which you interpret and analyze in a synthesized way.</p>
 <p>Tips:</p>
 <ul class="simple">
 <li><p>Make sure your research question is not too broad or too narrow.  Is it manageable?</p></li>
 <li><p>Begin writing down terms that are related to your question. These will be useful for searches later.</p></li>
-<li><p>If you have the opportunity, discuss your topic with your professor and your class mates.</p></li>
+<li><p>If you can, discuss your topic with your professor and classmates.</p></li>
 </ul>
 </section>
 <section id="scope-of-your-review">
@@ -455,7 +441,7 @@ document.write(`
 <h4>Select the databases<a class="headerlink" href="#select-the-databases" title="Link to this heading">#</a></h4>
 <p>Make a list of the databases you will search.  Try the following databases:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://scholar.google.com/">Google Scholar</a>. Google uses a similar search algorithm as regular searches to find most relevant articles.</p></li>
+<li><p><a class="reference external" href="https://scholar.google.com/">Google Scholar</a>. Google uses a similar search algorithm as regular searches to find the most relevant articles.</p></li>
 <li><p><a class="reference external" href="https://www.sciencedirect.com/">ScienceDirect</a>- Elsevier’s search engine focused on hundreds of journals published by Elsevier.</p></li>
 <li><p><a class="reference external" href="https://www.scopus.com/search/form.uri?display=basic&amp;amp;zone=header&amp;amp;origin=#basic">Scopus</a>- another very large database engine from Elsevier.</p></li>
 <li><p><a class="reference external" href="https://www.webofscience.com/wos/woscc/basic-search">Web of Science</a> - popular and widely used database</p></li>
@@ -465,13 +451,13 @@ document.write(`
 <h4>Conduct your search<a class="headerlink" href="#conduct-your-search" title="Link to this heading">#</a></h4>
 <p>Search to find the evidence for your research. Keep track of your searches.</p>
 <ul class="simple">
-<li><p>Use the key words in your question, as well as synonyms for those words, as terms in your search.</p></li>
-<li><p>Save the searches in the databases. This saves time when you want to redo, or modify, the searches. It is also helpful to use as a guide is the searches are not finding any useful results.</p></li>
+<li><p>Use the keywords in your question and synonyms for those words as terms in your search.</p></li>
+<li><p>Save the searches in the databases. This saves time when you want to redo or modify the searches. It is also helpful to use as a guide if the searches do not find useful results.</p></li>
 <li><p>Review the abstracts of research studies carefully. This will save you time.</p></li>
-<li><p>Use the bibliographies and references of research studies you find to locate others.</p></li>
-<li><p>Check with your professor, or a subject expert in the field, if you are missing any key works in the field.</p></li>
+<li><p>Use the bibliographies and references of research studies to locate others.</p></li>
+<li><p>Check with your professor or a subject expert in the field if you are missing any key works.</p></li>
 <li><p>Ask your librarian for help at any time.</p></li>
-<li><p>Use a citation manager, such as Mendeley as the repository for your citations. Visit <a class="reference external" href="https://www.mendeley.com/?interaction_required=true">Mendeley - Reference Management Software</a> and sign up for a free account.  Download the desktop software to link to your Word app.</p></li>
+<li><p>Use a citation manager, such as Mendeley, as the repository for your citations. Visit <a class="reference external" href="https://www.mendeley.com/?interaction_required=true">Mendeley - Reference Management Software</a> and create a free account.  Download the desktop software to link to your Word app.</p></li>
 </ul>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/OzFHGFnAM2Q" 
@@ -486,14 +472,14 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <li><p>Was the research funded by a source that could influence the findings?</p></li>
 <li><p>What were the research methodologies? Analyze its literature review, the samples and variables used, the results, and the conclusions.</p></li>
 <li><p>Does the research seem to be complete? Could it have been conducted more soundly? What further questions does it raise?</p></li>
-<li><p>If there are conflicting studies, why do you think that is?</p></li>
+<li><p>If there are conflicting studies, why do you think that is the case?</p></li>
 <li><p>How are the authors viewed in the field? Has this study been cited? If so, how has it been analyzed?</p></li>
 </ul>
 <p>Tips:</p>
 <ul class="simple">
 <li><p>Review the abstracts carefully.</p></li>
 <li><p>Keep careful notes so that you may track your thought processes during the research process.</p></li>
-<li><p>Create a matrix of the studies for easy analysis, and synthesis, across all of the studies.</p></li>
+<li><p>Create a matrix of the studies for easy analysis and synthesis across all of the studies.</p></li>
 </ul>
 </section>
 </section>
@@ -546,7 +532,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -618,8 +605,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

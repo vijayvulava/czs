@@ -1,21 +1,20 @@
 # 6 Geochemistry and Biogeochemistry
 
-Biogeochemistry plays an important role in Critical Zone processes. The CZ is a complex system of interacting regolith, water, air, nutrients, and organisms. Biogeochemistry examines how these components interact and how they are transformed over time. Biogeochemical processes within the CZ are responsible for regulating nutrient cycling and energy flow through the CZ. They also play a critical role in supporting terrestrial life, including humanity. Biogeochemistry-based knowledge can be used to solve humanity’s grand challenges including climate change and environmental stability.
+Biogeochemistry plays a crucial role in the processes of the Critical Zone (CZ), a complex system composed of interacting regolith, water, air, nutrients, and organisms. This field of study examines how these components interact and transform over time. The biogeochemical processes within the CZ are essential for regulating nutrient cycling and energy flow, which are vital for sustaining terrestrial life, including that of humans. Insights gained from biogeochemistry can contribute to addressing significant challenges facing humanity, such as climate change and environmental stability.
 
-This module examines the integrated roles that biology, geology, and chemistry play in the CZ. This module highlights the biogeochemical functions the CZ plays. Through the subunits of phosphorus and eutrophication, and nutrient inputs and transformations, students will come to understand the role of biogeochemistry in Critical Zone processes.
+This module explores the integrated roles of biology, geology, and chemistry in the CZ, with an emphasis on its biogeochemical functions. Through specific subunits focusing on phosphorus and eutrophication, as well as nutrient inputs and transformations, students will develop a deeper understanding of biogeochemistry's role in Critical Zone processes.
 
-As you are studying biogeochemistry within the CZ, consider how you will 
-- develop scientific and geoscientific habit of mind through biogeochemical-based activities.
-- evaluate the chemical and biological processes and reactions that govern the composition of the CZ.
-- explain the role of CZ services in supporting terrestrial life, including humanity.
-- explain and use examples of how organisms and biodiversity affect biogeochemical processes.
-- use data, and examples from published scientific literature to explain critical zone functions.
-- explain some of the common methods used in biogeochemical research.
-- explain the effect of differences in land-use on nutrient cycling and critical zone functions.
-
+As you study biogeochemistry within the CZ, consider how you will: 
+- Develop a scientific and geoscientific mindset through biogeochemical activities.
+- Evaluate the chemical and biological processes that determine the composition of the CZ.
+- Explain the significance of CZ services in supporting terrestrial life, including that of humans.
+- Use examples to illustrate the impact of organisms and biodiversity on biogeochemical processes.
+- Utilize data and examples from published scientific literature to explain the functions of the CZ.
+- Describe common methods used in biogeochemical research.
+- Analyze how variations in land use affect nutrient cycling and Critical Zone functions.
 
 ## Goals of the Module
 
-**Overarching Learning Objective:** Describe and characterize how interaction among the atmosphere, lithosphere, hydrosphere, biosphere, and soil (The CZ) support and influence life.
-- Unit 6.1: Scientific articles on atmospheric inputs into tropical rain forests and the movement of nutrients through the biosphere and within aquatic ecosystems.
--  Unit 6.2: The role of phosphorous loading into water-based resources as does the interactions of nutrients in agricultural systems examined in relevant data sets.
+**Overarching Learning Objective:** Describe and characterize how interactions among the atmosphere, lithosphere, hydrosphere, biosphere, and soil (the CZ) support and influence life.  
+- Unit 6.1: Review scientific articles discussing atmospheric inputs into tropical rainforests and nutrient movement through the biosphere and aquatic ecosystems. 
+- Unit 6.2: Examine the role of phosphorus loading into water resources and the interactions of nutrients in agricultural systems using relevant data sets.

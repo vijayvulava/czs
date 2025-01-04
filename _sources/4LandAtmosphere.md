@@ -1,16 +1,15 @@
 # 4 Land-Atmosphere Exchange
 
-In this module we will analyze how energy and carbon flow through the CZ and how they drive CZ processes. We will learn how to analyze data and use simple models to interpret spatial and temporal trends in energy flow and reservoirs at a catchment scale to answer questions about CZ processes.
+This module will explore the movement of energy and carbon within the critical zone (CZ) and how these processes influence the CZ itself. We will investigate methods for analyzing data and applying basic models to understand spatial and temporal patterns in energy flow and reservoirs at the catchment level. Our goal is to address inquiries related to critical zone processes.
 
-As you are studying interactions between Earth's surface and the atmosphere, consider how you will 
-- trace primary radiative forcings through the CZ using data derived from field sites,
-- use micro-meteorological data to describe the differences between the main atmospheric fluxes at different CZ regions,
-- relate carbon flux data collected at various scales to understand the regional exchange of carbon, and
-- analyze how energy, carbon, and nutrients flow through the CZ and drive CZ processes.
-
+As we examine the interactions between the Earth's surface and the atmosphere, consider the following points:
+- Track primary radiative forcings throughout the critical zone by utilizing data obtained from field locations.
+- Use micro-meteorological data to explain variations in key atmospheric fluxes across different areas of the critical zone.
+- Connect carbon flux data collected at various scales to gain insight into regional carbon exchange.
+- Examine how energy, carbon, and nutrients circulate through the critical zone and influence its processes.
 
 ## Goals of the Module
 
-**Overarching Learning Objective:** Describe and characterize how interaction among the atmosphere, lithosphere, hydrosphere, biosphere, and soil (The CZ) support and influence life.
-- Unit 4.1: The use of water and energy budgets and mass/energy conservation are both ways that scientists evaluate their understanding of the interactions among different systems and are the main topics of this unit.
-- Unit 4.2: The use of carbon budgets and mass conservation are both ways that scientists evaluate their understanding of the interactions among different systems and are the main topics of this unit.
+**Overarching Learning Objective:** Explain and define how the interactions among the atmosphere, lithosphere, hydrosphere, biosphere, and soil (the critical zone) support and affect life.
+- Unit 4.1: Water and energy budgets, along with mass and energy conservation, are methods that scientists use to assess their understanding of interactions among various systems. These are the primary subjects of this unit.
+- Unit 4.2: Carbon budgets and mass conservation are approaches scientists apply to evaluate their understanding of interactions among different systems, which are the key topics of this unit.

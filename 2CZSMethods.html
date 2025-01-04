@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -66,6 +69,7 @@
     <link rel="prev" title="1.3 Systems Approach" href="13SystemsOverview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +149,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Critical Zone Science - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -235,9 +224,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -334,24 +328,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -389,28 +375,28 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="methods-in-cz-science">
 <h1>2 Methods in CZ Science<a class="headerlink" href="#methods-in-cz-science" title="Link to this heading">#</a></h1>
-<p>This module presents basic scientific methods, such as literature searches and graphing (Unit 2.1) as well as CZ specific methods, such as biogeochemistry, isotope geochemistry, geospatial investigation, and systems modeling (Unit 2.2), that will be used in later modules. The exercises presented in the two units are designed to introduce students to skills that they will build on in this course and in other geosciences courses.</p>
-<p>This module is an introduction to methods that will be used in the remainder of the course. CZ science is the study of Earth’s surface, where all humans live. The methods introduced here provide a base for investigations of the natural environment as well as human-induced changes to the environment such as perturbations to the hydrologic cycle, carbon and nutrient cycles and soil degradation. The unit will also provide a basis to investigate the environment from an interdisciplinary perspective. Specifically, this module will:</p>
+<p>This module introduces fundamental scientific methods, such as literature searches and data visualization techniques (Unit 2.1), alongside specific methods related to the Critical Zone (CZ), including biogeochemistry, isotope geochemistry, geospatial investigation, and systems modeling (Unit 2.2). These methods will be essential in later modules. The exercises in these units are designed to equip students with skills that they will further develop in this and other geoscience courses.</p>
+<p>The focus of this module is on the methods that will be utilized throughout the remainder of the course. Critical Zone science examines Earth’s surface, where all human life exists. The techniques introduced here provide a foundation for investigating the natural environment and the human-induced changes that affect it, such as disruptions to the hydrologic cycle, carbon and nutrient cycles, and soil degradation. This module will also establish a basis for exploring environmental issues from an interdisciplinary perspective. Specifically, it will:</p>
 <ul class="simple">
-<li><p>Illustrate how geosciences related grand challenges are addressed by CZ methods.</p></li>
-<li><p>Learn data visualization and analysis skills using authentic data.</p></li>
-<li><p>Learn how to use biogeochemistry and isotope geochemistry methods to investigate natural and anthropogenic influences on the CZ.</p></li>
-<li><p>Familiarize students with geospatial techniques necessary to investigate Earth’s CZ.</p></li>
-<li><p>Investigate systems modeling as a method to illuminate CZ processes.</p></li>
-<li><p>Use library reference resources and the construction of an annotated bibliography around a self-identified research question related to the interdisciplinary nature of CZ science.</p></li>
+<li><p>Illustrate how Critical Zone methods address significant challenges in geosciences.</p></li>
+<li><p>Teach data visualization and analysis skills using real-world data.</p></li>
+<li><p>Demonstrate the application of biogeochemistry and isotope geochemistry methods to examine both natural and human-induced influences on the Critical Zone.</p></li>
+<li><p>Familiarize students with the geospatial techniques required to study Earth’s Critical Zone.</p></li>
+<li><p>Explore systems modeling as a method to understand Critical Zone processes.</p></li>
+<li><p>Guide students in using library resources to construct an annotated bibliography centered on a self-identified research question related to the interdisciplinary nature of Critical Zone science.</p></li>
 </ul>
 <section id="goals-of-the-module">
 <h2>Goals of the Module<a class="headerlink" href="#goals-of-the-module" title="Link to this heading">#</a></h2>
-<p><strong>Specific Module Goals</strong></p>
+<p><strong>Specific Module Goals:</strong></p>
 <ul class="simple">
 <li><p>Introduce students to effective literature review methods and hypothesis development.</p></li>
-<li><p>Improve students’ capacity to interpret and present data using standard graphical methods.</p></li>
-<li><p>Engage students in specific methods to understand the nature of CZ science.</p></li>
+<li><p>Enhance students’ ability to interpret and present data using standard graphical methods.</p></li>
+<li><p>Engage students in specific techniques to understand the nature of Critical Zone science.</p></li>
 </ul>
-<p><strong>Overarching Learning Objective:</strong> Describe and characterize how interaction among the atmosphere, lithosphere, hydrosphere, biosphere, and soil (The CZ) support and influence life.</p>
+<p><strong>Overarching Learning Objective:</strong> Describe and characterize how the interactions among the atmosphere, lithosphere, hydrosphere, biosphere, and soil (the Critical Zone) support and influence life.</p>
 <ul class="simple">
-<li><p>Unit 2.1: Provides skills on how to conduct library research on critical-zone topics.</p></li>
-<li><p>Unit 2.2: Introduces CZ specific methods used to investigate Earth’s CZ.</p></li>
+<li><p>Unit 2.1: Provides skills for conducting library research on Critical Zone topics.</p></li>
+<li><p>Unit 2.2: Introduces CZ-specific methods used to investigate Earth’s Critical Zone.</p></li>
 </ul>
 </section>
 </section>
@@ -470,7 +456,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -531,8 +518,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

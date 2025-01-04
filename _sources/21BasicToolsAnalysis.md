@@ -1,80 +1,83 @@
 # 2.1 Basic Tools and Analysis
 
-This module is an introduction to methods that will be used in the remainder of the course. CZ science is the study of Earth's surface, where all humans live. The methods introduced here provide a base for investigations of the natural environment as well as human-induced changes to the environment such as perturbations to the hydrologic cycle, carbon and nutrient cycles and soil degradation. The unit will also provide a basis to investigate the environment from an interdisciplinary perspective. Specifically, this module will:
-* Illustrate how geosciences related grand challenges are addressed by CZ methods.
-* Learn data visualization and analysis skills using authentic data.
-* Learn how to use biogeochemistry and isotope geochemistry methods to investigate natural and anthropogenic influences on the CZ.
-* Familiarize students with geospatial techniques necessary to investigate Earth's CZ.
-* Investigate systems modeling as a method to illuminate CZ processes.
-* Use library reference resources and the construction of an annotated bibliography around a self-identified research question related to the interdisciplinary nature of CZ science.
+This module introduces the methods that will be used throughout the remainder of the course. Critical Zone (CZ) science studies the Earth's surface, where all humans reside. The methods introduced in this module will establish a foundation for investigating the natural environment and human-induced changes, including disturbances to the hydrologic cycle, carbon and nutrient cycles, and soil degradation. Additionally, this unit will lay the groundwork for examining the environment from an interdisciplinary perspective. Specifically, this module will:
+
+* Demonstrate how the grand challenges related to geosciences are addressed using CZ methods.
+* Teach data visualization and analysis skills using authentic data.
+* Introduce biogeochemistry and isotope geochemistry methods to explore natural and anthropogenic influences on the CZ.
+* Familiarize students with geospatial techniques essential for studying the Earth's CZ.
+* Investigate systems modeling as a means to illuminate CZ processes.
+* Guide the use of library resources and the construction of an annotated bibliography based on a self-identified research question related to the interdisciplinary nature of CZ science.
 
 
 ## Annotated Bibliography
 
 ### What is Annotated Bibliography
 
-An annotated bibliography includes descriptions and explanations of your listed sources beyond the basic citation information you usually provide.
+An annotated bibliography includes descriptions and explanations of your listed sources that go beyond the basic citation information you typically provide.
 
-One of the reasons behind citing sources and compiling a general bibliography is so that you can prove you have done some valid research to back up your argument and claims. Readers can refer to a citation in your bibliography and then go look up the material themselves. When inspired by your text or your argument, interested researchers can access your resources. They may wish to double check a claim or interpretation you’ve made, or they may simply wish to continue researching according to their interests. But think about it: even though a bibliography provides a list of research sources of all types that includes publishing information, how much does that really tell a researcher or reader about the sources themselves?
+One reason for citing sources and compiling a general bibliography is to demonstrate that you have conducted valid research to support your arguments and claims. Readers can refer to citations in your bibliography and look up the materials themselves. When inspired by your text or arguments, interested researchers may want to verify a claim or interpretation you've made or continue researching based on their interests. However, while a bibliography offers a list of research sources with publishing details, it often lacks comprehensive information about the sources themselves.
 
-An annotated bibliography provides specific information about each source you have used. As a researcher, you have become an expert on your topic: you have the ability to explain the content of your sources, assess their usefulness, and share this information with others who may be less familiar with them. Think of your paper as part of a conversation with people interested in the same things you are; the annotated bibliography allows you to tell readers what to check out, what might be worth checking out in some situations, and what might not be worth spending the time on. It’s kind of like providing a list of good movies for your classmates to watch and then going over the list with them, telling them why this movie is better than that one or why one student in your class might like a particular movie better than another student would. You want to give your audience enough information to understand basically what the movies are about and to make an informed decision about where to spend their money based on their interests.
+An annotated bibliography provides specific information about each source you have used. As a researcher, you become an expert on your topic, enabling you to explain the content of your sources, assess their usefulness, and share this information with others who might be less familiar with them. Consider your paper part of a conversation with people who share your interests; the annotated bibliography allows you to recommend resources, suggest what might be worth checking out, and indicate what may not be worth the reader's time. It's akin to providing a list of good movies for your classmates and discussing them, explaining why one movie is better or why a particular student might enjoy one film more. Your goal is to give your audience enough information to understand the main content of the sources and make informed decisions about where to direct their attention based on their interests.
 
-An annotated bibliography is a list of citations to books, articles, and documents. Each citation is followed by a brief (usually about 150 words) descriptive and evaluative paragraph, the annotation. The purpose of the annotation is to inform the reader of the relevance, accuracy, and quality of the sources cited.
+An annotated bibliography consists of citations for books, articles, and documents. Each citation is followed by a brief (usually about 150 words) descriptive and evaluative paragraph known as the annotation. The annotation informs the reader about the cited sources' relevance, accuracy, and quality.
 
-*Annotations are not abstracts!* Abstracts are the purely descriptive summaries often found at the beginning of scholarly journal articles or in periodical indexes. Annotations are descriptive and critical; they may describe the author's point of view, authority, or clarity and appropriateness of expression.
+*It is important to note that annotations are not abstracts.* Abstracts are purely descriptive summaries commonly found at the beginning of scholarly journal articles or in periodical indexes. Annotations are descriptive and critical; they may discuss the author's perspective, authority, and the clarity and appropriateness of expression.
+
 
 ### What does an annotated bibliography do?
 
-**A good annotated bibliography:**
+**A Good Annotated Bibliography:**
 
-- Encourages you to think critically about the content of the works you are using, their place within a field of study, and their relation to your own research and ideas.
-- Proves you have read and understand your sources.
+- Encourages critical thinking about the content of the works you are using, their place within a field of study, and their relation to your research and ideas.
+- Demonstrates that you have read and understand your sources.
 - Establishes your work as a valid source and you as a competent researcher.
-- Situates your study and topic in a continuing professional conversation.
-- Provides a way for others to decide whether a source will be helpful to their research if they read it.
-- Could help interested researchers determine whether they are interested in a topic by providing background information and an idea of the kind of work going on in a field.
+- Situate your study and topic within an ongoing professional conversation.
+- Provides a way for others to determine whether a source will be helpful to their research.
+- Helps interested researchers gauge their interest in a topic by providing background information and an overview of the current work in the field.
 
-### What elements might an annotation include?
+### What Elements Might an Annotation Include?
 
-1. Bibliography according to the appropriate citation style (MLA, APA, CBE/CSE, etc.).
-2. Explanation of main points and/or purpose of the work—basically, its thesis—which shows among other things that you have read and thoroughly understand the source.
+1. A bibliography in the appropriate citation style (MLA, APA, CBE/CSE, etc.).
+2. An explanation of the work's main points and/or purpose—essentially, its thesis—demonstrating that you have read and thoroughly understood the source.
 3. Verification or critique of the authority or qualifications of the author.
-4. Comments on the worth, effectiveness, and usefulness of the work in terms of both the topic being researched and/or your own research project.
-5. The point of view or perspective from which the work was written. For instance, you may note whether the author seemed to have particular biases or was trying to reach a particular audience.
-6. Relevant links to other work done in the area, like related sources, possibly including a comparison with some of those already on your list. You may want to establish connections to other aspects of the same argument or opposing views.
+4. Comments on the work's worth, effectiveness, and usefulness of your research topic and project.
+5. The point of view or perspective from which the work was written. For example, you might note whether the author has specific biases or is targeting a particular audience.
+6. Relevant links to other work in the area, such as related sources, including comparisons with other works on your list. You may want to identify connections to different aspects of the same argument or opposing views.
 
-The first four elements above are usually a necessary part of the annotated bibliography. Points 5 and 6 may involve a little more analysis of the source, but you may include them in other kinds of annotations besides evaluative ones. Depending on the type of annotation you use, which this handout will address in the next section, there may be additional kinds of information that you will need to include.
+The first four elements listed above are typically essential parts of an annotated bibliography. Points 5 and 6 may involve a deeper analysis of the source, but they can also be included in other annotations besides evaluative ones. Depending on the type of annotation you use, which this guide will address in the next section, you may need to include additional information.
 
-For more extensive research papers (probably ten pages or more), you often see resource materials grouped into sub-headed sections based on content, but this probably will not be necessary for the kinds of assignments you’ll be working on. For longer papers, ask your instructor about her preferences concerning annotated bibliographies.
+Resource materials are often grouped into sub-headed sections based on content for more extensive research papers (typically ten pages or longer). However, this may not be necessary for the assignments you will be working on. For longer papers, consult your instructor about her preferences regarding annotated bibliographies.
 
-### Types of annotations
+### Types of Annotations
 
-As you now know, one annotation does not fit all purposes! There are different kinds of annotations, depending on what might be most important for your reader to learn about a source. Your assignments will usually make it clear which citation format you need to use, but they may not always specify which type of annotation to employ. In that case, you’ll either need to pick your instructor’s brain a little to see what she wants or use clue words from the assignment itself to make a decision. For instance, the assignment may tell you that your annotative bibliography should give evidence proving an analytical understanding of the sources you’ve used. The word analytical clues you in to the idea that you must evaluate the sources you’re working with and provide some kind of critique.
+As you now know, one annotation type does not fit all purposes! There are different kinds of annotations, depending on what you want your reader to learn about a source. Your assignments usually specify the citation format you must use, but they may not always clarify which annotation type to employ. In that case, consider asking your instructor for guidance or looking for keywords in the assignment to help you decide. For example, suppose the assignment states that your annotated bibliography should provide evidence demonstrating an analytical understanding of the sources you've used. In that case, "analytical" indicates that you must evaluate the sources and include some critique.
 
 ### The Process
 
-Creating an annotated bibliography calls for the application of a variety of intellectual skills: concise exposition, succinct analysis, and informed library research.
+Creating an annotated bibliography calls for applying various intellectual skills: concise exposition, succinct analysis, and informed library research.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/32OjXkZXy34" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-First, locate and record citations to books, periodicals, and documents that may contain useful information and ideas on your topic. Briefly examine and review the actual items. Then choose those works that provide a variety of perspectives on your topic.
+First, locate and record citations for books, periodicals, and documents that may contain helpful information and ideas related to your topic. Briefly examine and review the selected items, then choose works that provide a range of perspectives. 
 
-Cite the book, article, or document using the appropriate style.
+Cite each book, article, or document using the appropriate citation style. 
 
-Write a concise annotation that summarizes the central theme and scope of the book or article. Include one or more sentences that (a) evaluate the authority or background of the author, (b) comment on the intended audience, (c) compare or contrast this work with another you have cited, or (d) explain how this work illuminates your bibliography topic.
+Write a concise annotation summarizing the work's central theme and scope. Include one or more of the following elements: (a) an evaluation of the author’s authority or background, (b) a comment on the intended audience, (c) a comparison with another work you have cited, or (d) an explanation of how this work enhances your bibliography topic.
 
-#### Conduct your searches to find the evidence. Keep track of your searches.
+#### Conduct Your Searches to Find Evidence:
 
-- Use the key words in your question, as well as synonyms for those words, as terms in your search. 
-- Save the searches in the databases. This saves time when you want to redo, or modify, the searches. It is also helpful to use as a guide is the searches are not finding any useful results.
-- Review the abstracts of research studies carefully. This will save you time.
-- Use the bibliographies and references of research studies you find to locate others.
-- Check with your professor, or a subject expert in the field, if you are missing any key works in the field.
-- Ask your librarian for help at any time.
-- Use a citation manager, such as Mendeley as the repository for your citations. Visit [Mendeley - Reference Management Software](https://www.mendeley.com/?interaction_required=true) and sign up for a free account.  Download the desktop software to link to your Word app.
+- Use keywords from your question as well as synonyms in your search terms. 
+- Save your searches in databases to save time when you want to redo or modify them. This will also serve as a helpful guide if your searches are not yielding valuable results. 
+- Carefully review the abstracts of research studies to save time.
+- Utilize the bibliographies and references of research studies you find to discover additional sources. 
+- Consult your professor or a subject expert if you are missing key field works. 
+- Don't hesitate to ask your librarian for assistance at any stage.
+- Use a citation manager, such as Mendeley, as a repository for your citations. Visit [Mendeley - Reference Management Software](https://www.mendeley.com/?interaction_required=true) to sign up for a free account and download the desktop software to link it to your Word application.
+
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/DVR2x3F84SQ" 
@@ -84,7 +87,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Data Analysis and Visualization
 
-Data is at the core of all scientific endeavors.  The data could be in form of measurements in the field or the lab, geographic coordinates, census measurements, maps, etc. Effective visualization of these data help advance our understanding of the underlying science in any discipline.
+Data is fundamental to all scientific endeavors. It can take various forms, including measurements collected in the field or laboratory, geographic coordinates, census data, maps, and more. Effective visualization of this data enhances our understanding of the underlying science across different disciplines.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/5Zg-C8AAIGg" 
@@ -105,7 +108,7 @@ Use Microsoft Excel to process, learn about trends, and visualize data.
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-Maps include geographical information and can be a powerful tool to also show other types of data as many different layers on top of the underlying geographical information.  You can use Google Earth or ArcGIS Online to create different kind of maps.  Use the free access to ArcGIS on campus to learn how to make basic maps. [Get started with ArcGIS Online | Learn ArcGIS](https://learn.arcgis.com/en/projects/get-started-with-arcgis-online/).
+Maps provide geographical information and can effectively display various data types by layering them on top of this foundational information. You can use tools like Google Earth or ArcGIS Online to create different kinds of maps. Take advantage of free access to ArcGIS on campus to learn how to make basic maps. [Get started with ArcGIS Online | Learn ArcGIS](https://learn.arcgis.com/en/projects/get-started-with-arcgis-online/).
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/toawx4D-htc" 
@@ -121,5 +124,5 @@ frameborder="0" allowfullscreen class="video"></iframe>
 ## Readings and resources for this section
 
 1. [Annotated Bibliographies – The Writing Center • University of North Carolina at Chapel Hill (unc.edu)](https://writingcenter.unc.edu/tips-and-tools/annotated-bibliographies/)
-2. All CZO related data is now located here: [Find, Analyze and Share Water Data | CUAHSI HydroShare](https://www.hydroshare.org/)
+2. All CZO-related data is now located here: [Find, Analyze and Share Water Data | CUAHSI HydroShare](https://www.hydroshare.org/)
 3. Visual data client: [CUAHSI HIS HydroClient](https://data.cuahsi.org/)

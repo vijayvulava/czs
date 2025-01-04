@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="6.1 Biogeochemistry in the CZ" href="61Biogeochemistry.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Critical Zone Science - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -237,9 +226,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -336,24 +330,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -399,8 +385,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="biogeochemical-cycles">
 <h1>6.2 Biogeochemical Cycles<a class="headerlink" href="#biogeochemical-cycles" title="Link to this heading">#</a></h1>
-<p>Biogeochemical cycles refer to the pathways by which essential elements, such as <span class="math notranslate nohighlight">\(\ce{C}\)</span>, <span class="math notranslate nohighlight">\(\ce{N}\)</span>, and <span class="math notranslate nohighlight">\(\ce{P}\)</span>, cycle through the Earth’s ecosystems. These cycles involve the interaction of biological, geological, and chemical processes that facilitate the transfer of these materials between living organisms and their environment.  These cycles also involve processes such as photosynthesis, respiration, decomposition, weathering, and nutrient uptake and release by plants and animals.</p>
-<p>The biogeochemical cycles help to maintain the balance of essential elements and compounds in the Earth’s ecosystems. Changes to these cycles through human activities like deforestation, land use change, or pollution, can have significant impacts on the health and functioning of ecosystems.</p>
+<p>Biogeochemical cycles refer to the pathways through which essential elements, such as carbon (C), nitrogen (N), and phosphorus (P), circulate in Earth’s ecosystems. These cycles involve the interplay of biological, geological, and chemical processes that facilitate the transfer of these materials between living organisms and their environments. Key processes within these cycles include photosynthesis, respiration, decomposition, weathering, and the uptake and release of nutrients by plants and animals.</p>
+<p>These biogeochemical cycles are crucial for maintaining the balance of essential elements and compounds in ecosystems. However, human activities such as deforestation, land use changes, and pollution can significantly disrupt these cycles, impacting the health and functioning of ecosystems.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/Bn41lXKyVWQ" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -409,15 +395,15 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <ul class="simple">
 <li><p>nutrient pollution,</p></li>
 <li><p>agricultural importance, and</p></li>
-<li><p>CZ function and dynamics in relation to nutrient cycling.</p></li>
+<li><p>CZ function and dynamics as related to nutrient cycling.</p></li>
 </ul>
 <section id="the-carbon-cycle">
 <h2>The Carbon Cycle<a class="headerlink" href="#the-carbon-cycle" title="Link to this heading">#</a></h2>
-<p>The carbon cycle describes the movement of <span class="math notranslate nohighlight">\(\ce{C}\)</span> between the atmosphere, oceans, land, and living organisms. It involves both biotic and abiotic processes, including photosynthesis, respiration, decomposition, and the exchange of <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> between the atmosphere and oceans.</p>
+<p>The carbon cycle describes the movement of carbon between the atmosphere, oceans, land, and living organisms. It includes biotic and abiotic processes such as photosynthesis, respiration, decomposition, and carbon dioxide exchange between the atmosphere and oceans.</p>
 <figure class="margin-caption align-default" id="c-cycle">
 <img alt="https://openstax.org/apps/archive/20230220.155442/resources/e8f44d6ce2709457ad741448a53b4fecc7b51aa7" src="https://openstax.org/apps/archive/20230220.155442/resources/e8f44d6ce2709457ad741448a53b4fecc7b51aa7" />
 <figcaption>
-<p><span class="caption-number">Fig. 42 </span><span class="caption-text"><span class="math notranslate nohighlight">\(\ce{CO2}\)</span> gas exists in the atmosphere and is dissolved in water. Photosynthesis converts <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> gas to organic carbon, and respiration cycles the organic carbon back into <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> gas. Long-term storage of organic carbon occurs when matter from living organisms is buried deep underground and becomes fossilized. Volcanic activity and, more recently, human emissions bring this stored carbon back into the carbon cycle.</span><a class="headerlink" href="#c-cycle" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text"><span class="math notranslate nohighlight">\(\ce{CO2}\)</span> gas exists in the atmosphere and is dissolved in water. Photosynthesis converts <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> gas to organic carbon, and respiration cycles the organic carbon back into <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> gas. Long-term organic carbon storage occurs when matter from living organisms is buried deep underground and fossilized. Volcanic activity and, more recently, human emissions bring this stored carbon back into the carbon cycle.</span><a class="headerlink" href="#c-cycle" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://openstax.org/books/concepts-biology/pages/20-2-biogeochemical-cycles">20.2 Biogeochemical Cycles - Concepts of Biology | OpenStax</a></p>
 </div>
@@ -426,20 +412,22 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p>The <span class="math notranslate nohighlight">\(\ce{C}\)</span> cycle is most easily studied as two interconnected subcycles: one dealing with rapid carbon exchange among living organisms and the other dealing with the long-term cycling of carbon through geologic processes.</p>
 <section id="the-biological-carbon-cycle">
 <h3>The Biological Carbon Cycle<a class="headerlink" href="#the-biological-carbon-cycle" title="Link to this heading">#</a></h3>
-<p>Living organisms are connected in many ways, even between ecosystems. A good example of this connection is the exchange of <span class="math notranslate nohighlight">\(\ce{C}\)</span> between heterotrophs and autotrophs within and between ecosystems by way of atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>. <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> is the basic building block that autotrophs use to build multi-<span class="math notranslate nohighlight">\(\ce{C}\)</span>, high-energy compounds, such as glucose. The energy harnessed from the Sun is used by these organisms to form the covalent bonds that link <span class="math notranslate nohighlight">\(\ce{C}\)</span> atoms together. These chemical bonds store this energy for later use in the process of respiration. Most terrestrial autotrophs obtain their <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> directly from the atmosphere, while marine autotrophs acquire it in the dissolved form (bicarbonate, <span class="math notranslate nohighlight">\(\ce{HCO3-}\)</span>). However the <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> is acquired, a byproduct of fixing carbon in organic compounds is <span class="math notranslate nohighlight">\(\ce{O2}\)</span>. Photosynthetic organisms are responsible for maintaining approximately <span class="math notranslate nohighlight">\(\pu{21 \%}\)</span> of <span class="math notranslate nohighlight">\(\ce{O2}\)</span> content of the atmosphere that we observe today.</p>
-<p>The partners in biological carbon exchange are the heterotrophs (especially the primary consumers, largely herbivores). Heterotrophs acquire the high-energy carbon compounds from the autotrophs by consuming them and breaking them down by respiration to obtain cellular energy, such as ATP. The most efficient type of respiration, aerobic respiration, requires oxygen obtained from the atmosphere or dissolved in water. Thus, there is a constant exchange of <span class="math notranslate nohighlight">\(\ce{O2}\)</span> and <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> between the autotrophs (which need the carbon) and the heterotrophs (which need the oxygen). Autotrophs also respire and consume the organic molecules they form: using <span class="math notranslate nohighlight">\(\ce{O2}\)</span> and releasing <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>. They release more <span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span> as a waste product of photosynthesis than they use for their own respiration; therefore, there is excess available for the respiration of other aerobic organisms. Gas exchange through the atmosphere and water is one way that the carbon cycle connects all living organisms on Earth.</p>
+<p>Living organisms are interconnected in numerous ways, including across different ecosystems. A prime example of this connection is the exchange of carbon ((\ce{C})) between heterotrophs and autotrophs, facilitated by atmospheric carbon dioxide ((\ce{CO2})). Autotrophs utilize (\ce{CO2}) as a fundamental building block to create multi-carbon, high-energy compounds like glucose. These organisms harness energy from the Sun to form the covalent bonds that link carbon atoms together, storing this energy for later use in processes such as respiration.</p>
+<p>Most terrestrial autotrophs directly obtain (\ce{CO2}) from the atmosphere, while marine autotrophs acquire it in dissolved forms, such as bicarbonate ((\ce{HCO3-})). Regardless of the method of acquisition, a byproduct of carbon fixation in these organic compounds is oxygen ((\ce{O2})). Photosynthetic organisms are responsible for maintaining approximately 21% of the oxygen content in the atmosphere that we observe today.</p>
+<p>In this biological carbon exchange, heterotrophs—particularly primary consumers like herbivores—play a crucial role. Heterotrophs obtain high-energy carbon compounds by consuming autotrophs and breaking them down through respiration to generate cellular energy, such as ATP. Aerobic respiration is the most efficient form of respiration, which requires oxygen from the atmosphere or dissolved in water. Consequently, there is a continuous exchange of (\ce{O2}) and (\ce{CO2}) between autotrophs, which need carbon, and heterotrophs, which require oxygen.</p>
+<p>Autotrophs also engage in respiration, consuming the organic molecules they produce. They utilize (\ce{O2}) and release (\ce{CO2}). However, they produce more oxygen as a waste product of photosynthesis than they consume for respiration. This surplus oxygen is available for the respiration of other aerobic organisms. Gas exchange through the atmosphere and water is one of the key ways the carbon cycle connects all living organisms on Earth.</p>
 </section>
 <section id="the-biogeochemical-carbon-cycle">
 <h3>The Biogeochemical Carbon Cycle<a class="headerlink" href="#the-biogeochemical-carbon-cycle" title="Link to this heading">#</a></h3>
-<p>The movement of <span class="math notranslate nohighlight">\(\ce{C}\)</span> through land, water, and air is complex, and, in many cases, it occurs much more slowly geologically than the movement between living organisms. Carbon is stored for long periods in what are known as carbon reservoirs, which include the atmosphere, bodies of liquid water (mostly oceans), ocean sediment, soil, rocks (including fossil fuels), and Earth’s interior.</p>
-<p>As stated, the atmosphere is a major reservoir of carbon in the form of <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> that is essential to the process of photosynthesis. The level of <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> in the atmosphere is greatly influenced by the reservoir of carbon in the oceans. The exchange of carbon between the atmosphere and water reservoirs influences how much carbon is found in each, and each one affects the other reciprocally. <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> from the atmosphere dissolves in water and, unlike oxygen and nitrogen gas, reacts with water molecules to form ionic compounds. Some of these ions combine with <span class="math notranslate nohighlight">\(\ce{Ca^2+}\)</span> in the seawater to form <span class="math notranslate nohighlight">\(\ce{CaCO3}\)</span>, a major component of the shells of marine organisms. These organisms eventually form sediments on the ocean floor. Over geologic time, the <span class="math notranslate nohighlight">\(\ce{CaCO3}\)</span> forms limestone, which comprises the largest carbon reservoir on Earth.</p>
-<p>On land, carbon is stored in soil as organic carbon as a result of the decomposition of living organisms or from weathering of terrestrial rock and minerals. Deeper under the ground, at land and at sea, are fossil fuels, the anaerobically decomposed remains of plants that take millions of years to form. Fossil fuels are considered a non-renewable resource because their use far exceeds their rate of formation. A non-renewable resource is either regenerated very slowly or not at all. Another way for carbon to enter the atmosphere is from land (including land beneath the surface of the ocean) by the eruption of volcanoes and other geothermal systems. Carbon sediments from the ocean floor are taken deep within Earth by the process of subduction: the movement of one tectonic plate beneath another. Carbon is released as <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> when a volcano erupts or from volcanic hydrothermal vents.</p>
-<p><span class="math notranslate nohighlight">\(\ce{CO2}\)</span> is also added to the atmosphere by the animal husbandry practices of humans. The large number of land animals raised to feed Earth’s growing human population results in increased carbon-dioxide levels in the atmosphere caused by their respiration. This is another example of how human activity indirectly affects biogeochemical cycles in a significant way. Although much of the debate about the future effects of increasing atmospheric carbon on climate change focuses on fossils fuels, scientists take natural processes, such as volcanoes, plant growth, soil carbon levels, and respiration, into account as they model and predict the future impact of this increase.</p>
+<p>The movement of carbon through land, water, and air is complex and, in many cases, occurs much more slowly on geological timescales than the movement between living organisms. Carbon is stored for long periods in what are known as carbon reservoirs. These include the atmosphere, bodies of liquid water (mostly oceans), ocean sediments, soil, rocks (including fossil fuels), and Earth’s interior.</p>
+<p>The atmosphere serves as a major carbon reservoir, primarily in the form of carbon dioxide ((\ce{CO2})), which is essential for the process of photosynthesis. The levels of (\ce{CO2}) in the atmosphere are significantly influenced by the carbon stored in the oceans. The carbon exchange between the atmosphere and water reservoirs affects how much carbon is found in each, creating a reciprocal relationship. Carbon dioxide from the atmosphere dissolves in water and, unlike oxygen and nitrogen gas, reacts with water molecules to form ionic compounds. Some of these ions combine with (\ce{Ca^{2+}}) in seawater to form calcium carbonate ((\ce{CaCO3})), a significant component of marine organisms’ shells. Over geologic time, (\ce{CaCO3}) accumulates to form limestone, the largest carbon reservoir on Earth.</p>
+<p>On land, carbon is stored in the soil as organic carbon, resulting from the decomposition of living organisms and the weathering of terrestrial rocks and minerals. Beneath the surface, both on land and at sea, fossil fuels are formed from the anaerobic decomposition of plant remains over millions of years. Fossil fuels are considered non-renewable because their consumption far exceeds their formation rate. A non-renewable resource is regenerated very slowly or not at all. Carbon can also enter the atmosphere from land (including the seabed) through volcanic eruptions and other geothermal processes. Carbon sediments from the ocean floor are transported deep within Earth by subduction, the movement of one tectonic plate beneath another. Carbon is released as (\ce{CO2}) during volcanic eruptions or from hydrothermal vents.</p>
+<p>Additionally, human practices in animal husbandry add carbon dioxide to the atmosphere. The large number of livestock raised to feed Earth’s growing human population contributes to increased (\ce{CO2}) levels resulting from their respiration. This exemplifies how human activities indirectly impact biogeochemical cycles in significant ways. While much of the debate regarding the future effects of increasing atmospheric carbon on climate change centers on fossil fuels, scientists consider natural processes—such as volcanic activity, plant growth, soil carbon levels, and respiration—when modeling and predicting the future impacts of rising (\ce{CO2}) levels.</p>
 </section>
 </section>
 <section id="the-nitrogen-cycle">
 <h2>The Nitrogen Cycle<a class="headerlink" href="#the-nitrogen-cycle" title="Link to this heading">#</a></h2>
-<p>The nitrogen cycle is the biogeochemical cycle by which <span class="math notranslate nohighlight">\(\ce{N}\)</span> is converted into various chemical forms as it circulates among the biosphere, geosphere, hydrosphere, and atmosphere. The principal forms of <span class="math notranslate nohighlight">\(\ce{N}\)</span> are gaseous dinitrogen (<span class="math notranslate nohighlight">\(\ce{N2}\)</span>), ammonia (<span class="math notranslate nohighlight">\(\ce{NH3}\)</span>), ammonium (<span class="math notranslate nohighlight">\(\ce{NH4+}\)</span>), and nitrate (<span class="math notranslate nohighlight">\(\ce{NO3−}\)</span>).</p>
+<p>The nitrogen cycle is the biogeochemical process through which nitrogen ((\ce{N})) is transformed into various chemical forms as it moves through the biosphere, geosphere, hydrosphere, and atmosphere. The primary forms of nitrogen include gaseous dinitrogen ((\ce{N2})), ammonia ((\ce{NH3})), ammonium ((\ce{NH4+})), and nitrate ((\ce{NO3−})).</p>
 <figure class="margin-caption align-default" id="n-cycle">
 <img alt="https://openstax.org/apps/archive/20230220.155442/resources/fcd7625eabb80c9af5a289cf8b2ea6389950c9a1" src="https://openstax.org/apps/archive/20230220.155442/resources/fcd7625eabb80c9af5a289cf8b2ea6389950c9a1" />
 <figcaption>
@@ -449,63 +437,64 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 </figcaption>
 </figure>
-<p>Getting nitrogen into the living world is difficult. Plants and phytoplankton are not equipped to incorporate nitrogen from the atmosphere (which exists as tightly bonded, triple covalent <span class="math notranslate nohighlight">\(\ce{N2}\)</span>) even though this molecule comprises approximately <span class="math notranslate nohighlight">\(\pu{78 \%}\)</span> of the atmosphere. Nitrogen enters the living world via free-living and symbiotic bacteria, which incorporate nitrogen into their macromolecules through nitrogen fixation (conversion of <span class="math notranslate nohighlight">\(\ce{N2}\)</span>). Cyanobacteria live in most aquatic ecosystems where sunlight is present; they play a key role in nitrogen fixation. Cyanobacteria are able to use inorganic sources of nitrogen to “fix” nitrogen. <em>Rhizobium</em> bacteria live symbiotically in the root nodules of legumes (such as peas, beans, and peanuts) and provide them with the organic nitrogen they need. Free-living bacteria, such as <em>Azotobacter</em>, are also important nitrogen fixers.</p>
-<p>Organic nitrogen is especially important to the study of ecosystem dynamics since many ecosystem processes, such as primary production and decomposition, are limited by the available supply of nitrogen. the nitrogen that enters living systems by nitrogen fixation is eventually converted from organic nitrogen back into nitrogen gas by bacteria. This process occurs in three steps in terrestrial systems: ammonification, nitrification, and denitrification. First, the ammonification process converts nitrogenous waste from living animals or from the remains of dead animals into ammonium (<span class="math notranslate nohighlight">\(\ce{NH4+}\)</span>) by certain bacteria and fungi. Second, this ammonium is then converted to nitrites (<span class="math notranslate nohighlight">\(\ce{NO2−}\)</span>) by nitrifying bacteria, such as <em>Nitrosomonas</em>, through nitrification. Subsequently, nitrites are converted to nitrates (<span class="math notranslate nohighlight">\(\ce{NO3−}\)</span>) by similar organisms. Lastly, the process of denitrification occurs, whereby bacteria, such as <em>Pseudomonas</em> and <em>Clostridium</em>, convert the nitrates into nitrogen gas, thus allowing it to re-enter the atmosphere.</p>
-<p>Human activity can release nitrogen into the environment by two primary means: the combustion of fossil fuels, which releases different nitrogen oxides, and by the use of artificial fertilizers (which contain nitrogen and phosphorus compounds) in agriculture, which are then washed into lakes, streams, and rivers by surface runoff. Atmospheric nitrogen (other than <span class="math notranslate nohighlight">\(\ce{N2}\)</span>) is associated with several effects on Earth’s ecosystems including the production of acid rain (as nitric acid, <span class="math notranslate nohighlight">\(\ce{HNO3}\)</span>) and greenhouse gas effects (as nitrous oxide, <span class="math notranslate nohighlight">\(\ce{N2O}\)</span>), potentially causing climate change. A major effect from fertilizer runoff is saltwater and freshwater eutrophication, a process whereby nutrient runoff causes the overgrowth of algae and a number of consequential problems.</p>
-<p>A similar process occurs in the marine nitrogen cycle, where the ammonification, nitrification, and denitrification processes are performed by marine bacteria and archaea. Some of this nitrogen falls to the ocean floor as sediment, which can then be moved to land in geologic time by uplift of Earth’s surface, and thereby incorporated into terrestrial rock. Although the movement of nitrogen from rock directly into living systems has been traditionally seen as insignificant compared with nitrogen fixed from the atmosphere, a recent study showed that this process may indeed be significant and should be included in any study of the global nitrogen cycle.</p>
+<p>Getting nitrogen into the living world is a challenging process. Plants and phytoplankton cannot directly utilize nitrogen from the atmosphere, which exists as the tightly bonded, triple covalent molecule <span class="math notranslate nohighlight">\(\ce{N2}\)</span>. Despite comprising approximately 78% of the atmosphere, this gaseous nitrogen needs to be processed to be helpful in living organisms. Nitrogen enters the biosphere primarily through free-living and symbiotic bacteria that incorporate nitrogen into their macromolecules via nitrogen fixation, which converts <span class="math notranslate nohighlight">\(\ce{N2}\)</span> into a usable form.</p>
+<p>Cyanobacteria, which inhabit most sunlight-rich aquatic ecosystems, play a critical role in this nitrogen fixation process. They can utilize inorganic nitrogen sources to “fix” nitrogen. Additionally, the bacteria known as <em>Rhizobium</em> live symbiotically in the root nodules of legumes (such as peas, beans, and peanuts) and supply these plants with the organic nitrogen they require. Free-living bacteria like <em>Azotobacter</em> are also significant contributors to nitrogen fixation.</p>
+<p>Organic nitrogen is vital for understanding ecosystem dynamics, as many ecosystem processes, including primary production and decomposition, are limited by nitrogen availability. Once nitrogen is fixed into living organisms, it eventually undergoes conversion back into nitrogen gas through the actions of bacteria in a series of steps in terrestrial systems: ammonification, nitrification, and denitrification. The process begins with ammonification, where specific bacteria and fungi convert nitrogenous waste from living animals or decaying organisms into ammonium (<span class="math notranslate nohighlight">\(\ce{NH4+}\)</span>). Next, nitrifying bacteria, such as <em>Nitrosomonas</em>, convert this ammonium into nitrites (<span class="math notranslate nohighlight">\(\ce{NO2−}\)</span>) through nitrification. Subsequently, similar bacteria transform these nitrites into nitrates (<span class="math notranslate nohighlight">\(\ce{NO3-}\)</span>). Finally, denitrification occurs, where bacteria such as <em>Pseudomonas</em> and <em>Clostridium</em> convert nitrates into nitrogen gas, allowing them to re-enter the atmosphere.</p>
+<p>Human activities can also introduce nitrogen into the environment, mainly through the combustion of fossil fuels, which releases various nitrogen oxides, and the application of artificial fertilizers that contain nitrogen and phosphorus compounds in agriculture. These fertilizers can wash into lakes, streams, and rivers due to surface runoff. Atmospheric nitrogen (aside from <span class="math notranslate nohighlight">\(\ce{N2}\)</span>) is linked to several ecological effects, including the formation of acid rain (as nitric acid, <span class="math notranslate nohighlight">\(\ce{HNO3}\)</span>) and greenhouse gas effects (as nitrous oxide, <span class="math notranslate nohighlight">\(\ce{N2O}\)</span>), which could contribute to climate change. A significant consequence of fertilizer runoff is the process of eutrophication in both freshwater and saltwater systems, wherein nutrient over-enrichment leads to excessive algae growth, causing a range of environmental problems.</p>
+<p>In the marine nitrogen cycle, a similar set of processes—ammonification, nitrification, and denitrification—takes place and is conducted by marine bacteria and archaea. Some of this nitrogen ultimately settles on the ocean floor as sediment, which may be transferred to land over geological time due to the uplift of Earth’s surface, thereby becoming part of terrestrial rock. Although the direct movement of nitrogen from rocks into living systems has traditionally been viewed as insignificant compared to atmospheric nitrogen fixation, recent studies suggest that this process may be significant and should be included in any comprehensive analysis of the global nitrogen cycle.</p>
 </section>
 <section id="the-phosphorus-cycle">
 <h2>The Phosphorus Cycle<a class="headerlink" href="#the-phosphorus-cycle" title="Link to this heading">#</a></h2>
-<p>Phosphorus is an essential nutrient for living processes; it is a major component of nucleic acids and phospholipids, and, as calcium phosphate, makes up the supportive components of our bones. Phosphorus is often the limiting nutrient (necessary for growth) in aquatic, particularly freshwater, ecosystems.</p>
+<p>Phosphorus is an essential nutrient for living processes; it is a significant component of nucleic acids and phospholipids and, as calcium phosphate, makes up the supportive components of our bones. Phosphorus is often the limiting nutrient (necessary for growth) in aquatic, particularly freshwater, ecosystems.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/8Ia_KKj-UN0" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Phosphorus occurs in nature as the phosphate ion (<span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span>). In addition to <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> runoff as a result of human activity, natural surface runoff occurs when it is leached from phosphate-containing rock by weathering, thus sending phosphates into rivers, lakes, and the ocean. This rock has its origins in the ocean. Phosphate-containing ocean sediments form primarily from the bodies of ocean organisms and from their excretions. However, volcanic ash, aerosols, and mineral dust may also be significant <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> sources. This sediment then is moved to land over geologic time by the uplifting of Earth’s surface.</p>
-<p>Phosphorus is also reciprocally exchanged between <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> dissolved in the ocean and marine organisms. The movement of <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> from the ocean to the land and through the soil is extremely slow, with average <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> oceanic residence time between 20,000 and 100,000 years.</p>
-<p>The <span class="math notranslate nohighlight">\(\ce{P}\)</span> cycle is a relatively slow cycle, and it can take millions of years for <span class="math notranslate nohighlight">\(\ce{P}\)</span> to move from one reservoir to another. The main reservoirs of <span class="math notranslate nohighlight">\(\ce{P}\)</span> are rocks, sediments, soil, and living organisms. Most <span class="math notranslate nohighlight">\(\ce{P}\)</span> in nature exists in the form of <span class="math notranslate nohighlight">\(\ce{PO4^3−}\)</span>.</p>
+<p>Phosphorus occurs naturally as the phosphate ion (<span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span>). In addition to human activities, natural surface runoff occurs when phosphates are leached from phosphate-containing rocks due to weathering, sending these phosphates into rivers, lakes, and oceans. These rocks have origins in the ocean, where phosphate-containing sediments primarily form from the bodies and excretions of marine organisms. Additionally, volcanic ash, aerosols, and mineral dust can contribute significantly to <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> sources. Over geological time, this sediment is transported to land by uplifting the Earth’s surface.</p>
+<p>Phosphorus is also exchanged between <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> dissolved in the ocean and marine organisms. The movement of <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> from the ocean to land and through soil is extremely slow, with an average oceanic residence time of <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> ranging between 20,000 and 100,000 years.</p>
+<p>The phosphorus cycle is relatively slow, taking millions of years to move from one reservoir to another. The main reservoirs of phosphorus include rocks, sediments, soil, and living organisms. Most phosphorus in nature exists in the form of <span class="math notranslate nohighlight">\(\ce{PO4^3−}\)</span>.</p>
 <figure class="margin-caption align-default" id="p-cycle">
 <img alt="https://openstax.org/apps/archive/20230220.155442/resources/9562c1b0dad72fbb700154d03a689a5c00d2ddce" src="https://openstax.org/apps/archive/20230220.155442/resources/9562c1b0dad72fbb700154d03a689a5c00d2ddce" />
 <figcaption>
-<p><span class="caption-number">Fig. 44 </span><span class="caption-text">In nature, phosphorus exists as the phosphate ion (PO43-). Weathering of rocks and volcanic activity releases phosphate into the soil, water, and air, where it becomes available to terrestrial food webs. Phosphate enters the oceans in surface runoff, groundwater flow, and river flow. Phosphate dissolved in ocean water cycles into marine food webs. Some phosphate from the marine food webs falls to the ocean floor, where it forms sediment.</span><a class="headerlink" href="#p-cycle" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">In nature, phosphorus exists as the phosphate ion (<span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span>). Weathering of rocks and volcanic activity releases phosphate into the soil, water, and air, where it becomes available to terrestrial food webs. Phosphate enters the oceans through surface runoff, groundwater, and river flow. Phosphate dissolved in ocean water cycles into marine food webs. Some phosphate from the marine food webs falls to the ocean floor, forming sediment.</span><a class="headerlink" href="#p-cycle" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://openstax.org/books/concepts-biology/pages/20-2-biogeochemical-cycles">20.2 Biogeochemical Cycles - Concepts of Biology | OpenStax</a></p>
 </div>
 </figcaption>
 </figure>
-<p>Excess <span class="math notranslate nohighlight">\(\ce{P}\)</span> and <span class="math notranslate nohighlight">\(\ce{N}\)</span> that enter these ecosystems from fertilizer runoff and from sewage cause excessive growth of algae. The subsequent death and decay of these organisms depletes dissolved <span class="math notranslate nohighlight">\(\ce{O2}\)</span>, which leads to the death of aquatic organisms, such as shellfish and finfish. This process is responsible for dead zones in lakes and at the mouths of many major rivers and for massive fish kills, which often occur during the summer months.</p>
+<p>Excess phosphorus (P) and nitrogen (N) entering ecosystems from fertilizer runoff and sewage lead to excessive algae growth. When these algae die and decay, they deplete dissolved oxygen (<span class="math notranslate nohighlight">\(\ce{O2}\)</span>) in the water, resulting in the death of aquatic organisms, such as shellfish and finfish. This process contributes to the formation of dead zones in lakes and at the mouths of major rivers, resulting in massive fish kills, particularly during the summer months.</p>
 <figure class="margin-caption align-default" id="dead-zones">
 <img alt="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa030000%2Fa030400%2Fa030479%2Fdead_zones_crops_particulate_carbon.png&amp;f=1&amp;nofb=1&amp;ipt=c8b816c24b28dd7266ae900f0d7d7fb5fec0907bb2b849fe41d00c71be6e24ee&amp;ipo=images" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa030000%2Fa030400%2Fa030479%2Fdead_zones_crops_particulate_carbon.png&amp;f=1&amp;nofb=1&amp;ipt=c8b816c24b28dd7266ae900f0d7d7fb5fec0907bb2b849fe41d00c71be6e24ee&amp;ipo=images" />
 <figcaption>
-<p><span class="caption-number">Fig. 45 </span><span class="caption-text">The size and number of marine dead zones—areas where the deep water is so low in dissolved oxygen that sea creatures can’t survive—have grown explosively in the past half-century. Yellow circles on this map show the location of observed eutrophic zones. Red dots show where hypoxic zones have been observed. It’s no coincidence that dead zones occur downriver of places where land is intensively used for agriculture. Some of the fertilizer we apply to crops is washed into streams and rivers. Fertilizer-laden runoff triggers explosive planktonic algae growth in coastal areas. The algae die and rain down into deep waters, where their remains are like fertilizer for microbes. The microbes decompose the organic matter, using up the oxygen. Mass killing of fish and other sea life often results. Satellites can observe changes in the way the ocean surface reflects and absorbs sunlight when the water holds a lot of particles of organic matter. Darker blues in this image show higher concentrations of particulate organic matter, an indication of the overly fertile waters that can culminate in dead zones.</span><a class="headerlink" href="#dead-zones" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">The size and number of marine dead zones—areas where the deep water is so low in dissolved oxygen that sea creatures can’t survive—have grown explosively in the past half-century. Yellow circles on this map show the location of observed eutrophic zones. Red dots show where hypoxic zones have been observed. It’s no coincidence that dead zones occur downriver of places where land is intensively used for agriculture. Some fertilizer we apply to crops is washed into streams and rivers. Fertilizer-laden runoff triggers explosive planktonic algae growth in coastal areas. The algae die and rain down into deep waters, where their remains are like fertilizer for microbes. The microbes decompose the organic matter, using up the oxygen. Mass killing of fish and other sea life often results. Satellites can observe changes in how the ocean surface reflects and absorbs sunlight when the water holds a lot of particles of organic matter. Darker blues in this image show higher concentrations of particulate organic matter, indicating the overly fertile waters that can culminate in dead zones.</span><a class="headerlink" href="#dead-zones" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://svs.gsfc.nasa.gov/30479">Coastal Dead Zones (nasa.gov)</a></p>
 </div>
 </figcaption>
 </figure>
-<p>A dead zone is an area in lakes and oceans near the mouths of rivers where large areas are periodically depleted of their normal flora and fauna; these zones can be caused by eutrophication, oil spills, dumping toxic chemicals, and other human activities. The number of dead zones has increased for several years, and more than 400 of these zones were present as of 2008. One of the worst dead zones is off the coast of the United States in the Gulf of Mexico: fertilizer runoff from the Mississippi River basin created a dead zone of over 8,463 square miles. Phosphate and nitrate runoff from fertilizers also negatively affect several lake and bay ecosystems including the Chesapeake Bay in the eastern United States.</p>
+<p>A dead zone is an area in lakes and oceans near the mouths of rivers where large regions are periodically depleted of their normal flora and fauna; these zones can be caused by eutrophication, oil spills, dumping of toxic chemicals, and other human activities. The number of dead zones has increased for several years, and more than 400 of these zones were present as of 2008. One of the worst dead zones is off the coast of the United States in the Gulf of Mexico: fertilizer runoff from the Mississippi River basin created a dead zone of over 8,463 square miles. Phosphate and nitrate runoff from fertilizers also negatively affect several lake and bay ecosystems, including the Chesapeake Bay in the eastern United States.</p>
 </section>
 <section id="nutrient-pollution">
 <h2>Nutrient Pollution<a class="headerlink" href="#nutrient-pollution" title="Link to this heading">#</a></h2>
 <p>Nutrient pollution is the addition of excess nutrients, mainly nitrogen and phosphorus, into the water or air.</p>
-<p>According to US EPA “nutrient pollution is one of America’s most widespread, costly and challenging environmental problems.” (<a class="reference external" href="https://www.epa.gov/nutrientpollution">Nutrient Pollution | US EPA</a>)</p>
+<p>According to US EPA, “nutrient pollution is one of America’s most widespread, costly and challenging environmental problems.” (<a class="reference external" href="https://www.epa.gov/nutrientpollution">Nutrient Pollution | US EPA</a>)</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/vCicSNnKUvM" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Nitrogen and phosphorus are nutrients that are natural parts of aquatic ecosystems. Nitrogen is also the most abundant element in the air we breathe. Nitrogen and phosphorus support the growth of algae and aquatic plants, which provide food and habitat for fish, shellfish and smaller organisms that live in water.</p>
-<p>But when too much nitrogen and phosphorus enter the environment - usually from a wide range of human activities - the air and water can become polluted. Nutrient pollution has impacted many streams, rivers, lakes, bays and coastal waters for the past several decades, resulting in serious environmental and human health issues, and impacting the economy.</p>
-<p>Too much nitrogen and phosphorus in the water causes algae to grow faster than ecosystems can handle. Significant increases in algae harm water quality, food resources and habitats, and decrease the oxygen that fish and other aquatic life need to survive. Large growths of algae are called algal blooms and they can severely reduce or eliminate oxygen in the water, leading to illnesses in fish and the death of large numbers of fish. Some algal blooms are harmful to humans because they produce elevated toxins and bacterial growth that can make people sick if they come into contact with polluted water, consume tainted fish or shellfish, or drink contaminated water.</p>
-<p>Nutrient pollution in ground water - which millions of people in the United States use as their drinking water source - can be harmful, even at low levels. Infants are vulnerable to a nitrogen-based compound called nitrates in drinking water. Excess nitrogen in the atmosphere can produce pollutants such as ammonia and ozone, which can impair our ability to breathe, limit visibility and alter plant growth. When excess nitrogen comes back to earth from the atmosphere, it can harm the health of forests, soils and waterways.</p>
+<p>Nitrogen and phosphorus are natural nutrients found in aquatic ecosystems. Nitrogen is the most abundant element in the air we breathe. Both nitrogen and phosphorus support the growth of algae and aquatic plants, which provide food and habitat for fish, shellfish, and smaller organisms living in water.</p>
+<p>However, when excessive amounts of nitrogen and phosphorus enter the environment—often due to various human activities—air and water can become polluted. Over the past several decades, nutrient pollution has affected many streams, rivers, lakes, bays, and coastal waters, leading to serious environmental and human health issues and economic impacts.</p>
+<p>An overabundance of nitrogen and phosphorus in water leads to accelerated algae growth, which can overwhelm ecosystems. Significant increases in algae harm water quality, disrupt food resources and habitats, and decrease the oxygen needed for fish and other aquatic life to survive. Large algae outbreaks are known as algal blooms, which can drastically reduce or eliminate oxygen in the water, causing illnesses in fish and resulting in significant fish die-offs. Some algal blooms produce harmful toxins and encourage bacterial growth, posing health risks to humans through contact with contaminated water, consuming tainted fish or shellfish, or drinking polluted water.</p>
+<p>Nutrient pollution in groundwater—used as a drinking water source by millions of people in the United States—can be harmful even at low levels. Infants are particularly vulnerable to a nitrogen-based compound called nitrates found in drinking water. Excess nitrogen in the atmosphere can create pollutants such as ammonia and ozone, impairing respiratory health, limiting visibility, and disrupting plant growth. When excess nitrogen falls back to Earth from the atmosphere, it can negatively affect the health of forests, soils, and waterways.</p>
 <p>The primary sources of excess nitrogen and phosphorus are:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/sources-and-solutions-agriculture">Agriculture</a>: The nitrogen and phosphorus in animal manure and chemical fertilizers are necessary to grow crops. However, when these nutrients are not fully utilized by plants they can be lost from the farm fields and negatively impact air and downstream water quality.</p></li>
-<li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/sources-and-solutions-stormwater">Stormwater</a>: When precipitation falls on our cities and towns it runs across hard surfaces - like rooftops, sidewalks and roads - and carries pollutants, including nitrogen and phosphorus, into local waterways.</p></li>
+<li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/sources-and-solutions-agriculture">Agriculture</a>: The nitrogen and phosphorus in animal manure and chemical fertilizers are necessary to grow crops. However, when plants do not fully utilize these nutrients they can be lost from the farm fields and negatively impact air and downstream water quality.</p></li>
+<li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/sources-and-solutions-stormwater">Stormwater</a>: When precipitation falls on our cities and towns, it runs across hard surfaces - like rooftops, sidewalks, and roads - and carries pollutants, including nitrogen and phosphorus, into local waterways.</p></li>
 <li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/sources-and-solutions-wastewater">Wastewater</a>: Our sewer and septic systems are responsible for treating large quantities of waste, and these systems do not always operate properly or remove enough nitrogen and phosphorus before discharging into waterways.</p></li>
-<li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/sources-and-solutions-fossil-fuels">Fossil Fuels</a>: Electric power generation, industry, transportation and agriculture have increased the amount of nitrogen in the air through use of fossil fuels.</p></li>
-<li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/sources-and-solutions-and-around-home">In and Around the Home</a>: Fertilizers, yard and pet waste and certain soaps and detergents contain nitrogen and phosphorus, and can contribute to nutrient pollution if not properly used or disposed. The amount of hard surfaces and type of landscaping can also increase the runoff of nitrogen and phosphorus during wet weather.</p></li>
+<li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/sources-and-solutions-fossil-fuels">Fossil Fuels</a>: Electric power generation, industry, transportation, and agriculture have increased the amount of nitrogen in the air through the use of fossil fuels.</p></li>
+<li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/sources-and-solutions-and-around-home">In and Around the Home</a>: Fertilizers, yard and pet waste, and certain soaps and detergents contain nitrogen and phosphorus and can contribute to nutrient pollution if not properly used or disposed of. The amount of hard surfaces and landscaping type can also increase nitrogen and phosphorus runoff during wet weather.</p></li>
 </ul>
-<p>The presence of excess nutrients in air and water can affect human health, the environment and the economy. Federal, state and local governments spend billions of dollars per year to minimize these effects.</p>
+<p>Excess nutrients in air and water can affect human health, the environment, and the economy. Federal, state, and local governments spend billions annually to minimize these effects.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/effects-human-health">Human health effects</a></p></li>
 <li><p><a class="reference external" href="https://www.epa.gov/nutrientpollution/effects-environment">Environmental effects</a></p></li>
@@ -519,7 +508,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <li><p>What is the main point the author is trying to make?</p></li>
 <li><p>How did researchers determine the cause of eutrophication? What did they find?</p></li>
 <li><p>How are marine environments different than freshwater systems with respect to nutrients and eutrophication?</p></li>
-<li><p>What activities do the authors suggest that could control both N and P inputs into aquatic systems?</p></li>
+<li><p>What activities do the authors suggest could control N and P inputs into aquatic systems?</p></li>
 <li><p>What impacts on the critical zone does nitrogen have other than eutrophication?</p></li>
 <li><p>Create a concept map of the pathways</p></li>
 </ol>
@@ -593,7 +582,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -662,8 +652,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

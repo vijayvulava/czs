@@ -2,14 +2,14 @@
 
 ## Overview
 
-The CZ encompasses the external or near-surface Earth extending from the top of the vegetation canopy down to and including the subsurface zone of freely circulating fresh groundwater. Complex biogeochemical processes combine here to transform rock and biomass into the central component of the CZ: the soil. The CZ sustains nearly all terrestrial life, including humanity, nonetheless ever-increasing negative impacts of human society on the CZ continue.
+The Critical Zone (CZ) refers to the Earth's outer layer, extending from the top of the vegetation canopy down to the subsurface zone where fresh groundwater circulates freely. Within this zone, complex biogeochemical processes occur, transforming rock and organic matter into the central component of the CZ: soil. The CZ is essential for sustaining nearly all terrestrial life, including humans. However, human activities increasingly harm the CZ, leading to significant negative impacts on this vital environment.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/8gW-Vy7zFdU" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-CZ science truly is multi- and trans-disciplinary. CZ processes are represented by coupled physical, biological, and chemical processes - and an array of scientific expertise in many fields including geology, soil science, biology, ecology, geochemistry, geomorphology, hydrology, and more, is needed to understand the CZ.
+The study of critical zones (CZ) is inherently multi- and trans-disciplinary. Understanding critical zone processes requires an examination of interconnected physical, biological, and chemical interactions. A wide range of scientific expertise is necessary, spanning geology, soil science, biology, ecology, geochemistry, geomorphology, hydrology, and more.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/RIhU3FxfbMM" 
@@ -34,6 +34,6 @@ Write a one-page statement (~500 words) of four aspects of the CZ:
 * describe how it functions; and,
 * why it is important to society.
 
-Cite all your references in a consistent manner.
+Cite all your references consistently (e.g., APA, Chicago style).
 
 ```

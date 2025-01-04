@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -66,6 +69,7 @@
     <link rel="prev" title="2 Methods in CZ Science" href="2CZSMethods.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +149,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Critical Zone Science - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -235,9 +224,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -334,24 +328,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -378,10 +364,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-bibliography">Annotated Bibliography</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-annotated-bibliography">What is Annotated Bibliography</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-an-annotated-bibliography-do">What does an annotated bibliography do?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-elements-might-an-annotation-include">What elements might an annotation include?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-annotations">Types of annotations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-elements-might-an-annotation-include">What Elements Might an Annotation Include?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-annotations">Types of Annotations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-process">The Process</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conduct-your-searches-to-find-the-evidence-keep-track-of-your-searches">Conduct your searches to find the evidence. Keep track of your searches.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conduct-your-searches-to-find-evidence">Conduct Your Searches to Find Evidence:</a></li>
 </ul>
 </li>
 </ul>
@@ -401,74 +387,74 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-tools-and-analysis">
 <h1>2.1 Basic Tools and Analysis<a class="headerlink" href="#basic-tools-and-analysis" title="Link to this heading">#</a></h1>
-<p>This module is an introduction to methods that will be used in the remainder of the course. CZ science is the study of Earth’s surface, where all humans live. The methods introduced here provide a base for investigations of the natural environment as well as human-induced changes to the environment such as perturbations to the hydrologic cycle, carbon and nutrient cycles and soil degradation. The unit will also provide a basis to investigate the environment from an interdisciplinary perspective. Specifically, this module will:</p>
+<p>This module introduces the methods that will be used throughout the remainder of the course. Critical Zone (CZ) science studies the Earth’s surface, where all humans reside. The methods introduced in this module will establish a foundation for investigating the natural environment and human-induced changes, including disturbances to the hydrologic cycle, carbon and nutrient cycles, and soil degradation. Additionally, this unit will lay the groundwork for examining the environment from an interdisciplinary perspective. Specifically, this module will:</p>
 <ul class="simple">
-<li><p>Illustrate how geosciences related grand challenges are addressed by CZ methods.</p></li>
-<li><p>Learn data visualization and analysis skills using authentic data.</p></li>
-<li><p>Learn how to use biogeochemistry and isotope geochemistry methods to investigate natural and anthropogenic influences on the CZ.</p></li>
-<li><p>Familiarize students with geospatial techniques necessary to investigate Earth’s CZ.</p></li>
-<li><p>Investigate systems modeling as a method to illuminate CZ processes.</p></li>
-<li><p>Use library reference resources and the construction of an annotated bibliography around a self-identified research question related to the interdisciplinary nature of CZ science.</p></li>
+<li><p>Demonstrate how the grand challenges related to geosciences are addressed using CZ methods.</p></li>
+<li><p>Teach data visualization and analysis skills using authentic data.</p></li>
+<li><p>Introduce biogeochemistry and isotope geochemistry methods to explore natural and anthropogenic influences on the CZ.</p></li>
+<li><p>Familiarize students with geospatial techniques essential for studying the Earth’s CZ.</p></li>
+<li><p>Investigate systems modeling as a means to illuminate CZ processes.</p></li>
+<li><p>Guide the use of library resources and the construction of an annotated bibliography based on a self-identified research question related to the interdisciplinary nature of CZ science.</p></li>
 </ul>
 <section id="annotated-bibliography">
 <h2>Annotated Bibliography<a class="headerlink" href="#annotated-bibliography" title="Link to this heading">#</a></h2>
 <section id="what-is-annotated-bibliography">
 <h3>What is Annotated Bibliography<a class="headerlink" href="#what-is-annotated-bibliography" title="Link to this heading">#</a></h3>
-<p>An annotated bibliography includes descriptions and explanations of your listed sources beyond the basic citation information you usually provide.</p>
-<p>One of the reasons behind citing sources and compiling a general bibliography is so that you can prove you have done some valid research to back up your argument and claims. Readers can refer to a citation in your bibliography and then go look up the material themselves. When inspired by your text or your argument, interested researchers can access your resources. They may wish to double check a claim or interpretation you’ve made, or they may simply wish to continue researching according to their interests. But think about it: even though a bibliography provides a list of research sources of all types that includes publishing information, how much does that really tell a researcher or reader about the sources themselves?</p>
-<p>An annotated bibliography provides specific information about each source you have used. As a researcher, you have become an expert on your topic: you have the ability to explain the content of your sources, assess their usefulness, and share this information with others who may be less familiar with them. Think of your paper as part of a conversation with people interested in the same things you are; the annotated bibliography allows you to tell readers what to check out, what might be worth checking out in some situations, and what might not be worth spending the time on. It’s kind of like providing a list of good movies for your classmates to watch and then going over the list with them, telling them why this movie is better than that one or why one student in your class might like a particular movie better than another student would. You want to give your audience enough information to understand basically what the movies are about and to make an informed decision about where to spend their money based on their interests.</p>
-<p>An annotated bibliography is a list of citations to books, articles, and documents. Each citation is followed by a brief (usually about 150 words) descriptive and evaluative paragraph, the annotation. The purpose of the annotation is to inform the reader of the relevance, accuracy, and quality of the sources cited.</p>
-<p><em>Annotations are not abstracts!</em> Abstracts are the purely descriptive summaries often found at the beginning of scholarly journal articles or in periodical indexes. Annotations are descriptive and critical; they may describe the author’s point of view, authority, or clarity and appropriateness of expression.</p>
+<p>An annotated bibliography includes descriptions and explanations of your listed sources that go beyond the basic citation information you typically provide.</p>
+<p>One reason for citing sources and compiling a general bibliography is to demonstrate that you have conducted valid research to support your arguments and claims. Readers can refer to citations in your bibliography and look up the materials themselves. When inspired by your text or arguments, interested researchers may want to verify a claim or interpretation you’ve made or continue researching based on their interests. However, while a bibliography offers a list of research sources with publishing details, it often lacks comprehensive information about the sources themselves.</p>
+<p>An annotated bibliography provides specific information about each source you have used. As a researcher, you become an expert on your topic, enabling you to explain the content of your sources, assess their usefulness, and share this information with others who might be less familiar with them. Consider your paper part of a conversation with people who share your interests; the annotated bibliography allows you to recommend resources, suggest what might be worth checking out, and indicate what may not be worth the reader’s time. It’s akin to providing a list of good movies for your classmates and discussing them, explaining why one movie is better or why a particular student might enjoy one film more. Your goal is to give your audience enough information to understand the main content of the sources and make informed decisions about where to direct their attention based on their interests.</p>
+<p>An annotated bibliography consists of citations for books, articles, and documents. Each citation is followed by a brief (usually about 150 words) descriptive and evaluative paragraph known as the annotation. The annotation informs the reader about the cited sources’ relevance, accuracy, and quality.</p>
+<p><em>It is important to note that annotations are not abstracts.</em> Abstracts are purely descriptive summaries commonly found at the beginning of scholarly journal articles or in periodical indexes. Annotations are descriptive and critical; they may discuss the author’s perspective, authority, and the clarity and appropriateness of expression.</p>
 </section>
 <section id="what-does-an-annotated-bibliography-do">
 <h3>What does an annotated bibliography do?<a class="headerlink" href="#what-does-an-annotated-bibliography-do" title="Link to this heading">#</a></h3>
-<p><strong>A good annotated bibliography:</strong></p>
+<p><strong>A Good Annotated Bibliography:</strong></p>
 <ul class="simple">
-<li><p>Encourages you to think critically about the content of the works you are using, their place within a field of study, and their relation to your own research and ideas.</p></li>
-<li><p>Proves you have read and understand your sources.</p></li>
+<li><p>Encourages critical thinking about the content of the works you are using, their place within a field of study, and their relation to your research and ideas.</p></li>
+<li><p>Demonstrates that you have read and understand your sources.</p></li>
 <li><p>Establishes your work as a valid source and you as a competent researcher.</p></li>
-<li><p>Situates your study and topic in a continuing professional conversation.</p></li>
-<li><p>Provides a way for others to decide whether a source will be helpful to their research if they read it.</p></li>
-<li><p>Could help interested researchers determine whether they are interested in a topic by providing background information and an idea of the kind of work going on in a field.</p></li>
+<li><p>Situate your study and topic within an ongoing professional conversation.</p></li>
+<li><p>Provides a way for others to determine whether a source will be helpful to their research.</p></li>
+<li><p>Helps interested researchers gauge their interest in a topic by providing background information and an overview of the current work in the field.</p></li>
 </ul>
 </section>
 <section id="what-elements-might-an-annotation-include">
-<h3>What elements might an annotation include?<a class="headerlink" href="#what-elements-might-an-annotation-include" title="Link to this heading">#</a></h3>
+<h3>What Elements Might an Annotation Include?<a class="headerlink" href="#what-elements-might-an-annotation-include" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Bibliography according to the appropriate citation style (MLA, APA, CBE/CSE, etc.).</p></li>
-<li><p>Explanation of main points and/or purpose of the work—basically, its thesis—which shows among other things that you have read and thoroughly understand the source.</p></li>
+<li><p>A bibliography in the appropriate citation style (MLA, APA, CBE/CSE, etc.).</p></li>
+<li><p>An explanation of the work’s main points and/or purpose—essentially, its thesis—demonstrating that you have read and thoroughly understood the source.</p></li>
 <li><p>Verification or critique of the authority or qualifications of the author.</p></li>
-<li><p>Comments on the worth, effectiveness, and usefulness of the work in terms of both the topic being researched and/or your own research project.</p></li>
-<li><p>The point of view or perspective from which the work was written. For instance, you may note whether the author seemed to have particular biases or was trying to reach a particular audience.</p></li>
-<li><p>Relevant links to other work done in the area, like related sources, possibly including a comparison with some of those already on your list. You may want to establish connections to other aspects of the same argument or opposing views.</p></li>
+<li><p>Comments on the work’s worth, effectiveness, and usefulness of your research topic and project.</p></li>
+<li><p>The point of view or perspective from which the work was written. For example, you might note whether the author has specific biases or is targeting a particular audience.</p></li>
+<li><p>Relevant links to other work in the area, such as related sources, including comparisons with other works on your list. You may want to identify connections to different aspects of the same argument or opposing views.</p></li>
 </ol>
-<p>The first four elements above are usually a necessary part of the annotated bibliography. Points 5 and 6 may involve a little more analysis of the source, but you may include them in other kinds of annotations besides evaluative ones. Depending on the type of annotation you use, which this handout will address in the next section, there may be additional kinds of information that you will need to include.</p>
-<p>For more extensive research papers (probably ten pages or more), you often see resource materials grouped into sub-headed sections based on content, but this probably will not be necessary for the kinds of assignments you’ll be working on. For longer papers, ask your instructor about her preferences concerning annotated bibliographies.</p>
+<p>The first four elements listed above are typically essential parts of an annotated bibliography. Points 5 and 6 may involve a deeper analysis of the source, but they can also be included in other annotations besides evaluative ones. Depending on the type of annotation you use, which this guide will address in the next section, you may need to include additional information.</p>
+<p>Resource materials are often grouped into sub-headed sections based on content for more extensive research papers (typically ten pages or longer). However, this may not be necessary for the assignments you will be working on. For longer papers, consult your instructor about her preferences regarding annotated bibliographies.</p>
 </section>
 <section id="types-of-annotations">
-<h3>Types of annotations<a class="headerlink" href="#types-of-annotations" title="Link to this heading">#</a></h3>
-<p>As you now know, one annotation does not fit all purposes! There are different kinds of annotations, depending on what might be most important for your reader to learn about a source. Your assignments will usually make it clear which citation format you need to use, but they may not always specify which type of annotation to employ. In that case, you’ll either need to pick your instructor’s brain a little to see what she wants or use clue words from the assignment itself to make a decision. For instance, the assignment may tell you that your annotative bibliography should give evidence proving an analytical understanding of the sources you’ve used. The word analytical clues you in to the idea that you must evaluate the sources you’re working with and provide some kind of critique.</p>
+<h3>Types of Annotations<a class="headerlink" href="#types-of-annotations" title="Link to this heading">#</a></h3>
+<p>As you now know, one annotation type does not fit all purposes! There are different kinds of annotations, depending on what you want your reader to learn about a source. Your assignments usually specify the citation format you must use, but they may not always clarify which annotation type to employ. In that case, consider asking your instructor for guidance or looking for keywords in the assignment to help you decide. For example, suppose the assignment states that your annotated bibliography should provide evidence demonstrating an analytical understanding of the sources you’ve used. In that case, “analytical” indicates that you must evaluate the sources and include some critique.</p>
 </section>
 <section id="the-process">
 <h3>The Process<a class="headerlink" href="#the-process" title="Link to this heading">#</a></h3>
-<p>Creating an annotated bibliography calls for the application of a variety of intellectual skills: concise exposition, succinct analysis, and informed library research.</p>
+<p>Creating an annotated bibliography calls for applying various intellectual skills: concise exposition, succinct analysis, and informed library research.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/32OjXkZXy34" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>First, locate and record citations to books, periodicals, and documents that may contain useful information and ideas on your topic. Briefly examine and review the actual items. Then choose those works that provide a variety of perspectives on your topic.</p>
-<p>Cite the book, article, or document using the appropriate style.</p>
-<p>Write a concise annotation that summarizes the central theme and scope of the book or article. Include one or more sentences that (a) evaluate the authority or background of the author, (b) comment on the intended audience, (c) compare or contrast this work with another you have cited, or (d) explain how this work illuminates your bibliography topic.</p>
-<section id="conduct-your-searches-to-find-the-evidence-keep-track-of-your-searches">
-<h4>Conduct your searches to find the evidence. Keep track of your searches.<a class="headerlink" href="#conduct-your-searches-to-find-the-evidence-keep-track-of-your-searches" title="Link to this heading">#</a></h4>
+<p>First, locate and record citations for books, periodicals, and documents that may contain helpful information and ideas related to your topic. Briefly examine and review the selected items, then choose works that provide a range of perspectives.</p>
+<p>Cite each book, article, or document using the appropriate citation style.</p>
+<p>Write a concise annotation summarizing the work’s central theme and scope. Include one or more of the following elements: (a) an evaluation of the author’s authority or background, (b) a comment on the intended audience, (c) a comparison with another work you have cited, or (d) an explanation of how this work enhances your bibliography topic.</p>
+<section id="conduct-your-searches-to-find-evidence">
+<h4>Conduct Your Searches to Find Evidence:<a class="headerlink" href="#conduct-your-searches-to-find-evidence" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Use the key words in your question, as well as synonyms for those words, as terms in your search.</p></li>
-<li><p>Save the searches in the databases. This saves time when you want to redo, or modify, the searches. It is also helpful to use as a guide is the searches are not finding any useful results.</p></li>
-<li><p>Review the abstracts of research studies carefully. This will save you time.</p></li>
-<li><p>Use the bibliographies and references of research studies you find to locate others.</p></li>
-<li><p>Check with your professor, or a subject expert in the field, if you are missing any key works in the field.</p></li>
-<li><p>Ask your librarian for help at any time.</p></li>
-<li><p>Use a citation manager, such as Mendeley as the repository for your citations. Visit <a class="reference external" href="https://www.mendeley.com/?interaction_required=true">Mendeley - Reference Management Software</a> and sign up for a free account.  Download the desktop software to link to your Word app.</p></li>
+<li><p>Use keywords from your question as well as synonyms in your search terms.</p></li>
+<li><p>Save your searches in databases to save time when you want to redo or modify them. This will also serve as a helpful guide if your searches are not yielding valuable results.</p></li>
+<li><p>Carefully review the abstracts of research studies to save time.</p></li>
+<li><p>Utilize the bibliographies and references of research studies you find to discover additional sources.</p></li>
+<li><p>Consult your professor or a subject expert if you are missing key field works.</p></li>
+<li><p>Don’t hesitate to ask your librarian for assistance at any stage.</p></li>
+<li><p>Use a citation manager, such as Mendeley, as a repository for your citations. Visit <a class="reference external" href="https://www.mendeley.com/?interaction_required=true">Mendeley - Reference Management Software</a> to sign up for a free account and download the desktop software to link it to your Word application.</p></li>
 </ul>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/DVR2x3F84SQ" 
@@ -479,7 +465,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="data-analysis-and-visualization">
 <h2>Data Analysis and Visualization<a class="headerlink" href="#data-analysis-and-visualization" title="Link to this heading">#</a></h2>
-<p>Data is at the core of all scientific endeavors.  The data could be in form of measurements in the field or the lab, geographic coordinates, census measurements, maps, etc. Effective visualization of these data help advance our understanding of the underlying science in any discipline.</p>
+<p>Data is fundamental to all scientific endeavors. It can take various forms, including measurements collected in the field or laboratory, geographic coordinates, census data, maps, and more. Effective visualization of this data enhances our understanding of the underlying science across different disciplines.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/5Zg-C8AAIGg" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -494,7 +480,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <iframe src="https://www.youtube.com/embed/dmQx246lS_0" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Maps include geographical information and can be a powerful tool to also show other types of data as many different layers on top of the underlying geographical information.  You can use Google Earth or ArcGIS Online to create different kind of maps.  Use the free access to ArcGIS on campus to learn how to make basic maps. <a class="reference external" href="https://learn.arcgis.com/en/projects/get-started-with-arcgis-online/">Get started with ArcGIS Online | Learn ArcGIS</a>.</p>
+<p>Maps provide geographical information and can effectively display various data types by layering them on top of this foundational information. You can use tools like Google Earth or ArcGIS Online to create different kinds of maps. Take advantage of free access to ArcGIS on campus to learn how to make basic maps. <a class="reference external" href="https://learn.arcgis.com/en/projects/get-started-with-arcgis-online/">Get started with ArcGIS Online | Learn ArcGIS</a>.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/toawx4D-htc" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -508,7 +494,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <h2>Readings and resources for this section<a class="headerlink" href="#readings-and-resources-for-this-section" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://writingcenter.unc.edu/tips-and-tools/annotated-bibliographies/">Annotated Bibliographies – The Writing Center • University of North Carolina at Chapel Hill (unc.edu)</a></p></li>
-<li><p>All CZO related data is now located here: <a class="reference external" href="https://www.hydroshare.org/">Find, Analyze and Share Water Data | CUAHSI HydroShare</a></p></li>
+<li><p>All CZO-related data is now located here: <a class="reference external" href="https://www.hydroshare.org/">Find, Analyze and Share Water Data | CUAHSI HydroShare</a></p></li>
 <li><p>Visual data client: <a class="reference external" href="https://data.cuahsi.org/">CUAHSI HIS HydroClient</a></p></li>
 </ol>
 </section>
@@ -569,7 +555,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -581,10 +568,10 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-bibliography">Annotated Bibliography</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-annotated-bibliography">What is Annotated Bibliography</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-an-annotated-bibliography-do">What does an annotated bibliography do?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-elements-might-an-annotation-include">What elements might an annotation include?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-annotations">Types of annotations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-elements-might-an-annotation-include">What Elements Might an Annotation Include?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-annotations">Types of Annotations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-process">The Process</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conduct-your-searches-to-find-the-evidence-keep-track-of-your-searches">Conduct your searches to find the evidence. Keep track of your searches.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conduct-your-searches-to-find-evidence">Conduct Your Searches to Find Evidence:</a></li>
 </ul>
 </li>
 </ul>
@@ -642,8 +629,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

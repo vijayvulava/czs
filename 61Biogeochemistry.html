@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="6 Geochemistry and Biogeochemistry" href="6Biogeochem.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Critical Zone Science - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -237,9 +226,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -336,24 +330,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -407,22 +393,22 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="biogeochemistry-in-the-cz">
 <h1>6.1 Biogeochemistry in the CZ<a class="headerlink" href="#biogeochemistry-in-the-cz" title="Link to this heading">#</a></h1>
-<p>Biogeochemistry is the chemistry of the surface of the Earth.  This chemistry is influenced by life on Earth and rapidly changing under the outsized influence of human actions.</p>
-<p>Biogeochemical processes are essential for the functioning of the CZ. These processes include the cycling of nutrients, the production of <span class="math notranslate nohighlight">\(\ce{O2}\)</span>, and the regulation of climate. Biogeochemical processes are also affected by human activity. For example, the burning of fossil fuels releases <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> into the atmosphere, which can contribute to climate change.</p>
-<p>Biogeochemistry is important for understanding how the critical zone is affected by human activity. This information can be used to develop sustainable management practices that protect the critical zone.</p>
-<p>Here are some specific examples of how biogeochemistry is important for the critical zone:</p>
+<p>Biogeochemistry is the study of the chemical processes that occur on the surface of the Earth. Living organisms influence this chemistry and is rapidly changing due to significant human impact.</p>
+<p>Biogeochemical processes are essential for the functioning of the critical zone (CZ). These processes include nutrient cycling, oxygen production, and climate regulation. Additionally, human activities affect these processes. For instance, burning fossil fuels releases carbon dioxide (<span class="math notranslate nohighlight">\(\ce{CO2}\)</span>) into the atmosphere, contributing to climate change.</p>
+<p>Understanding biogeochemistry is crucial for determining how human actions impact the critical zone. This knowledge can inform the development of sustainable management practices that protect this vital area.</p>
+<p>Here are some specific examples of the importance of biogeochemistry for the critical zone:</p>
 <ul class="simple">
-<li><p>Nutrients are essential for life, and they are cycled through the critical zone by biogeochemical processes.</p></li>
-<li><p>Water is essential for life, and it is moved through the CZ.</p></li>
-<li><p>Photosynthesis is a process that plants use to convert sunlight into energy. As a byproduct of photosynthesis, plants release oxygen into the atmosphere.</p></li>
-<li><p>Human activities, such as agriculture, deforestation, and climate change, can affect biogeochemical processes.
-It is important to understand biogeochemistry in order to protect the critical zone. The critical zone is essential for life on Earth, and it is important to ensure that it is healthy and sustainable.</p></li>
+<li><p>Nutrients are cycled through the critical zone by biogeochemical processes.</p></li>
+<li><p>Water, another essential element for life, is moved throughout the critical zone.</p></li>
+<li><p>Photosynthesis is the process by which plants convert sunlight into energy, releasing oxygen as a byproduct into the atmosphere.</p></li>
+<li><p>Human activities, such as agriculture, deforestation, and climate change, can disrupt biogeochemical processes.</p></li>
 </ul>
+<p>It is essential to understand biogeochemistry to ensure the health and sustainability of the critical zone, which is vital for life on Earth.</p>
 <p>In this section, you will explore:</p>
 <ul class="simple">
-<li><p>allochthonous inputs,</p></li>
-<li><p>the role of organisms in biogeochemical cycles and how ecological theory can be applied to biogeochemistry, and</p></li>
-<li><p>how biogeochemical processes can assist in creating solutions for humanity’s grand challenges.</p></li>
+<li><p>Allochthonous inputs,</p></li>
+<li><p>The role of organisms in biogeochemical cycles and the application of ecological theory to biogeochemistry and</p></li>
+<li><p>How biogeochemical processes can help address humanity’s grand challenges.</p></li>
 </ul>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/aU2rYMvYUWs" 
@@ -430,13 +416,13 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 <section id="what-is-biogeochemistry">
 <h2>What is Biogeochemistry?<a class="headerlink" href="#what-is-biogeochemistry" title="Link to this heading">#</a></h2>
-<p>The transport and transformation of chemicals in ecosystems, known as biogeochemical cycling, involve a great number of interrelated physical, chemical, and biological processes. Biogeochemistry features a combination of many chemical transformations and chemical transport processes. Many transformations of N, S, Fe, Mn, C, P and other chemicals occur in various CZ environments as a result of the combination of both aerobic and anaerobic conditions in proximity.</p>
-<p>The CZ can be sources, sinks, or transformers of nutrients and some transformations cause toxic conditions, as with the production of hydrogen sulfide, whereas others, such as sedimentation, denitrification, and carbon sequestration, improve water quality and improve the planet’s carbon balance. Many transformations in the CZ, especially in the nitrogen, sulfur, and carbon cycles, are mediated by microbial populations that are adapted to the anaerobic environment, while many other processes, such as those in the phosphorus cycle, are chemical and physical. Specific CZ such as wetlands are often coupled to adjacent ecosystems such as by exporting vital organic carbon to downstream aquatic ecosystems.</p>
+<p>The transport and transformation of chemicals in ecosystems, known as biogeochemical cycling, involve a wide range of interrelated physical, chemical, and biological processes. Biogeochemistry encompasses numerous chemical transformations and transport processes. Various transformations of nitrogen (N), sulfur (S), iron (Fe), manganese (Mn), carbon (C), phosphorus (P), and other chemicals occur in different critical zone (CZ) environments due to a combination of both aerobic and anaerobic conditions nearby.</p>
+<p>The CZ can act as sources, sinks, or transformers of nutrients. Some transformations can create toxic conditions, such as hydrogen sulfide production, while others, like sedimentation, denitrification, and carbon sequestration, enhance water quality and contribute positively to the planet’s carbon balance. Microbial populations adapted to anaerobic environments facilitate many transformations in the CZ, particularly within the N, S, and C cycles. In contrast, processes in the phosphorus cycle are primarily governed by chemical and physical mechanisms. Specific critical zones like wetlands are often linked with adjacent ecosystems, exporting vital organic carbon to downstream aquatic environments.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/Bn41lXKyVWQ" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Biogeochemistry is important because it helps us understand how the Earth works. It helps us understand how the Earth’s systems are interconnected and how they are affected by human activity. Biogeochemistry is also important for developing sustainable management practices.</p>
+<p>Biogeochemistry helps us understand how the Earth works. It helps us understand how the Earth’s systems are interconnected and how they are affected by human activity. Biogeochemistry is also vital for developing sustainable management practices.</p>
 <figure class="margin-caption align-default" id="biogeochemistry">
 <img alt="https://seaborg.llnl.gov/sites/seaborg/files/2020-05/actinide-transport-field-sites.png" src="https://seaborg.llnl.gov/sites/seaborg/files/2020-05/actinide-transport-field-sites.png" />
 <figcaption>
@@ -448,114 +434,115 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </figure>
 <section id="autochthonous-inputs">
 <h3>Autochthonous Inputs<a class="headerlink" href="#autochthonous-inputs" title="Link to this heading">#</a></h3>
-<p>Every system responds to various types of inputs in different ways.  Autochthonous inputs into a natural system are those that originate from within the system itself. These inputs can be in the form of nutrients, energy, or other materials that are produced or generated by the system’s own biotic and abiotic processes.</p>
-<p>In an aquatic ecosystem, autochthonous inputs may include the nutrients and organic matter produced by photosynthetic organisms like algae and aquatic plants. These inputs can support the growth of other organisms in the ecosystem, such as zooplankton and fish.</p>
-<p>In a terrestrial ecosystem, autochthonous inputs may include the organic matter produced by plant growth and decomposition, as well as the nutrients and energy generated by the system’s own biogeochemical processes, such as nitrogen fixation by soil bacteria.</p>
-<p>Autochthonous inputs are important for the functioning and sustainability of natural systems, as they provide the resources that support the growth and productivity of organisms within the system.</p>
+<p>Every system responds to various types of inputs in different ways. Autochthonous inputs are those that originate from within a natural system itself. These inputs can include nutrients, energy, or other materials produced by the system’s own biotic and abiotic processes.</p>
+<p>In an aquatic ecosystem, autochthonous inputs may consist of the nutrients and organic matter generated by photosynthetic organisms, such as algae and aquatic plants. These inputs support the growth of other organisms in the ecosystem, including zooplankton and fish.</p>
+<p>In a terrestrial ecosystem, autochthonous inputs encompass the organic matter produced by plant growth and decomposition, as well as the nutrients and energy generated by the system’s biogeochemical processes, such as nitrogen fixation by soil bacteria.</p>
+<p>Autochthonous inputs are crucial for the functioning and sustainability of natural systems, as they provide the resources necessary to support the growth and productivity of organisms within the ecosystem.</p>
 </section>
 <section id="allochthonous-inputs">
 <h3>Allochthonous Inputs<a class="headerlink" href="#allochthonous-inputs" title="Link to this heading">#</a></h3>
-<p>Allochthonous inputs into a natural system are those that originate from outside the system and are transported into it by external processes such as water or wind. These inputs can be in the form of nutrients, energy, or other materials that have been produced in other ecosystems or environments.</p>
-<p>In an aquatic ecosystem, allochthonous inputs may include the organic matter and nutrients that are transported into the system by rivers or streams from surrounding terrestrial ecosystems. These inputs can support the growth of aquatic organisms and contribute to the overall productivity of the ecosystem.</p>
-<p>In a terrestrial ecosystem, allochthonous inputs may include organic matter and nutrients that are brought into the system by animals, wind-blown dust, or water runoff from neighboring ecosystems. These inputs can affect the composition and productivity of the receiving ecosystem and can influence the interactions between different species.</p>
-<p>Allochthonous inputs can have significant impacts on the functioning and dynamics of natural systems. For example, changes in the quantity or quality of allochthonous inputs can affect the growth and survival of organisms within the system and can alter the balance of nutrient cycling and energy flow.</p>
-<p>In addition to their direct effects on CZ processes, autochthonous and allochthonous inputs can also interact with other factors such as climate and land use to affect the overall health and sustainability of the CZ. For example, changes in land use practices such as deforestation or agriculture can alter the balance of autochthonous and allochthonous inputs, which can have long-term impacts on soil fertility, water quality, and ecosystem productivity.</p>
+<p>Allochthonous inputs into a natural system refer to materials that originate from outside of that system and are transported in by external processes such as water or wind. These inputs can consist of nutrients, energy, or other materials produced in different ecosystems or environments.</p>
+<p>In aquatic ecosystems, allochthonous inputs may include organic matter and nutrients that enter the system through rivers or streams from surrounding terrestrial ecosystems. These inputs support the growth of aquatic organisms and contribute to the overall productivity of the ecosystem.</p>
+<p>In terrestrial ecosystems, allochthonous inputs can come from various sources, including organic matter and nutrients carried in by animals, wind-blown dust, or water runoff from neighboring ecosystems. These inputs can influence the composition and productivity of the recipient ecosystem and affect interactions among different species.</p>
+<p>Allochthonous inputs can significantly impact the functioning and dynamics of natural systems. For instance, changes in the quantity or quality of allochthonous inputs can affect the growth and survival of organisms within the system, altering the balance of nutrient cycling and energy flow.</p>
+<p>In addition to their direct effects on critical zone processes, both autochthonous and allochthonous inputs can interact with other factors, such as climate and land use, ultimately influencing the overall health and sustainability of the critical zone. For example, changes in land use practices, such as deforestation or agriculture, can disrupt the balance between autochthonous and allochthonous inputs, leading to long-term effects on soil fertility, water quality, and ecosystem productivity.</p>
 <p>See <a class="reference external" href="https://all-geo.org/highlyallochthonous/2011/06/when-a-tree-falls-in-a-stream-theres-always-something-around-to-make-use-of-it/">Jefferson’s blog entry for a hydrology/CZ perspective</a></p>
 </section>
 <section id="methods-to-examine-inputs">
 <h3>Methods to Examine Inputs<a class="headerlink" href="#methods-to-examine-inputs" title="Link to this heading">#</a></h3>
 <section id="principal-component-analysis">
 <h4>Principal Component Analysis<a class="headerlink" href="#principal-component-analysis" title="Link to this heading">#</a></h4>
-<p>In CZ science studies there are many types of data that are collected as we see from many of the papers that we read.  Many of these data are related to each other.  Recognizing patterns within these data becomes very crucial to our understanding of the CZ system functions. Principal Component Analysis (PCA) is a statistical technique used to reduce the complexity of data by identifying patterns and relationships between variables.  PCA is used in data analysis to condense many variables into a smaller set of variables that capture most of the important information (dimension reduction). It’s like summarizing a long article into a shorter, key point version.</p>
+<p>Various types of data are collected in the study of critical zone (CZ) science, as evident in many of the papers we read. Many of these data points are interconnected. Recognizing patterns within these data is crucial for understanding the functions of the CZ system.</p>
+<p>Principal Component Analysis (PCA) is a statistical technique that simplifies data complexity by identifying patterns and relationships between variables. PCA condenses numerous variables into smaller sets that capture the most important information, effectively reducing the dimensions. It is similar to summarizing a lengthy article into a concise version that highlights the key points.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/wWt6cAHlDbg" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Here’s a short summary of how PCA works:</p>
+<p>Here’s a clear summary of how PCA (Principal Component Analysis) works:</p>
 <ol class="arabic simple">
-<li><p><strong>Imagine a bunch of data points:</strong> These data points could represent anything. For example, data on precipitation, ET, soil type, types of trees,  age of trees in a forest, etc. Each point has multiple features or variables.</p></li>
-<li><p><strong>Find the big picture:</strong> PCA identifies the directions of greatest variation in the data. Think of these directions as lines or planes that best fit the scattered data points.</p></li>
-<li><p><strong>New and improved variables:</strong> PCA creates new variables, called principal components, that align with these directions of variation. The first component captures the most variation, the second captures the remaining variation, and so on.</p></li>
-<li><p><strong>Less is more (sometimes):</strong> By using a smaller set of principal components, you can achieve dimensionality reduction. This means you can represent the data with fewer variables, which can be easier to analyze and visualize.</p></li>
+<li><p><strong>Imagine a collection of data points:</strong> These data points can represent various aspects, such as precipitation, evapotranspiration (ET), soil type, types of trees, and the age of trees in a forest. Each point has multiple features or variables associated with it.</p></li>
+<li><p><strong>Identify the overall pattern:</strong> PCA uncovers the directions in which the data varies the most. You can think of these directions as lines or planes that best fit the scattered data points.</p></li>
+<li><p><strong>Create new variables:</strong> PCA generates new variables, known as principal components, that align with these directions of variation. The first principal component captures the most variation in the data, the second component captures the remaining variation, and so on.</p></li>
+<li><p><strong>Simplifying data:</strong> By using a smaller number of principal components, you can achieve dimensionality reduction. This means you can represent the data with fewer variables, making it easier to analyze and visualize.</p></li>
 </ol>
-<p>There’s a trade-off, though. PCA discards some information to create the new compressed set of variables. The key is to keep the components that hold the most important information.</p>
-<p>PCA data are shown in biplots which combine two plots into one: a score plot and a loadings plot.</p>
+<p>However, there is a trade-off. PCA discards some information to create this new, compressed set of variables. The key is to retain the components that hold the most significant information.</p>
+<p>PCA results are often displayed through biplots, which combine two types of plots: a score plot and a loadings plot.</p>
 <ul class="simple">
-<li><p><strong>Score plot:</strong> This shows the data points themselves, projected onto the first two principal components. Each data point is represented by a dot, and its location reflects how it scores on those two components.</p></li>
-<li><p><strong>Loadings plot:</strong> This shows the variables used in the PCA analysis. They are represented by arrows or lines radiating from the origin. The direction of the arrow indicates how the variable is related to the principal components, and the length of the arrow reflects how much it contributes to the variation captured by that component.</p></li>
+<li><p><strong>Score plot:</strong> This plot shows the data points projected onto the first two principal components. Each data point is represented as a dot, and its location reflects how it scores on those two components.</p></li>
+<li><p><strong>Loadings plot:</strong> This plot illustrates the variables used in the PCA analysis. The variables are represented by arrows or lines radiating from the origin. The direction of an arrow indicates how a variable relates to the principal components, while the length of the arrow represents how much that variable contributes to the variation captured by each component.</p></li>
 </ul>
 <p>By combining these two plots, a PCA biplot allows you to visualize both the relationships between the data points and the relationships between the variables. Here’s an example:</p>
 <figure class="margin-caption align-default" id="pca-biplot">
 <img alt="https://agupubs.onlinelibrary.wiley.com/cms/asset/b325d69c-c39f-4dbf-95ea-6bc2133fc10d/wrcr22784-fig-0003-m.jpg" src="https://agupubs.onlinelibrary.wiley.com/cms/asset/b325d69c-c39f-4dbf-95ea-6bc2133fc10d/wrcr22784-fig-0003-m.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Results of Principal Component Analysis of landscape predictor variables.</span><a class="headerlink" href="#pca-biplot" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Results of Principal Component Analysis of the landscape predictor variables.</span><a class="headerlink" href="#pca-biplot" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://doi.org/10.1002/2016WR020016">Wymore, et al. (2017), Critical zone structure controls concentration-discharge relationships and solute generation in forested tropical montane watersheds, <em>Water Resour. Res.</em>, 53, 6279–6295</a></p>
 </div>
 </figcaption>
 </figure>
-<p>Here are some key things to look for when interpreting a PCA biplot:</p>
+<p>Here are some key aspects to consider when interpreting a PCA biplot:</p>
 <ul class="simple">
-<li><p>Grouping of data points: Do the data points cluster together, or are they spread out? Clusters suggest similar characteristics within those groups.</p></li>
-<li><p>Direction of variable arrows: How do the variable arrows relate to each other? Are they pointing in similar directions (positive correlation), opposite directions (negative correlation), or perpendicular (no correlation)?</p></li>
-<li><p>Length of variable arrows: The longer the arrow, the more the variable contributes to the variation captured by that principal component.</p></li>
+<li><p><strong>Grouping of Data Points</strong>: Observe whether the data points cluster or are spread out. Clusters indicate similar characteristics among those groups.</p></li>
+<li><p><strong>Direction of Variable Arrows</strong>: Examine how the variable arrows relate. Are they pointing in similar directions (indicating a positive correlation) or opposite directions (indicating a negative correlation), or are they perpendicular (suggesting no correlation)?</p></li>
+<li><p><strong>Length of Variable Arrows</strong>: The longer the arrow, the greater the variable’s contribution to the variation captured by that principal component.</p></li>
 </ul>
-<p>By considering these aspects of the biplot, you can gain valuable insights into the relationships between the variables and the structure of your data.</p>
-<p>In essence, PCA is a way to simplify data by identifying the most important patterns and relationships between variables, and reducing the complexity of the data. It is a powerful tool that is used in many different fields, including sciences, engineering, humanities, and finance.</p>
+<p>By considering these elements of the biplot, you can gain valuable insights into the relationships between the variables and the overall structure of your data.</p>
+<p>In essence, PCA (Principal Component Analysis) is a method for simplifying data by identifying the most important patterns and relationships among variables, thereby reducing the complexity of the dataset. It is a powerful tool utilized across various fields, including the sciences, engineering, humanities, and finance.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example of PCA Application in CZS</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Read <a class="reference external" href="https://onlinelibrary.wiley.com/doi/10.1002/hyp.8257">Groundwater–surface water interactions in a lowland watershed: source contribution to stream flow - Guinn Garrett - 2012 - Hydrological Processes - Wiley Online Library</a></p>
 <p class="sd-card-text">Consider the following questions:</p>
 <ol class="arabic simple">
-<li><p class="sd-card-text">What was the big picture research question asked in this study?</p></li>
+<li><p class="sd-card-text">What was the big-picture research question asked in this study?</p></li>
 <li><p class="sd-card-text">How is the water balance affecting this stream system in the Charleston area?</p></li>
-<li><p class="sd-card-text">How many potential water sources were identified for this stream sysem?</p></li>
+<li><p class="sd-card-text">How many potential water sources were identified for this stream system?</p></li>
 <li><p class="sd-card-text">How was PCA used to separate the different sources and identify the more significant sources?</p></li>
-<li><p class="sd-card-text">What was determined to be the main source of water to such stream systems?</p></li>
+<li><p class="sd-card-text">What was determined to be the primary water source for such stream systems?</p></li>
 </ol>
 </div>
 </details><p>See <a class="reference external" href="https://towardsdatascience.com/principal-component-analysis-pca-explained-visually-with-zero-math-1cbf392b9e7d">Principal Component Analysis (PCA) Explained Visually with Zero Math | by Casey Cheng</a> for a nice summary of the method.</p>
 </section>
 <section id="t-test">
 <h4>t-test<a class="headerlink" href="#t-test" title="Link to this heading">#</a></h4>
-<p>T-tests are statistical tools used to compare the means of two groups in large sets of data. They are particularly helpful when the data comes from normally distributed populations and the variances are unknown.</p>
+<p>T-tests are statistical tools that compare the means of two groups within large data sets. They are especially useful when the data originates from normally distributed populations, and the variances are unknown.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/VekJxtk4BYM" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 <p>There are two main types of t-tests:</p>
 <ul class="simple">
-<li><p><strong>One-sample t-test:</strong> This kind of test compares the mean of a single group to a hypothesized value. For instance, you might use it to see if the average precipitation in Charleston is different from the national average.</p></li>
-<li><p><strong>Two-sample t-test:</strong> This kind of test compares the means of two different groups. Maybe you want to see if a new fertilizer increases corn yield compared to a standard fertilizer.</p></li>
+<li><p><strong>One-sample t-test:</strong> This test compares the mean of a single group to a hypothesized value. For example, you might use it to determine if Charleston’s precipitation differs from the national average.</p></li>
+<li><p><strong>Two-sample t-test:</strong> This test compares the means of two different groups. For instance, you might want to assess whether a new fertilizer increases corn yield compared to a standard fertilizer.</p></li>
 </ul>
-<p>Here’s the general process of how a t-test works:</p>
+<p>Here’s a general overview of how a t-test works:</p>
 <ol class="arabic simple">
-<li><p><strong>Set up your hypothesis:</strong> You’ll have a null hypothesis, which is the idea you’re trying to disprove (usually that there’s no difference between the means), and an alternative hypothesis (that there is a difference).</p></li>
-<li><p><strong>Calculate the t-statistic:</strong> This statistic considers the difference between the group means, the variability within the groups, and the sample sizes.</p></li>
-<li><p><strong>Find the p-value:</strong> This value represents the probability of getting a t-statistic as extreme as the one you calculated, assuming the null hypothesis is true. Lower p-values mean there’s less chance the observed difference is due to random chance.</p></li>
-<li><p><strong>Interpret the results:</strong> You’ll choose a significance level (often 0.05) to decide if the p-value is small enough to reject the null hypothesis. If it is, you can conclude there’s a statistically significant difference between the means.</p></li>
+<li><p><strong>Set up your hypothesis:</strong> You will formulate a null hypothesis, which is the idea you aim to disprove (typically that there is no difference between the means), and an alternative hypothesis, which suggests that there is a difference.</p></li>
+<li><p><strong>Calculate the t-statistic:</strong> This statistic reflects the difference between the group means, the variability within the groups, and the sample sizes.</p></li>
+<li><p><strong>Find the p-value:</strong> This value indicates the probability of obtaining a t-statistic as extreme as the one you calculated, assuming the null hypothesis is true. Lower p-values suggest a smaller chance that the observed difference occurred randomly.</p></li>
+<li><p><strong>Interpret the results:</strong> Choose a significance level (commonly set at 0.05) to determine if the p-value is small enough to reject the null hypothesis. If it is, you can conclude that there is a statistically significant difference between the means.</p></li>
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example of t-test in environmental applications</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Scenario:</strong> A geologist wants to investigate if there’s a difference in average lead concentration between roadside dust and soil samples collected further away from traffic in a city.</p>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Null hypothesis (H₀):</strong> The average lead concentration in roadside dust is the same as the average lead concentration in soil further from traffic.</p></li>
-<li><p class="sd-card-text"><strong>Alternative hypothesis (H₁):</strong> The average lead concentration in roadside dust is higher than the average lead concentration in soil further from traffic (due to traffic emissions).</p></li>
+<li><p class="sd-card-text"><strong>Null hypothesis (H₀):</strong> The average lead concentration in roadside dust is the same as that in the soil further from traffic.</p></li>
+<li><p class="sd-card-text"><strong>Alternative hypothesis (H₁):</strong> The average lead concentration in roadside dust is higher than the average lead concentration in the soil further from traffic (due to traffic emissions).</p></li>
 </ul>
 <p class="sd-card-text"><strong>Steps:</strong></p>
 <ol class="arabic simple">
 <li><p class="sd-card-text"><strong>Collect data:</strong> The geologist randomly collects samples from both roadside areas and further away from traffic. They then measure the lead concentration in each sample.</p></li>
 <li><p class="sd-card-text"><strong>Perform the t-test:</strong> Using statistical software, the geologist runs an independent samples t-test on the lead concentration data for roadside dust and soil samples.</p></li>
 <li><p class="sd-card-text"><strong>Analyze the results:</strong> The t-test will provide a t-statistic and a p-value. Let’s say the p-value is lower than the chosen significance level (e.g., 0.05).</p></li>
-<li><p class="sd-card-text"><strong>Interpretation:</strong> Since the p-value is statistically significant, we reject the null hypothesis. This suggests that the average lead concentration in roadside dust is statistically higher than the average lead concentration in soil further from traffic. This supports the idea that traffic emissions contribute to higher lead levels in roadside dust.</p></li>
+<li><p class="sd-card-text"><strong>Interpretation:</strong> Since the p-value is statistically significant, we reject the null hypothesis. This suggests that the average lead concentration in roadside dust is statistically higher than in soil further from traffic. This supports the idea that traffic emissions contribute to higher lead levels in roadside dust.</p></li>
 </ol>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example of t-test in critical zone sciences</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Scenario:</strong> CZ researchers are interested in studying the effects of different land-use practices on soil carbon content. They collect soil samples from two different sites: one site with a forested area (Site A) and another site with an agricultural field (Site B). They measure the soil carbon content (in <span class="math notranslate nohighlight">\(\pu{g kg-1}\)</span> of soil) at multiple locations within each site.</p>
+<p class="sd-card-text"><strong>Scenario:</strong> CZ researchers are interested in studying the effects of different land-use practices on soil carbon content. They collect soil samples from two sites: one with a forested area (Site A) and another with an agricultural field (Site B). They measure the soil carbon content (in <span class="math notranslate nohighlight">\(\pu{g kg-1}\)</span> of soil) at multiple locations within each site.</p>
 <p class="sd-card-text">The researchers want to determine if there is a significant difference in the mean soil carbon content between Site A and Site B. They can use a two-sample t-test to compare the means of the two independent samples.</p>
 <p class="sd-card-text">Let’s assume the following data:</p>
 <p class="sd-card-text">Site A (Forested area):
@@ -590,17 +577,17 @@ t &amp;=&amp; \frac{x_A-x_B}{\sqrt{{s_A}^2/n_A + {s_B}^2/n_B}}\\
 \]</div>
 <ol class="arabic simple" start="4">
 <li><p class="sd-card-text">Determine the critical value from the t-distribution based on the chosen significance level (e.g., <span class="math notranslate nohighlight">\(\alpha\)</span> = 0.05).</p></li>
-<li><p class="sd-card-text">Compare the calculated t-statistic with the critical value. With the t-statistic and degrees of freedom, the researchers can compare the calculated value to the critical value from the t-distribution table or use a statistical software to determine the p-value and make a decision about the null hypothesis.</p></li>
-<li><p class="sd-card-text">Make a decision to reject or fail to reject the null hypothesis based on the comparison. For example, if you have 10 degrees of freedom and want to test at a significance level of 0.05 (α = 0.05), the critical t-value from the table is 1.812. If your calculated t-statistic is greater than this critical value, you would reject the null hypothesis.</p></li>
+<li><p class="sd-card-text">Compare the calculated t-statistic with the critical value. With the t-statistic and degrees of freedom, the researchers can compare the calculated value to the critical value from the t-distribution table or use statistical software to determine the p-value and decide the null hypothesis.</p></li>
+<li><p class="sd-card-text">Decide to reject or fail to reject the null hypothesis based on the comparison. For example, if you have 10 degrees of freedom and want to test at a significance level of 0.05 (α = 0.05), the critical t-value from the table is 1.812. If your calculated t-statistic is greater than this critical value, you would reject the null hypothesis.</p></li>
 </ol>
-<p class="sd-card-text">The calculated t-statistic is greater than the critical value, the researchers can conclude that there is a significant difference in the mean soil carbon content between the forested area and the agricultural field. This result might suggest that the land-use practices (forest versus agriculture) have an impact on soil carbon content, and further investigations could be conducted to understand the underlying mechanisms.</p>
+<p class="sd-card-text">The calculated t-statistic is greater than the critical value; the researchers can conclude that there is a significant difference in the mean soil carbon content between the forested area and the agricultural field. This result might suggest that the land-use practices (forest versus agriculture) impact soil carbon content, and further investigations could be conducted to understand the underlying mechanisms.</p>
 </div>
 </details><p>See <a class="reference external" href="https://www.scribbr.com/statistics/t-test/">An Introduction to t Tests | Definitions, Formula and Examples (scribbr.com)</a></p>
 </section>
 <section id="stable-isotope-ratios">
 <h4>Stable Isotope Ratios<a class="headerlink" href="#stable-isotope-ratios" title="Link to this heading">#</a></h4>
-<p>Stable isotopes do not spontaneously break down to form other isotopes. Because of relative differences in masses of isotopes of an element, changes to isotopic ratios can be observed during various biogeochemical processes. Study of stable isotopes is useful in gaining better understanding in environmental and geological studies.</p>
-<p>Stable isotopes are especially useful in elements whose isotopes have large relative mass differences. Therefore, most of the elements used for stable isotope studies have a low atomic number and atomic mass (<a class="reference internal" href="#stable-isotopes"><span class="std std-numref">Table 1</span></a>). For isotopes with an atomic mass of greater than <span class="math notranslate nohighlight">\(40\)</span>, the relative mass differences are too small for any measurable isotopic fractionation. Most elements used in radiometric dating have high atomic mass, and mass fractionation is not significant.</p>
+<p>Stable isotopes do not spontaneously break down to form other isotopes. Because of relative differences in masses of isotopes of an element, changes to isotopic ratios can be observed during various biogeochemical processes. The study of stable isotopes is useful in gaining a better understanding of environmental and geological studies.</p>
+<p>Stable isotopes are especially useful in elements whose isotopes have large relative mass differences. Therefore, most elements used for stable isotope studies have a low atomic number and atomic mass (<a class="reference internal" href="#stable-isotopes"><span class="std std-numref">Table 1</span></a>). For isotopes with an atomic mass of greater than <span class="math notranslate nohighlight">\(40\)</span>, the relative mass differences are too small for any measurable isotopic fractionation. Most elements used in radiometric dating have high atomic mass, and mass fractionation is insignificant.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="stable-isotopes">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Distribution of stable isotopes of most commonly-used elements.</span><a class="headerlink" href="#stable-isotopes" title="Link to this table">#</a></caption>
 <thead>
@@ -647,26 +634,26 @@ t &amp;=&amp; \frac{x_A-x_B}{\sqrt{{s_A}^2/n_A + {s_B}^2/n_B}}\\
 </div>
 <section id="stable-isotope-fractionation">
 <h5>Stable Isotope Fractionation<a class="headerlink" href="#stable-isotope-fractionation" title="Link to this heading">#</a></h5>
-<p>Isotopic fractionation is the partitioning of isotopes during physical (evaporation, condensation, melting, crystallization, absorption and desorption, diffusion), chemical, or biological processes. This partitioning is proportional to the difference in the masses of the isotopes. The processes can either be equilibrium reactions, in which forward and backward reaction rates are equal for each isotope, or kinetic reactions, which are unidirectional reactions in which reaction rates are dependent on the masses of the isotopes and their vibrational energies.</p>
+<p>Isotopic fractionation is the partitioning of isotopes during physical (evaporation, condensation, melting, crystallization, absorption, and desorption, diffusion), chemical, or biological processes. This partitioning is proportional to the difference in the masses of the isotopes. The processes can either be equilibrium reactions, in which forward and backward reaction rates are equal for each isotope, or kinetic reactions, which are unidirectional reactions in which reaction rates depend on the masses of the isotopes and their vibrational energies.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Stable isotope fractionation of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">During evaporation of  in a closed system, six isotope combinations of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> are possible: <span class="math notranslate nohighlight">\(\ce{^1H2^{16}O}, \ce{^1H^2H^{16}O}, \ce{^2H2^{16}O}, \ce{^1H2^{18}O}, \ce{^1H^2H^{18}O}, \ce{^2H2^{18}O}\)</span>.</p>
-<p class="sd-card-text">As a result of these different stable isotope combinations, the molecular masses are <span class="math notranslate nohighlight">\(18\)</span>, <span class="math notranslate nohighlight">\(19\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(21\)</span>, and <span class="math notranslate nohighlight">\(22\)</span> respectively. See the conceptulizations in the figure below.</p>
+<p class="sd-card-text">During evaporation of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> in a closed system, six isotope combinations of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> are possible: <span class="math notranslate nohighlight">\(\ce{^1H2^{16}O}, \ce{^1H^2H^{16}O}, \ce{^2H2^{16}O}, \ce{^1H2^{18}O}, \ce{^1H^2H^{18}O}, \ce{^2H2^{18}O}\)</span>.</p>
+<p class="sd-card-text">As a result of these different stable isotope combinations, the molecular masses are <span class="math notranslate nohighlight">\(18\)</span>, <span class="math notranslate nohighlight">\(19\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(21\)</span>, and <span class="math notranslate nohighlight">\(22\)</span> respectively. See the conceptualizations in the figure below.</p>
 <p class="sd-card-text"><img alt="# Water Isotopes Diagram - USGS" src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/Fig%201.Isotopes.web_.jpg" /></p>
 </div>
-</details><p>Why do stable isotopes fractionate? Isotopically lighter isotopes have higher velocities than heavier isotopes. From basic physics, kinetic energy of a particle can be calculated using the following formula:</p>
+</details><p>Why do stable isotopes fractionate? Isotopically lighter isotopes have higher velocities than heavier isotopes. From basic physics, the kinetic energy of a particle can be calculated using the following formula:</p>
 <div class="math notranslate nohighlight" id="equation-kineticenergy">
 <span class="eqno">(7)<a class="headerlink" href="#equation-kineticenergy" title="Link to this equation">#</a></span>\[\text{Kinetic Energy} = \frac{1}{2} mv^2\]</div>
-<p>Per Eqn. <a class="reference internal" href="#equation-kineticenergy">(7)</a>, isotopically lighter molecules that have higher velocities and therefore, greater amount of kinetic energy. Consider the above water example. Since the lighter molecules have greater velocities, they preferentially escape into the vapor phase resulting in enrichment of the lighter isotopes ( and ), relative to the liquid phase of water. In addition, atoms with greater mass form slightly stronger bonds, the heavier isotope is generally enriched in the more condensed phase or larger molecule.</p>
+<p>Per Eqn. <a class="reference internal" href="#equation-kineticenergy">(7)</a>, isotopically lighter molecules with higher velocities and, therefore, a greater amount of kinetic energy. Consider the above water example. Since the lighter molecules have greater velocities, they preferentially escape into the vapor phase, enriching the lighter isotopes ( and ) relative to the liquid phase of water. In addition, atoms with greater mass form slightly stronger bonds, and the heavier isotope is generally enriched in the more condensed phase or larger molecule.</p>
 <p>The partitioning of stable isotopes between two substances, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, is described by the isotopic fractionation factor, <span class="math notranslate nohighlight">\(\alpha\)</span>. The fractionation factor is written as</p>
 <div class="math notranslate nohighlight" id="equation-alpha">
 <span class="eqno">(8)<a class="headerlink" href="#equation-alpha" title="Link to this equation">#</a></span>\[\alpha = \frac{R_A}{R_B}\]</div>
-<p>where, <span class="math notranslate nohighlight">\(R\)</span> is ratio of heavy to light isotope abundance (e.g., <span class="math notranslate nohighlight">\(\ce{^2 H}\)</span>/<span class="math notranslate nohighlight">\(\ce{^1 H}\)</span>  , <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16}O}\)</span> ). Generally, the isotope abundance ratio does not greatly vary in the environment, and so the fractionation factor, <span class="math notranslate nohighlight">\(\alpha\)</span>, generally has a value close to 1. However, this value can be precisely measured and so is expressed with a precision of 4-5 decimal places. The fractionation factor depends on the temperature and can be determined either experimentally or calculated from spectroscopic data.</p>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the ratio of heavy to light isotope abundance (e.g., <span class="math notranslate nohighlight">\(\ce{^2 H}\)</span>/<span class="math notranslate nohighlight">\(\ce{^1 H}\)</span>, <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16}O}\)</span> ), generally, the isotope abundance ratio does not significantly vary in the environment, so the fractionation factor, <span class="math notranslate nohighlight">\(\alpha\)</span>, generally has a value close to unity (1). However, this value can be precisely measured and expressed with a precision of 4-5 decimal places. The fractionation factor depends on the temperature and can be determined experimentally or from spectroscopic data.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Isotope fractionation factor</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Consider the evaporation of water. We can setup the fractionation ratio and factor as follows:</p>
+<p class="sd-card-text">Consider the evaporation of water. We can set the fractionation ratio and factor as follows:</p>
 <div class="math notranslate nohighlight">
 \[R = \frac{\ce{^{18}O}}{\ce{^{16}O}}
 \]</div>
@@ -683,23 +670,23 @@ t &amp;=&amp; \frac{x_A-x_B}{\sqrt{{s_A}^2/n_A + {s_B}^2/n_B}}\\
 <div class="math notranslate nohighlight">
 \[
 [\ce{^{18}O}]_{\text{liquid}} &gt; [\ce{^{18}O}]_{\text{vapor}}\]</div>
-<p class="sd-card-text">Therefore, the fractionation factor is greater than 1. With increasing temperature, the fractionation factor decreases, and it becomes 1 at infinite temperature.</p>
+<p class="sd-card-text">Therefore, the fractionation factor is greater than 1. With increasing temperature, the fractionation factor decreases and becomes 1 at infinite temperature.</p>
 </div>
 </details><p>In <a class="reference internal" href="#oxygen-fractionation"><span class="std std-numref">Fig. 41</span></a>, isotope fractionation of <span class="math notranslate nohighlight">\(\ce{O}\)</span> as a function of temperature during evaporation of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> is shown. Paleoclimatologists use <span class="math notranslate nohighlight">\(\ce{O}\)</span> ratios (<span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16}O}\)</span>) from <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> trapped in glaciers as well as the <span class="math notranslate nohighlight">\(\ce{O}\)</span> absorbed in the shells of marine plants and animals to measure past temperatures and rainfall. In polar ice cores, the measurement is relatively simple: less <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> in the frozen water means that temperatures were cooler.  In shells, the measurement is far more complicated because the biological and chemical processes that form the shells skew the <span class="math notranslate nohighlight">\(\ce{O}\)</span> ratio in different ways depending on temperature.</p>
 <figure class="margin-caption align-default" id="oxygen-fractionation">
 <img alt="https://earthobservatory.nasa.gov/ContentFeature/Paleoclimatology_OxygenBalance/images/oxygen_schematic.jpg" src="https://earthobservatory.nasa.gov/ContentFeature/Paleoclimatology_OxygenBalance/images/oxygen_schematic.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Water vapor gradually loses <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> as it travels from the equator to the poles. Because water molecules with heavy <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> isotopes in them condense more easily than normal water molecules, air becomes progressively depleted in <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> as it travels to high latitudes and becomes colder and drier. In turn, the snow that forms most glacial ice is also depleted in <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span>. Image source: <a class="reference external" href="https://earthobservatory.nasa.gov/features/Paleoclimatology_OxygenBalance">Paleoclimatology: The Oxygen Balance (nasa.gov)</a></span><a class="headerlink" href="#oxygen-fractionation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Water vapor gradually loses <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> as it travels from the equator to the poles. Because water molecules with heavy <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> isotopes in them condense more quickly than normal water molecules, the air becomes progressively depleted in <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> as it travels to high latitudes and becomes colder and drier. The snow that forms most glacial ice is also depleted in <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span>. Image source: <a class="reference external" href="https://earthobservatory.nasa.gov/features/Paleoclimatology_OxygenBalance">Paleoclimatology: The Oxygen Balance (nasa.gov)</a></span><a class="headerlink" href="#oxygen-fractionation" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="the-delta-notation">
 <h5>The <span class="math notranslate nohighlight">\(\delta\)</span> notation<a class="headerlink" href="#the-delta-notation" title="Link to this heading">#</a></h5>
 <p><span class="math notranslate nohighlight">\(R\)</span> values for environmental samples have to be compared with a fixed value (or a standard) to know if that sample is enriched or depleted compared to the standard.</p>
-<p>Since isotopic variations between samples are very small, we express isotopic ratios using delta (<span class="math notranslate nohighlight">\(\delta\)</span>) notation. This value is determined by comparing the isotopic ratio (<span class="math notranslate nohighlight">\(R\)</span>) of a sample with that of a standard and calculated as follows:</p>
+<p>Since isotopic variations between samples are minimal, we express isotopic ratios using delta (<span class="math notranslate nohighlight">\(\delta\)</span>) notation. This value is determined by comparing the isotopic ratio (<span class="math notranslate nohighlight">\(R\)</span>) of a sample with that of a standard and calculated as follows:</p>
 <div class="math notranslate nohighlight" id="equation-delta">
 <span class="eqno">(9)<a class="headerlink" href="#equation-delta" title="Link to this equation">#</a></span>\[\delta = \left(\frac{R_\text{Sample}}{R_\text{Standard}} - 1\right) \times 1000\]</div>
-<p>Where the isotopic ratio, <span class="math notranslate nohighlight">\(R\)</span>, has been defined in the previous section. Note that the ratio is multiplied by a thousand and is expressed in “parts per thousand” or permille or permil or the symbol, <span class="math notranslate nohighlight">\(\pu{‰}\)</span>. As seen in Eqn. <a class="reference internal" href="#equation-delta">(9)</a>, <span class="math notranslate nohighlight">\(R_\text{Standard}\)</span> is required for the element of interest. Standards for most common elements of interest have been adopted worldwide for research purposes and shown in <a class="reference internal" href="#isotopestandards"><span class="std std-numref">Table 2</span></a>. Typically, V-SMOW (Vienna standard mean ocean water), and PDB (Pee Dee beleminite) are most commonly used for <span class="math notranslate nohighlight">\(\ce{H}\)</span>, <span class="math notranslate nohighlight">\(\ce{O}\)</span>, and <span class="math notranslate nohighlight">\(\ce{C}\)</span> ratios.</p>
+<p>Where the isotopic ratio, <span class="math notranslate nohighlight">\(R\)</span>, has been defined in the previous section. Note that the ratio is multiplied by a thousand and is expressed in “parts per thousand” or permille or permil or the symbol, <span class="math notranslate nohighlight">\(\pu{‰}\)</span>. As seen in Eqn. <a class="reference internal" href="#equation-delta">(9)</a>, <span class="math notranslate nohighlight">\(R_\text{Standard}\)</span> is required for the element of interest. Standards for most common elements of interest have been adopted worldwide for research purposes and shown in <a class="reference internal" href="#isotopestandards"><span class="std std-numref">Table 2</span></a>. Typically, V-SMOW (Vienna standard mean ocean water) and PDB (Pee Dee belemnite) are most commonly used for <span class="math notranslate nohighlight">\(\ce{H}\)</span>, <span class="math notranslate nohighlight">\(\ce{O}\)</span>, and <span class="math notranslate nohighlight">\(\ce{C}\)</span> ratios.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="isotopestandards">
 <caption><span class="caption-number">Table 2 </span><span class="caption-text">Isotope ratios and standards for most commonly-used elements in environmental geosciences.</span><a class="headerlink" href="#isotopestandards" title="Link to this table">#</a></caption>
 <thead>
@@ -736,7 +723,7 @@ t &amp;=&amp; \frac{x_A-x_B}{\sqrt{{s_A}^2/n_A + {s_B}^2/n_B}}\\
 </tbody>
 </table>
 </div>
-<p>When <span class="math notranslate nohighlight">\(\delta\)</span> values are negative, <span class="math notranslate nohighlight">\(R_\text{Sample} &lt; R_\text{Standard}\)</span> in Eqn. <a class="reference internal" href="#equation-delta">(9)</a>, therefore, the sample is considered to be depleted compared with the standard. Similarly, when <span class="math notranslate nohighlight">\(\delta\)</span> values are positive, <span class="math notranslate nohighlight">\(R_\text{Sample} &gt; R_\text{Standard}\)</span>, therefore, the sample is considered to be enriched compared to the standard.</p>
+<p>When <span class="math notranslate nohighlight">\(\delta\)</span> values are negative, <span class="math notranslate nohighlight">\(R_\text{Sample} &lt; R_\text{Standard}\)</span> in Eqn. <a class="reference internal" href="#equation-delta">(9)</a>, therefore, the sample is considered depleted compared with the standard. Similarly, when <span class="math notranslate nohighlight">\(\delta\)</span> values are positive, <span class="math notranslate nohighlight">\(R_\text{Sample} &gt; R_\text{Standard}\)</span>, therefore, the sample is considered to be enriched compared to the standard.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: <span class="math notranslate nohighlight">\(\delta\)</span> notation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -754,20 +741,20 @@ t &amp;=&amp; \frac{x_A-x_B}{\sqrt{{s_A}^2/n_A + {s_B}^2/n_B}}\\
 </section>
 <section id="role-of-organisms">
 <h2>Role of Organisms<a class="headerlink" href="#role-of-organisms" title="Link to this heading">#</a></h2>
-<p>Organisms have a significant impact on the CZ. These impacts include:</p>
+<p>Organisms have a significant impact on the critical zone (CZ). Their effects include:</p>
 <ul class="simple">
-<li><p>Soil formation: Living organisms, especially microbes, plants, and animals, play a crucial role in the weathering of rock and the formation of soil, which is the central component of the critical zone. Organisms break down rock, cycle nutrients, and create organic matter that accumulates in the soil.</p></li>
-<li><p>Regulating water and nutrient cycles: The roots, stems, and leaves of plants interact with the soil, water, and atmosphere to regulate the movement of water, carbon, and other nutrients through the critical zone. This cycling of water and nutrients is essential for sustaining terrestrial life.</p></li>
-<li><p>Shaping landscape and ecosystem processes: Burrowing animals, tree roots, and other organisms physically alter the structure and composition of the critical zone, which in turn shapes landscape evolution, erosion, and the overall functioning of ecosystems.</p></li>
-<li><p>Providing ecosystem services: The organisms in the CZ provide essential services to human society, such as food production, water filtration, and climate regulation. Disruptions to CZ organisms can degrade these important services.</p></li>
+<li><p><strong>Soil Formation</strong>: Living organisms, particularly microbes, plants, and animals, play a crucial role in the weathering of rock and the formation of soil, which is a central component of the critical zone. These organisms break down rocks, cycle nutrients, and accumulate organic matter in the soil.</p></li>
+<li><p><strong>Regulating Water and Nutrient Cycles</strong>: The roots, stems, and leaves of plants interact with the soil, water, and atmosphere to regulate the movement of water, carbon, and other nutrients through the critical zone. This cycling of water and nutrients is essential for sustaining terrestrial life.</p></li>
+<li><p><strong>Shaping Landscape and Ecosystem Processes</strong>: Burrowing animals, tree roots, and other organisms physically alter the structure and composition of the critical zone. These changes shape landscape evolution, erosion, and the overall functioning of ecosystems.</p></li>
+<li><p><strong>Providing Ecosystem Services</strong>: Organisms in the critical zone provide essential services to human society, including food production, water filtration, and climate regulation. Disruptions to these organisms can degrade these important services.</p></li>
 </ul>
-<p>The diverse array of living organisms, from microbes to large plants and animals, are intimately connected to and play a vital role in regulating the complex physical, chemical, and biological processes within the critical zone. Understanding these organism-critical zone interactions is crucial for managing natural resources and sustaining terrestrial life. See <a class="reference external" href="https://doi.org/10.5194/bg-8-3531-2011">Akob and Küsel</a> for an excellent review.</p>
+<p>The diverse living organisms, from microbes to large plants and animals, are intimately connected to and play a vital role in regulating the critical zone’s complex physical, chemical, and biological processes. Understanding these organism-critical zone interactions is crucial for managing natural resources and sustaining terrestrial life. See <a class="reference external" href="https://doi.org/10.5194/bg-8-3531-2011">Akob and Küsel</a> for an excellent review.</p>
 <div class="admonition-the-role-of-organisms-in-biogeochemistry admonition">
 <p class="admonition-title">The Role of Organisms in Biogeochemistry</p>
 <p>Read the following article: <a class="reference external" href="https://esajournals.onlinelibrary.wiley.com/doi/10.1890/09-0292.1">Wolves modulate soil nutrient heterogeneity and foliar nitrogen by configuring the distribution of ungulate carcasses - Bump - 2009 - Ecology</a></p>
 <p>Consider the following questions:</p>
 <ol class="arabic simple">
-<li><p>What is the big picture research question being asked by these researchers?</p></li>
+<li><p>What is the big-picture research question these researchers are asking?</p></li>
 <li><p>What were some of the specific responses that were attributed to moose carcasses?</p></li>
 <li><p>How were nitrogen isotopes incorporated into this study?</p></li>
 <li><p>What are some of the positive feedback mechanisms proposed by the authors regarding the effects of wolf-killed moose carcasses?</p></li>
@@ -845,7 +832,8 @@ t &amp;=&amp; \frac{x_A-x_B}{\sqrt{{s_A}^2/n_A + {s_B}^2/n_B}}\\
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -922,8 +910,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

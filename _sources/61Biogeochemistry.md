@@ -1,22 +1,23 @@
 # 6.1 Biogeochemistry in the CZ
 
-Biogeochemistry is the chemistry of the surface of the Earth.  This chemistry is influenced by life on Earth and rapidly changing under the outsized influence of human actions. 
+Biogeochemistry is the study of the chemical processes that occur on the surface of the Earth. Living organisms influence this chemistry and is rapidly changing due to significant human impact.
 
-Biogeochemical processes are essential for the functioning of the CZ. These processes include the cycling of nutrients, the production of $\ce{O2}$, and the regulation of climate. Biogeochemical processes are also affected by human activity. For example, the burning of fossil fuels releases $\ce{CO2}$ into the atmosphere, which can contribute to climate change.
+Biogeochemical processes are essential for the functioning of the critical zone (CZ). These processes include nutrient cycling, oxygen production, and climate regulation. Additionally, human activities affect these processes. For instance, burning fossil fuels releases carbon dioxide ($\ce{CO2}$) into the atmosphere, contributing to climate change.
 
-Biogeochemistry is important for understanding how the critical zone is affected by human activity. This information can be used to develop sustainable management practices that protect the critical zone.
+Understanding biogeochemistry is crucial for determining how human actions impact the critical zone. This knowledge can inform the development of sustainable management practices that protect this vital area.
 
-Here are some specific examples of how biogeochemistry is important for the critical zone:
-- Nutrients are essential for life, and they are cycled through the critical zone by biogeochemical processes. 
-- Water is essential for life, and it is moved through the CZ.
-- Photosynthesis is a process that plants use to convert sunlight into energy. As a byproduct of photosynthesis, plants release oxygen into the atmosphere.
-- Human activities, such as agriculture, deforestation, and climate change, can affect biogeochemical processes. 
-It is important to understand biogeochemistry in order to protect the critical zone. The critical zone is essential for life on Earth, and it is important to ensure that it is healthy and sustainable.
+Here are some specific examples of the importance of biogeochemistry for the critical zone:
+- Nutrients are cycled through the critical zone by biogeochemical processes.
+- Water, another essential element for life, is moved throughout the critical zone.
+- Photosynthesis is the process by which plants convert sunlight into energy, releasing oxygen as a byproduct into the atmosphere.
+- Human activities, such as agriculture, deforestation, and climate change, can disrupt biogeochemical processes.
+
+It is essential to understand biogeochemistry to ensure the health and sustainability of the critical zone, which is vital for life on Earth.
 
 In this section, you will explore:
-- allochthonous inputs,
-- the role of organisms in biogeochemical cycles and how ecological theory can be applied to biogeochemistry, and 
-- how biogeochemical processes can assist in creating solutions for humanity's grand challenges.
+- Allochthonous inputs,
+- The role of organisms in biogeochemical cycles and the application of ecological theory to biogeochemistry and 
+- How biogeochemical processes can help address humanity's grand challenges.
 
 
 <div class="container">
@@ -27,16 +28,17 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## What is Biogeochemistry?
 
-The transport and transformation of chemicals in ecosystems, known as biogeochemical cycling, involve a great number of interrelated physical, chemical, and biological processes. Biogeochemistry features a combination of many chemical transformations and chemical transport processes. Many transformations of N, S, Fe, Mn, C, P and other chemicals occur in various CZ environments as a result of the combination of both aerobic and anaerobic conditions in proximity. 
+The transport and transformation of chemicals in ecosystems, known as biogeochemical cycling, involve a wide range of interrelated physical, chemical, and biological processes. Biogeochemistry encompasses numerous chemical transformations and transport processes. Various transformations of nitrogen (N), sulfur (S), iron (Fe), manganese (Mn), carbon (C), phosphorus (P), and other chemicals occur in different critical zone (CZ) environments due to a combination of both aerobic and anaerobic conditions nearby.
 
-The CZ can be sources, sinks, or transformers of nutrients and some transformations cause toxic conditions, as with the production of hydrogen sulfide, whereas others, such as sedimentation, denitrification, and carbon sequestration, improve water quality and improve the planet's carbon balance. Many transformations in the CZ, especially in the nitrogen, sulfur, and carbon cycles, are mediated by microbial populations that are adapted to the anaerobic environment, while many other processes, such as those in the phosphorus cycle, are chemical and physical. Specific CZ such as wetlands are often coupled to adjacent ecosystems such as by exporting vital organic carbon to downstream aquatic ecosystems.
+The CZ can act as sources, sinks, or transformers of nutrients. Some transformations can create toxic conditions, such as hydrogen sulfide production, while others, like sedimentation, denitrification, and carbon sequestration, enhance water quality and contribute positively to the planet's carbon balance. Microbial populations adapted to anaerobic environments facilitate many transformations in the CZ, particularly within the N, S, and C cycles. In contrast, processes in the phosphorus cycle are primarily governed by chemical and physical mechanisms. Specific critical zones like wetlands are often linked with adjacent ecosystems, exporting vital organic carbon to downstream aquatic environments.
+
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/Bn41lXKyVWQ" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-Biogeochemistry is important because it helps us understand how the Earth works. It helps us understand how the Earth's systems are interconnected and how they are affected by human activity. Biogeochemistry is also important for developing sustainable management practices.
+Biogeochemistry helps us understand how the Earth works. It helps us understand how the Earth's systems are interconnected and how they are affected by human activity. Biogeochemistry is also vital for developing sustainable management practices.
 
 
 ```{figure} https://seaborg.llnl.gov/sites/seaborg/files/2020-05/actinide-transport-field-sites.png
@@ -52,25 +54,26 @@ Image source: [BioGeoChemistry at Interfaces Science Focus Area  (energy.gov)](h
 
 ### Autochthonous Inputs
 
-Every system responds to various types of inputs in different ways.  Autochthonous inputs into a natural system are those that originate from within the system itself. These inputs can be in the form of nutrients, energy, or other materials that are produced or generated by the system's own biotic and abiotic processes.
+Every system responds to various types of inputs in different ways. Autochthonous inputs are those that originate from within a natural system itself. These inputs can include nutrients, energy, or other materials produced by the system's own biotic and abiotic processes.
 
-In an aquatic ecosystem, autochthonous inputs may include the nutrients and organic matter produced by photosynthetic organisms like algae and aquatic plants. These inputs can support the growth of other organisms in the ecosystem, such as zooplankton and fish.
+In an aquatic ecosystem, autochthonous inputs may consist of the nutrients and organic matter generated by photosynthetic organisms, such as algae and aquatic plants. These inputs support the growth of other organisms in the ecosystem, including zooplankton and fish.
 
-In a terrestrial ecosystem, autochthonous inputs may include the organic matter produced by plant growth and decomposition, as well as the nutrients and energy generated by the system's own biogeochemical processes, such as nitrogen fixation by soil bacteria.
+In a terrestrial ecosystem, autochthonous inputs encompass the organic matter produced by plant growth and decomposition, as well as the nutrients and energy generated by the system's biogeochemical processes, such as nitrogen fixation by soil bacteria.
 
-Autochthonous inputs are important for the functioning and sustainability of natural systems, as they provide the resources that support the growth and productivity of organisms within the system.
+Autochthonous inputs are crucial for the functioning and sustainability of natural systems, as they provide the resources necessary to support the growth and productivity of organisms within the ecosystem.
+
 
 ### Allochthonous Inputs
 
-Allochthonous inputs into a natural system are those that originate from outside the system and are transported into it by external processes such as water or wind. These inputs can be in the form of nutrients, energy, or other materials that have been produced in other ecosystems or environments.
+Allochthonous inputs into a natural system refer to materials that originate from outside of that system and are transported in by external processes such as water or wind. These inputs can consist of nutrients, energy, or other materials produced in different ecosystems or environments.
 
-In an aquatic ecosystem, allochthonous inputs may include the organic matter and nutrients that are transported into the system by rivers or streams from surrounding terrestrial ecosystems. These inputs can support the growth of aquatic organisms and contribute to the overall productivity of the ecosystem.
+In aquatic ecosystems, allochthonous inputs may include organic matter and nutrients that enter the system through rivers or streams from surrounding terrestrial ecosystems. These inputs support the growth of aquatic organisms and contribute to the overall productivity of the ecosystem.
 
-In a terrestrial ecosystem, allochthonous inputs may include organic matter and nutrients that are brought into the system by animals, wind-blown dust, or water runoff from neighboring ecosystems. These inputs can affect the composition and productivity of the receiving ecosystem and can influence the interactions between different species.
+In terrestrial ecosystems, allochthonous inputs can come from various sources, including organic matter and nutrients carried in by animals, wind-blown dust, or water runoff from neighboring ecosystems. These inputs can influence the composition and productivity of the recipient ecosystem and affect interactions among different species.
 
-Allochthonous inputs can have significant impacts on the functioning and dynamics of natural systems. For example, changes in the quantity or quality of allochthonous inputs can affect the growth and survival of organisms within the system and can alter the balance of nutrient cycling and energy flow.
+Allochthonous inputs can significantly impact the functioning and dynamics of natural systems. For instance, changes in the quantity or quality of allochthonous inputs can affect the growth and survival of organisms within the system, altering the balance of nutrient cycling and energy flow.
 
-In addition to their direct effects on CZ processes, autochthonous and allochthonous inputs can also interact with other factors such as climate and land use to affect the overall health and sustainability of the CZ. For example, changes in land use practices such as deforestation or agriculture can alter the balance of autochthonous and allochthonous inputs, which can have long-term impacts on soil fertility, water quality, and ecosystem productivity.
+In addition to their direct effects on critical zone processes, both autochthonous and allochthonous inputs can interact with other factors, such as climate and land use, ultimately influencing the overall health and sustainability of the critical zone. For example, changes in land use practices, such as deforestation or agriculture, can disrupt the balance between autochthonous and allochthonous inputs, leading to long-term effects on soil fertility, water quality, and ecosystem productivity.
 
 See [Jefferson's blog entry for a hydrology/CZ perspective](https://all-geo.org/highlyallochthonous/2011/06/when-a-tree-falls-in-a-stream-theres-always-something-around-to-make-use-of-it/)
 
@@ -78,25 +81,33 @@ See [Jefferson's blog entry for a hydrology/CZ perspective](https://all-geo.org/
 
 #### Principal Component Analysis
 
-In CZ science studies there are many types of data that are collected as we see from many of the papers that we read.  Many of these data are related to each other.  Recognizing patterns within these data becomes very crucial to our understanding of the CZ system functions. Principal Component Analysis (PCA) is a statistical technique used to reduce the complexity of data by identifying patterns and relationships between variables.  PCA is used in data analysis to condense many variables into a smaller set of variables that capture most of the important information (dimension reduction). It's like summarizing a long article into a shorter, key point version.
+Various types of data are collected in the study of critical zone (CZ) science, as evident in many of the papers we read. Many of these data points are interconnected. Recognizing patterns within these data is crucial for understanding the functions of the CZ system. 
+
+Principal Component Analysis (PCA) is a statistical technique that simplifies data complexity by identifying patterns and relationships between variables. PCA condenses numerous variables into smaller sets that capture the most important information, effectively reducing the dimensions. It is similar to summarizing a lengthy article into a concise version that highlights the key points.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/wWt6cAHlDbg" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-Here's a short summary of how PCA works:
-1. **Imagine a bunch of data points:** These data points could represent anything. For example, data on precipitation, ET, soil type, types of trees,  age of trees in a forest, etc. Each point has multiple features or variables.
-  2. **Find the big picture:** PCA identifies the directions of greatest variation in the data. Think of these directions as lines or planes that best fit the scattered data points.
-  3. **New and improved variables:** PCA creates new variables, called principal components, that align with these directions of variation. The first component captures the most variation, the second captures the remaining variation, and so on.
-  4. **Less is more (sometimes):** By using a smaller set of principal components, you can achieve dimensionality reduction. This means you can represent the data with fewer variables, which can be easier to analyze and visualize.
+Here's a clear summary of how PCA (Principal Component Analysis) works:
 
-There's a trade-off, though. PCA discards some information to create the new compressed set of variables. The key is to keep the components that hold the most important information.
+1. **Imagine a collection of data points:** These data points can represent various aspects, such as precipitation, evapotranspiration (ET), soil type, types of trees, and the age of trees in a forest. Each point has multiple features or variables associated with it.
 
-PCA data are shown in biplots which combine two plots into one: a score plot and a loadings plot.
+2. **Identify the overall pattern:** PCA uncovers the directions in which the data varies the most. You can think of these directions as lines or planes that best fit the scattered data points.
 
-- **Score plot:** This shows the data points themselves, projected onto the first two principal components. Each data point is represented by a dot, and its location reflects how it scores on those two components.
-- **Loadings plot:** This shows the variables used in the PCA analysis. They are represented by arrows or lines radiating from the origin. The direction of the arrow indicates how the variable is related to the principal components, and the length of the arrow reflects how much it contributes to the variation captured by that component.
+3. **Create new variables:** PCA generates new variables, known as principal components, that align with these directions of variation. The first principal component captures the most variation in the data, the second component captures the remaining variation, and so on.
+
+4. **Simplifying data:** By using a smaller number of principal components, you can achieve dimensionality reduction. This means you can represent the data with fewer variables, making it easier to analyze and visualize.
+
+However, there is a trade-off. PCA discards some information to create this new, compressed set of variables. The key is to retain the components that hold the most significant information.
+
+PCA results are often displayed through biplots, which combine two types of plots: a score plot and a loadings plot.
+
+- **Score plot:** This plot shows the data points projected onto the first two principal components. Each data point is represented as a dot, and its location reflects how it scores on those two components.
+  
+- **Loadings plot:** This plot illustrates the variables used in the PCA analysis. The variables are represented by arrows or lines radiating from the origin. The direction of an arrow indicates how a variable relates to the principal components, while the length of the arrow represents how much that variable contributes to the variation captured by each component.
+
 
 By combining these two plots, a PCA biplot allows you to visualize both the relationships between the data points and the relationships between the variables. Here's an example:
 
@@ -105,21 +116,20 @@ By combining these two plots, a PCA biplot allows you to visualize both the rela
 name: pca-biplot
 figclass: margin-caption
 ---
-Results of Principal Component Analysis of landscape predictor variables.
+Results of Principal Component Analysis of the landscape predictor variables.
 
 Image source: [Wymore, et al. (2017), Critical zone structure controls concentration-discharge relationships and solute generation in forested tropical montane watersheds, _Water Resour. Res._, 53, 6279–6295](https://doi.org/10.1002/2016WR020016)
 ```
 
-Here are some key things to look for when interpreting a PCA biplot:
+Here are some key aspects to consider when interpreting a PCA biplot:
 
-- Grouping of data points: Do the data points cluster together, or are they spread out? Clusters suggest similar characteristics within those groups.
-- Direction of variable arrows: How do the variable arrows relate to each other? Are they pointing in similar directions (positive correlation), opposite directions (negative correlation), or perpendicular (no correlation)?
-- Length of variable arrows: The longer the arrow, the more the variable contributes to the variation captured by that principal component.
+- **Grouping of Data Points**: Observe whether the data points cluster or are spread out. Clusters indicate similar characteristics among those groups.
+- **Direction of Variable Arrows**: Examine how the variable arrows relate. Are they pointing in similar directions (indicating a positive correlation) or opposite directions (indicating a negative correlation), or are they perpendicular (suggesting no correlation)?
+- **Length of Variable Arrows**: The longer the arrow, the greater the variable's contribution to the variation captured by that principal component.
 
-By considering these aspects of the biplot, you can gain valuable insights into the relationships between the variables and the structure of your data.
+By considering these elements of the biplot, you can gain valuable insights into the relationships between the variables and the overall structure of your data.
 
-In essence, PCA is a way to simplify data by identifying the most important patterns and relationships between variables, and reducing the complexity of the data. It is a powerful tool that is used in many different fields, including sciences, engineering, humanities, and finance.
-
+In essence, PCA (Principal Component Analysis) is a method for simplifying data by identifying the most important patterns and relationships among variables, thereby reducing the complexity of the dataset. It is a powerful tool utilized across various fields, including the sciences, engineering, humanities, and finance.
 
 
 ```{dropdown} Example of PCA Application in CZS
@@ -127,19 +137,20 @@ In essence, PCA is a way to simplify data by identifying the most important patt
 Read [Groundwater–surface water interactions in a lowland watershed: source contribution to stream flow - Guinn Garrett - 2012 - Hydrological Processes - Wiley Online Library](https://onlinelibrary.wiley.com/doi/10.1002/hyp.8257)
 
 Consider the following questions:
-1. What was the big picture research question asked in this study?
+1. What was the big-picture research question asked in this study?
 2. How is the water balance affecting this stream system in the Charleston area?
-3. How many potential water sources were identified for this stream sysem?
+3. How many potential water sources were identified for this stream system?
 4. How was PCA used to separate the different sources and identify the more significant sources?
-5. What was determined to be the main source of water to such stream systems?
+5. What was determined to be the primary water source for such stream systems?
 
 ```
 
 
 See [Principal Component Analysis (PCA) Explained Visually with Zero Math | by Casey Cheng](https://towardsdatascience.com/principal-component-analysis-pca-explained-visually-with-zero-math-1cbf392b9e7d) for a nice summary of the method.
+
 #### t-test
 
-T-tests are statistical tools used to compare the means of two groups in large sets of data. They are particularly helpful when the data comes from normally distributed populations and the variances are unknown. 
+T-tests are statistical tools that compare the means of two groups within large data sets. They are especially useful when the data originates from normally distributed populations, and the variances are unknown.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/VekJxtk4BYM" 
@@ -149,32 +160,37 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 There are two main types of t-tests:
 
-- **One-sample t-test:** This kind of test compares the mean of a single group to a hypothesized value. For instance, you might use it to see if the average precipitation in Charleston is different from the national average.
-- **Two-sample t-test:** This kind of test compares the means of two different groups. Maybe you want to see if a new fertilizer increases corn yield compared to a standard fertilizer.
+- **One-sample t-test:** This test compares the mean of a single group to a hypothesized value. For example, you might use it to determine if Charleston's precipitation differs from the national average.
+  
+- **Two-sample t-test:** This test compares the means of two different groups. For instance, you might want to assess whether a new fertilizer increases corn yield compared to a standard fertilizer.
 
-Here's the general process of how a t-test works:
+Here’s a general overview of how a t-test works:
 
-1. **Set up your hypothesis:** You'll have a null hypothesis, which is the idea you're trying to disprove (usually that there's no difference between the means), and an alternative hypothesis (that there is a difference).
-2. **Calculate the t-statistic:** This statistic considers the difference between the group means, the variability within the groups, and the sample sizes.
-3. **Find the p-value:** This value represents the probability of getting a t-statistic as extreme as the one you calculated, assuming the null hypothesis is true. Lower p-values mean there's less chance the observed difference is due to random chance.
-4. **Interpret the results:** You'll choose a significance level (often 0.05) to decide if the p-value is small enough to reject the null hypothesis. If it is, you can conclude there's a statistically significant difference between the means.
+1. **Set up your hypothesis:** You will formulate a null hypothesis, which is the idea you aim to disprove (typically that there is no difference between the means), and an alternative hypothesis, which suggests that there is a difference.
+
+2. **Calculate the t-statistic:** This statistic reflects the difference between the group means, the variability within the groups, and the sample sizes.
+
+3. **Find the p-value:** This value indicates the probability of obtaining a t-statistic as extreme as the one you calculated, assuming the null hypothesis is true. Lower p-values suggest a smaller chance that the observed difference occurred randomly.
+
+4. **Interpret the results:** Choose a significance level (commonly set at 0.05) to determine if the p-value is small enough to reject the null hypothesis. If it is, you can conclude that there is a statistically significant difference between the means.
+
 
 ```{dropdown} Example of t-test in environmental applications
 **Scenario:** A geologist wants to investigate if there's a difference in average lead concentration between roadside dust and soil samples collected further away from traffic in a city.
 
-- **Null hypothesis (H₀):** The average lead concentration in roadside dust is the same as the average lead concentration in soil further from traffic.
-- **Alternative hypothesis (H₁):** The average lead concentration in roadside dust is higher than the average lead concentration in soil further from traffic (due to traffic emissions).
+- **Null hypothesis (H₀):** The average lead concentration in roadside dust is the same as that in the soil further from traffic.
+- **Alternative hypothesis (H₁):** The average lead concentration in roadside dust is higher than the average lead concentration in the soil further from traffic (due to traffic emissions).
 
 **Steps:**
 1. **Collect data:** The geologist randomly collects samples from both roadside areas and further away from traffic. They then measure the lead concentration in each sample.
 2. **Perform the t-test:** Using statistical software, the geologist runs an independent samples t-test on the lead concentration data for roadside dust and soil samples.
 3. **Analyze the results:** The t-test will provide a t-statistic and a p-value. Let's say the p-value is lower than the chosen significance level (e.g., 0.05).
-4. **Interpretation:** Since the p-value is statistically significant, we reject the null hypothesis. This suggests that the average lead concentration in roadside dust is statistically higher than the average lead concentration in soil further from traffic. This supports the idea that traffic emissions contribute to higher lead levels in roadside dust.
+4. **Interpretation:** Since the p-value is statistically significant, we reject the null hypothesis. This suggests that the average lead concentration in roadside dust is statistically higher than in soil further from traffic. This supports the idea that traffic emissions contribute to higher lead levels in roadside dust.
 
 ```
 
 ```{dropdown} Example of t-test in critical zone sciences
-**Scenario:** CZ researchers are interested in studying the effects of different land-use practices on soil carbon content. They collect soil samples from two different sites: one site with a forested area (Site A) and another site with an agricultural field (Site B). They measure the soil carbon content (in $\pu{g kg-1}$ of soil) at multiple locations within each site.
+**Scenario:** CZ researchers are interested in studying the effects of different land-use practices on soil carbon content. They collect soil samples from two sites: one with a forested area (Site A) and another with an agricultural field (Site B). They measure the soil carbon content (in $\pu{g kg-1}$ of soil) at multiple locations within each site.
 
 The researchers want to determine if there is a significant difference in the mean soil carbon content between Site A and Site B. They can use a two-sample t-test to compare the means of the two independent samples.
 
@@ -216,10 +232,10 @@ $$
 $$
 
 4. Determine the critical value from the t-distribution based on the chosen significance level (e.g., $\alpha$ = 0.05). 
-5. Compare the calculated t-statistic with the critical value. With the t-statistic and degrees of freedom, the researchers can compare the calculated value to the critical value from the t-distribution table or use a statistical software to determine the p-value and make a decision about the null hypothesis.
-6. Make a decision to reject or fail to reject the null hypothesis based on the comparison. For example, if you have 10 degrees of freedom and want to test at a significance level of 0.05 (α = 0.05), the critical t-value from the table is 1.812. If your calculated t-statistic is greater than this critical value, you would reject the null hypothesis.
+5. Compare the calculated t-statistic with the critical value. With the t-statistic and degrees of freedom, the researchers can compare the calculated value to the critical value from the t-distribution table or use statistical software to determine the p-value and decide the null hypothesis.
+6. Decide to reject or fail to reject the null hypothesis based on the comparison. For example, if you have 10 degrees of freedom and want to test at a significance level of 0.05 (α = 0.05), the critical t-value from the table is 1.812. If your calculated t-statistic is greater than this critical value, you would reject the null hypothesis.
 
-The calculated t-statistic is greater than the critical value, the researchers can conclude that there is a significant difference in the mean soil carbon content between the forested area and the agricultural field. This result might suggest that the land-use practices (forest versus agriculture) have an impact on soil carbon content, and further investigations could be conducted to understand the underlying mechanisms.
+The calculated t-statistic is greater than the critical value; the researchers can conclude that there is a significant difference in the mean soil carbon content between the forested area and the agricultural field. This result might suggest that the land-use practices (forest versus agriculture) impact soil carbon content, and further investigations could be conducted to understand the underlying mechanisms.
 
 ```
 
@@ -228,9 +244,9 @@ See [An Introduction to t Tests | Definitions, Formula and Examples (scribbr.com
 
 #### Stable Isotope Ratios
 
-Stable isotopes do not spontaneously break down to form other isotopes. Because of relative differences in masses of isotopes of an element, changes to isotopic ratios can be observed during various biogeochemical processes. Study of stable isotopes is useful in gaining better understanding in environmental and geological studies.
+Stable isotopes do not spontaneously break down to form other isotopes. Because of relative differences in masses of isotopes of an element, changes to isotopic ratios can be observed during various biogeochemical processes. The study of stable isotopes is useful in gaining a better understanding of environmental and geological studies.
 
-Stable isotopes are especially useful in elements whose isotopes have large relative mass differences. Therefore, most of the elements used for stable isotope studies have a low atomic number and atomic mass ({numref}`stable-isotopes`). For isotopes with an atomic mass of greater than $40$, the relative mass differences are too small for any measurable isotopic fractionation. Most elements used in radiometric dating have high atomic mass, and mass fractionation is not significant.
+Stable isotopes are especially useful in elements whose isotopes have large relative mass differences. Therefore, most elements used for stable isotope studies have a low atomic number and atomic mass ({numref}`stable-isotopes`). For isotopes with an atomic mass of greater than $40$, the relative mass differences are too small for any measurable isotopic fractionation. Most elements used in radiometric dating have high atomic mass, and mass fractionation is insignificant.
 
 ```{table} Distribution of stable isotopes of most commonly-used elements.
 :name: stable-isotopes
@@ -250,26 +266,26 @@ Stable isotopes are especially useful in elements whose isotopes have large rela
 
 ##### Stable Isotope Fractionation
 
-Isotopic fractionation is the partitioning of isotopes during physical (evaporation, condensation, melting, crystallization, absorption and desorption, diffusion), chemical, or biological processes. This partitioning is proportional to the difference in the masses of the isotopes. The processes can either be equilibrium reactions, in which forward and backward reaction rates are equal for each isotope, or kinetic reactions, which are unidirectional reactions in which reaction rates are dependent on the masses of the isotopes and their vibrational energies.
+Isotopic fractionation is the partitioning of isotopes during physical (evaporation, condensation, melting, crystallization, absorption, and desorption, diffusion), chemical, or biological processes. This partitioning is proportional to the difference in the masses of the isotopes. The processes can either be equilibrium reactions, in which forward and backward reaction rates are equal for each isotope, or kinetic reactions, which are unidirectional reactions in which reaction rates depend on the masses of the isotopes and their vibrational energies.
 
 ```{dropdown} Example: Stable isotope fractionation of $\ce{H2O}$
 
-During evaporation of  in a closed system, six isotope combinations of $\ce{H2O}$ are possible: $\ce{^1H2^{16}O}, \ce{^1H^2H^{16}O}, \ce{^2H2^{16}O}, \ce{^1H2^{18}O}, \ce{^1H^2H^{18}O}, \ce{^2H2^{18}O}$.
+During evaporation of $\ce{H2O}$ in a closed system, six isotope combinations of $\ce{H2O}$ are possible: $\ce{^1H2^{16}O}, \ce{^1H^2H^{16}O}, \ce{^2H2^{16}O}, \ce{^1H2^{18}O}, \ce{^1H^2H^{18}O}, \ce{^2H2^{18}O}$.
 
-As a result of these different stable isotope combinations, the molecular masses are $18$, $19$, $20$, $20$, $21$, and $22$ respectively. See the conceptulizations in the figure below.
+As a result of these different stable isotope combinations, the molecular masses are $18$, $19$, $20$, $20$, $21$, and $22$ respectively. See the conceptualizations in the figure below.
 
 ![# Water Isotopes Diagram - USGS](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/Fig%201.Isotopes.web_.jpg)
 
 ```
 
-Why do stable isotopes fractionate? Isotopically lighter isotopes have higher velocities than heavier isotopes. From basic physics, kinetic energy of a particle can be calculated using the following formula:
+Why do stable isotopes fractionate? Isotopically lighter isotopes have higher velocities than heavier isotopes. From basic physics, the kinetic energy of a particle can be calculated using the following formula:
 
 ```{math}
 :label: kineticenergy
 \text{Kinetic Energy} = \frac{1}{2} mv^2
 ```
 
-Per Eqn. {eq}`kineticenergy`, isotopically lighter molecules that have higher velocities and therefore, greater amount of kinetic energy. Consider the above water example. Since the lighter molecules have greater velocities, they preferentially escape into the vapor phase resulting in enrichment of the lighter isotopes ( and ), relative to the liquid phase of water. In addition, atoms with greater mass form slightly stronger bonds, the heavier isotope is generally enriched in the more condensed phase or larger molecule.
+Per Eqn. {eq}`kineticenergy`, isotopically lighter molecules with higher velocities and, therefore, a greater amount of kinetic energy. Consider the above water example. Since the lighter molecules have greater velocities, they preferentially escape into the vapor phase, enriching the lighter isotopes ( and ) relative to the liquid phase of water. In addition, atoms with greater mass form slightly stronger bonds, and the heavier isotope is generally enriched in the more condensed phase or larger molecule.
 
 The partitioning of stable isotopes between two substances, $A$ and $B$, is described by the isotopic fractionation factor, $\alpha$. The fractionation factor is written as 
 
@@ -278,11 +294,11 @@ The partitioning of stable isotopes between two substances, $A$ and $B$, is desc
 \alpha = \frac{R_A}{R_B}
 ```
 
-where, $R$ is ratio of heavy to light isotope abundance (e.g., $\ce{^2 H}$/$\ce{^1 H}$  , $\ce{^{18}O}$/$\ce{^{16}O}$ ). Generally, the isotope abundance ratio does not greatly vary in the environment, and so the fractionation factor, $\alpha$, generally has a value close to 1. However, this value can be precisely measured and so is expressed with a precision of 4-5 decimal places. The fractionation factor depends on the temperature and can be determined either experimentally or calculated from spectroscopic data.
+where $R$ is the ratio of heavy to light isotope abundance (e.g., $\ce{^2 H}$/$\ce{^1 H}$, $\ce{^{18}O}$/$\ce{^{16}O}$ ), generally, the isotope abundance ratio does not significantly vary in the environment, so the fractionation factor, $\alpha$, generally has a value close to unity (1). However, this value can be precisely measured and expressed with a precision of 4-5 decimal places. The fractionation factor depends on the temperature and can be determined experimentally or from spectroscopic data.
 
 ```{dropdown} Example: Isotope fractionation factor 
 
-Consider the evaporation of water. We can setup the fractionation ratio and factor as follows:
+Consider the evaporation of water. We can set the fractionation ratio and factor as follows:
 
 $$R = \frac{\ce{^{18}O}}{\ce{^{16}O}}
 $$ 
@@ -302,7 +318,7 @@ Conversely, $\ce{^{18}O}$ is enriched in the liquid relative to the vapor,
 $$
 [\ce{^{18}O}]_{\text{liquid}} > [\ce{^{18}O}]_{\text{vapor}}$$
 
-Therefore, the fractionation factor is greater than 1. With increasing temperature, the fractionation factor decreases, and it becomes 1 at infinite temperature.
+Therefore, the fractionation factor is greater than 1. With increasing temperature, the fractionation factor decreases and becomes 1 at infinite temperature.
 
 ```
 
@@ -313,7 +329,7 @@ In {numref}`oxygen-fractionation`, isotope fractionation of $\ce{O}$ as a functi
 name: oxygen-fractionation
 figclass: margin-caption
 ---
-Water vapor gradually loses $\ce{^{18}O}$ as it travels from the equator to the poles. Because water molecules with heavy $\ce{^{18}O}$ isotopes in them condense more easily than normal water molecules, air becomes progressively depleted in $\ce{^{18}O}$ as it travels to high latitudes and becomes colder and drier. In turn, the snow that forms most glacial ice is also depleted in $\ce{^{18}O}$. Image source: [Paleoclimatology: The Oxygen Balance (nasa.gov)](https://earthobservatory.nasa.gov/features/Paleoclimatology_OxygenBalance)
+Water vapor gradually loses $\ce{^{18}O}$ as it travels from the equator to the poles. Because water molecules with heavy $\ce{^{18}O}$ isotopes in them condense more quickly than normal water molecules, the air becomes progressively depleted in $\ce{^{18}O}$ as it travels to high latitudes and becomes colder and drier. The snow that forms most glacial ice is also depleted in $\ce{^{18}O}$. Image source: [Paleoclimatology: The Oxygen Balance (nasa.gov)](https://earthobservatory.nasa.gov/features/Paleoclimatology_OxygenBalance)
 ```
 
 
@@ -321,14 +337,14 @@ Water vapor gradually loses $\ce{^{18}O}$ as it travels from the equator to the
 
 $R$ values for environmental samples have to be compared with a fixed value (or a standard) to know if that sample is enriched or depleted compared to the standard.
 
-Since isotopic variations between samples are very small, we express isotopic ratios using delta ($\delta$) notation. This value is determined by comparing the isotopic ratio ($R$) of a sample with that of a standard and calculated as follows:
+Since isotopic variations between samples are minimal, we express isotopic ratios using delta ($\delta$) notation. This value is determined by comparing the isotopic ratio ($R$) of a sample with that of a standard and calculated as follows:
 
 ```{math}
 :label: delta
 \delta = \left(\frac{R_\text{Sample}}{R_\text{Standard}} - 1\right) \times 1000
 ```
 
-Where the isotopic ratio, $R$, has been defined in the previous section. Note that the ratio is multiplied by a thousand and is expressed in "parts per thousand" or permille or permil or the symbol, $\pu{‰}$. As seen in Eqn. {eq}`delta`, $R_\text{Standard}$ is required for the element of interest. Standards for most common elements of interest have been adopted worldwide for research purposes and shown in {numref}`isotopestandards`. Typically, V-SMOW (Vienna standard mean ocean water), and PDB (Pee Dee beleminite) are most commonly used for $\ce{H}$, $\ce{O}$, and $\ce{C}$ ratios.
+Where the isotopic ratio, $R$, has been defined in the previous section. Note that the ratio is multiplied by a thousand and is expressed in "parts per thousand" or permille or permil or the symbol, $\pu{‰}$. As seen in Eqn. {eq}`delta`, $R_\text{Standard}$ is required for the element of interest. Standards for most common elements of interest have been adopted worldwide for research purposes and shown in {numref}`isotopestandards`. Typically, V-SMOW (Vienna standard mean ocean water) and PDB (Pee Dee belemnite) are most commonly used for $\ce{H}$, $\ce{O}$, and $\ce{C}$ ratios.
 
 ```{table} Isotope ratios and standards for most commonly-used elements in environmental geosciences.
 :name: isotopestandards
@@ -342,7 +358,7 @@ Where the isotopic ratio, $R$, has been defined in the previous section. Note th
 | $\ce{^{34} S}$/$\ce{^{32} S}$ | CDT      | $4499.4$   |
 ```
 
-When $\delta$ values are negative, $R_\text{Sample} < R_\text{Standard}$ in Eqn. {eq}`delta`, therefore, the sample is considered to be depleted compared with the standard. Similarly, when $\delta$ values are positive, $R_\text{Sample} > R_\text{Standard}$, therefore, the sample is considered to be enriched compared to the standard.
+When $\delta$ values are negative, $R_\text{Sample} < R_\text{Standard}$ in Eqn. {eq}`delta`, therefore, the sample is considered depleted compared with the standard. Similarly, when $\delta$ values are positive, $R_\text{Sample} > R_\text{Standard}$, therefore, the sample is considered to be enriched compared to the standard.
 
 
 ```{dropdown} Example: $\delta$ notation 
@@ -360,20 +376,24 @@ Since this final value is negative, the sample isotopically lighter than the sta
 
 ## Role of Organisms
 
-Organisms have a significant impact on the CZ. These impacts include:
-- Soil formation: Living organisms, especially microbes, plants, and animals, play a crucial role in the weathering of rock and the formation of soil, which is the central component of the critical zone. Organisms break down rock, cycle nutrients, and create organic matter that accumulates in the soil.
-- Regulating water and nutrient cycles: The roots, stems, and leaves of plants interact with the soil, water, and atmosphere to regulate the movement of water, carbon, and other nutrients through the critical zone. This cycling of water and nutrients is essential for sustaining terrestrial life.
-- Shaping landscape and ecosystem processes: Burrowing animals, tree roots, and other organisms physically alter the structure and composition of the critical zone, which in turn shapes landscape evolution, erosion, and the overall functioning of ecosystems.
-- Providing ecosystem services: The organisms in the CZ provide essential services to human society, such as food production, water filtration, and climate regulation. Disruptions to CZ organisms can degrade these important services.
+Organisms have a significant impact on the critical zone (CZ). Their effects include:
 
-The diverse array of living organisms, from microbes to large plants and animals, are intimately connected to and play a vital role in regulating the complex physical, chemical, and biological processes within the critical zone. Understanding these organism-critical zone interactions is crucial for managing natural resources and sustaining terrestrial life. See [Akob and Küsel](https://doi.org/10.5194/bg-8-3531-2011) for an excellent review.
+- **Soil Formation**: Living organisms, particularly microbes, plants, and animals, play a crucial role in the weathering of rock and the formation of soil, which is a central component of the critical zone. These organisms break down rocks, cycle nutrients, and accumulate organic matter in the soil.
+
+- **Regulating Water and Nutrient Cycles**: The roots, stems, and leaves of plants interact with the soil, water, and atmosphere to regulate the movement of water, carbon, and other nutrients through the critical zone. This cycling of water and nutrients is essential for sustaining terrestrial life.
+
+- **Shaping Landscape and Ecosystem Processes**: Burrowing animals, tree roots, and other organisms physically alter the structure and composition of the critical zone. These changes shape landscape evolution, erosion, and the overall functioning of ecosystems.
+
+- **Providing Ecosystem Services**: Organisms in the critical zone provide essential services to human society, including food production, water filtration, and climate regulation. Disruptions to these organisms can degrade these important services.
+
+The diverse living organisms, from microbes to large plants and animals, are intimately connected to and play a vital role in regulating the critical zone's complex physical, chemical, and biological processes. Understanding these organism-critical zone interactions is crucial for managing natural resources and sustaining terrestrial life. See [Akob and Küsel](https://doi.org/10.5194/bg-8-3531-2011) for an excellent review.
 
 ```{admonition} The Role of Organisms in Biogeochemistry
 
 Read the following article: [Wolves modulate soil nutrient heterogeneity and foliar nitrogen by configuring the distribution of ungulate carcasses - Bump - 2009 - Ecology](https://esajournals.onlinelibrary.wiley.com/doi/10.1890/09-0292.1)
 
 Consider the following questions:
-1. What is the big picture research question being asked by these researchers?
+1. What is the big-picture research question these researchers are asking?
 2. What were some of the specific responses that were attributed to moose carcasses?
 3. How were nitrogen isotopes incorporated into this study?
 4. What are some of the positive feedback mechanisms proposed by the authors regarding the effects of wolf-killed moose carcasses?

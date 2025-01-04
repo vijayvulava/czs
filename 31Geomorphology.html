@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -66,6 +69,7 @@
     <link rel="prev" title="3 CZ Architecture and Evolution" href="3CZArchitectureEvolution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +149,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Critical Zone Science - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -235,9 +224,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -334,24 +328,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -405,12 +391,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geology-and-geomorphology">
 <h1>3.1 Geology and Geomorphology<a class="headerlink" href="#geology-and-geomorphology" title="Link to this heading">#</a></h1>
-<p>Parent material is a critical component of the pedogenic system and the CZ— all the other state factors of soil formation act upon the parent material to create soil, and thus the original, unweathered composition of the parent material plays a unique role in the weathered product.</p>
-<p>The geology of a region controls the parent material available for pedogenesis. Parent material can be represented by a wide range of rock types of varying geochemical compositions, it can be lithified (hardened) or unconsolidated, and it can be relatively recent in age or billions of years old. The geologic setting of a region, past and present, also determines whether or not mountains or valleys exist, thereby exerting a first-order influence on the topographic setting in which CZ processes function and soils form. Furthermore, the geologic setting will determine whether parent material lies within an active setting, perhaps only recently exposed to pedogenic processes; or within a more stable setting in which soil formation has continued unabated for hundreds of millennia, subject only to the vagaries of climatic and biotic change.</p>
-<p>Let’s review basic principles of geology and geomorphology.</p>
+<p>Parent material is crucial to the pedogenic system and the critical zone (CZ). All other factors that contribute to soil formation act upon the parent material to develop soil, highlighting the distinctive role of the original, unweathered composition of the parent material in the resulting weathered product.</p>
+<p>The geology of a region dictates the types of parent material available for pedogenesis. Parent material can consist of various rock types with differing geochemical compositions, which may be lithified (hardened) or unconsolidated. This material can also range from relatively recent to billions of years old. The geological context of a region, both in the past and present, determines the existence of mountains or valleys, significantly influencing the topographic setting in which CZ processes operate and soils are formed. Additionally, the geological setting indicates whether the parent material is in an active environment, recently exposed to pedogenic processes, or in a more stable area where soil formation has occurred continuously for hundreds of millennia, influenced only by climatic and biological changes.</p>
+<p>Let’s review some basic principles of geology and geomorphology.</p>
 <section id="fundamental-geological-principles">
 <h2>Fundamental Geological Principles<a class="headerlink" href="#fundamental-geological-principles" title="Link to this heading">#</a></h2>
-<p>Geology is the scientific discipline dedicated to understanding the physical features and processes of Earth, as well as the history of the planet and its inhabitants since its origin. A basic understanding of the fundamentals of geology can enhance your appreciation of geoheritage sites and scenic vistas.</p>
+<p>Geology is the scientific discipline focused on understanding Earth’s physical features and processes, as well as the history of the planet and its inhabitants since its formation. A fundamental understanding of geology can enhance your appreciation of geoheritage sites and scenic landscapes.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/pEtg209pvdU" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -420,10 +406,12 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <figure class="margin-caption align-default" id="pegmatite-dikes-blca">
 <img alt="https://www.nps.gov/articles/images/BLCA-crop.jpg" src="https://www.nps.gov/articles/images/BLCA-crop.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Pegmatite dikes exposed in Painted Wall cliff face. The light colored dikes are younger than the dark rock. Black Canyon of the Gunnison National Park, Colorado.</span><a class="headerlink" href="#pegmatite-dikes-blca" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Pegmatite dikes exposed in Painted Wall cliff face. The light-colored dikes are younger than the dark rock — Black Canyon of the Gunnison National Park, Colorado.</span><a class="headerlink" href="#pegmatite-dikes-blca" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/James_Hutton">James Hutton</a>’s observations related to <a class="reference external" href="https://www.nps.gov/articles/geologic-principles-uniformitarianism.htm">uniformitarianism</a> also serve as the basis for another important geologic principle called cross-cutting relationships, which is a technique used in <strong>relative age dating</strong>. In short an <strong>intrusive</strong> rock body is younger than the rocks it intrudes. For example, Salisbury Crag, a prominent Edinburgh landmark known to Hutton, owes its relief to a thick sheet of resistant <strong>basalt</strong>. Hutton showed from the super-heated <strong>contacts</strong> below and above, and from places where the basalt actually invaded underlying and overlying beds, that the thick basalt body was not merely a flow that had formed in sequence. Rather it was intruded as hot magma into the surrounding sedimentary rocks long after they were deposited (Eicher 1976). Other similar relationships include faults being younger than the rock layers they cut and erosional surfaces being younger than the rocks they erode.</p>
+<p>James Hutton’s observations related to uniformitarianism also serve as the foundation for another essential geological principle known as cross-cutting relationships. This technique is used in relative age dating. In brief, an intrusive rock body is younger than the rocks it disrupts.</p>
+<p>For instance, Salisbury Crag, a well-known landmark in Edinburgh that Hutton studied, owes its distinct shape to a thick layer of resistant basalt. Through his observations of the heated contacts above and below the basalt and where the basalt intruded into the underlying and overlying sedimentary layers, Hutton demonstrated that this thick basalt body was not simply a flow that had formed in succession. Instead, it was intruded as hot magma into the surrounding sedimentary rocks long after those rocks had been deposited (Eicher 1976).</p>
+<p>Similar relationships include faults younger than the rock layers they cut through and erosional surfaces younger than the eroded rocks.</p>
 <figure class="margin-caption align-default" id="slaisbury-crags">
 <img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Hutton%27s_Section%2C_Salisbury_Crags.jpg/1920px-Hutton%27s_Section%2C_Salisbury_Crags.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Hutton%27s_Section%2C_Salisbury_Crags.jpg/1920px-Hutton%27s_Section%2C_Salisbury_Crags.jpg" />
 <figcaption>
@@ -439,19 +427,19 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p><span class="caption-number">Fig. 11 </span><span class="caption-text">Park ranger surveys park lands for exposed fossils. Petrified Forest National Park, Arizona.</span><a class="headerlink" href="#exposed-fossil-pefo" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>As an engineer and surveyor, <a class="reference external" href="https://en.wikipedia.org/wiki/William_Smith_(geologist)">William Smith</a>’s (1769–1839) travels acquainted him intimately with much of England’s countryside. As he investigated roads, quarries, mines, and canals, Smith recognized and traced out numerous sedimentary rock units, in which he noticed that each successive unit contained its own diagnostic assemblage of fossils. Smith’s discovery that strata may be identified by the fossils they contain became known as the law of faunal succession. Henceforth, fossils became a new tool by which geologists could distinguish rock units of different ages from one another. Faunal succession became a unifying principle by which rock units are categorized and recognized widely.</p>
-<p>This important principle raised questions about ancient life that were not easily answered at Smith’s time, but even without answers to these questions, correlation between distant localities now became feasible. A method was established to assign a stratigraphic classification based on time relations of <strong>strata</strong> rather than on rock types, which was previously thought to indicate age. In short, this was the key discovery that stratigraphic geology needed in order to progress further (<a class="reference external" href="https://archive.org/details/geologictime0000eich_z7h8">Eicher 1976</a>).</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/William_Smith_(geologist)">William Smith</a> (1769–1839), an engineer and surveyor, traveled extensively throughout England’s countryside. He identified and mapped numerous sedimentary rock units while investigating roads, quarries, mines, and canals. Smith observed that each successive rock layer contained a unique set of fossils. His key finding—that strata can be identified by their fossil content—became the law of faunal succession. This discovery allowed geologists to use fossils to differentiate rock units of various ages. Consequently, faunal succession emerged as a fundamental principle for categorizing and recognizing rock units across different regions.</p>
+<p>Although Smith’s findings raised questions about ancient life that were not easy to answer then, they made it possible to correlate distant localities. A framework was established to assign a stratigraphic classification based on the temporal relationships of strata rather than relying solely on rock types, which had previously been thought to indicate age. In summary, this was the crucial discovery that stratigraphic geology needed to advance further (<a class="reference external" href="https://archive.org/details/geologictime0000eich_z7h8">Eicher 1976</a>).</p>
 </section>
 <section id="organic-evolution">
 <h3>Organic Evolution<a class="headerlink" href="#organic-evolution" title="Link to this heading">#</a></h3>
 <figure class="margin-caption align-default" id="fossil-trackway-grca">
 <img alt="https://www.nps.gov/articles/images/GRCA_2013_GIP_Knight_Cassi_Photo5_fundamentals_evolution.jpg" src="https://www.nps.gov/articles/images/GRCA_2013_GIP_Knight_Cassi_Photo5_fundamentals_evolution.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Fossil trackway in the Coconino Sandstone (about 260 million years old) made by Chelichnus, a reptile like mammal. Grand Canyon National Park, Arizona.</span><a class="headerlink" href="#fossil-trackway-grca" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Fossil trackway in the Coconino Sandstone (about 260 million years old) made by Chelichnus, a reptile-like mammal. Grand Canyon National Park, Arizona.</span><a class="headerlink" href="#fossil-trackway-grca" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Organic evolution is the <strong>theory</strong> that more recent types of plants and animals have their origins in other pre-existing forms and that the distinguishable differences between ancestors and descendents are due to modifications in successive generations. <a class="reference external" href="https://en.wikipedia.org/wiki/Charles_Darwin">Charles Darwin</a> (1809–1882) did not invent the idea of organic evolution; generations preceding him entertained the notion such as the French zoologist Jean Baptist de Lamarck (1744–1829), a pioneer in invertebrate paleontology, and Erasmus Darwin (1744–1802), grandfather of Charles. Until Charles Darwin’s time, however, the idea had never had wide currency because earlier workers lacked important data and the Huttonian concept of geologic time, which are both vital for the evolutionary argument. Charles Darwin’s contribution was to propose a mechanism—natural selection—to explain how this change could occur.</p>
-<p>Because sufficient time is required to produce changes, one of the first requirements of evolution came out of <a class="reference external" href="https://www.nps.gov/articles/geologic-principles-uniformitarianism.htm">uniformitarianism</a>. This idea provided the first link in Darwin’s chain of reasoning. The relationship between organic evolution and geologic time is that the very randomness of very small, fortuitous evolutionary variations in species, which result in noticeable changes in the physical form of an organism, requires enormous amounts of time. Building on uniformitarianism, Darwin constructed a singularly rational and convincing argument for the origin of the diverse organisms that populate the world.</p>
+<p>Organic evolution is the <strong>theory</strong> that modern plants and animals originate from pre-existing forms, with notable differences between ancestors and descendants arising from modifications over successive generations. <a class="reference external" href="https://en.wikipedia.org/wiki/Charles_Darwin">Charles Darwin</a> (1809–1882) did not invent the concept of organic evolution; thinkers before him, such as the French zoologist Jean-Baptiste de Lamarck (1744–1829), a pioneer in invertebrate paleontology, and Erasmus Darwin (1744–1802), Charles’s grandfather, explored similar ideas. However, until Charles Darwin’s time, the theory had not gained widespread acceptance, primarily due to earlier scientists lacking crucial data and the Huttonian concept of geologic time, which are essential for the evolutionary argument. Darwin’s significant contribution was proposing a mechanism—natural selection—to explain how evolutionary change occurs.</p>
+<p>A key requirement for evolution is that sufficient time is needed to produce these changes, which is where the concept of <a class="reference external" href="https://www.nps.gov/articles/geologic-principles-uniformitarianism.htm">uniformitarianism</a> comes into play. This idea serves as the first link in Darwin’s chain of reasoning. The relationship between organic evolution and geologic time is that the randomness of minor, fortuitous evolutionary variations in species—resulting in noticeable changes in an organism’s physical form—requires immense time. Building on uniformitarianism, Darwin formulated a compelling and rational argument for the origin of our world’s diverse organisms.</p>
 </section>
 <section id="organic-extinction">
 <h3>Organic Extinction<a class="headerlink" href="#organic-extinction" title="Link to this heading">#</a></h3>
@@ -461,9 +449,9 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p><span class="caption-number">Fig. 13 </span><span class="caption-text">Jurassic Dinosaur bones of the Morrison formation at the Quarry Exhibit Hall. Dinosaur National Monument, Utah.</span><a class="headerlink" href="#org-extinction-dino" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>For more than 300 years, naturalists have recognized that fossils are the remains of once-living plants and animals. They postulated that formerly existing species were no longer living; that is, they had become extinct. However, the idea of extinction took a while to be proven to the satisfaction of most people. The chief reason was that the best known fossils were marine <strong>invertebrates</strong>. These are certainly as good as terrestrial organisms to demonstrate extinction, but at the beginning of the 19th century little was known of life in the oceans. Mindful of the very real limits of their knowledge, naturalists of the time hesitated to suggest that certain marine animals represented by fossils no longer existed anywhere on Earth (Eicher 1976); an organism might still be living in some deeper, unexplored part of the ocean.</p>
-<p>Following the lead of William Smith’s work on <a class="reference external" href="https://www.nps.gov/articles/geologic-principles-faunal-succession.htm">faunal succession</a>, George Cuvier (1769–1832), a French zoologist, worked out the stratigraphic sequences of terrestrial <strong>vertebrates</strong> and marine invertebrates in the strata of the Paris Basin. In 1812 he showed conclusively that many fossil vertebrates have no known living counterparts, and people agreed that it was highly unlikely that such big land animals would go undiscovered (Eicher 1976).</p>
-<p>Like William Smith, Cuvier recognized distinctive fossils, but he emphasized the changes in them over time. As Cuvier carefully worked out a succession of different faunas in the strata of the Paris Basin, he noted that the younger deposits contained creatures more like those of the present day than did the older deposits (Eicher 1976). Therefore, in addition to proving the extinction of species, Cuvier demonstrated that each changing sequence of faunas represents a particular time in the geologic past.</p>
+<p>For over 300 years, naturalists have recognized that fossils are the remains of once-living plants and animals. They proposed that particular species formerly existing were no longer alive; in other words, they had become extinct. However, the concept of extinction took some time to gain acceptance among the majority. The main reason for this hesitance was that the most well-known fossils were marine invertebrates. While these fossils are just as valid as terrestrial organisms in demonstrating extinction, little was understood about ocean life at the beginning of the 19th century. Aware of the significant gaps in their knowledge, naturalists of that era were reluctant to assert that certain marine animals represented by fossils no longer existed anywhere on Earth; they considered the possibility that these organisms might still be living in some deeper, unexplored part of the ocean (Eicher 1976).</p>
+<p>Following William Smith’s work on faunal succession, George Cuvier (1769–1832), a French zoologist, developed the stratigraphic sequences of terrestrial vertebrates and marine invertebrates in the strata of the Paris Basin. In 1812, Cuvier conclusively demonstrated that many fossil vertebrates had no known living counterparts, and people acknowledged that it was improbable for such large land animals to go undiscovered (Eicher 1976).</p>
+<p>Like William Smith, Cuvier recognized distinctive fossils, but he placed greater emphasis on the changes in these fossils over time. As Cuvier meticulously mapped the succession of different faunas in the strata of the Paris Basin, he observed that the younger deposits contained creatures more similar to modern-day species than the older deposits (Eicher 1976). Thus, Cuvier not only proved the extinction of species but also showed that each changing sequence of faunas corresponds to a specific period in the geological past.</p>
 </section>
 <section id="superposition-and-original-horizontality">
 <h3>Superposition and Original Horizontality<a class="headerlink" href="#superposition-and-original-horizontality" title="Link to this heading">#</a></h3>
@@ -473,19 +461,19 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p><span class="caption-number">Fig. 14 </span><span class="caption-text">Cross-bedded sandstone of the Jurassic Navajo formation. Zion National Park, Utah.</span><a class="headerlink" href="#crossbed-zion" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In 1669, <a class="reference external" href="https://en.wikipedia.org/wiki/Nicolas_Steno">Nicolaus Steno</a> made the first clear statement that strata (layered rocks) show sequential changes, that is, that rocks have histories. From his work in the mountains of western Italy, Steno realized that the principle of superposition in stratified (layered) rocks was the key to linking time to rocks. In short, each layer of sedimentary rock (also called a “bed”) is older than the one above it and younger than the one below it. Steno’s seemingly simple rule of superposition has come to be the most basic principle of <strong>relative dating</strong>. Steno originally developed his reasoning from observations of sedimentary rocks, but the principle also applies to other surface-deposited materials such as lava flows and beds of ash from volcanic eruptions.</p>
-<p>In addition, Steno realized the importance of another principle, original horizontality, namely that strata are always initially deposited in nearly horizontal positions. Thus, a rock layer that is folded or inclined at a steep angle must have been moved into that position by crustal disturbances (i.e., mountain building, faults, or plate tectonics) sometime after its deposition.</p>
+<p>In 1669, <a class="reference external" href="https://en.wikipedia.org/wiki/Nicolas_Steno">Nicolaus Steno</a> first clearly stated that rock layers, or strata, exhibit sequential changes, indicating that rocks have histories. Through his studies in the mountains of western Italy, Steno discovered that the principle of superposition in stratified rocks is crucial for linking time to these rocks. Essentially, each layer of sedimentary rock, also known as a “bed,” is older than the layer above it and younger than the layer below it. This seemingly simple superposition rule has become the most fundamental principle of relative dating. Although Steno initially based his conclusions on observations of sedimentary rocks, the principle also applies to other materials deposited on the surface, such as lava flows and volcanic ash beds.</p>
+<p>Additionally, Steno recognized the importance of another principle: original horizontality. This principle states that strata are initially deposited in nearly horizontal positions. Therefore, if a rock layer is folded or inclined at a steep angle, it indicates that the layer has been moved into that position by crustal disturbances (such as mountain building, faults, or plate tectonics) sometime after it was deposited.</p>
 </section>
 <section id="uniformitarianism">
 <h3>Uniformitarianism<a class="headerlink" href="#uniformitarianism" title="Link to this heading">#</a></h3>
-<p><strong>Uniformitarianism</strong> is a fundamental concept in geology. It asserts that the same <strong>natural laws and processes</strong> that operate today have always been at work throughout Earth’s history. In other words, the present is the key to understanding the past. Let’s delve into this principle:</p>
-<p><strong>Uniformitarianism</strong> suggests that Earth’s geologic processes—whether gradual or sudden—have consistently shaped the planet over time. Whether we witness an <strong>earthquake</strong>, the <strong>erosion</strong> of a river valley, or a <strong>volcano eruption</strong>, these events occur today in the same way they did in the past.</p>
-<p>Prior to 1830, scientists adhered to the theory of <strong>catastrophism</strong>, which proposed that large, abrupt changes (or catastrophes) were responsible for shaping Earth’s features, such as mountains. However, two influential figures challenged this view:</p>
+<p><strong>Uniformitarianism</strong> is a fundamental concept in geology. It asserts that the same <strong>natural laws and processes</strong> that operate today have always been at work throughout Earth’s history. In other words, the present is the key to understanding the past. Let’s delve into this principle:
+<strong>Uniformitarianism</strong> posits that Earth’s geological processes—both gradual and sudden—have consistently shaped the planet over time. Events such as <strong>earthquakes</strong>, the <strong>erosion</strong> of river valleys, and <strong>volcanic eruptions</strong> occur today as they did in the past.</p>
+<p>Before 1830, scientists adhered to the theory of <strong>catastrophism</strong>, which argued that significant, abrupt changes (or catastrophes) were responsible for shaping Earth’s features, such as mountains. However, two influential figures challenged this perspective:</p>
 <ol class="arabic simple">
-<li><p><strong>James Hutton</strong> (1726–1797), a Scottish farmer and naturalist, observed that natural processes—like mountain-building and erosion—unfolded gradually over time. He formulated the <strong>Principle of Uniformitarianism</strong>, emphasizing the slow, continuous forces shaping Earth’s surface.</p></li>
-<li><p><strong>Charles Lyell</strong> (1797–1875), a Scottish geologist, further championed uniformitarianism. His book, <em>Principles of Geology</em>, debunked catastrophism. Lyell found evidence that sea levels had risen and fallen, volcanoes could form atop older rocks, and valleys eroded slowly due to water’s power.</p></li>
+<li><p><strong>James Hutton</strong> (1726–1797), a Scottish farmer and naturalist, observed that natural processes—like mountain-building and erosion—occurred gradually over time. He formulated the <strong>Principle of Uniformitarianism</strong>, emphasizing the slow, continuous forces that shape the Earth’s surface.</p></li>
+<li><p><strong>Charles Lyell</strong> (1797–1875), a Scottish geologist, further championed uniformitarianism. His book, <em>Principles of Geology</em>, debunked catastrophism. Lyell found evidence that sea levels had risen and fallen, volcanoes could form atop older rocks, and valleys eroded slowly due to the power of water.</p></li>
 </ol>
-<p>The combined efforts of Hutton and Lyell laid the foundation for modern geology. Interestingly, <strong>Charles Darwin</strong>, the father of evolutionary biology, saw uniformitarianism as support for his theory of species emergence. He recognized that life’s evolution required vast spans of time, which geology confirmed.</p>
+<p>The combined efforts of Hutton and Lyell laid the foundation for modern geology. Interestingly, <strong>Charles Darwin</strong>, the father of evolutionary biology, viewed uniformitarianism as support for his theory of species emergence. He recognized that the evolution of life required vast periods, which geology confirmed.</p>
 <figure class="margin-caption align-default" id="uniformitarianism-grca">
 <img alt="https://www.nps.gov/articles/images/GRCA_2016_GIP_Bair_Russell_Photo_5_fundamentaals_uniformitarianism.jpg" src="https://www.nps.gov/articles/images/GRCA_2016_GIP_Bair_Russell_Photo_5_fundamentaals_uniformitarianism.jpg" />
 <figcaption>
@@ -495,22 +483,22 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="the-present-is-the-key-to-the-past">
 <h3>The Present is the Key to the Past<a class="headerlink" href="#the-present-is-the-key-to-the-past" title="Link to this heading">#</a></h3>
-<p>Many geologists consider James Hutton to be the father of historical geology. Hutton observed such processes as wave action, erosion by running water, and sediment transport and concluded that given enough time these processes could account for the geologic features in his native Scotland. He thought that “the past history of our globe must be explained by what can be seen to be happening now.” This assumption that present-day processes have operated throughout geologic time was the basis for the principle of uniformitarianism.</p>
-<p>Before Hutton, no one had effectively demonstrated that geologic processes occurred over long periods of time. Hutton persuasively argued that seemingly weak, slow-acting processes could, over long spans of time, produce effects that were just as great as those resulting from sudden catastrophic events. And, unlike his predecessors, Hutton cited verifiable observations to support his ideas.</p>
-<p>Although Hutton developed a comprehensive <strong>theory</strong> of uniformitarian geology, <a class="reference external" href="https://en.wikipedia.org/wiki/Charles_Lyell">Charles Lyell</a> (1797–1875) became its principal advocate. Lyell was successful in interpreting and publicizing uniformitarianism for society at large. Hutton’s idea of uniformitarianism (and his cumbersome and difficult literary style) had simply failed to capture the imagination of his generation, so geologists often credit Lyell with advancing the basic principles of modern geology. Lyell’s <a class="reference external" href="https://www.gutenberg.org/cache/epub/33224/pg33224-images.html">Principles of Geology</a> is a landmark text in the history of science and as important to modern world views as the works of Charles Darwin. In 1990 the University of Chicago Press republished his works. In the first of three volumes, Charles Lyell sets forth the uniformitarian argument: processes now visibly acting in the natural world are essentially the same as those that have acted throughout the history of the Earth, and are sufficient to account for all geologic phenomena.</p>
+<p>Many geologists consider James Hutton to be the father of historical geology. Hutton observed various processes such as wave action, erosion caused by running water, and sediment transport. He concluded that, given enough time, these processes could explain the geological features of his native Scotland. He believed that “the past history of our globe must be explained by what can be seen to be happening now.” This idea that present-day processes have been at work throughout geological time formed the basis of the principle of uniformitarianism.</p>
+<p>Before Hutton, no one had effectively demonstrated that geological processes could occur over long periods. Hutton convincingly argued that seemingly weak, slow-acting processes could, over extensive timescales, produce effects as significant as those resulting from sudden catastrophic events. Unlike his predecessors, Hutton supported his ideas with verifiable observations.</p>
+<p>Although Hutton developed a comprehensive theory of uniformitarian geology, <a class="reference external" href="https://en.wikipedia.org/wiki/Charles_Lyell">Charles Lyell</a> (1797–1875) became its principal advocate. Lyell successfully interpreted and publicized uniformitarianism for the wider audience. Hutton’s concept of uniformitarianism, combined with his complex and challenging literary style, did not capture the imagination of his contemporaries. As a result, geologists often credit Lyell with advancing the fundamental principles of modern geology. Lyell’s <a class="reference external" href="https://www.gutenberg.org/cache/epub/33224/pg33224-images.html">Principles of Geology</a> is a landmark text in the history of science and is as influential to modern worldviews as the works of Charles Darwin. In 1990, the University of Chicago Press republished his works. In the first of three volumes, Charles Lyell presents the uniformitarian argument: the processes currently observable in the natural world are essentially the same as those that have acted throughout Earth’s history and are sufficient to explain all geological phenomena.</p>
 </section>
 </section>
 <section id="plate-tectonics">
 <h2>Plate Tectonics<a class="headerlink" href="#plate-tectonics" title="Link to this heading">#</a></h2>
-<p>We live on a layer of Earth known as the lithosphere which is a collection of rigid slabs that are shifting and sliding into each other. These slabs are called tectonic plates and fit together like pieces to a puzzle. The shifts and movements of these plates shape our landscape including the spectacular mountain ranges, valleys, and coastlines of our national parks. The theory of plate tectonics was revolutionary in helping us understand how these landscapes formed in the past and how they continue to change during our lifetimes.</p>
-<p>The story of plate tectonics starts deep within the Earth. Each layer of the Earth has its own unique properties and chemical composition. The thin outer layer, the one we live on, is broken into several plates that move relative to one another. Plate boundary interactions result in earthquakes and volcanoes, and the formation of mountain ranges, continents, and ocean basins.</p>
+<p>We live on a layer of Earth known as the lithosphere, which consists of rigid slabs that shift and slide against one another. These slabs are called tectonic plates and fit together like puzzle pieces. The movements and shifts of these plates shape our landscape, forming spectacular mountain ranges, valleys, and coastlines, mainly seen in our national parks. The theory of plate tectonics has been revolutionary in helping us understand how these landscapes were formed in the past and how they continue to change during our lifetimes.</p>
+<p>The story of plate tectonics begins deep within the Earth. Each layer has its own unique properties and chemical composition. The thin outer layer, where we live, is divided into several plates that move relative to one another. Interactions along plate boundaries can result in earthquakes and volcanic activity, as well as the formation of mountain ranges, continents, and ocean basins.</p>
 <figure class="margin-caption align-default" id="us-shaded-relief">
 <img alt="https://www.nps.gov/subjects/geology/images/shaded-relief-map-of-us-w-tectonic-settings-and-park-10x-crop.jpg?maxwidth=1200&amp;autorotate=false&amp;quality=78&amp;format=webp" src="https://www.nps.gov/subjects/geology/images/shaded-relief-map-of-us-w-tectonic-settings-and-park-10x-crop.jpg?maxwidth=1200&amp;autorotate=false&amp;quality=78&amp;format=webp" />
 <figcaption>
 <p><span class="caption-number">Fig. 16 </span><span class="caption-text">Shaded relief map of the U.S. highlighting different tectonic settings. Superimposed in red are the more than 400 National Park System sites. Letter codes are abbreviations for parks. Image source: <a class="reference external" href="https://www.nps.gov/subjects/geology/plate-tectonics.htm">Plate Tectonics &amp; Our National Parks - Geology (nps.gov)</a></span><a class="headerlink" href="#us-shaded-relief" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The dramatic topography in western US is due to its youth. Mountains and coastlines are continuously being built and deformed because they are at or near active plate boundaries. Features in the eastern US, such as the Appalachian Mountains and Atlantic Coast, formed at plate boundaries, but that was a long time ago. Now, the nearest plate boundaries are more than a thousand miles away, and the landscapes are wearing away.</p>
+<p>The dramatic topography of the western United States is a result of its geological youth. Mountains and coastlines are continuously formed and deformed because they are located at or near active plate boundaries. In contrast, features in the eastern United States, such as the Appalachian Mountains and the Atlantic Coast, were created at plate boundaries long ago. Today, the nearest plate boundaries are more than a thousand miles away, and the landscapes in that region are gradually eroding.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/jzqnUvE66HA" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -522,8 +510,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="rock-cycle">
 <h2>Rock Cycle<a class="headerlink" href="#rock-cycle" title="Link to this heading">#</a></h2>
-<p>Rocks and minerals are all around us! They help us to develop new technologies and are used in our everyday lives. Our use of rocks and minerals includes as building material, cosmetics, cars, roads, and appliances. In order maintain a healthy lifestyle and strengthen the body, humans need to consume minerals daily. Rocks and minerals play a valuable role in natural systems such as providing habitat like the cliffs at Grand Canyon National Park where endangered condors nest, or provide soil nutrients in Redwood where the tallest trees in the world grow.</p>
-<p>Rocks and minerals are important for learning about earth materials, structure, and systems. Studying these natural objects incorporates an understanding of earth science, chemistry, physics, and math. The learner can walk away with an understanding of crystal geometry, the ability to visualize 3-D objects, or knowing rates of crystallization.</p>
+<p>Rocks and minerals are all around us! They are essential for developing new technologies and have various applications in our daily lives. We use rocks and minerals in building materials, cosmetics, cars, roads, and appliances. Humans must consume minerals daily to maintain a healthy lifestyle and strengthen our bodies. Additionally, rocks and minerals play a valuable role in natural systems; for example, they provide habitats like the cliffs in Grand Canyon National Park, where endangered condors nest, and contribute nutrients to the soil in Redwoods, where the tallest trees in the world grow.</p>
+<p>Studying rocks and minerals is essential for learning about Earth’s materials, structure, and systems. This field of study encompasses various disciplines, including earth science, chemistry, physics, and mathematics. Learners can understand crystal geometry, develop the ability to visualize three-dimensional objects and learn about crystallization rates.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/Vp_S3BDiR-I" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -535,17 +523,18 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="geologic-time">
 <h2>Geologic Time<a class="headerlink" href="#geologic-time" title="Link to this heading">#</a></h2>
-<p>In geology, we can refer to “relative time” and “absolute time” in addressing the age of geologic formations or rock units. Chronostratigraphy is the branch of geology that studies the relative time relations and ages of rock units. In chronostratigraphy, we are concerned with the age relations between rock bodies irrespective of their absolute (numerical) age. Fossils provide us with a rapid and accurate means of determining the relative age of rocks in a stratigraphic sequence. We cannot assign an absolute age to the fossils until we have a time scale. Geochronology is that branch of stratigraphy concerned with the dating and subdivision of geologic time and the establishment of time scales.</p>
+<p>In geology, we discuss “relative time” and “absolute time” when discussing the age of geological formations or rock units. Chronostratigraphy is the branch of geology that focuses on the relationships and ages of rock units in relative time. This means that in chronostratigraphy, we are concerned with how the ages of different rock bodies relate, regardless of their specific numerical age.</p>
+<p>Fossils offer a quick and precise way to determine the relative age of rocks within a stratigraphic sequence. However, we cannot assign an absolute age to these fossils until we have established a time scale. Geochronology is the branch of stratigraphy dedicated to dating and subdividing geological time and establishing time scales.</p>
 <figure class="margin-caption align-default" id="geologic-time-nps">
 <img alt="https://www.nps.gov/subjects/geology/images/Geo-Time-Scale-FY17.jpg?maxwidth=1200&amp;maxheight=1200&amp;autorotate=false" src="https://www.nps.gov/subjects/geology/images/Geo-Time-Scale-FY17.jpg?maxwidth=1200&amp;maxheight=1200&amp;autorotate=false" />
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Geologic time scale showing the geologic eons, eras, periods, epochs, and associated dates in millions of years ago (MYA). The time scale also shows the onset of major evolutionary and tectonic events affecting the North American continent and the Northern Cordillera (SCAK, south-central Alaska; SEAK, southeast Alaska; NAK, northern Alaska; CAK central Alaska). Image source: <a class="reference external" href="https://www.nps.gov/subjects/geology/time-scale.htm">Geologic Time Scale - Geology (nps.gov)</a></span><a class="headerlink" href="#geologic-time-nps" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Geologic time scale shows the geologic eons, eras, periods, epochs, and associated dates from millions of years ago (MYA). The time scale also indicates the onset of major evolutionary and tectonic events affecting the North American continent and the Northern Cordillera (SCAK, south-central Alaska; SEAK, southeast Alaska; NAK, northern Alaska; CAK central Alaska). Image source: <a class="reference external" href="https://www.nps.gov/subjects/geology/time-scale.htm">Geologic Time Scale - Geology (nps.gov)</a></span><a class="headerlink" href="#geologic-time-nps" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Before geologists had a means to determine the actual ages of rocks, their correlations were based on the superposition of rock strata, that is, older rocks are deposited before younger rocks. Geologic time was subdivided into a hierarchy of chronostratigraphic units of unknown duration. The application of radiometric dating techniques to determine the absolute ages of rocks resulted in the discipline of geochronology and the ability to establish geologic time scales.</p>
-<p>There is no single location on earth that has experienced a continuous and uninterrupted accumulation of sediments or rocks that could be dated and that could yield an ideal reference time scale. A chronostratigraphic scale is not discovered; it is established by agreement among numerous geologists and is based on a composite of sections. An ideal chronostratigraphic section that would be part of a larger composite section would possess the following attributes: a sequence of points representing essentially continuous, and preferably marine, deposition; fossils that are abundant, distinctive, diverse, cosmopolitan, and well preserved, and without major paleoenvironmental changes; minerals for isotopic age determinations, and a record of geomagnetic polarity reversals. Additionally, these “type” sections would be well exposed, have reasonably permanent accessibility, and be readily correlated to other sections.</p>
-<p>Once a chronostratigraphic scale is agreed upon, it serves as a recognized standard and generally stands unchanged until it is reevaluated and modified with even better stratigraphic sections or with improved analytical instrumentation. As a result, no chronostratigraphic scale is ever totally finalized.</p>
-<p>A chronostratigraphic scale that is integrated with absolute ages (geochronology) is called a geologic time scale. Nearly two dozen time scales have been proposed since Arthur Holmes published his first one in 1913. Each scale incorporated the latest developments in standard stratigraphic sections, biostratigraphy, and age-dating. The latest time scale, edited in 2004 by Felix Gradstein and colleagues, incorporated high-resolution radiometric and astronomical age-dating into a comprehensive time scale for the last 3.850 billion years (the age of the earth being 4.54 billion years). No doubt the 2004 time scale will ultimately be replaced, but until then, it will serve as a reference standard to which all geologic units can be correlated and assigned an absolute age.</p>
+<p>Before geologists had the means to determine the actual ages of rocks, they based correlations on the principle of superposition, which states that older rocks are deposited before younger rocks. Geological time was divided into a hierarchy of chronostratigraphic units with unknown durations. The advent of radiometric dating techniques to ascertain the absolute ages of rocks gave rise to the discipline of geochronology and enabled the establishment of geological time scales.</p>
+<p>No single location on Earth has experienced a continuous accumulation of sediments or rocks that can be dated to yield an ideal reference time scale. A chronostratigraphic scale is not simply discovered; it is established by consensus among numerous geologists and is based on a composite of various sections. An ideal chronostratigraphic section, which would contribute to a larger composite, would have the following attributes: a nearly continuous sequence of marine deposition; fossils that are abundant, distinctive, diverse, cosmopolitan, well-preserved, and free from significant paleoenvironmental changes; minerals suitable for isotopic age determinations; and a record of geomagnetic polarity reversals. Additionally, these “type” sections should be well-exposed, easily accessible, and readily correlatable to other sections.</p>
+<p>Once a chronostratigraphic scale is agreed upon, it serves as a recognized standard that remains unchanged until it is reevaluated and modified based on better stratigraphic sections or improved analytical techniques. Consequently, no chronostratigraphic scale is ever wholly finalized.</p>
+<p>A chronostratigraphic scale integrated with absolute ages (geochronology) is termed a geological time scale. Since Arthur Holmes published the first geological time scale in 1913, nearly two dozen time scales have been proposed. Each scale incorporated the latest standard stratigraphic sections, biostratigraphy, and age-dating developments. The most recent time scale, edited in 2004 by Felix Gradstein and colleagues, integrated high-resolution radiometric and astronomical age-dating into a comprehensive time scale covering the last 3.85 billion years (with the age of the Earth estimated at 4.54 billion years). While the 2004 time scale will likely be replaced, it currently serves as a reference standard for all geological units to be correlated and assigned an absolute age.</p>
 <p><a class="reference external" href="https://www.nps.gov/subjects/geology/geotime.htm">Geologic Time - Geology (U.S. National Park Service) (nps.gov)</a></p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/rWp5ZpJAIAE" 
@@ -560,8 +549,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p><span class="caption-number">Fig. 18 </span><span class="caption-text">Eroded sedimentary structures. Image source: <a class="reference external" href="https://www.nps.gov/subjects/erosion/index.htm">Erosion: Water, Wind &amp; Weather (U.S. National Park Service) (nps.gov)</a></span><a class="headerlink" href="#sedimentary-roccks" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Jagged, fractured mountains, sloping streambanks, rugged coasts are examples of natural features that take their shape because the forces of water, wind, and weather have acted upon them over time. As the surfaces wear down, erosion moves particles away, to be deposited in other locations.  Some of these features are also expressed in strata of rock formations seen in the pictures in the previous sections.</p>
-<p>See the stream model demonstration below that shows how erosion and sediment transport modifies stream channels and geomorphology.</p>
+<p>Jagged, fractured mountains, sloping streambanks, and rugged coasts are natural features shaped by water, wind, and weather over time. As these surfaces wear down, erosion carries particles away to be deposited in different locations. Some of these features are also visible in the strata of rock formations, as shown in the previous sections.</p>
+<p>See the stream model demonstration below, which shows how erosion and sediment transport modifies stream channels and geomorphology.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/0mtccoC_1Uw" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -569,23 +558,23 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <div class="admonition-in-class-project admonition">
 <p class="admonition-title">In-class Project</p>
 <ol class="arabic simple">
-<li><p>The Critical Zone can be thought of as a “feed-through reactor” in which physical denudation and erosion are closely tied to chemical weathering. Discuss the following questions based on your reading of the article: Anderson et al, 2007, <a class="reference external" href="https://doi.org/10.2113/gselements.3.5.315">Physical and chemical controls on the Critical Zone</a>, Elements, 3(5), 315-319. <a class="reference external" href="https://www.elementsmagazine.org/wp-content/uploads/archivearticles/e3_5/anderson.pdf">Access article here.</a></p></li>
+<li><p>The Critical Zone can be considered a “feed-through reactor” in which physical denudation and erosion are closely tied to chemical weathering. Discuss the following questions based on your reading of the article: Anderson et al, 2007, <a class="reference external" href="https://doi.org/10.2113/gselements.3.5.315">Physical and chemical controls on the Critical Zone</a>, Elements, 3(5), 315-319. <a class="reference external" href="https://www.elementsmagazine.org/wp-content/uploads/archivearticles/e3_5/anderson.pdf">Access article here.</a></p></li>
 </ol>
 <ul class="simple">
 <li><p>Do you think all soil parent materials were subject to erosion and deposition?</p></li>
-<li><p>Are some soils the result of weathering of bedrock in place, that is not subjected to erosion and deposition?</p></li>
+<li><p>Are some soils the result of weathering of bedrock in place that is not subjected to erosion and deposition?</p></li>
 <li><p>If so, how do soils developed directly from bedrock differ from soils developed on unconsolidated material, if at all?</p></li>
 </ul>
 <ol class="arabic simple" start="2">
-<li><p>Critical Zone (and soil) formation can be greatly affected by landscape position, particularly in actively uplifting systems. Discuss the following questions based on your reading of the article: Goodfellow et al, 2016, <a class="reference external" href="https://doi.org/10.1002/2016JF003822">The chemical, mechanical, and hydrological evolution of weathering granitoid</a>, J. Geophys. Res. Earth Surf., 121, 1410-1435.</p></li>
+<li><p>Landscape position can significantly affect Critical Zone (and soil) formation, particularly in actively uplifting systems. Discuss the following questions based on your reading of the article: Goodfellow et al, 2016, <a class="reference external" href="https://doi.org/10.1002/2016JF003822">The chemical, mechanical, and hydrological evolution of weathering granitoid</a>, J. Geophys. Res. Earth Surf., 121, 1410-1435.</p></li>
 </ol>
 <ul class="simple">
 <li><p>What is the progression of chemical weathering in an uplifting system?</p></li>
 <li><p>What links exist between rock chemistry and physical properties as a function of weathering?</p></li>
-<li><p>How do changes in rock physical properties feedback on chemical weathering?</p></li>
+<li><p>How do changes in rock physical properties affect chemical weathering?</p></li>
 </ul>
 <ol class="arabic simple" start="3">
-<li><p>Biota exert a fundamental role on landscape evolution and development of Critical Zone architecture. Discuss the following questions based on your reading of the article - Dietrich, W., and Perron, T., 2006, <a class="reference external" href="https://doi.org/10.1038/nature04452">The search for a topographic signature of life</a>, Nature, 439/26, 411-418.</p></li>
+<li><p>Biota exert a fundamental role in landscape evolution and development of Critical Zone architecture. Discuss the following questions based on your reading of the article - Dietrich, W., and Perron, T., 2006, <a class="reference external" href="https://doi.org/10.1038/nature04452">The search for a topographic signature of life</a>, Nature, 439/26, 411-418.</p></li>
 </ol>
 <ul class="simple">
 <li><p>How does life impact CZ architecture on long and short time scales?</p></li>
@@ -597,20 +586,27 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </ol>
 <ul class="simple">
 <li><p>What is the relationship between soil depth and hillslope curvature?</p></li>
-<li><p>What is a cosmogenic nuclide and how might one be used to study soil production rates?</p></li>
-<li><p>Why might the thinnest soils and highest soil production rates be found on ridge tops?</p></li>
+<li><p>What is a cosmogenic nuclide, and how might one be used to study soil production rates?</p></li>
+<li><p>Why might the thinnest soils and highest soil production rates be found on ridgetops?</p></li>
 </ul>
 </div>
 </section>
 <section id="geomorphology">
 <h2>Geomorphology<a class="headerlink" href="#geomorphology" title="Link to this heading">#</a></h2>
-<p>Geomorphology is the study of Earth’s surface landforms and landform evolution. The study is both  qualitative, which is the description of landforms, and quantitative, which is process-based and describes forces acting on Earth’s surface to produce landforms and landform change.</p>
-<p>In framing how to study geomorphology, consider the three systems that intersect at and near Earth’s surface. Specifically, the geosphere, which includes the rocks comprising Earth’s crust and the global tectonic system that elevates the rocks that get sculpted into topography; the hydrosphere, which encompasses the oceans, the atmosphere, and the surface and subsurface waters that erode, transport, and deposit sediment; and the biosphere, living things that are part of ecosystems that help shape and are in turn shaped by landscape dynamics. Global patterns within and among these three basic systems set the broad regional templates within which geomorphological processes shape landforms and landscapes evolve.</p>
-<p>The landforms and topography of a region control a variety of CZ processes. The plate tectonic setting of a region plays a first-order role in determining the topography of a site and thus in determining whether soils develop and accumulate or are subject to erosion. The overall geologic setting determines other aspects of environmental control on the CZ. Consider the following questions:</p>
+<p>Geomorphology studies the Earth’s surface landforms and the processes that shape them. This field encompasses qualitative descriptions of landforms and quantitative analyses focusing on the forces acting on the Earth’s surface to create and change these landforms.</p>
+<p>To understand geomorphology, it’s essential to consider the three systems that intersect at or near the Earth’s surface:</p>
+<ol class="arabic simple">
+<li><p><strong>Geosphere</strong>: This includes the rocks that make up Earth’s crust and the global tectonic systems that elevate these rocks, shaping the topography.</p></li>
+<li><p><strong>Hydrosphere</strong>: This covers the oceans, atmosphere, and surface and subsurface waters that erode, transport, and deposit sediments.</p></li>
+<li><p><strong>Biosphere</strong>: This consists of living organisms within ecosystems that influence and are influenced by landscape dynamics.</p></li>
+</ol>
+<p>Global patterns among these three fundamental systems establish broad regional templates within which geomorphological processes shape landforms and landscapes.</p>
+<p>The landforms and topography of a region have a significant impact on a variety of catchment zone (CZ) processes. The plate tectonic setting plays a crucial role in determining the topography of a site, which in turn affects whether soils develop and accumulate or are subjected to erosion. The overall geological framework influences other environmental factors that control the CZ.</p>
+<p>Here are some questions to consider:</p>
 <ul class="simple">
-<li><p>Can unique depositional environments consist of characteristic landforms? If so, what can those landforms show us about CZ processes?</p></li>
-<li><p>Do soils developed on unique landforms or landscape positions have unique characteristics?</p></li>
-<li><p>What is the slope and aspect of a site and how do these relate to solar heat budgets, vegetation, and CZ processes?</p></li>
+<li><p>Can unique depositional environments give rise to characteristic landforms? If so, what can these landforms reveal about CZ processes?</p></li>
+<li><p>Do soils that develop on unique landforms or landscape positions exhibit distinctive characteristics?</p></li>
+<li><p>What is the slope and aspect of a site, and how do these relate to solar heat budgets, vegetation, and CZ processes?</p></li>
 </ul>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/NG9_DJm8LFg" 
@@ -619,9 +615,9 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="mapping-bedrock-and-surficial-geology">
 <h2>Mapping Bedrock and Surficial Geology<a class="headerlink" href="#mapping-bedrock-and-surficial-geology" title="Link to this heading">#</a></h2>
-<p>Geologists use and create a variety of maps to display the results of our work. Among the simplest of these are maps of bedrock and surficial geology. Bedrock maps display the various rock types in a region. They are best understood if you can imagine stripping away all of the unconsolidated sediment, soil, and vegetation from the land surface down to solid rock. Bedrock maps do not indicate that XYZ rock type can be found at ABC locale; instead they show what exists in the subsurface beneath the soil and sediment and vegetation. In some places, particularly out west, rocks do exist at the surface! In that case, the bedrock map shows the rock type at the surface.</p>
-<p>Surficial geologic maps differ from bedrock maps in that they display the sediments mantling bedrock. In some places, no sediment exists and, therefore, the surficial map may show bedrock. But in others, for example in northeastern and northwestern Pennsylvania (where multiple glaciers dumped their sediment load over the past several hundred thousand years), surficial geologic maps differentiate between the various materials moved into the region by glaciation and may even differentiate between deposits of different ice ages.</p>
-<p>To access maps of interest see <a class="reference external" href="https://ngmdb.usgs.gov/ngmdb/ngmdb_home.html">National Geologic Map Database (usgs.gov)</a></p>
+<p>Geologists utilize and create various types of maps to present the results of their work. Among the simplest are bedrock and surficial geology maps. Bedrock maps illustrate the different rock types found in a region. They are best understood when you envision removing all the unconsolidated sediment, soil, and vegetation from the solid rock. It’s important to note that bedrock maps do not indicate a specific rock type at a particular location; instead, they show what lies beneath the subsurface’s soil, sediment, and vegetation. In some areas, particularly in the western United States, rocks may be visible at the surface, in which case the bedrock map reflects the rock type found there.</p>
+<p>Surficial geologic maps, on the other hand, focus on the sediments that cover the bedrock. In some locations, there may be no sediment; thus, the surficial map will reveal the underlying bedrock. However, surficial geologic maps distinguish between the various materials brought into the region by glaciation in northeastern and northwestern Pennsylvania, where multiple glaciers deposited sediment over the past several hundred thousand years. They may even identify deposits from different ice ages.</p>
+<p>To access maps of interest, see <a class="reference external" href="https://ngmdb.usgs.gov/ngmdb/ngmdb_home.html">National Geologic Map Database (usgs.gov)</a></p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/UCTIvQqVr4E" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -629,14 +625,14 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <div class="admonition-mini-project-4 admonition">
 <p class="admonition-title">Mini-Project #4</p>
 <p><strong>Part A</strong></p>
-<p>Make a list of infrastructure installed at the CZO site that you are investigating. What kind of data is this infrastructure collecting? Show examples of data collected.</p>
+<p>Make a list of infrastructure installed at the CZO site you are investigating. What kind of data is this infrastructure collecting? Show examples of data collected.</p>
 <p><strong>Part B</strong></p>
 <p>Go to <a class="reference external" href="https://ngmdb.usgs.gov/ngm-bin/ngm_compsearch.pl">National Geologic Map Database (usgs.gov)</a></p>
 <p>Choose: “Map Catalog” from the menu bar or Choose “MapView” to explore available maps.</p>
-<p>In “Map Catalog”, search for your study location by typing in keywords or using the map, state or county filters. If zooming in on map, click the “Use Area Shown on the Map” to set bounding coordinates for the search. Click “Search” at the bottom of the page once filters are set. In “Map View”, perform a “Go to Location,” by clicking on the crosshair symbol in the far right tool bar to zoom to your study site as the location.</p>
+<p>In “Map Catalog,” search for your study location by typing in keywords or using the map, state, or county filters. If zooming in on the map, click the “Use Area Shown on the Map” to set bounding coordinates for the search. Click “Search” at the bottom of the page once filters are set. In “Map View,” perform a “Go to Location” by clicking on the crosshair symbol in the far right toolbar to zoom to your study site as the location.</p>
 <p>In “Map Catalog”, use the “Themes” section to select bedrock and surficial from the “Geology” drop-down menu, then click Search. Conduct similar searches using the “Resources” and “Hazards” drop-down menus.</p>
 <p>Click on the most relevant maps from the search results to assess the available mapping resources for your study site.</p>
-<p>(1) Find and download the following four maps from your study site. For each map, provide a short description of where the map is from, the scale, and what it shows about the geology of the area.</p>
+<p>(1) Find and download the following four maps from your study site. For each map, briefly describe where it is from, the scale, and what it shows about the area’s geology.</p>
 <ol class="arabic simple">
 <li><p>Bedrock geology map</p></li>
 <li><p>Surficial geology map</p></li>
@@ -714,7 +710,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -791,8 +788,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -66,6 +69,7 @@
     <link rel="prev" title="7 Humans in the CZ" href="7HumansCZ.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +149,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Critical Zone Science - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -235,9 +224,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -334,24 +328,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -395,7 +381,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="watershed-impacts">
 <h1>7.1 Watershed Impacts<a class="headerlink" href="#watershed-impacts" title="Link to this heading">#</a></h1>
-<p>Humans are agents of change in the CZ. Here we focus on the land/water connection and on how human-induced land use change affects local hydrology. You will apply what they learned in the previous modules about how hydrologists use data (land-cover type, soil texture, and slope) to predict the amount and destination of water as it moves through a built environment. You will use the Model My Watershed application to evaluate the impact of human alterations to the landscape and will also investigate how best-management practices can lesson those impacts. While doing so, you will also consider impacts to society both from the increased runoff and from some mitigation measures.</p>
+<p>Humans play a crucial role in driving change in the CZ. In this module, we will focus on the connection between land and water and explore how human-induced land use changes affect local hydrology. You will apply knowledge from previous modules about how hydrologists use data—such as land cover type, soil texture, and slope—to predict the movement of water through built environments.</p>
+<p>Using the Model My Watershed application, you will evaluate the impact of human alterations to the landscape and investigate how best management practices can mitigate these effects. Additionally, you will consider the societal impacts arising from increased runoff and the various mitigation measures implemented.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/kyH02NjyfPA" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -406,15 +393,15 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 <p>In this section, you will:</p>
 <ul class="simple">
-<li><p>describe a watershed and delineate a watershed on a map;</p></li>
-<li><p>identify the key factors in a watershed that impact runoff and sediment yield, describe how increased storm-water runoff affects landscapes (e.g., erosion, channel incision, sedimentation) and describe how those factors are impacted by human development;</p></li>
-<li><p>evaluate the impact of human alterations to the landscape and investigate how best-management practices can lessen those impacts;</p></li>
-<li><p>compare social and economic impacts to society from both runoff changes and from mitigation measures;</p></li>
-<li><p>analyze how neighborhood redevelopment can affect local communities, to their benefit and/or to their detriment.</p></li>
+<li><p>Describe what a watershed is and delineate a watershed on a map.</p></li>
+<li><p>Identify the key factors within a watershed that influence runoff and sediment yield. Explain how increased stormwater runoff affects landscapes, leading to issues such as erosion, channel incision, and sedimentation. Additionally, discuss how these factors are impacted by human development.</p></li>
+<li><p>Evaluate the effects of human alterations to the landscape and explore how best management practices can mitigate these impacts.</p></li>
+<li><p>Compare the social and economic implications for society arising from changes in runoff and the measures taken to address these changes.</p></li>
+<li><p>Analyze how neighborhood redevelopment can affect local communities, considering both potential benefits and drawbacks.</p></li>
 </ul>
 <section id="watersheds">
 <h2>Watersheds<a class="headerlink" href="#watersheds" title="Link to this heading">#</a></h2>
-<p>Watershed is a land where all of the water that falls or flows within it drains into a final receiving body of water, such as a river, lake, or ocean. The boundaries of a watershed are defined by the topography of the landscape, with higher elevations forming ridges or divides that separate one watershed from another.</p>
+<p>A watershed is an area of land where all the water that falls or flows within it drains into a single body of water, such as a river, lake, or ocean. The boundaries of a watershed are determined by the landscape’s topography, with higher elevations forming ridges or divides that separate one watershed from another.</p>
 <figure class="margin-caption align-default" id="cwp-watershed">
 <img alt="https://cwp.org/wp-content/uploads/2019/05/cwp_watershed_04.30.19.2.png" src="https://cwp.org/wp-content/uploads/2019/05/cwp_watershed_04.30.19.2.png" />
 <figcaption>
@@ -424,16 +411,16 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 </figcaption>
 </figure>
-<p>Watersheds can range from small first order streams to large river basins that encompass large bodies of land at continental scales. They play a critical role in the hydrological cycle by capturing and storing precipitation and releasing it slowly over time, providing water for human consumption, irrigation, and industrial uses, and supporting aquatic ecosystems. Understanding the boundaries, characteristics, and functions of watersheds is essential for effective land and water management, conservation, and restoration efforts.</p>
+<p>Watersheds can vary in size, ranging from small first-order streams to large river basins that cover extensive areas of land, even at a continental scale. They play a crucial role in the hydrological cycle by capturing and storing precipitation and gradually releasing it over time. This process provides water for human consumption, irrigation, and industrial uses and supports aquatic ecosystems. Understanding the boundaries, characteristics, and functions of watersheds is essential for effective land and water management, as well as for conservation and restoration efforts.</p>
 <p>Explore the watersheds of the southeastern US in the USGS National Map below (turn on the Watershed Boundary Dataset in the layers button):</p>
 <iframe width="500" height="300" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-9524278.7223%2C3666643.0447%2C-8414413.0716%2C4171127.4314%2C102100"></iframe>
 </section>
 <section id="whats-in-our-watersheds">
 <h2>What’s in our Watersheds<a class="headerlink" href="#whats-in-our-watersheds" title="Link to this heading">#</a></h2>
-<p>We have previously used  <a class="reference external" href="https://www.usgs.gov/streamstats">StreamStats | U.S. Geological Survey (usgs.gov)</a> to delineate watersheds at small scale.  Here we will explore another application called <a class="reference external" href="https://modelmywatershed.org/">Model My Watershed</a> to learn a bit more about what’s in our watersheds. Follow the instructions below to try this application.</p>
+<p>We have previously used  <a class="reference external" href="https://www.usgs.gov/streamstats">StreamStats | U.S. Geological Survey (usgs.gov)</a> to delineate watersheds at a small scale.  Here, we will explore another application called <a class="reference external" href="https://modelmywatershed.org/">Model My Watershed</a> to learn more about what’s in our watersheds. Follow the instructions below to try this application.</p>
 <div class="admonition-model-my-watershed admonition">
 <p class="admonition-title">Model My Watershed</p>
-<p>Let’s use <a class="reference external" href="https://wikiwatershed.org/model/">Model My Watershed® - WikiWatershed</a> which is an interactive web-based hydrologic modeling tool that allows users to calculate water budgets for various storm intensities, generic land-cover types, and soil textures for a generic patch of land (“Micro model”) or for an area you have defined in your own watershed (“Watershed model”).</p>
+<p>Let’s use <a class="reference external" href="https://wikiwatershed.org/model/">Model My Watershed® - WikiWatershed</a> which is an interactive web-based hydrologic modeling tool that allows users to calculate water budgets for various storm intensities, generic land-cover types, and soil textures for a generic patch of land (“Micro model”) or for an area you have defined in your watershed (“Watershed model”).</p>
 <ol class="arabic simple">
 <li><p>Launch <a class="reference external" href="https://wikiwatershed.org/model/">Model My Watershed® - WikiWatershed</a></p></li>
 <li><p>Zoom into some area of interest;</p></li>
@@ -460,21 +447,21 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <li><p>Water Quality tab - Water Quality component tables: Landcover source zone (above), TMDL (below)</p></li>
 </ul>
 <ol class="arabic simple" start="5">
-<li><p>Do these make sense based on what you know about the area?</p></li>
-<li><p>How does amount of precipitation affect the water balance? (site storm model)</p></li>
+<li><p>Do these make sense based on your knowledge of the area?</p></li>
+<li><p>How does the amount of precipitation affect the water balance? (site storm model)</p></li>
 <li><p>Which seasons contribute the most sediment to the stream? Why? (multi-year model)</p></li>
 </ol>
 </div>
 </section>
 <section id="stormwater-runoff-and-pollution">
 <h2>Stormwater Runoff and Pollution<a class="headerlink" href="#stormwater-runoff-and-pollution" title="Link to this heading">#</a></h2>
-<p>Stormwater runoff pollution is the contamination of water that occurs when rainwater or melted snow flows over the ground and into storm drains, rivers, lakes, or other bodies of water. As the water flows over the land, it can pick up various pollutants such as oil and grease, pesticides, fertilizers, animal waste, litter, and sediment. These pollutants can have harmful effects on the water quality and can lead to a variety of environmental problems.</p>
-<p>One of the major sources of stormwater runoff pollution is urbanization, which increases the amount of impervious surfaces such as roads, parking lots, and buildings. These surfaces prevent water from soaking into the ground and instead cause it to flow rapidly over the surface, picking up pollutants along the way.</p>
+<p>Stormwater runoff pollution occurs when rainwater or melted snow flows over the ground and into storm drains, rivers, lakes, or other bodies of water, carrying various pollutants with it. As the water travels over the land, it can pick up contaminants such as oil, grease, pesticides, fertilizers, animal waste, litter, and sediment. These pollutants can significantly harm water quality and lead to various environmental issues.</p>
+<p>A major source of stormwater runoff pollution is urbanization, which increases the number of impervious surfaces like roads, parking lots, and buildings. These surfaces prevent water from soaking into the ground, causing it to flow rapidly over the surface and collect pollutants along the way.</p>
 <p>To learn about the water quality issues in your community waterways, see <a class="reference external" href="https://mywaterway.epa.gov/community">How’s My Waterway - Community (epa.gov)</a>.</p>
 <section id="stormwater-bmps">
 <h3>Stormwater BMPs<a class="headerlink" href="#stormwater-bmps" title="Link to this heading">#</a></h3>
-<p>The primary method to control stormwater runoff is the use of best management practices (BMPs). Stormwater BMPs are devices, practices, or methods that are used to manage stormwater runoff by controlling peak runoff rate, improving water quality, and managing runoff volume.</p>
-<p>Examples of BMPs include reducing the amount of impervious surfaces, using permeable paving materials, and implementing green infrastructure such as rain gardens and bioswales. Additionally, individuals can help reduce stormwater runoff pollution by properly disposing of trash, chemicals, and other pollutants, and by minimizing the use of fertilizers and pesticides on their lawns and gardens.</p>
+<p>The primary method for controlling stormwater runoff is through the use of best management practices (BMPs). Stormwater BMPs consist of various devices, practices, or methods designed to manage runoff by controlling peak runoff rates, improving water quality, and managing runoff volumes.</p>
+<p>Examples of BMPs include reducing the amount of impervious surfaces, using permeable paving materials, and implementing green infrastructure solutions such as rain gardens and bioswales. Additionally, individuals can help reduce stormwater runoff pollution by properly disposing of trash, chemicals, and other pollutants and by minimizing the use of fertilizers and pesticides on their lawns and gardens.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/bVAOOjRoEB4" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -495,7 +482,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <iframe src="https://www.youtube.com/embed/eqGbzNbXkBY" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Investigate various water management best practices in urban/suburban neighborhoods. You can research various BMPs and investigate the appropriate use of these measures. You can select locations in an area of your interest and develop designs using BMPs, to address problematic areas where runoff produces problems. Individual students or teams will report back to the class on their designs, both orally and using a handout for the class to use for discussion purposes.</p>
+<p>Investigate various best management practices (BMPs) for water management in urban and suburban neighborhoods. Research different BMPs and explore their appropriate applications. Choose specific locations in an area of your interest and develop designs that incorporate BMPs to address problematic areas where runoff causes issues. Individual students or teams will present their designs to the class, both orally and through a handout for discussion purposes.</p>
 </section>
 </section>
 <section id="readings-and-resources-for-this-section">
@@ -561,7 +548,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -628,8 +616,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

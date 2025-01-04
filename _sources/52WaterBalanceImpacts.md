@@ -1,16 +1,18 @@
 # 5.2 Water Balance Impacts
 
-Water balance components like soil moisture, precipitation, and runoff can vary greatly across spatial and temporal scales. This makes comprehensive measurements challenging and expensive. In order to understand and model such components accurately and efficiently, field campaigns and experiments should be designed to collect appropriate data types and amounts, and allow scaling across time and space. Accurate measurements also greatly help in effective management of water resources.
+Water balance components, such as soil moisture, precipitation, and runoff, can vary significantly across spatial and temporal scales. This variability makes comprehensive measurement both challenging and expensive. To accurately and efficiently understand and model these components, field campaigns and experiments must be designed to collect appropriate types and amounts of data, allowing for scaling across time and space. Precise measurements are also crucial for the effective management of water resources.
 
-In this section you will:
-- use tested methodologies to efficiently scale point measurement up to the spatial extent of interest.
-- learn how CZ  processes and land management decisions impact the water balance. The process of decision-making for water resources requires deep understanding of the water cycle and quantitative data to best balance both societal and environmental water needs.
+In this section, you will:
+- Use accepted methodologies to scale point measurements to the desired spatial extent effectively.
+- Learn how critical zone processes and land management decisions impact the water balance. Decision-making in water resource management requires a deep understanding of the water cycle and quantitative data to balance societal and environmental water needs effectively.
+
 
 ## Scaling of Point Measurements
 
-Scientists use data from multiple rain gages to estimate the rainfall distribution over an area. The distribution may be for specific storms, days, months, or even years. It may be necessary to determine an average depth or a spatial distribution of depths. 
 
-Precipitation is highly variable. When multiple gauges area available, the spatial average precipitation must be calculated from point measurements.  A weighed average approach is commonly used:
+Scientists utilize data from multiple rain gauges to estimate rainfall distribution over a specific area. This distribution can be analyzed for storms, days, months, or even years. Calculating an average rainfall depth or assessing the spatial distribution of depths may be important.
+
+Precipitation can be highly variable. When multiple gauges are available, the spatial rainfall average must be derived from point measurements. A weighted average approach is commonly employed for this calculation.
 
 ```{math}
 :label: aerial-precip-eq
@@ -19,15 +21,21 @@ P &= \sum_{i=1}^n w_i P_i\\
 \sum_{i=1}^n w_i &= 1
 \end{align}
 ```
-where $P$ is the precipitation measured at a gauge ($i$), $n$ is the total number of gauges, and $w$ is the weight assigned to a gauge. Most common approaches to estimate spatial average of multiple gauges are simply methods to assign weights. For example, we could elect to simply take the direct average of all of our gauges. In this case, each gauge gets an equal weight. If $n = 3$, each gauge gets a weight of 1/3. This is the same as same as simply adding up each $P$ and dividing by the number of gauges.
 
-A problem with the direct averaging approach is it assumes that the gauges are placed in a way that captures the actual spatial variability. For example, we know that in mountainous terrain precipitation tends to be higher at higher elevations in a watershed. If all of our gauges are placed at high elevations, we will overestimate the average. If the gauges, however, are placed throughout the watershed in a way that appropriately represents the relationship between precipitation and elevation, our direct average will be more accurate.
+In this context, let \( P \) represent the precipitation measured at a gauge \( i \), \( n \) denote the total number of gauges, and \( w \) signify the weight assigned to each gauge. The most common methods for estimating the spatial average from multiple gauges involve assigning weights to the gauges. For instance, we could calculate a direct average of all the gauges. In this case, each gauge is assigned an equal weight. If \( n = 3 \), each gauge would receive a weight of \(\frac{1}{3}\). This approach is equivalent to summing all the measurements \( P \) and dividing by the total number of gauges.
 
-If the rain gages are evenly distributed, a simple arithmetic average will be adequate. If the gages are not evenly distributed, other methods have to be considered.
+However, a significant drawback of the direct averaging method is that it assumes the gauges are positioned in a manner that adequately captures the actual spatial variability of precipitation. For example, in mountainous regions, precipitation is often greater at higher elevations within a watershed. If all the gauges are located at high elevations, this method could overestimate the average precipitation. Conversely, suppose the gauges are distributed throughout the watershed in a way that accurately reflects the relationship between precipitation and elevation. In that case, the direct average will yield a more reliable estimate.
+
+A simple arithmetic average is sufficient when the rain gauges are evenly distributed. However, other methods must be considered to ensure accurate measurements if the gauges are unevenly distributed.
+
 
 ### Thiessen Polygon Method
 
-One of the most widely used methods to calculate aerial precipitation is the Thiessen polygon method. The use of the Thiessen polygon method is illustrated in {numref}`thiessen-polygon`. The locations of each rain gage in and immediately adjacent to the area of interest are located on a map. The rainfall amount at each gage is noted. The straight dashed lines are drawn between each adjacent gage site; then, solid perpendicular bisectors to these lines are constructed so that the area around each gage is enclosed by the bisectors or the area boundary. The enclosed areas around each gage are known as Thiessen polygons. The entire area within each polygon is closer to the rain gage in that polygon than to any other rain gage. The rainfall amount measured by the gage within each polygon is assumed to be representative of the rainfall for that polygon. The areas of each polygon are calculated by geometry, with a planimeter, with graph paper, or with a computer-aided drawing package. The average rainfall for the entire area is then assumed to be a weighted average of the observed rainfalls, as shown below:
+The Thiessen polygon method is one of the most commonly used methods for calculating aerial precipitation. The process of using this method is illustrated in {numref}`thiessen-polygon`. To apply this technique, the locations of each rain gauge, both within and adjacent to the area of interest, are marked on a map. The rainfall amount recorded at each gauge is noted.
+
+Next, dashed lines are drawn to connect each adjacent gauge site, and solid perpendicular bisectors are constructed along these lines. This creates an area around each gauge, enclosed by the bisectors, referred to as a Thiessen polygon. The entire area within each polygon is closer to the rain gauge in that polygon than any other gauge. Therefore, the rainfall amount measured by the gauge in each polygon is assumed to represent the rainfall for that polygon.
+
+The areas of each polygon are calculated using geometric methods, a planimeter, graph paper, or computer-aided design software. To find the average rainfall for the entire area, a weighted average of the observed rainfalls is then calculated, as outlined below:
 
 ```{math}
 :label: thiessen-eq
@@ -44,7 +52,7 @@ where $P$ represents the average depth of rainfall in the watershed with a total
 name: thiessen-polygon
 figclass: margin-caption
 ---
-This graphical technique calculates station weights based on the relative areas of each measurement station in the Thiessen polygon network. The individual weights are multiplied by the station observation and the values are summed to obtain the areal average precipitation.
+This graphical technique calculates station weights based on the relative areas of each measurement station in the Thiessen polygon network. The individual weights are multiplied by the station observation, and the values are summed to obtain the average precipitation.
 
 Image source: [Precipitation Measurements (weather.gov)](https://www.weather.gov/abrfc/map)
 ```
@@ -64,13 +72,17 @@ frameborder="0" allowfullscreen class="video"></iframe>
 ```{admonition} Thiessen Polygon Interpolation 
 Here are the steps involved in Thiessen Polygon Interpolation:
 
-- Identify Known Points: Start with known values in your dataset.
-- Constructing Thiessen Polygons:
-	- Starting Point: Begin with a set of discrete sample points on a plane. These could be locations of weather stations, archaeological sites, or any other point data.
-	- Drawing Perpendicular Bisectors: For every pair of neighboring points, draw the perpendicular bisector (a line that cuts in half the shortest distance between them). This bisector represents a boundary where locations are equidistant to the two points.
-	- Meeting of Bisectors: As more bisectors are drawn, they’ll intersect, forming the vertices of polygons.Completing the Polygon: Once all necessary bisectors have been drawn, the polygons are formed, each surrounding its respective sample point.
-- Key Features and Assumptions: Each polygon represents the region of influence of its central sample point. Any location inside a particular Thiessen polygon is closer to its central sample point (or “source point”) than to any other sample point outside the polygon.
-- Interpolate: Finally, use the value of the central point of each Thiessen polygon to estimate values at unknown locations.
+1. **Identify Known Points**: Start by gathering known values from your dataset.
+
+2. **Constructing Thiessen Polygons**:
+   - **Starting Point**: Begin with a set of discrete sample points on a plane. These points could represent weather stations, archaeological sites, or any other point data type.
+   - **Drawing Perpendicular Bisectors**: For each pair of neighboring points, draw the perpendicular bisector, which is a line that divides the shortest distance between them in half. This bisector marks a boundary where locations are equidistant from the two points.
+   - **Meeting of Bisectors**: As more bisectors are drawn, they will intersect, forming the vertices of polygons.
+   - **Completing the Polygon**: Once all necessary bisectors are drawn, the polygons are complete, with each polygon surrounding its respective sample point.
+
+3. **Key Features and Assumptions**: Each polygon represents the area of influence of its central sample point. Any location inside a particular Thiessen polygon is closer to its central sample point (or "source point") than any other sample point outside the polygon.
+
+4. **Interpolate**: Finally, use the value of the central point of each Thiessen polygon to estimate values at unknown locations.
 ```
 
 
@@ -145,7 +157,7 @@ Setting all the calculations in a table, we can see that the  precipitation for 
 
 ### Inverse Distance Weighted Method
 
-Inverse distance weighted (IDW) interpolation explicitly makes the assumption that things that are close to one another are more alike than those that are farther apart. To predict a value for any unmeasured location, IDW uses the measured values surrounding the prediction location. The measured values closest to the prediction location have more influence on the predicted value than those farther away. IDW assumes that each measured point has a local influence that diminishes with distance. It gives greater weights to points closest to the prediction location, and the weights diminish as a function of distance, hence the name inverse distance weighted. It is calculated as shown below.
+Inverse Distance Weighted (IDW) interpolation is based on the assumption that locations close to each other are more similar than those that are farther apart. IDW uses the measured values from the surrounding area to predict a value for an unmeasured location. The measured values closest to the prediction location have a greater impact on the predicted value than those farther away. IDW operates on the principle that each measured point has a local influence that decreases with distance. It assigns greater weights to points nearest to the prediction location, while the weights decrease as the distance increases, which is why it is called "inverse distance weighted." The calculation for IDW is typically performed using a specific formula as shown below:
 
 ```{math}
 :label: idw-eq
@@ -169,10 +181,14 @@ Image source: [Inverse Distance Weighting (IDW) Interpolation - GIS Geography](h
 ```{admonition} Inverse Distance Weighting (IDW) 
 Here are the steps involved in Inverse Distance Weighting (IDW):
 
-- Identify Known Points: Start with known values in your dataset.
-- Spatial Autocorrelation: IDW assumes that things that are close to one another are more alike than those that are farther apart. This is known as spatial autocorrelation.
-- Calculate Path Distances: Calculate path distances from each known point to each prediction point.
-- Assign Weights: Assign weights to the known points based on their distance from the prediction location. The closer a known point is to the prediction location, the more influence it has on the predicted value.
+1. **Identify Known Points**: Identify the known values in your dataset.
+
+2. **Understand Spatial Autocorrelation**: IDW operates on the principle that closer locations are more similar than those farther apart. This concept is referred to as spatial autocorrelation.
+
+3. **Calculate Path Distances**: Measure the path distances from each known point to every prediction point.
+
+4. **Assign Weights**: Assign weights to the known points based on their distances from the prediction location. The closer a known point is to the prediction location, the greater its influence on the predicted value.
+
 ```
 
 ```{dropdown} Example of IDW Interpolation 
@@ -231,13 +247,13 @@ Setting all the calculations in a table, we can see that the  precipitation for 
 | 5       | 2, 4, 5               | 5.1, 4.0, 3.4 | 1015, 1101, 1057   | 1060.7                   |
 | 6       | 3, 5, 6               | 5.9, 3.5, 1.9 | 963, 1057, 1078    | 1052.0                   |
 
-- Step 5: Calculate weighted precip for entire basin. Since the six pixels are equal size, just need to take arithmetic mean.
+- Step 5: Calculate weighted precip for the entire basin. Since the six pixels are equal in size, take the arithmetic mean.
 
 $$
 \text{Weighted Precip} = \frac{1005.8+994.8+993.6+1070.3+1060.7+1052.0}{6} = \pu{1029.5 mm}
 $$
 
-This final value is similar to the value obtained using the Thiessen Polygon Method - a difference of less than 2%.
+This final value is similar to that obtained using the Thiessen Polygon Method - a difference of less than 2%.
 
 ```
 
@@ -245,19 +261,25 @@ This final value is similar to the value obtained using the Thiessen Polygon Met
 
 ### Hypsometric Method
 
-The term hypsometry refers to the measurement of elevation. The hypsometric method combines the distribution of elevation within a watershed with a known relationship between precipitation and elevation to determine weights for elevation classes. An advantage of the hypsometric method in mountainous terrain is that is accounts for the mechanism that is known to produce spatial variability of precipitation.
+Hypsometry refers to the measurement of elevation. The hypsometric method combines the elevation distribution within a watershed with a known relationship between precipitation and elevation to assign weights to different elevation classes. 
 
-The method combines the distribution of elevation within a watershed with a knowledge of the precipitation-elevation relationship to determine weights for elevation classes. These weights are then used to calculate the average precipitation over the watershed.
+One advantage of the hypsometric method, particularly in mountainous terrain, is that it considers the factors that cause spatial variability in precipitation. Using this method, researchers can calculate the average precipitation over a watershed based on the elevation distribution and the precipitation-elevation relationship.
 
-The hypsometric method is a useful tool for estimating precipitation in mountainous areas, where the relationship between precipitation and elevation is often non-linear. The method is also relatively simple to implement, making it a good choice for watershed-scale studies.
+The hypsometric method is particularly useful for estimating precipitation in mountainous areas, where the relationship between elevation and precipitation is often non-linear. Additionally, the method is relatively straightforward, making it a practical choice for watershed-scale studies.
 
 ```{admonition} Hypsometric Weighting Method
 
-To calculate aerial precipitation using the hypsometric method, the following steps are taken:
-- The distribution of elevation within the watershed is obtained. This can be done using a variety of methods, such as topographic maps, DEMs, or GPS data.
-- The precipitation-elevation relationship is obtained. This can be done using historical data, climate models, or theoretical relationships.
-- The weights for each elevation class are calculated. This is done by multiplying the area of each elevation class by the precipitation-elevation relationship for that elevation class.
-- The average precipitation over the watershed is calculated by weighting the precipitation for each elevation class by the weights for that elevation class.
+To calculate aerial precipitation using the hypsometric method, follow these steps:
+
+1. **Obtain the distribution of elevation within the watershed.** This can be done using various methods, such as topographic maps, digital elevation models (DEMs), or GPS data.
+
+2. **Determine the precipitation-elevation relationship.** This can be achieved using historical data, climate models, or theoretical relationships.
+
+3. **Calculate the weights for each elevation class.** This involves multiplying the area of each elevation class by the precipitation value associated with that class.
+
+4. **Calculate the average precipitation over the watershed.** This is done by weighting the precipitation for each elevation class according to the previously calculated weights.
+
+Following these steps, you can calculate aerial precipitation using the hypsometric method.
 ```
 
 
@@ -266,30 +288,30 @@ The method is relatively simple to implement and can be used to calculate averag
 
 ## Water Management and Balance
 
-Climate change is intensifying the water cycle to speed up as warming global temperatures increase the rate of evaporation worldwide. Increased evaporation in one part of the Earth system results in increased precipitation elsewhere. Extreme weather events are also causing extreme water scarcity, extreme precipitation, and degraded water environments. [These impacts throughout the water cycle threaten sustainable development, biodiversity, and people’s access to water and sanitation](https://scied.ucar.edu/learning-zone/climate-change-impacts/water-cycle-climate-change).
+Climate change is intensifying the water cycle, leading to an increase in the evaporation rate worldwide due to rising global temperatures. This heightened evaporation in one area of the Earth results in increased precipitation in another. Extreme weather events are causing significant water scarcity, excessive rainfall, and degraded water environments. [These effects on the water cycle pose serious threats to sustainable development, biodiversity, and people's access to water and sanitation](https://scied.ucar.edu/learning-zone/climate-change-impacts/water-cycle-climate-change).
 
-According to the [latest IPCC Assessment Report](https://report.ipcc.ch/ar6syr/pdf/IPCC_AR6_SYR_SPM.pdf), managing water resources is very high on adaptation strategies.
+According to the [latest IPCC Assessment Report](https://report.ipcc.ch/ar6syr/pdf/IPCC_AR6_SYR_SPM.pdf),, managing water resources is a top priority in adaptation strategies.
+
 
 ```{figure} https://www.ipcc.ch/report/ar6/syr/downloads/figures/summary-for-policymakers/IPCC_AR6_SYR_SPM_Figure2.png
 ---
 name: ipcc-ar6-spm.2
 figclass: margin-caption
 ---
-**Projected changes of annual maximum daily maximum temperature, annual mean total column soil moisture and annual maximum 1-day precipitation at global warming levels of 1.5°C, 2°C, 3°C, and 4°C relative to 1850–1900.** Projected **(a)** annual maximum daily temperature change (°C), **(b)** annual mean total column soil moisture (standard deviation), (c) annual maximum 1-day precipitation change (%). The panels show CMIP6 multi-model median changes. In panels (b) and (c), large positive relative changes in dry regions may correspond to small absolute changes. In panel (b), the unit is the standard deviation of interannual variability in soil moisture during 1850–1900. Standard deviation is a widely used metric in characterising drought severity. A projected reduction in mean soil moisture by one standard deviation corresponds to soil moisture conditions typical of droughts that occurred about once every six years during 1850–1900.
+**Projected changes of annual maximum daily maximum temperature, annual mean total column soil moisture, and annual maximum 1-day precipitation at global warming levels of 1.5°C, 2°C, 3°C, and 4°C relative to 1850–1900.** Projected **(a)** annual maximum daily temperature change (°C), **(b)** annual mean total column soil moisture (standard deviation), (c) annual maximum 1-day precipitation change (%). The panels show CMIP6 multi-model median changes. In panels (b) and (c), large positive relative changes in dry regions may correspond to small absolute changes. In panel (b), the unit is the standard deviation of interannual variability in soil moisture during 1850–1900. Standard deviation is a widely used metric in characterizing drought severity. A projected reduction in mean soil moisture by one standard deviation corresponds to soil moisture conditions typical of droughts that occurred about once every six years during 1850–1900.
 
 Image source: [Figures: AR6 Synthesis Report (ipcc.ch)](https://www.ipcc.ch/report/ar6/syr/figures/)
 ```
 
-In many parts of the western United States, mountains can serve as "water towers". However societal demand for water in the mountains is relatively lower. In California, precipitation falls in mountain ranges and flows via rivers and man-made aqueducts and canals to the areas where higher demand is located. Snowpack also acts as a reservoir, gradually releasing water downstream as it melts.
+In many regions of the western United States, mountains function as "water towers." However, societal demand for water in these mountainous areas is relatively low. In California, precipitation falls in the mountain ranges and flows through rivers, man-made aqueducts, and canals to regions with higher water demand. Additionally, the snowpack acts as a natural reservoir, gradually releasing water downstream as it melts.
 
-Much of California experiences a rainy season in the winter and spring, and a dry season in the summer and early fall. It is naturally driest during the peak of the agricultural growing season, when water demand is greatest. Residential and commercial areas also generally do not adjust their demands to follow the natural supply. To address this, there are large reservoirs to store winter precipitation and snowmelt. These reservoirs and their releases control the downstream flow in streams and rivers.
+California experiences a rainy season in winter and spring, followed by a dry season in the summer and early fall. This dry period coincides with the peak of the agricultural growing season when water demand is at its highest. Residential and commercial areas generally do not alter water usage to align with natural supply fluctuations. To mitigate this issue, large reservoirs have been built to store winter precipitation and snowmelt. These reservoirs help regulate the downstream flow of streams and rivers.
 
-Land development can also have a significant impact on the water balance. Change in land use/cover impacts the water balance of a watershed by changing the magnitude and pattern of different components of the water balance resulting in increasing  water management problem (e.g., [Schilling et al., 2008](https://doi.org/10.1029/2007WR006644),[Kundu et al, 2017](https://doi.org/10.1016/j.jenvman.2017.04.018)).
+Land development can significantly impact the water balance of a watershed. Changes in land use or cover can alter the magnitude and pattern of various components of the water balance, leading to increased water management challenges (e.g., [Schilling et al., 2008](https://doi.org/10.1029/2007WR006644),[Kundu et al., 2017](https://doi.org/10.1016/j.jenvman.2017.04.018)).
 
-Due to the increased water stress, wildfires are expected to increase as well. Wildfires release ash and contaminants associated with ash into streams, lakes and water reservoirs. Vegetation that holds soil in place and retains water is burned away leading to other geological hazards. [According to EPA](https://www.epa.gov/sciencematters/wildfires-how-do-they-affect-our-water-supplies), in the aftermath of a large wildfire, rainstorms flush vast quantities of ash, sediment, nutrients and contaminants into streams, rivers, and downstream reservoirs. Fire suppression in western U.S. mountains has caused dense forests with high evapotranspiration leading to heightened risk of wildfires. Restoring natural wildfire regimes to these forests could affect hydrology by changing vegetation composition and structure, but the specific effects on water balance are unknown [(Boisramé et al., 2019)](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2018WR024098).
+As water stress increases, wildfires are also expected to rise. Wildfires release ash and contaminants into streams, lakes, and water reservoirs. The vegetation that typically retains soil and water is burned away, which can lead to additional geological hazards. [According to EPA](https://www.epa.gov/sciencematters/wildfires-how-do-they-affect-our-water-supplies), after a large wildfire, rainstorms can wash significant amounts of ash, sediment, nutrients, and contaminants into streams, rivers, and downstream reservoirs. Fire suppression efforts in the western U.S. mountains have resulted in dense forests with high evapotranspiration, increasing the risk of wildfires. Restoring natural wildfire regimes in these forests could modify hydrology by changing the composition and structure of vegetation. Still, the specific effects on the water balance remain uncertain [(Boisramé et al., 2019)](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2018WR024098).
 
-Fire suppression can have a significant impact on water. Fire suppression runoff can contaminate soil and water with toxic or hazardous materials, and direct exposure to soil and water from hazardous materials whose containers/containment systems may fail due to fire. This can lead to contamination of the air via the fire plume and its subsequent diffusion, with deposition of particulate and other materials likely to contaminate soil and water [(Martin et al., 2016)](https://firesciencereviews.springeropen.com/articles/10.1186/s40038-016-0014-1).
-
+Fire suppression can also have a considerable impact on water quality. Runoff from fire suppression can contaminate soil and water with toxic or hazardous materials. Direct exposure to soil and water from hazardous materials, which may spill due to fire, can lead to air contamination through smoke plumes and their subsequent dispersal. This can result in the deposition of particulates and other contaminants, further compromising soil and water quality [(Martin et al., 2016)](https://firesciencereviews.springeropen.com/articles/10.1186/s40038-016-0014-1).
 
 
 ```{admonition} Mini-Project #6
@@ -297,7 +319,7 @@ Fire suppression can have a significant impact on water. Fire suppression runoff
 
 Read [Mountain runoff vulnerability to increased evapotranspiration with vegetation expansion](https://www.pnas.org/doi/10.1073/pnas.1319316111)
 
-Cooperatively and collaboratively present the main findings from this  paper for the Southern Sierra Nevada CZO.  See the below breakdown of tasks for the format. Use good screenshots of the figures and graphs and add text. 
+Cooperatively and collaboratively present the main findings from this paper for the Southern Sierra Nevada CZO.  See the breakdown of tasks for the format. Use good screenshots of the figures and graphs and add text. 
 
 Add your name to one part and take ownership of the appropriate slides. The Results and Discussion sections can be worked on with a partner.
 
