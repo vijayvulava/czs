@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4.2 Carbon Budget &#8212; Critical Zone Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '42CarbonBudget';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5 Water Transfer Through the CZ" href="5WaterTransfer.html" />
+    <link rel="prev" title="4.1 Energy Budget" href="41EnergyBudget.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Critical Zone Science - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Critical Zone Science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Background</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1CZBackground.html">1 CZ Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11CZOverview.html">1.1 CZ Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12SoilOverview.html">1.2 The Role of Soil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13SystemsOverview.html">1.3 Systems Approach</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Science Methods</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2CZSMethods.html">2 Methods in CZ Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21BasicToolsAnalysis.html">2.1 Basic Tools and Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22CZSFieldMethods.html">2.2 Field and Lab Analyses</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Architecture &amp; Evolution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3CZArchitectureEvolution.html">3 CZ Architecture and Evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31Geomorphology.html">3.1 Geology and Geomorphology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LandformsRemoteSensing.html">3.2 Landforms and Remote Sensing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Land Atmosphere Exchange</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4LandAtmosphere.html">4 Land-Atmosphere Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41EnergyBudget.html">4.1 Energy Budget</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4.2 Carbon Budget</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Water Transfer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5WaterTransfer.html">5 Water Transfer Through the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51WaterBalanceTree.html">5.1 Water Balance of a Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52WaterBalanceImpacts.html">5.2 Water Balance Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Biogeochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Biogeochem.html">6 Geochemistry and Biogeochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Biogeochemistry.html">6.1 Biogeochemistry in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62BiogeochemicalCycles.html">6.2 Biogeochemical Cycles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Humans and the CZ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7HumansCZ.html">7 Humans in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71HumanWatershed.html">7.1 Watershed Impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72ClimateCZ.html">7.2 Climate Change Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="91papers.html">Literature Review</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/42CarbonBudget.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4.2 Carbon Budget</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carbon-cycle">Carbon Cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Carbon Budget</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photosynthesis">Photosynthesis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#respiration">Respiration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#allocation">Allocation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controls-on-npp">Controls on <em>NPP</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carbon-relationships">Carbon Relationships</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="carbon-budget">
+<h1>4.2 Carbon Budget<a class="headerlink" href="#carbon-budget" title="Link to this heading">#</a></h1>
+<p>We will analyze carbon flux data collected at various scales to understand the regional exchange of carbon at an Ameriflux or CZO site. This relates to the grand challenge of understanding atmospheric gases and biogeochemical/carbon cycling. This unit also relates to the geoscience literacy themes of Earth system changes that occur at multiple scales and the interconnections between the carbon and energy and water cycles.</p>
+<p>You will:</p>
+<ul class="simple">
+<li><p>Use a carbon cycle diagram to discuss the different pathways of carbon at a watershed scale.</p></li>
+<li><p>Contrast global and biome-specific carbon budgets to better understand watershed-scale processes.</p></li>
+<li><p>Relate carbon flux data collected at various scales to understand the regional exchange of carbon at an Ameriflux site.</p></li>
+<li><p>Explore and visualize carbon flux data from the Ameriflux database.</p></li>
+<li><p>Use carbon flux data from the Ameriflux database to support a simple hypothesis relating carbon flux to driving environmental variables.</p></li>
+</ul>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/E8Y6L5TI_94" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<section id="carbon-cycle">
+<h2>Carbon Cycle<a class="headerlink" href="#carbon-cycle" title="Link to this heading">#</a></h2>
+<p>Carbon is the foundation of all life on Earth, required to form complex molecules like proteins and DNA. This element is also found in our atmosphere in the form of <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>. Carbon helps to regulate the Earth’s temperature, makes all life possible, is a key ingredient in the food that sustains us, and provides a major source of the energy to fuel our global economy.</p>
+<p>The carbon cycle describes the process in which carbon atoms continually travel from the atmosphere to the Earth and then back into the atmosphere. Since our planet and its atmosphere form a closed environment, the amount of carbon in this system does not change. Where the carbon is located — in the atmosphere or on Earth — is constantly in flux.</p>
+<p>On Earth, most carbon is stored in rocks and sediments, while the rest is located in the ocean, atmosphere, and in living organisms. These are the reservoirs, or sinks, through which carbon cycles.</p>
+<p>Carbon is released back into the atmosphere when organisms die, volcanoes erupt, fires blaze, fossil fuels are burned, and through a variety of other mechanisms.</p>
+<p>In the case of the ocean, carbon is continually exchanged between the ocean’s surface waters and the atmosphere, or is stored for long periods of time in the ocean depths.</p>
+<p>Humans play a major role in the carbon cycle through activities such as the burning of fossil fuels or land development resulting in a rapid increased in <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> in the atmosphere.</p>
+<figure class="margin-caption align-default" id="id1">
+<img alt="https://www.earthobservatory.nasa.gov/ContentFeature/CarbonCycle/images/carbon_cycle.jpg" src="https://www.earthobservatory.nasa.gov/ContentFeature/CarbonCycle/images/carbon_cycle.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">The fast carbon cycle shows the movement of carbon between land, atmosphere, and oceans. Yellow numbers are natural fluxes, and red are human contributions in gigatons of carbon per year. White numbers indicate stored carbon. Image source: <a class="reference external" href="https://www.earthobservatory.nasa.gov/features/CarbonCycle">The Carbon Cycle (nasa.gov)</a></span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id2">
+<h2>Carbon Budget<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Energy flow refers to the movement of energy through an ecosystem, from the external environment (the Sun) through a series of organisms and back to the external environment (space). It is a fundamental process common to all ecosystems.</p>
+<p>In ecosystems energy flow is what distinguishes life and life-supporting systems from the rest of the universe. All life requires energy. Our body mass is a delicate balance between the energy we take in through food and the energy we use through activities; what we don’t use, we store. This is true not only of people, but also of other organisms, and of populations, communities, ecosystems, biomes, and the biosphere.</p>
+<p>Two aspects of energy and its role in ecosystems are essential to an understanding of energy and life. The first is the functions of energy in living systems, especially its involvement in the production of organic matter in ecosystems, which can tell us about the ultimate limits on the abundance of life. The second is the pathways through which energy flows, the efficiency with which it is used, and the role it plays in the various processes of life.</p>
+<figure class="margin-caption align-default" id="global-carbon-budget">
+<img alt="https://essd.copernicus.org/articles/12/3269/2020/essd-12-3269-2020-f02-web.png" src="https://essd.copernicus.org/articles/12/3269/2020/essd-12-3269-2020-f02-web.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Schematic representation of the overall perturbation of the global carbon cycle caused by anthropogenic activities, averaged globally for the decade 2010–2019. Image source: <a class="reference external" href="https://essd.copernicus.org/articles/12/3269/2020/">ESSD - Global Carbon Budget 2020 (copernicus.org)</a></span><a class="headerlink" href="#global-carbon-budget" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="photosynthesis">
+<h3>Photosynthesis<a class="headerlink" href="#photosynthesis" title="Link to this heading">#</a></h3>
+<p>The basic function of energy in a life-supporting system is to make possible the production of organic matter. The amount of usable energy in a system provides an upper limit on the amount of organic matter, and thus the amount of life that can be sustained by any ecosystem, and ultimately by the Earth system as a whole.</p>
+<p>Photosynthesis is the only biological process that can capture energy that originates from sunlight and converts it into chemical compounds (carbohydrates) that every organism uses to power its metabolism. It is also a source of oxygen necessary for many living organisms. In brief, the energy of sunlight is “captured” to energize electrons, whose energy is then stored in the covalent bonds of sugar molecules.</p>
+<p>Plants, algae, and a group of bacteria called cyanobacteria are the only organisms capable of performing photosynthesis. Because they use light to manufacture their own food, they are called <em>photoautotrophs</em> (literally, “self-feeders using light”). Other organisms, such as animals, fungi, and most other bacteria, are termed <em>heterotrophs</em> (“other feeders”), because they must rely on the sugars produced by photosynthetic organisms for their energy needs. A small group of bacteria synthesize sugars, not by using sunlight’s energy, but by extracting energy from inorganic chemical compounds and are called <em>chemoautotrophs</em>.</p>
+<p>Photosynthesis is a multi-step process that requires specific wavelengths of visible sunlight, <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> (which is low in energy), and <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> as substrates. After the process is complete, it releases <span class="math notranslate nohighlight">\(\ce{O2}\)</span> and produces simple carbohydrate molecules (high in energy) that can then be converted into glucose, sucrose, or any of dozens of other sugar molecules. These sugar molecules contain energy and the energized carbon that all living things need to survive.</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{6 CO2 + 6 H2O -&gt;[Sunlight] C6H12O6 + 6 O2}
+\]</div>
+<p>Note that the total amount of organic matter on Earth or in any particular ecosystem is called the biomass of that system. This includes all living things and all products of living things. Most of life is on or close to Earth’s surface, so biomass is usually measured as an amount per unit surface area.</p>
+<p>Primary producers convert energy and inorganic compounds into biomass, in the form of carbon-based organic compounds. There are three steps in the production of biomass and its use as a source of energy by autotrophs. First, the autotrophic organism produces organic matter within its body (by photosynthesis or, less commonly, by chemosynthesis); then it uses some of this new organic matter as a fuel in metabolism and respiration, releasing energy back to the surrounding environment in the form of heat; finally, it stores some of the newly produced organic matter for future use, in the form of carbon-based compounds.</p>
+<p>The first step, production of organic matter before any use, is called gross production. The biomass that is left over from gross production after it has been used to
+fuel the processes of life (the second step) is called net production. In these terms,</p>
+<div class="math notranslate nohighlight">
+\[
+NPP = GPP – Re
+\]</div>
+<p>where, <span class="math notranslate nohighlight">\(NPP\)</span> is net primary production, <span class="math notranslate nohighlight">\(GPP\)</span> is gross primary production and <span class="math notranslate nohighlight">\(Re\)</span> is  respiration. This is a fundamental production relationship.</p>
+</section>
+<section id="respiration">
+<h3>Respiration<a class="headerlink" href="#respiration" title="Link to this heading">#</a></h3>
+<p>Carbohydrates made during photosynthesis are of value to a plant when they are converted to energy. This energy is used for cell growth and building new tissues. The chemical process by which sugars and starches are converted to energy is called <em>oxidation</em> and is similar to the burning of wood or coal to produce heat.</p>
+<p>Organisms that derive food energy by feeding on other organisms or on organic compounds produced by other organisms are called heterotrophs. When heterotrophs consume another organism, the energy stored in the organic compounds is released by one of two metabolic processes. Organisms that cannot tolerate oxygen obtain their energy through the anaerobic process of fermentation, in which carbohydrate molecules release energy as they are partially decomposed to form alcohol, carbon dioxide, and water. Heterotrophs that are oxygen-tolerant obtain their energy through the aerobic (oxygenated) process of respiration (or cellular respiration), which means that they use oxygen to break down carbohydrates, releasing carbon dioxide, water, and energy. Respiration is many times more efficient than fermentation as a metabolic process.</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{O2 + Sugars -&gt; Alcohols + CO2 + H2O + Energy}
+\]</div>
+</section>
+<section id="allocation">
+<h3>Allocation<a class="headerlink" href="#allocation" title="Link to this heading">#</a></h3>
+<p>The partitioning of the primary products of photosynthesis into different functional pools is termed carbon (C) allocation. Several conceptual frameworks were developed decades ago to describe plant allocation strategies in terms of a functional equilibrium between aboveground and belowground organ biomass. Allocation has also been described as a trade-off in resource partitioning between different functional sinks, like growth and defense in the presence of herbivores and pathogens.</p>
+<figure class="margin-caption align-default" id="carbon-allocation">
+<img alt="_images/nph16757-fig-0001-m.jpg" src="_images/nph16757-fig-0001-m.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Plant carbon allocation in a changing world. Plants allocate carbohydrates produced during photosynthesis to support maintenance, growth, development, and reproduction as well as defence and communication.  NSC, nonstructural carbohydrates. Image source: <a class="reference external" href="https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.16757">Plant carbon allocation in a changing world – challenges and progress - New Phytologist</a></span><a class="headerlink" href="#carbon-allocation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The allocation of carbon depends on the ecosystem type, its components, and the interactions between them. Carbon allocation to plant biomass can be shown as</p>
+<div class="math notranslate nohighlight">
+\[\frac{dC_{biomass}}{dt} = α_{biomass} \times NPP\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{dC_{biomass}}{dt}\)</span> is the rate of change in plant biomass carbon stock</p></li>
+<li><p><span class="math notranslate nohighlight">\(α_{biomass}\)</span> is the fraction of <span class="math notranslate nohighlight">\(NPP\)</span> allocated to plant biomass growth</p></li>
+</ul>
+<p>Environmental parameters, like temperature, precipitation and atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> or ozone concentrations, influence these processes either directly (e.g. heat damage) or by influencing the availability of carbohydrates (e.g. reduction of photosynthetic rates). Plants respond to changes in environmental conditions by shifting the partitioning of available carbon among organs (e.g. aboveground vs belowground growth, reproduction) and/or functional metabolites (e.g. synthesis of cellulose for growth vs production of defense compounds). Such plant responses define allocation strategies, most of which are still not well understood in the context of climate change.</p>
+</section>
+<section id="controls-on-npp">
+<h3>Controls on <em>NPP</em><a class="headerlink" href="#controls-on-npp" title="Link to this heading">#</a></h3>
+<p>The main controls on <span class="math notranslate nohighlight">\(NPP\)</span> can be categorized into environmental factors and biological factors.</p>
+<p>Environmental Factors:</p>
+<ol class="arabic simple">
+<li><p>Light availability: Photosynthesis is driven by the energy from sunlight, so the amount of available light is a critical factor for <span class="math notranslate nohighlight">\(NPP\)</span>. Light availability is influenced by latitude, season, cloud cover, and canopy structure in forests.</p></li>
+<li><p>Temperature: Photosynthesis and respiration rates are temperature-dependent, with an optimum range for most plant species. Temperatures that are too low or too high can limit <span class="math notranslate nohighlight">\(NPP\)</span>.</p></li>
+<li><p>Water availability: Water is essential for photosynthesis and plant growth. Drought conditions can severely limit <span class="math notranslate nohighlight">\(NPP\)</span>, while excessive water can also be detrimental.</p></li>
+<li><p>Nutrient availability: Plants require nutrients such as nitrogen, phosphorus, and potassium for growth and development. Nutrient limitations in the soil can constrain <span class="math notranslate nohighlight">\(NPP\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ce{CO2}\)</span> concentration: Higher atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> concentrations can increase photosynthetic rates and potentially boost <span class="math notranslate nohighlight">\(NPP\)</span>, although other factors may limit the response.</p></li>
+</ol>
+<p>Biological Factors:</p>
+<ol class="arabic simple">
+<li><p>Plant species composition: Different plant species have varying photosynthetic efficiencies, growth rates, and resource requirements, which can influence <span class="math notranslate nohighlight">\(NPP\)</span> at the ecosystem level.</p></li>
+<li><p>Plant functional traits: Traits such as leaf area, leaf lifespan, root architecture, and wood density can affect the efficiency of resource acquisition and utilization, impacting <span class="math notranslate nohighlight">\(NPP\)</span>.</p></li>
+<li><p>Plant age and development: <span class="math notranslate nohighlight">\(NPP\)</span> generally increases as plants mature, reaches a maximum at an intermediate age, and then declines as plants senesce.</p></li>
+<li><p>Herbivory and disturbances: Herbivores consuming plant biomass, as well as disturbances like fires, storms, and human activities, can reduce <span class="math notranslate nohighlight">\(NPP\)</span>.</p></li>
+<li><p>Competition and facilitation: Interactions between plants, such as competition for resources or facilitative effects, can influence NPP at the community level.</p></li>
+</ol>
+<p>These environmental and biological factors interact in complex ways to determine the overall <span class="math notranslate nohighlight">\(NPP\)</span> of an ecosystem. Changes in these factors, such as those driven by climate change or land-use practices, can significantly impact the carbon cycling and productivity of terrestrial ecosystems.</p>
+</section>
+<section id="carbon-relationships">
+<h3>Carbon Relationships<a class="headerlink" href="#carbon-relationships" title="Link to this heading">#</a></h3>
+<p>The main equations that cover the carbon budget on Earth (or the CZ) involve tracking the exchange of carbon between different reservoirs or pools, including the atmosphere, terrestrial biosphere (plants and soils), oceans, and geological reservoirs (fossil fuels and sedimentary rocks). Some of these pools (e.g., oceans) do not apply in the CZ context.</p>
+<p>Here are some of the key equations used to quantify the carbon budget:</p>
+<ol class="arabic">
+<li><p>Atmospheric Carbon Balance:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dC_{atm}}{dt} = E_{ff} + E_{luc} - S_{ocean} - S_{land}\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{dC_{atm}}{dt}\)</span> is the rate of change in atmospheric carbon dioxide (<span class="math notranslate nohighlight">\(\ce{CO2}\)</span>) concentration</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_{ff}\)</span> is the emission from fossil fuel combustion and industrial processes</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_{luc}\)</span> is the emission from land-use change (e.g., deforestation)</p></li>
+<li><p><span class="math notranslate nohighlight">\(S_{ocean}\)</span> is the uptake of carbon by the oceans</p></li>
+<li><p><span class="math notranslate nohighlight">\(S_{land}\)</span> is the uptake of carbon by terrestrial ecosystems</p></li>
+</ul>
+</li>
+<li><p>Ocean Carbon Uptake:</p>
+<div class="math notranslate nohighlight">
+\[S_{ocean} = k_g \times (p\ce{CO2}_{,atm} - p\ce{CO2}_{, ocean})\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(k_g\)</span> is the gas transfer coefficient</p></li>
+<li><p><span class="math notranslate nohighlight">\(p\ce{CO2}_{, atm}\)</span> is the partial pressure of <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> in the atmosphere</p></li>
+<li><p><span class="math notranslate nohighlight">\(p\ce{CO2}_{, ocean}\)</span> is the partial pressure of <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> in the ocean surface waters</p></li>
+</ul>
+</li>
+<li><p>Terrestrial Biosphere Carbon Uptake:</p>
+<div class="math notranslate nohighlight">
+\[S_{land} = NPP - R_h - D\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(NPP\)</span> is the net primary production (the amount of carbon fixed by plants through photosynthesis)</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_h\)</span> is the heterotrophic respiration (the release of carbon from the decomposition of organic matter)</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\)</span> is the disturbance flux (e.g., fires, deforestation)</p></li>
+</ul>
+</li>
+<li><p>Geological Carbon Reservoir Balance:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dC_{geo}}{dt} = F_{burial} - F_{weathering} - E_{ff}\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{dC_{geo}}{dt}\)</span> is the rate of change in the geological carbon reservoir</p></li>
+<li><p><span class="math notranslate nohighlight">\(F_{burial}\)</span> is the flux of carbon burial in sedimentary rocks</p></li>
+<li><p><span class="math notranslate nohighlight">\(F_{weathering}\)</span> is the flux of carbon release through rock weathering processes</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_{ff}\)</span> is the emission from fossil fuel combustion</p></li>
+</ul>
+</li>
+<li><p>Climate-Carbon Cycle Feedback Relationship:</p>
+<div class="math notranslate nohighlight">
+\[NPP = f(T, P, \ce{CO2}) R_h = g(T, P, \ce{CO2})\]</div>
+<p>Where:</p>
+</li>
+</ol>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(NPP\)</span> and <span class="math notranslate nohighlight">\(R_h\)</span> are functions of temperature (<span class="math notranslate nohighlight">\(T\)</span>), precipitation (<span class="math notranslate nohighlight">\(P\)</span>), and atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> concentration</p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> represent the functional relationships between these variables and the carbon fluxes</p></li>
+</ul>
+<div class="admonition-mini-project-5 admonition">
+<p class="admonition-title">Mini-Project #5</p>
+<p><strong>Part A</strong></p>
+<p>Now that you are familiar with using ArcGIS online version to make basic maps, make a comprehensive portfolio of maps of your CZO. Start at <a class="reference external" href="https://scgis.maps.arcgis.com/home/organization.html#overview" title="SCGIS Laboratory - CofC">SCGIS Laboratory - College of Charleston</a>.</p>
+<p>Task 1: Click on Map at the top to start a new map. Remember to Save the map after each of the following tasks. To Print a map, click on the Print icon on the left, add an appropriate title and change “File format” to JPG. Click “Advanced Options” and add your name. Check the “Include Legend” box. Click “Export”. This step takes a minute or so and the map link appears below the “Exported Files”.</p>
+<p>Task 2: Click on the Base Map tool on the left and add USGS National Map from the Living Atlas dropdown menu. This is a very detailed map and shows water and topographical features in very high resolution. Make this your Base Map.</p>
+<p>Task 3: Go to <a class="reference external" href="https://www.usgs.gov/streamstats">StreamStats | U.S. Geological Survey</a> and create a watershed for your site. Study existing information for your CZO to identify the general boundary of the areas of interest. Download the Layer to your computer and import it into the map you just created. Print this map. Make this layer transparency 25% so that the underlying basemap is visible.</p>
+<p>Task 4: Add the following layers to your map, one at a time and print a map:</p>
+<ul class="simple">
+<li><p>ESRI Hydro Reference Overlay</p></li>
+<li><p>Live Stream Gages</p></li>
+<li><p>Predominant Major Forest Carbon Pools of the Continental United States</p></li>
+<li><p>Sentinel-2 10m Land Use/Land Cover Change from 2018 to 2021</p></li>
+<li><p>State Geologic Map Compilation</p></li>
+<li><p>StreamStats Layer for main watershed (imported from StreamStats)</p></li>
+<li><p>Terrain Slope Map</p></li>
+<li><p>USA Flood Hazard Areas</p></li>
+<li><p>USA NAIP Imagery: Natural Color</p></li>
+<li><p>USA NAIP Imagery: NDVI</p></li>
+<li><p>USA Soil Map Units</p></li>
+</ul>
+<p>Task 5: Copy and paste each map in Word on a separate sheet. Below each map include a short summary (~100 words) of the main information from each map.</p>
+<p>Task 6: Given all the information from these maps, describe how they help explain the nature of the CZ at these sites.</p>
+<p><strong>Part B</strong></p>
+<p>Go to <a class="reference external" href="https://ameriflux.lbl.gov/">AmeriFlux</a> and Sign In using the username and password you created.</p>
+<p>Navigate to the sites closest to the CZO you are studying. Click on the “Site Publication” to identify the major publications for this site.</p>
+<p>Identify TWO recent journal articles that address carbon/land-atmosphere fluxes for this site. For each article do the following:</p>
+<p>Task 1: Include the full citation and write a 150-200 word summary of the article.</p>
+<p>Task 2: Identify the main data collected and the mass and energy balance equations used to make connections to the data collected in this study.</p>
+<p>Task 3: Include one or two figures that best summarize the main data in the papers and add a short description of how they are important.</p>
+</div>
+</section>
+</section>
+<section id="readings-and-resources-for-this-section">
+<h2>Readings and resources for this section<a class="headerlink" href="#readings-and-resources-for-this-section" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.earthobservatory.nasa.gov/features/CarbonCycle">The Carbon Cycle (nasa.gov)</a></p></li>
+<li><p><a class="reference external" href="https://essd.copernicus.org/articles/12/3269/2020/">ESSD - Global Carbon Budget 2020 (copernicus.org)</a></p></li>
+<li><p><a class="reference external" href="https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2486.2007.01439.x">CO2 balance of boreal, temperate, and tropical forests derived from a global database - LUYSSAERT - 2007 - Global Change Biology - Wiley Online Library</a></p></li>
+<li><p><a class="reference external" href="https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.16757">Plant carbon allocation in a changing world – challenges and progress: introduction to a Virtual Issue on carbon allocation - Hartmann - 2020 - New Phytologist - Wiley Online Library</a></p></li>
+<li><p><a class="reference external" href="https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.13338">‘One physical system’: Tansley’s ecosystem as Earth’s CZ - Richter - 2015 - New Phytologist - Wiley Online Library</a></p></li>
+<li><p><a class="reference external" href="https://www.licor.com/env/products/eddy_covariance/ec-book">Eddy Covariance Book by George Burba | LI-COR Environmental (licor.com)</a></p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="41EnergyBudget.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4.1 Energy Budget</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5WaterTransfer.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5 Water Transfer Through the CZ</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carbon-cycle">Carbon Cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Carbon Budget</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photosynthesis">Photosynthesis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#respiration">Respiration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#allocation">Allocation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controls-on-npp">Controls on <em>NPP</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carbon-relationships">Carbon Relationships</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

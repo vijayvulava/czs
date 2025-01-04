@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4.1 Energy Budget &#8212; Critical Zone Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '41EnergyBudget';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4.2 Carbon Budget" href="42CarbonBudget.html" />
+    <link rel="prev" title="4 Land-Atmosphere Exchange" href="4LandAtmosphere.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Critical Zone Science - Home"/>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Critical Zone Science - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Critical Zone Science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Background</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1CZBackground.html">1 CZ Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11CZOverview.html">1.1 CZ Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12SoilOverview.html">1.2 The Role of Soil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13SystemsOverview.html">1.3 Systems Approach</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Science Methods</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2CZSMethods.html">2 Methods in CZ Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21BasicToolsAnalysis.html">2.1 Basic Tools and Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22CZSFieldMethods.html">2.2 Field and Lab Analyses</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Architecture &amp; Evolution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3CZArchitectureEvolution.html">3 CZ Architecture and Evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31Geomorphology.html">3.1 Geology and Geomorphology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LandformsRemoteSensing.html">3.2 Landforms and Remote Sensing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Land Atmosphere Exchange</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4LandAtmosphere.html">4 Land-Atmosphere Exchange</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4.1 Energy Budget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42CarbonBudget.html">4.2 Carbon Budget</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Water Transfer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5WaterTransfer.html">5 Water Transfer Through the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51WaterBalanceTree.html">5.1 Water Balance of a Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52WaterBalanceImpacts.html">5.2 Water Balance Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Biogeochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Biogeochem.html">6 Geochemistry and Biogeochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Biogeochemistry.html">6.1 Biogeochemistry in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62BiogeochemicalCycles.html">6.2 Biogeochemical Cycles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Humans and the CZ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7HumansCZ.html">7 Humans in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71HumanWatershed.html">7.1 Watershed Impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72ClimateCZ.html">7.2 Climate Change Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="91papers.html">Literature Review</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/41EnergyBudget.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4.1 Energy Budget</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solar-energy">Solar Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-and-temperature">Heat and Temperature</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-atmosphere-energy">Earth-Atmosphere Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-energy-transfers">Types of Energy Transfers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transfer-at-earths-surface">Heat Transfer at Earth’s Surface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance-at-earths-surface">Energy Balance at Earth’s Surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effective-energy-and-mass-transfer">Effective Energy and Mass Transfer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#water-budget">Water Budget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="energy-budget">
+<h1>4.1 Energy Budget<a class="headerlink" href="#energy-budget" title="Link to this heading">#</a></h1>
+<p>We will analyze water and energy flux data collected from different biomes to enhance our understanding of the measurements, processes, and regional exchanges of water and energy. This analysis pertains to the grand challenges of grasping essential climate dynamics, boundary layer processes, Earth’s energy budget, and radiative forcing. It also aligns with the geoscience literacy themes of energy sources that drive Earth processes and the changes occurring in the Earth system at multiple scales, along with the interconnections between the water and energy cycles.</p>
+<p>Two primary learning goals of this module are to understand better how the conservation of mass and energy leads to the development of the water and energy budget equation and to explore and extract data from Critical Zone Observatory (CZO) flux databases.</p>
+<p>In this module, we will:</p>
+<ul class="simple">
+<li><p>Use diagrams of the water and energy cycles to discuss how these elements are partitioned at the watershed scale.</p></li>
+<li><p>Learn about the instruments used to collect water and energy flux data.</p></li>
+<li><p>Examine radiative forcings gathered from various CZO sites to compare climatic and site-specific influences.</p></li>
+<li><p>Explore and visualize energy flux data from CZO and related databases.</p></li>
+<li><p>Calculate a measure of Effective Energy and Mass Transfer (<span class="math notranslate nohighlight">\(EEMT\)</span>) in relation to the potential for Critical Zone evolution.</p></li>
+<li><p>Use CZO micro-meteorological data to calculate reference evaporation at a chosen site.</p></li>
+</ul>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/U2CPwWgY_G4" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<section id="solar-energy">
+<h2>Solar Energy<a class="headerlink" href="#solar-energy" title="Link to this heading">#</a></h2>
+<p>The energy released by the Sun is known as <em>radiant energy</em>, which travels in waves through space. These <em>electromagnetic waves</em> possess electrical and magnetic properties that enable them to cover vast distances at the speed of light. Electromagnetic waves behave like ocean waves, featuring crests and troughs; however, they do not transport matter. When an object absorbs radiant energy, it is converted into heat.</p>
+<p>The term <em>electromagnetic energy</em> encompasses all forms of energy that travel in waves through space, including light, heat, X-rays, radar, and radio waves. Each type of wave has a specific <em>wavelength</em> and <em>frequency</em>. The complete range of all possible wavelengths of electromagnetic energy is referred to as the electromagnetic spectrum.</p>
+<p>The Sun emits radiant energy composed of 8% ultraviolet, X-ray, and gamma-ray wavelengths, 47% visible light wavelengths, and 45% infrared wavelengths.</p>
+<figure class="margin-caption align-default" id="electromagnetic-spectrum">
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/1920px-EM_Spectrum_Properties_edit.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/1920px-EM_Spectrum_Properties_edit.svg.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">The electromagnetic spectrum shows various properties across the range of frequencies and wavelengths. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Electromagnetic_spectrum">Electromagnetic spectrum - Wikipedia</a></span><a class="headerlink" href="#electromagnetic-spectrum" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<blockquote>
+<div><p>An important physical law states that all objects radiate energy in wavelengths related to their surface temperatures: The hotter the object, the shorter the wavelengths emitted. This law holds for the Sun and Earth.</p>
+</div></blockquote>
+<section id="heat-and-temperature">
+<h3>Heat and Temperature<a class="headerlink" href="#heat-and-temperature" title="Link to this heading">#</a></h3>
+<p>Temperature and heat are distinct yet interconnected concepts. Temperature measures the average kinetic energy, or average speed, of individual molecules in a substance. When molecular movement increases, the temperature rises. In contrast, heat is a form of energy that transfers between molecules and, consequently, between different bodies or substances. Heat is the flow of kinetic energy driven by a temperature difference.</p>
+<p>While heat is regarded as energy, temperature is related to the amount of energy in a substance. Heat crosses a system boundary in response to a temperature gradient. Since temperature reflects the average kinetic energy of molecules, it can also be understood as a measure of heat. An object with a “hot” temperature contains more heat energy, whereas an object with a “cold” temperature contains less.</p>
+<p>Heat always flows from matter at a higher temperature to matter at a lower temperature. This heat flow between objects or substances ceases once their temperatures, and thus their kinetic energy levels, equalize.</p>
+<p>When we apply these principles to the Sun and Earth, we observe that the hot Sun radiates shorter wavelengths of energy, primarily around 0.5 µm, with most radiation occurring in the visible region of the electromagnetic spectrum. In contrast, the cooler Earth emits energy at longer wavelengths, primarily in the infrared range, centered around 10 µm.</p>
+<p>As electromagnetic energy travels through Earth’s atmosphere, certain gases, such as water vapor and carbon dioxide, absorb specific wavelengths. These gases exhibit varying responses to radiation, being transparent to some wavelengths while absorbing others.</p>
+<figure class="margin-caption align-default" id="atmos-energy-budget">
+<img alt="https://earthobservatory.nasa.gov/ContentFeature/EnergyBalance/images/reflected_radiation.jpg" src="https://earthobservatory.nasa.gov/ContentFeature/EnergyBalance/images/reflected_radiation.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Of the <span class="math notranslate nohighlight">\(\pu{340 W m-2}\)</span> of solar energy that falls on the Earth, <span class="math notranslate nohighlight">\(\pu{29 \%}\)</span> is reflected into space, primarily by clouds, other bright surfaces, and the atmosphere itself. About <span class="math notranslate nohighlight">\(\pu{23 \%}\)</span> of incoming energy is absorbed in the atmosphere by atmospheric gases, dust, and other particles. The remaining <span class="math notranslate nohighlight">\(\pu{48 \%}\)</span> is absorbed at the surface. Image source: <a class="reference external" href="https://earthobservatory.nasa.gov/features/EnergyBalance/page1.php">Climate and Earth’s Energy Budget (nasa.gov)</a></span><a class="headerlink" href="#atmos-energy-budget" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For more information, see <a class="reference external" href="https://earthobservatory.nasa.gov/features/EnergyBalance/page1.php">Climate and Earth’s Energy Budget (nasa.gov)</a>.</p>
+</section>
+</section>
+<section id="earth-atmosphere-energy">
+<h2>Earth-Atmosphere Energy<a class="headerlink" href="#earth-atmosphere-energy" title="Link to this heading">#</a></h2>
+<p>The inputs for the Earth–atmosphere energy budget consist of shortwave radiation, which includes ultraviolet light, visible light, and near-infrared wavelengths. Only a portion of the <em>insolation</em> (incoming solar radiation) that enters Earth’s atmosphere reaches its surface; the rest is either reflected into space or absorbed by the atmosphere. Insolation arrives at the Earth’s surface as either direct or diffuse radiation. Direct sunlight creates shadows, while diffuse radiation provides a shadowless light seen in shaded areas or on cloudy days. This energy is then absorbed by the Earth’s surface and converted into heat. The outputs of our energy budget include shortwave radiation (the light reflected before reaching the Earth’s surface) and longwave radiation in the thermal infrared wavelengths.</p>
+<figure class="margin-caption align-default" id="earth-energy-budget">
+<img alt="https://www.noaa.gov/media/image_download/60247be8-d80e-4d4d-a482-de49136b195f" src="https://www.noaa.gov/media/image_download/60247be8-d80e-4d4d-a482-de49136b195f" />
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">The earth-atmosphere energy balance is the balance between incoming energy from the Sun and outgoing energy from the Earth. The energy released from the Sun is emitted as shortwave light and ultraviolet energy. When it reaches the Earth, some are reflected in space by clouds, some are absorbed by the atmosphere, and some are absorbed at the Earth’s surface. Image source: <a class="reference external" href="https://www.weather.gov/jetstream/energy">The Earth-Atmosphere Energy Balance (weather.gov)</a></span><a class="headerlink" href="#earth-energy-budget" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="types-of-energy-transfers">
+<h3>Types of Energy Transfers<a class="headerlink" href="#types-of-energy-transfers" title="Link to this heading">#</a></h3>
+<p>Insolation, or incoming solar radiation, is the primary energy input driving the Earth-atmosphere system, but its intensity varies across different global locations. In the equatorial and tropical regions, there are only minor variations in day length and high sun altitude, resulting in relatively consistent insolation values ranging from approximately 180 to 220 W m². However, insolation decreases toward the poles, particularly around 25° latitude in the Northern and Southern Hemispheres. Generally, low-latitude deserts worldwide experience greater insolation at the surface due to frequently cloudless skies.</p>
+<p>As insolation travels toward the Earth’s surface, it encounters an increasing density of atmospheric molecules. These gases, dust, cloud droplets, water vapor, and pollutants interact with insolation, redirecting radiation without changing its wavelengths. This phenomenon is known as <em>scattering</em>, and it accounts for some of the insolation that does not reach Earth’s surface but is instead reflected into space. Diffuse radiation is the portion of incoming energy that successfully reaches Earth’s surface after scattering.</p>
+<p>Additionally, some of the arriving solar energy is directly reflected into space, a process called <em>reflection</em>. Over a year, clouds reflect about 20% of insolation, significantly more than what is reflected by Earth’s surface. Air pollutants, whether natural or man-made, also contribute to this reflection. The roles of clouds and aerosols in the Earth-atmosphere energy budget will be discussed further.</p>
+<p><em>Albedo</em> describes a surface’s reflective quality or intrinsic brightness. Albedo is an essential factor influencing the amount of insolation that reaches Earth, expressed as the percentage of insolation reflected: 0% indicates total absorption, while 100% signifies total reflectance.</p>
+<p>Insolation—both direct and diffuse—that is not part of the 31% reflected by Earth’s surface and atmosphere is absorbed either by the atmosphere or by Earth’s surface. Absorption involves the assimilation of radiation by molecules of matter, which converts radiation from one form of energy to another. Solar energy is absorbed by land and water surfaces (about 45% of insolation) and atmospheric gases, dust, clouds, and stratospheric ozone. Once at Earth’s surface, this absorbed energy is converted into either longwave radiation or chemical energy, such as the energy used by plants during photosynthesis. The absorption process raises the temperature of the absorbing surface.</p>
+</section>
+<section id="heat-transfer-at-earths-surface">
+<h3>Heat Transfer at Earth’s Surface<a class="headerlink" href="#heat-transfer-at-earths-surface" title="Link to this heading">#</a></h3>
+<p>Two types of heat energy are essential for understanding Earth’s and the atmosphere’s energy budgets. <em>Sensible heat</em> can be “sensed” as temperature because it comes from the kinetic energy of molecular motion. To feel this heat, radiant energy from the Sun must first be absorbed. <em>Latent heat</em>, or “hidden” heat, is the energy gained or lost when a substance changes from one state to another, from liquid water to water vapor or from liquid water to ice. Unlike sensible heat transfer, latent heat transfer occurs without a change in the substance’s temperature while it undergoes a physical change. However, the surroundings may gain or lose heat. The latent heat absorbed during evaporation is a significant component of the Earth-atmosphere energy system.</p>
+<p>Heat energy, called thermal energy, can be transferred throughout the Earth’s atmosphere, land, and water bodies through several processes. <em>Radiation</em> is the transfer of heat through electromagnetic waves.</p>
+<p><em>Conduction</em> involves the molecule-to-molecule transfer of heat energy as it diffuses through a substance. When molecules warm up, their vibration increases, causing them to collide with neighboring molecules, transferring heat from warmer to cooler areas.</p>
+<p>In gases and liquids, energy is also transferred through <em>convection</em>, which transfers heat by mixing or circulation. In the atmosphere or bodies of water, warmer (less dense) masses tend to rise, while cooler (denser) masses sink, establishing convection patterns. This physical mixing usually involves strong vertical motion. When horizontal motion predominates, this process is called <em>advection</em>.</p>
+<figure class="margin-caption align-default" id="heat-transfer">
+<img alt="https://upload.wikimedia.org/wikipedia/commons/f/f4/Heat-transmittance-means2.jpg" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Heat-transmittance-means2.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">The four fundamental modes of heat transfer processes are illustrated with a campfire. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Heat_transfer">Heat transfer - Wikipedia</a></span><a class="headerlink" href="#heat-transfer" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="energy-balance-at-earths-surface">
+<h2>Energy Balance at Earth’s Surface<a class="headerlink" href="#energy-balance-at-earths-surface" title="Link to this heading">#</a></h2>
+<p>Energy and moisture are constantly exchanged with the lower atmosphere at the Earth’s surface, known as the boundary layer. Various characteristics of Earth’s surface, such as the presence or absence of vegetation and local topography, influence the energy balance within this boundary layer. Additionally, the height of the boundary layer varies over time and across different locations.</p>
+<p>In any given location, the surface receives and loses shortwave (SW) and longwave (LW) energy according to a straightforward scheme:</p>
+<p>Net radiation (<span class="math notranslate nohighlight">\(R_n\)</span>) is the total of all radiation gains and losses and fluctuates with the length of the day throughout the seasons, the amount of cloud cover, and latitude.</p>
+<div class="math notranslate nohighlight">
+\[ 
+R_n = SW_{Insolation} \downarrow - SW_{Reflection} \uparrow + LW_{Infrared} \downarrow - LW_{Infrared} \uparrow
+\]</div>
+<p>Heat is transferred in and across most soil surfaces mainly through conduction. This transfer occurs predominantly downward during the day (or in summer), while heat moves toward the surface at night (or in winter). Generally, energy exchange with the surface or surrounding materials becomes minimal at a depth of less than a meter. Energy flowing from the atmosphere into the surface is considered a positive value (a gain), while energy moving outward through sensible and latent heat transfers is regarded as a negative value (a loss) in the surface account.</p>
+</section>
+<section id="effective-energy-and-mass-transfer">
+<h2>Effective Energy and Mass Transfer<a class="headerlink" href="#effective-energy-and-mass-transfer" title="Link to this heading">#</a></h2>
+<p>An integrated framework based on thermodynamic theory characterizes the critical zone (CZ) as a system open to energy and mass fluxes, influenced by radiant, geochemical, and elevational gradients. <a class="reference external" href="https://doi.org/10.1007/s10533-010-9476-8">Rasmussen et al. (2011)</a> demonstrated the relative importance of solar radiation, water, carbon, and physical/chemical denudation mass fluxes in the CZ energy balance. They used rates of effective energy and mass transfer (<span class="math notranslate nohighlight">\(EEMT\)</span>, <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>) measured in watts per square meter (W m⁻²) to quantify the relevant flux-gradient relationships.</p>
+<p><span class="math notranslate nohighlight">\(EEMT\)</span> includes inputs of energy associated with reduced carbon from primary production (<span class="math notranslate nohighlight">\(E_{BIO}\)</span>) and heat influx to the soil from precipitation minus evapotranspiration and surface runoff (<span class="math notranslate nohighlight">\(E_{PPT}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+EEMT = E_{BIO} + E_{PPT}
+\]</div>
+<p>The balance of energy and mass flux involved in CZ development (Λ) may then be stated as:</p>
+<div class="math notranslate nohighlight">
+\[
+Λ = E_{ET}+E_{PPT}+E_{BIO}+E_{ELV}+E_{GEO}+ξ
+\]</div>
+<p>Each term is defined below:</p>
+<p>The energy and mass flux associated with evapotranspiration, denoted as <span class="math notranslate nohighlight">\(E_{ET}\)</span> (in <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>), can be expressed by the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{ET} = ET \cdot h_\nu
+\]</div>
+<p>In this equation, <span class="math notranslate nohighlight">\(ET\)</span> represents the mass flux of precipitation to evapotranspiration (in <span class="math notranslate nohighlight">\(\pu{kg m-2 s-1}\)</span>), and <span class="math notranslate nohighlight">\(h_\nu\)</span> is the latent heat of vaporization (in <span class="math notranslate nohighlight">\(\pu{J kg-1}\)</span>), which quantifies the fraction of radiant energy used to evaporate a given mass of water. This energy flux is primarily transferred from the Critical Zone (CZ) and returned to the atmosphere.</p>
+<p>The water mass flux converted to energy flux is represented as <span class="math notranslate nohighlight">\(E_{PPT}\)</span> (in <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>) and can be calculated using the formula:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{PPT} = F \cdot c_w \cdot \Delta T
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(F\)</span> is the mass flux of precipitation to base flow from the water balance (in <span class="math notranslate nohighlight">\(\pu{kg m-2 s-1}\)</span>), <span class="math notranslate nohighlight">\(c_w\)</span> is the specific heat of water (in <span class="math notranslate nohighlight">\(\pu{J kg-1 K-1}\)</span>), and <span class="math notranslate nohighlight">\(\Delta T = T_{ambient} - T_{ref}\)</span>, where <span class="math notranslate nohighlight">\(T_{ambient}\)</span> refers to the ambient water temperature at the time of water flux (assumed to be equal to the ambient air temperature), and <span class="math notranslate nohighlight">\(T_{ref}\)</span> is a reference temperature (273 K). When <span class="math notranslate nohighlight">\(T_{ref} &gt; T_{ambient}\)</span>, then $E_{PPT} = 0).</p>
+<p>The carbon mass flux, represented as <span class="math notranslate nohighlight">\(NPP\)</span>, can also be converted to energy flux and is denoted as <span class="math notranslate nohighlight">\(E_{BIO}\)</span> (in <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+E_{BIO} = NPP \cdot h_{BIO}
+\]</div>
+<p>In this formula, <span class="math notranslate nohighlight">\(NPP\)</span> stands for net primary production (in <span class="math notranslate nohighlight">\(\pu{kg m-2 s-1}\)</span>), and <span class="math notranslate nohighlight">\(h_{BIO}\)</span> is the specific biomass enthalpy (in <span class="math notranslate nohighlight">\(\pu{J kg-1}\)</span>). We assume an average <span class="math notranslate nohighlight">\(h_{BIO} = \pu{22e6 J kg-1}\)</span> based on the average values for various organic materials derived from calorimetric analyses.</p>
+<p>Physical denudation can be expressed in energy flux units as <span class="math notranslate nohighlight">\(E_{ELV}\)</span> (in <span class="math notranslate nohighlight">\(\pu{W m-2}\)</span>), based on the change in the potential energy of uplifted sediment. It is calculated using the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{ELV} = m \cdot g \cdot U
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(m\)</span> is the mass of sediment per unit area (in <span class="math notranslate nohighlight">\(\pu{kg m-2}\)</span>), <span class="math notranslate nohighlight">\(g\)</span> is the gravitational constant (approximately <span class="math notranslate nohighlight">\(\pu{9.81 m s-2}\)</span>), and <span class="math notranslate nohighlight">\(U\)</span> is the uplift rate (in <span class="math notranslate nohighlight">\(\pu{m s-1}\)</span>). The mass of sediment available for transport can be approximated using rock density, <span class="math notranslate nohighlight">\(\rho\)</span> (in <span class="math notranslate nohighlight">\(\pu{kg m-3}\)</span>), and regolith depth, <span class="math notranslate nohighlight">\(H_S\)</span> (in <span class="math notranslate nohighlight">\(\pu{m}\)</span>), where <span class="math notranslate nohighlight">\(m = \rho \cdot H_S\)</span>, assuming that all soil and saprolite layers have the potential to be physically transported.</p>
+<p>The mass and energy flux associated with chemical denudation and specific mineral transformations can be approximated using the Gibbs free energy <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> (in <span class="math notranslate nohighlight">\(\pu{J mol-1}\)</span>) of a given mineral transformation reaction under the relevant environmental conditions, along with the associated mass flux:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{GEO} = N \Delta_{rxn}G^\circ
+\]</div>
+<p>In this equation, <span class="math notranslate nohighlight">\(N\)</span> represents the mass flux per unit area (in <span class="math notranslate nohighlight">\(\pu{mol m-2 s-1}\)</span>), a function of reaction rate and stoichiometric coefficient.</p>
+<p>The term <span class="math notranslate nohighlight">\(\xi\)</span> encompasses the net energy flux associated with any additional material flux into the system, such as dust, atmospheric solutes, or anthropogenic inputs like fertilizers or other amendments.</p>
+<p>Generally, some energetic fluxes may be negligible relative to other terms but can be relevant for specific ecosystems. Over annual timescales, the relative magnitude of the individual fluxes indicates that latent heat transfer by evapotranspiration is the most significant energy flux. However, as noted, this energy is transferred mainly from the CZ back to the atmosphere, resulting in a less direct impact on subsurface development.</p>
+<p>Considering the range of values, the key parameters for quantifying the flux of energy into and through the subsurface CZ are <span class="math notranslate nohighlight">\(E_{PPT}\)</span> and <span class="math notranslate nohighlight">\(E_{BIO}\). These parameters describe the fraction of energy and mass effectively transferred into and through the subsurface CZ and are among the two parameters initially included in the \)</span>EEMT$ term.</p>
+</section>
+<section id="water-budget">
+<h2>Water Budget<a class="headerlink" href="#water-budget" title="Link to this heading">#</a></h2>
+<p>The hydrological cycle is crucial in transporting and cycling nutrients and energy. To manage water effectively and fairly, it’s essential to quantify the various components of the hydrological cycle, a process known as constructing a water budget for a specific area. Human activities have altered the hydrological cycle, impacting specific water budget components and the water movement between these components.</p>
+<figure class="margin-caption align-default" id="water-cycle">
+<img alt="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/USGS_WaterCycle_English_ONLINE_20221013.png" src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/USGS_WaterCycle_English_ONLINE_20221013.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Global water cycle and how human water use affect where water is stored, how it moves, and how clean it is. Image source: <a class="reference external" href="https://www.usgs.gov/special-topics/water-science-school/science/water-cycle-diagrams">Water Cycle Diagrams | U.S. Geological Survey (usgs.gov)</a></span><a class="headerlink" href="#water-cycle" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A water budget is a quantitative approach used to assess the availability and sustainability of water supply. It essentially states that the change in the amount of water stored in a specific area, such as a watershed, is balanced by the water inflow and outflow rate. Understanding the water budget and the associated hydrological processes is vital for effective water resource and environmental planning and management.</p>
+<p>Monitoring changes in the water budget over time can help evaluate the impacts of climate variability and human activities on water resources. Comparing water budgets from different regions allows quantifying how geology, soil, vegetation, and land use influence the hydrological cycle. Additionally, the water budget significantly quantifies energy and mass transfer within the Earth’s critical zone (CZ).</p>
+<p>The water balance equation in its most simple form is shown as:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S = i - q
+\]</div>
+<p>In this equation, the change in water storage (<span class="math notranslate nohighlight">\(\Delta S\)</span>) in a system is equal to the difference in the inflow (<span class="math notranslate nohighlight">\(i\)</span>) and the outflow (<span class="math notranslate nohighlight">\(q\)</span>). This water balance equation can be expanded to be a little more informative as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+P + Q_{In} = ET + Q_{Out} + \Delta S 
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q\)</span> is water flow into (<span class="math notranslate nohighlight">\(Q_{In}\)</span>) or out (<span class="math notranslate nohighlight">\(Q_{Out}\)</span>) of a watershed (can be separated into groundwater and surface water components), <span class="math notranslate nohighlight">\(P\)</span> is precipitation, <span class="math notranslate nohighlight">\(ET\)</span> is evapotranspiration (sum of evaporation from soils, surface water bodies, and plants), and <span class="math notranslate nohighlight">\(\Delta S\)</span> is change in water storage within the system.</p>
+<p>Meteorological and stream data will be required to calculate an annual water budget for a specific location.</p>
+<p>Precipitation is typically measured using either automated or manual rain gauges. To calculate the total precipitation (<span class="math notranslate nohighlight">\(P\)</span>) for a watershed, multiple measurements are often taken across the area to estimate an average value. Additionally, identifying the watershed boundary is crucial for accurate calculations, known as watershed delineation. Automated tools, such as those available on <a class="reference external" href="https://streamstats.usgs.gov/ss/">StreamStats (usgs.gov)</a>, can assist in delineating the watershed of interest.</p>
+<p>Evapotranspiration (<span class="math notranslate nohighlight">\(ET\)</span>) plays a significant role in the water balance and influences soil moisture content, groundwater recharge, and streamflow. It is responsible for returning a substantial portion of the precipitation that falls on land to the atmosphere. Generally, <span class="math notranslate nohighlight">\(ET\)</span> is considered a loss in the water budget since it decreases streamflow, storage, and available groundwater. Various methods are available to measure <span class="math notranslate nohighlight">\(ET\)</span> (such as potted plants or lysimeters), but many research sites commonly employ the eddy covariance flux method. Due to the challenges in measuring <span class="math notranslate nohighlight">\(ET\)</span>, several estimation methods have been developed.</p>
+<p>Darcy’s law describes groundwater movement for saturated flow through porous media, expressed as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{GW}= k_s A \frac{dh}{dl}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_{GW}\)</span> is groundwater discharge, <span class="math notranslate nohighlight">\(k_s\)</span> is saturated hydraulic conductivity (function of the type of rock or aquifer), <span class="math notranslate nohighlight">\(A\)</span> is an area of cross-section, and <span class="math notranslate nohighlight">\(dh/dl\)</span> is the hydraulic gradient (slope of the flow.)</p>
+<p>Streamflow in streams is commonly measured using the velocity-area method, as shown below:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{SW}=AV
+\]</div>
+<p>where, <span class="math notranslate nohighlight">\(Q_{SW}\)</span> is stream discharge, <span class="math notranslate nohighlight">\(A\)</span> is cross-sectional area of a stream, and <span class="math notranslate nohighlight">\(V\)</span> is the average velocity at a given location. In smaller streams with diffuse flows, “flumes” are installed.  In large streams, complex methods are used to measure discharge. See <a class="reference external" href="https://www.usgs.gov/special-topics/water-science-school/science/how-streamflow-measured">How Streamflow is Measured | U.S. Geological Survey (usgs.gov)</a>.</p>
+<p>USGS measures streamflow and makes these data available in real-time at <a class="reference external" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/?region=lower48&amp;amp;aoi=default">USGS | National Water Dashboard</a>. For example, <a class="reference external" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/?region=lower48&amp;amp;aoi=default&amp;amp;view=%7B%22basemap%22%3A%22EsriTopo%22%2C%22bounds%22%3A%22-81.3917271935721%2C32.525034335310814%2C-79.05330756375152%2C33.55722732300874%22%2C%22insetMap%22%3Afalse%2C%22panel%22%3A%7B%22checkbox%22%3A%220%2C9%2C19%2C20%2C21%2C22%22%2C%22range%22%3A%220%3A1.0%2C1%3A1.0%2C2%3A1.0%2C3%3A1.0%2C4%3A1.0%2C5%3A1.0%2C6%3A1.0%2C7%3A0.8%2C8%3A0.3%2C9%3A0.5%2C10%3A0.5%2C11%3A0.5%2C12%3A0.5%2C13%3A0.5%2C14%3A0.5%2C15%3A0.5%2C16%3A1.0%2C17%3A1.0%2C18%3A1.0%2C19%3A1.0%22%2C%22select%22%3A%220%3A0%2C1%3A0%2C2%3A0%2C3%3A0%2C4%3A0%2C5%3A0%2C6%3A0%2C7%3A0%2C8%3A0%2C9%3A0%2C10%3A0%2C11%3A0%2C12%3A0%2C13%3A0%2C14%3A0%2C15%3A0%2C16%3A0%2C17%3A0%2C18%3A0%22%7D%7D">Click Here for stream data for the greater Charleston area.</a>
+You can also create runoff simulations at <a class="reference external" href="https://wikiwatershed.org/model/">Model My Watershed® - WikiWatershed</a>.</p>
+</section>
+<section id="readings-and-resources-for-this-section">
+<h2>Readings and resources for this section<a class="headerlink" href="#readings-and-resources-for-this-section" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://earthobservatory.nasa.gov/features/EnergyBalance/page1.php">Climate and Earth’s Energy Budget (nasa.gov)</a></p></li>
+<li><p><a class="reference external" href="https://link.springer.com/article/10.1007/s10533-010-9476-8">An open system framework for integrating CZ structure and function | SpringerLink</a></p></li>
+<li><p><a class="reference external" href="https://pubs.geoscienceworld.org/vzj/article/14/1/vzj2014.10.0142/91405/Critical-Zone-Services-Expanding-Context">CZ Services: Expanding Context, Constraints, and Currency beyond Ecosystem Services | Vadose Zone Journal | GeoScienceWorld</a></p></li>
+<li><p><a class="reference external" href="https://pubs.usgs.gov/circ/2007/1308/">USGS Circular 1308: Water Budgets: Foundations for Effective Water-Resources and Environmental Management</a></p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4LandAtmosphere.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4 Land-Atmosphere Exchange</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="42CarbonBudget.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4.2 Carbon Budget</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solar-energy">Solar Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-and-temperature">Heat and Temperature</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-atmosphere-energy">Earth-Atmosphere Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-energy-transfers">Types of Energy Transfers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transfer-at-earths-surface">Heat Transfer at Earth’s Surface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance-at-earths-surface">Energy Balance at Earth’s Surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effective-energy-and-mass-transfer">Effective Energy and Mass Transfer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#water-budget">Water Budget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

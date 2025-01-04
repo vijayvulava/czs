@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5.2 Water Balance Impacts &#8212; Critical Zone Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '52WaterBalanceImpacts';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6 Geochemistry and Biogeochemistry" href="6Biogeochem.html" />
+    <link rel="prev" title="5.1 Water Balance of a Tree" href="51WaterBalanceTree.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Critical Zone Science - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Critical Zone Science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Background</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1CZBackground.html">1 CZ Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11CZOverview.html">1.1 CZ Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12SoilOverview.html">1.2 The Role of Soil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13SystemsOverview.html">1.3 Systems Approach</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Science Methods</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2CZSMethods.html">2 Methods in CZ Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21BasicToolsAnalysis.html">2.1 Basic Tools and Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22CZSFieldMethods.html">2.2 Field and Lab Analyses</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Architecture &amp; Evolution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3CZArchitectureEvolution.html">3 CZ Architecture and Evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31Geomorphology.html">3.1 Geology and Geomorphology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LandformsRemoteSensing.html">3.2 Landforms and Remote Sensing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Land Atmosphere Exchange</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4LandAtmosphere.html">4 Land-Atmosphere Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41EnergyBudget.html">4.1 Energy Budget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42CarbonBudget.html">4.2 Carbon Budget</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Water Transfer</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5WaterTransfer.html">5 Water Transfer Through the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51WaterBalanceTree.html">5.1 Water Balance of a Tree</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5.2 Water Balance Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Biogeochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Biogeochem.html">6 Geochemistry and Biogeochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Biogeochemistry.html">6.1 Biogeochemistry in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62BiogeochemicalCycles.html">6.2 Biogeochemical Cycles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Humans and the CZ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7HumansCZ.html">7 Humans in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71HumanWatershed.html">7.1 Watershed Impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72ClimateCZ.html">7.2 Climate Change Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="91papers.html">Literature Review</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/52WaterBalanceImpacts.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>5.2 Water Balance Impacts</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-of-point-measurements">Scaling of Point Measurements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thiessen-polygon-method">Thiessen Polygon Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-distance-weighted-method">Inverse Distance Weighted Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypsometric-method">Hypsometric Method</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#water-management-and-balance">Water Management and Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="water-balance-impacts">
+<h1>5.2 Water Balance Impacts<a class="headerlink" href="#water-balance-impacts" title="Link to this heading">#</a></h1>
+<p>Water balance components like soil moisture, precipitation, and runoff can vary greatly across spatial and temporal scales. This makes comprehensive measurements challenging and expensive. In order to understand and model such components accurately and efficiently, field campaigns and experiments should be designed to collect appropriate data types and amounts, and allow scaling across time and space. Accurate measurements also greatly help in effective management of water resources.</p>
+<p>In this section you will:</p>
+<ul class="simple">
+<li><p>use tested methodologies to efficiently scale point measurement up to the spatial extent of interest.</p></li>
+<li><p>learn how CZ  processes and land management decisions impact the water balance. The process of decision-making for water resources requires deep understanding of the water cycle and quantitative data to best balance both societal and environmental water needs.</p></li>
+</ul>
+<section id="scaling-of-point-measurements">
+<h2>Scaling of Point Measurements<a class="headerlink" href="#scaling-of-point-measurements" title="Link to this heading">#</a></h2>
+<p>Scientists use data from multiple rain gages to estimate the rainfall distribution over an area. The distribution may be for specific storms, days, months, or even years. It may be necessary to determine an average depth or a spatial distribution of depths.</p>
+<p>Precipitation is highly variable. When multiple gauges area available, the spatial average precipitation must be calculated from point measurements.  A weighed average approach is commonly used:</p>
+<div class="math notranslate nohighlight" id="equation-aerial-precip-eq">
+<span class="eqno">(2)<a class="headerlink" href="#equation-aerial-precip-eq" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+P &amp;= \sum_{i=1}^n w_i P_i\\
+\sum_{i=1}^n w_i &amp;= 1
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P\)</span> is the precipitation measured at a gauge (<span class="math notranslate nohighlight">\(i\)</span>), <span class="math notranslate nohighlight">\(n\)</span> is the total number of gauges, and <span class="math notranslate nohighlight">\(w\)</span> is the weight assigned to a gauge. Most common approaches to estimate spatial average of multiple gauges are simply methods to assign weights. For example, we could elect to simply take the direct average of all of our gauges. In this case, each gauge gets an equal weight. If <span class="math notranslate nohighlight">\(n = 3\)</span>, each gauge gets a weight of 1/3. This is the same as same as simply adding up each <span class="math notranslate nohighlight">\(P\)</span> and dividing by the number of gauges.</p>
+<p>A problem with the direct averaging approach is it assumes that the gauges are placed in a way that captures the actual spatial variability. For example, we know that in mountainous terrain precipitation tends to be higher at higher elevations in a watershed. If all of our gauges are placed at high elevations, we will overestimate the average. If the gauges, however, are placed throughout the watershed in a way that appropriately represents the relationship between precipitation and elevation, our direct average will be more accurate.</p>
+<p>If the rain gages are evenly distributed, a simple arithmetic average will be adequate. If the gages are not evenly distributed, other methods have to be considered.</p>
+<section id="thiessen-polygon-method">
+<h3>Thiessen Polygon Method<a class="headerlink" href="#thiessen-polygon-method" title="Link to this heading">#</a></h3>
+<p>One of the most widely used methods to calculate aerial precipitation is the Thiessen polygon method. The use of the Thiessen polygon method is illustrated in <a class="reference internal" href="#thiessen-polygon"><span class="std std-numref">Fig. 36</span></a>. The locations of each rain gage in and immediately adjacent to the area of interest are located on a map. The rainfall amount at each gage is noted. The straight dashed lines are drawn between each adjacent gage site; then, solid perpendicular bisectors to these lines are constructed so that the area around each gage is enclosed by the bisectors or the area boundary. The enclosed areas around each gage are known as Thiessen polygons. The entire area within each polygon is closer to the rain gage in that polygon than to any other rain gage. The rainfall amount measured by the gage within each polygon is assumed to be representative of the rainfall for that polygon. The areas of each polygon are calculated by geometry, with a planimeter, with graph paper, or with a computer-aided drawing package. The average rainfall for the entire area is then assumed to be a weighted average of the observed rainfalls, as shown below:</p>
+<div class="math notranslate nohighlight" id="equation-thiessen-eq">
+<span class="eqno">(3)<a class="headerlink" href="#equation-thiessen-eq" title="Link to this equation">#</a></span>\[P = \dfrac{\sum_{i=1}^n A_i P_i}{\sum_{i=1}^n A_i}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P\)</span> represents the average depth of rainfall in the watershed with a total area of <span class="math notranslate nohighlight">\(\sum_{i=1}^n A_i\)</span>, and <span class="math notranslate nohighlight">\(A_i\)</span> is the area of the <span class="math notranslate nohighlight">\(i\)</span>th polygon with precipitation of <span class="math notranslate nohighlight">\(P_i\)</span> in that polygon.</p>
+<figure class="margin-caption align-default" id="thiessen-polygon">
+<img alt="https://www.weather.gov/images/abrfc/map/map_thie.gif" src="https://www.weather.gov/images/abrfc/map/map_thie.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">This graphical technique calculates station weights based on the relative areas of each measurement station in the Thiessen polygon network. The individual weights are multiplied by the station observation and the values are summed to obtain the areal average precipitation.</span><a class="headerlink" href="#thiessen-polygon" title="Link to this image">#</a></p>
+<div class="legend">
+<p>Image source: <a class="reference external" href="https://www.weather.gov/abrfc/map">Precipitation Measurements (weather.gov)</a></p>
+</div>
+</figcaption>
+</figure>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/E-s1p5yQWI0" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/bZ3dcerKQGE" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<div class="admonition-thiessen-polygon-interpolation admonition">
+<p class="admonition-title">Thiessen Polygon Interpolation</p>
+<p>Here are the steps involved in Thiessen Polygon Interpolation:</p>
+<ul class="simple">
+<li><p>Identify Known Points: Start with known values in your dataset.</p></li>
+<li><p>Constructing Thiessen Polygons:</p>
+<ul>
+<li><p>Starting Point: Begin with a set of discrete sample points on a plane. These could be locations of weather stations, archaeological sites, or any other point data.</p></li>
+<li><p>Drawing Perpendicular Bisectors: For every pair of neighboring points, draw the perpendicular bisector (a line that cuts in half the shortest distance between them). This bisector represents a boundary where locations are equidistant to the two points.</p></li>
+<li><p>Meeting of Bisectors: As more bisectors are drawn, they’ll intersect, forming the vertices of polygons.Completing the Polygon: Once all necessary bisectors have been drawn, the polygons are formed, each surrounding its respective sample point.</p></li>
+</ul>
+</li>
+<li><p>Key Features and Assumptions: Each polygon represents the region of influence of its central sample point. Any location inside a particular Thiessen polygon is closer to its central sample point (or “source point”) than to any other sample point outside the polygon.</p></li>
+<li><p>Interpolate: Finally, use the value of the central point of each Thiessen polygon to estimate values at unknown locations.</p></li>
+</ul>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example of Thiessen Polygon Interpolation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In the following watershed area, there are six meteorological stations where annual precipitation values are reported.</p>
+<p class="sd-card-text"><img alt="Original Watershed" src="_images/original.png" /></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Met  Station</p></th>
+<th class="head"><p class="sd-card-text">Precipitation, mm</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">1</p></td>
+<td><p class="sd-card-text">985</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2</p></td>
+<td><p class="sd-card-text">1015</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">3</p></td>
+<td><p class="sd-card-text">963</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">4</p></td>
+<td><p class="sd-card-text">1101</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">5</p></td>
+<td><p class="sd-card-text">1057</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">6</p></td>
+<td><p class="sd-card-text">1078</p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">Calculate the annual precipitation for the entire area.</p>
+<ul class="simple">
+<li><p class="sd-card-text">Step 1: Draw lines connecting all the points to their two nearest neighbors.</p></li>
+</ul>
+<p class="sd-card-text"><img alt="1st Step" src="_images/1ststep.png" /></p>
+<ul class="simple">
+<li><p class="sd-card-text">Step 2: Draw lines that bisect (divide the lines in half) perpendicular to the lines connecting the points.</p></li>
+</ul>
+<p class="sd-card-text"><img alt="2nd Step" src="_images/2ndstep.png" /></p>
+<ul class="simple">
+<li><p class="sd-card-text">Step 3: Lengthen or shorten all lines to make them connect. Note that they should all come to a single point.</p></li>
+</ul>
+<p class="sd-card-text"><img alt="3rd Step" src="_images/3rdstep.png" /></p>
+<ul class="simple">
+<li><p class="sd-card-text">Step 4: Remove all the unnecessary lines.</p></li>
+</ul>
+<p class="sd-card-text"><img alt="4th Step" src="_images/4thstep.png" /></p>
+<ul class="simple">
+<li><p class="sd-card-text">Step 5: Once the final image is obtained, the proportions of each polygon to the whole should be calculated. This can be performed using geometry or by printing the Thiessen polygons on graph paper and counting the boxes in each polygon.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\% \text{Area} = \frac{\text{# of Pixels in polygon }}{\text{# of Pixels in Extent}} \times 100\%
+\]</div>
+<p class="sd-card-text"><img alt="5th Step" src="_images/5thstep.png" /></p>
+<ul class="simple">
+<li><p class="sd-card-text">Step 6: Calculate the weighted precipitation value for the area around each met station</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P_\text{area} = P_\text{Met Station} \times \text{Area}
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">Step 7: Calculate the weighted precipitation for the entire extent</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P_\text{Basin} = \sum (P_\text{Met Station} \times \text{Area})
+\]</div>
+<p class="sd-card-text">Setting all the calculations in a table, we can see that the  precipitation for the entire basin is <span class="math notranslate nohighlight">\(\pu{1047.2 mm} \)</span></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Met Station</p></th>
+<th class="head"><p class="sd-card-text">Precip. (mm)</p></th>
+<th class="head"><p class="sd-card-text">% Area</p></th>
+<th class="head"><p class="sd-card-text">Weighted Precip. (mm)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">1</p></td>
+<td><p class="sd-card-text">985</p></td>
+<td><p class="sd-card-text">6.9</p></td>
+<td><p class="sd-card-text">68</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2</p></td>
+<td><p class="sd-card-text">1015</p></td>
+<td><p class="sd-card-text">16.1</p></td>
+<td><p class="sd-card-text">163.4</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">3</p></td>
+<td><p class="sd-card-text">963</p></td>
+<td><p class="sd-card-text">14.3</p></td>
+<td><p class="sd-card-text">137.7</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">4</p></td>
+<td><p class="sd-card-text">1101</p></td>
+<td><p class="sd-card-text">27.5</p></td>
+<td><p class="sd-card-text">302.8</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">5</p></td>
+<td><p class="sd-card-text">1057</p></td>
+<td><p class="sd-card-text">19.5</p></td>
+<td><p class="sd-card-text">206.1</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">6</p></td>
+<td><p class="sd-card-text">1078</p></td>
+<td><p class="sd-card-text">15.7</p></td>
+<td><p class="sd-card-text">169.3</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><strong>Sum</strong></p></td>
+<td><p class="sd-card-text"><strong>1047.2</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
+<section id="inverse-distance-weighted-method">
+<h3>Inverse Distance Weighted Method<a class="headerlink" href="#inverse-distance-weighted-method" title="Link to this heading">#</a></h3>
+<p>Inverse distance weighted (IDW) interpolation explicitly makes the assumption that things that are close to one another are more alike than those that are farther apart. To predict a value for any unmeasured location, IDW uses the measured values surrounding the prediction location. The measured values closest to the prediction location have more influence on the predicted value than those farther away. IDW assumes that each measured point has a local influence that diminishes with distance. It gives greater weights to points closest to the prediction location, and the weights diminish as a function of distance, hence the name inverse distance weighted. It is calculated as shown below.</p>
+<div class="math notranslate nohighlight" id="equation-idw-eq">
+<span class="eqno">(4)<a class="headerlink" href="#equation-idw-eq" title="Link to this equation">#</a></span>\[P=\dfrac{\sum_{i=1}^n (\dfrac{P_i}{d_i} )}{\sum_{i=1}^n (\dfrac{1}{d_i})}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P\)</span> represents the average depth of rainfall in the watershed and <span class="math notranslate nohighlight">\(d_i\)</span> is the distance from a known point.</p>
+<figure class="margin-caption align-default" id="idw-fig">
+<img alt="https://gisgeography.com/wp-content/uploads/2016/05/IDW-3Points-768x384.png" src="https://gisgeography.com/wp-content/uploads/2016/05/IDW-3Points-768x384.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Interpolation between three known values involves identifying the closest neighbor or centroid between the three values that best captures the</span><a class="headerlink" href="#idw-fig" title="Link to this image">#</a></p>
+<div class="legend">
+<p>Image source: <a class="reference external" href="https://gisgeography.com/inverse-distance-weighting-idw-interpolation/">Inverse Distance Weighting (IDW) Interpolation - GIS Geography</a></p>
+</div>
+</figcaption>
+</figure>
+<div class="admonition-inverse-distance-weighting-idw admonition">
+<p class="admonition-title">Inverse Distance Weighting (IDW)</p>
+<p>Here are the steps involved in Inverse Distance Weighting (IDW):</p>
+<ul class="simple">
+<li><p>Identify Known Points: Start with known values in your dataset.</p></li>
+<li><p>Spatial Autocorrelation: IDW assumes that things that are close to one another are more alike than those that are farther apart. This is known as spatial autocorrelation.</p></li>
+<li><p>Calculate Path Distances: Calculate path distances from each known point to each prediction point.</p></li>
+<li><p>Assign Weights: Assign weights to the known points based on their distance from the prediction location. The closer a known point is to the prediction location, the more influence it has on the predicted value.</p></li>
+</ul>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example of IDW Interpolation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In the following watershed area (same as the Thiessen Polygon Method example), there are six meteorological stations where annual precipitation values are reported.</p>
+<p class="sd-card-text"><img alt="Original Watershed" src="_images/original.png" /></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Met  Station</p></th>
+<th class="head"><p class="sd-card-text">Precipitation, mm</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">1</p></td>
+<td><p class="sd-card-text">985</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2</p></td>
+<td><p class="sd-card-text">1015</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">3</p></td>
+<td><p class="sd-card-text">963</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">4</p></td>
+<td><p class="sd-card-text">1101</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">5</p></td>
+<td><p class="sd-card-text">1057</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">6</p></td>
+<td><p class="sd-card-text">1078</p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">Calculate the annual precipitation for the entire area.</p>
+<ul class="simple">
+<li><p class="sd-card-text">Step 1: Decide how many pixels to create. Let us choose six for this example. There will come a point where adding pixels will not improve the result.</p></li>
+</ul>
+<p class="sd-card-text"><img alt="1st Step" src="_images/idw1.png" /></p>
+<ul class="simple">
+<li><p class="sd-card-text">Step 2: Choose the nearest three neighbors to each centroid in a pixel.</p></li>
+</ul>
+<p class="sd-card-text"><img alt="2nd Step" src="_images/idw2.png" />
+<img alt="3rd Step" src="_images/idw3.png" />
+<img alt="4th Step" src="_images/idw4.png" />
+<img alt="5th Step" src="_images/idw5.png" />
+<img alt="6th Step" src="_images/idw6.png" />
+<img alt="7th Step" src="_images/idw7.png" /></p>
+<ul class="simple">
+<li><p class="sd-card-text">Step 3: Calculate the IDWs for each pixel as follows.</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-17e2b8bd-9191-4bb5-bcc2-385ce0a9ecd9">
+<span class="eqno">(5)<a class="headerlink" href="#equation-17e2b8bd-9191-4bb5-bcc2-385ce0a9ecd9" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+	P_{extent} &amp;=&amp; \dfrac{\sum (w_i \times P_{annual})}{\sum w_i}\\
+	\text{where,}\ w_i &amp;=&amp; \frac{1}{\text{distance}_i}
+\end{eqnarray}\]</div>
+<p class="sd-card-text">For Pixel 1: Example calculation for an upper left corner pixel using neighbors 1, 2, and 4:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9314c531-28a7-40a5-9df1-7de716b000df">
+<span class="eqno">(6)<a class="headerlink" href="#equation-9314c531-28a7-40a5-9df1-7de716b000df" title="Permalink to this equation">#</a></span>\[\begin{equation}
+	\dfrac{\dfrac{1}{1.2}\times 985 + \dfrac{1}{3.8} \times 1015 + \dfrac{1}{6.4} \times 1101}{\dfrac{1}{1.2}+\dfrac{1}{3.8}+\dfrac{1}{6.4}} = \pu{1005.8 mm}
+\end{equation}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">Step 4: Calculate IDWs for all pixels</p></li>
+</ul>
+<p class="sd-card-text">Setting all the calculations in a table, we can see that the  precipitation for the entire basin is <span class="math notranslate nohighlight">\(\pu{1047.2 mm} \)</span></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Pixel #</p></th>
+<th class="head"><p class="sd-card-text">Nearest Met Stations</p></th>
+<th class="head"><p class="sd-card-text">Distance (cm)</p></th>
+<th class="head"><p class="sd-card-text">Annual Precip (mm)</p></th>
+<th class="head"><p class="sd-card-text">Pixel Annual Precip (mm)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">1</p></td>
+<td><p class="sd-card-text">1, 2, 4</p></td>
+<td><p class="sd-card-text">1.2, 3.8, 6.4</p></td>
+<td><p class="sd-card-text">985, 1015, 1101</p></td>
+<td><p class="sd-card-text">1005.8</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2</p></td>
+<td><p class="sd-card-text">1, 2, 3</p></td>
+<td><p class="sd-card-text">5.5, 2.0, 3.8</p></td>
+<td><p class="sd-card-text">985, 1015, 963</p></td>
+<td><p class="sd-card-text">994.8</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">3</p></td>
+<td><p class="sd-card-text">2, 3, 6</p></td>
+<td><p class="sd-card-text">6.8, 1.4, 4.5</p></td>
+<td><p class="sd-card-text">1015, 963, 1078</p></td>
+<td><p class="sd-card-text">993.6</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">4</p></td>
+<td><p class="sd-card-text">1, 2, 4</p></td>
+<td><p class="sd-card-text">6.3, 5.5, 1.3</p></td>
+<td><p class="sd-card-text">985, 1015, 1101</p></td>
+<td><p class="sd-card-text">1070.3</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">5</p></td>
+<td><p class="sd-card-text">2, 4, 5</p></td>
+<td><p class="sd-card-text">5.1, 4.0, 3.4</p></td>
+<td><p class="sd-card-text">1015, 1101, 1057</p></td>
+<td><p class="sd-card-text">1060.7</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">6</p></td>
+<td><p class="sd-card-text">3, 5, 6</p></td>
+<td><p class="sd-card-text">5.9, 3.5, 1.9</p></td>
+<td><p class="sd-card-text">963, 1057, 1078</p></td>
+<td><p class="sd-card-text">1052.0</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p class="sd-card-text">Step 5: Calculate weighted precip for entire basin. Since the six pixels are equal size, just need to take arithmetic mean.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\text{Weighted Precip} = \frac{1005.8+994.8+993.6+1070.3+1060.7+1052.0}{6} = \pu{1029.5 mm}
+\]</div>
+<p class="sd-card-text">This final value is similar to the value obtained using the Thiessen Polygon Method - a difference of less than 2%.</p>
+</div>
+</details></section>
+<section id="hypsometric-method">
+<h3>Hypsometric Method<a class="headerlink" href="#hypsometric-method" title="Link to this heading">#</a></h3>
+<p>The term hypsometry refers to the measurement of elevation. The hypsometric method combines the distribution of elevation within a watershed with a known relationship between precipitation and elevation to determine weights for elevation classes. An advantage of the hypsometric method in mountainous terrain is that is accounts for the mechanism that is known to produce spatial variability of precipitation.</p>
+<p>The method combines the distribution of elevation within a watershed with a knowledge of the precipitation-elevation relationship to determine weights for elevation classes. These weights are then used to calculate the average precipitation over the watershed.</p>
+<p>The hypsometric method is a useful tool for estimating precipitation in mountainous areas, where the relationship between precipitation and elevation is often non-linear. The method is also relatively simple to implement, making it a good choice for watershed-scale studies.</p>
+<div class="admonition-hypsometric-weighting-method admonition">
+<p class="admonition-title">Hypsometric Weighting Method</p>
+<p>To calculate aerial precipitation using the hypsometric method, the following steps are taken:</p>
+<ul class="simple">
+<li><p>The distribution of elevation within the watershed is obtained. This can be done using a variety of methods, such as topographic maps, DEMs, or GPS data.</p></li>
+<li><p>The precipitation-elevation relationship is obtained. This can be done using historical data, climate models, or theoretical relationships.</p></li>
+<li><p>The weights for each elevation class are calculated. This is done by multiplying the area of each elevation class by the precipitation-elevation relationship for that elevation class.</p></li>
+<li><p>The average precipitation over the watershed is calculated by weighting the precipitation for each elevation class by the weights for that elevation class.</p></li>
+</ul>
+</div>
+<p>The method is relatively simple to implement and can be used to calculate average precipitation over large areas.</p>
+</section>
+</section>
+<section id="water-management-and-balance">
+<h2>Water Management and Balance<a class="headerlink" href="#water-management-and-balance" title="Link to this heading">#</a></h2>
+<p>Climate change is intensifying the water cycle to speed up as warming global temperatures increase the rate of evaporation worldwide. Increased evaporation in one part of the Earth system results in increased precipitation elsewhere. Extreme weather events are also causing extreme water scarcity, extreme precipitation, and degraded water environments. <a class="reference external" href="https://scied.ucar.edu/learning-zone/climate-change-impacts/water-cycle-climate-change">These impacts throughout the water cycle threaten sustainable development, biodiversity, and people’s access to water and sanitation</a>.</p>
+<p>According to the <a class="reference external" href="https://report.ipcc.ch/ar6syr/pdf/IPCC_AR6_SYR_SPM.pdf">latest IPCC Assessment Report</a>, managing water resources is very high on adaptation strategies.</p>
+<figure class="margin-caption align-default" id="ipcc-ar6-spm-2">
+<img alt="https://www.ipcc.ch/report/ar6/syr/downloads/figures/summary-for-policymakers/IPCC_AR6_SYR_SPM_Figure2.png" src="https://www.ipcc.ch/report/ar6/syr/downloads/figures/summary-for-policymakers/IPCC_AR6_SYR_SPM_Figure2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text"><strong>Projected changes of annual maximum daily maximum temperature, annual mean total column soil moisture and annual maximum 1-day precipitation at global warming levels of 1.5°C, 2°C, 3°C, and 4°C relative to 1850–1900.</strong> Projected <strong>(a)</strong> annual maximum daily temperature change (°C), <strong>(b)</strong> annual mean total column soil moisture (standard deviation), (c) annual maximum 1-day precipitation change (%). The panels show CMIP6 multi-model median changes. In panels (b) and (c), large positive relative changes in dry regions may correspond to small absolute changes. In panel (b), the unit is the standard deviation of interannual variability in soil moisture during 1850–1900. Standard deviation is a widely used metric in characterising drought severity. A projected reduction in mean soil moisture by one standard deviation corresponds to soil moisture conditions typical of droughts that occurred about once every six years during 1850–1900.</span><a class="headerlink" href="#ipcc-ar6-spm-2" title="Link to this image">#</a></p>
+<div class="legend">
+<p>Image source: <a class="reference external" href="https://www.ipcc.ch/report/ar6/syr/figures/">Figures: AR6 Synthesis Report (ipcc.ch)</a></p>
+</div>
+</figcaption>
+</figure>
+<p>In many parts of the western United States, mountains can serve as “water towers”. However societal demand for water in the mountains is relatively lower. In California, precipitation falls in mountain ranges and flows via rivers and man-made aqueducts and canals to the areas where higher demand is located. Snowpack also acts as a reservoir, gradually releasing water downstream as it melts.</p>
+<p>Much of California experiences a rainy season in the winter and spring, and a dry season in the summer and early fall. It is naturally driest during the peak of the agricultural growing season, when water demand is greatest. Residential and commercial areas also generally do not adjust their demands to follow the natural supply. To address this, there are large reservoirs to store winter precipitation and snowmelt. These reservoirs and their releases control the downstream flow in streams and rivers.</p>
+<p>Land development can also have a significant impact on the water balance. Change in land use/cover impacts the water balance of a watershed by changing the magnitude and pattern of different components of the water balance resulting in increasing  water management problem (e.g., <a class="reference external" href="https://doi.org/10.1029/2007WR006644">Schilling et al., 2008</a>,<a class="reference external" href="https://doi.org/10.1016/j.jenvman.2017.04.018">Kundu et al, 2017</a>).</p>
+<p>Due to the increased water stress, wildfires are expected to increase as well. Wildfires release ash and contaminants associated with ash into streams, lakes and water reservoirs. Vegetation that holds soil in place and retains water is burned away leading to other geological hazards. <a class="reference external" href="https://www.epa.gov/sciencematters/wildfires-how-do-they-affect-our-water-supplies">According to EPA</a>, in the aftermath of a large wildfire, rainstorms flush vast quantities of ash, sediment, nutrients and contaminants into streams, rivers, and downstream reservoirs. Fire suppression in western U.S. mountains has caused dense forests with high evapotranspiration leading to heightened risk of wildfires. Restoring natural wildfire regimes to these forests could affect hydrology by changing vegetation composition and structure, but the specific effects on water balance are unknown <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2018WR024098">(Boisramé et al., 2019)</a>.</p>
+<p>Fire suppression can have a significant impact on water. Fire suppression runoff can contaminate soil and water with toxic or hazardous materials, and direct exposure to soil and water from hazardous materials whose containers/containment systems may fail due to fire. This can lead to contamination of the air via the fire plume and its subsequent diffusion, with deposition of particulate and other materials likely to contaminate soil and water <a class="reference external" href="https://firesciencereviews.springeropen.com/articles/10.1186/s40038-016-0014-1">(Martin et al., 2016)</a>.</p>
+<div class="admonition-mini-project-6 admonition">
+<p class="admonition-title">Mini-Project #6</p>
+<p><strong>Part A</strong></p>
+<p>Read <a class="reference external" href="https://www.pnas.org/doi/10.1073/pnas.1319316111">Mountain runoff vulnerability to increased evapotranspiration with vegetation expansion</a></p>
+<p>Cooperatively and collaboratively present the main findings from this  paper for the Southern Sierra Nevada CZO.  See the below breakdown of tasks for the format. Use good screenshots of the figures and graphs and add text.</p>
+<p>Add your name to one part and take ownership of the appropriate slides. The Results and Discussion sections can be worked on with a partner.</p>
+<ol class="arabic simple">
+<li><p>Main goals, hypotheses, and objectives</p></li>
+<li><p>Site information - include maps</p></li>
+<li><p>Methods - summary w/ representative pictures of methods</p></li>
+<li><p>Main Results - select a few (not all)</p></li>
+<li><p>Discussion of Data</p></li>
+<li><p>Conclusions</p></li>
+</ol>
+<p><strong>Part B</strong></p>
+<p>Complete the SimWater exercise posted on OAKS.</p>
+</div>
+</section>
+<section id="readings-and-resources-for-this-section">
+<h2>Readings and resources for this section<a class="headerlink" href="#readings-and-resources-for-this-section" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.pnas.org/doi/10.1073/pnas.1319316111">Mountain runoff vulnerability to increased evapotranspiration with vegetation expansion | PNAS</a></p></li>
+<li><p><a class="reference external" href="https://www.waveland.com/browse.php?t=382">Physical Hydrology, Third Edition, by S. Lawrence Dingman</a> - See OAKS for Chapters 1 and 2.</p></li>
+<li><p><a class="reference external" href="https://www.weather.gov/abrfc/map">Precipitation Measurements (weather.gov)</a></p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="51WaterBalanceTree.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5.1 Water Balance of a Tree</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="6Biogeochem.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6 Geochemistry and Biogeochemistry</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-of-point-measurements">Scaling of Point Measurements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thiessen-polygon-method">Thiessen Polygon Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-distance-weighted-method">Inverse Distance Weighted Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypsometric-method">Hypsometric Method</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#water-management-and-balance">Water Management and Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

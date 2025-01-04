@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3.2 Landforms and Remote Sensing &#8212; Critical Zone Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '32LandformsRemoteSensing';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4 Land-Atmosphere Exchange" href="4LandAtmosphere.html" />
+    <link rel="prev" title="3.1 Geology and Geomorphology" href="31Geomorphology.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Critical Zone Science - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Critical Zone Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Critical Zone Science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Background</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1CZBackground.html">1 CZ Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11CZOverview.html">1.1 CZ Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12SoilOverview.html">1.2 The Role of Soil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13SystemsOverview.html">1.3 Systems Approach</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Science Methods</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2CZSMethods.html">2 Methods in CZ Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21BasicToolsAnalysis.html">2.1 Basic Tools and Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22CZSFieldMethods.html">2.2 Field and Lab Analyses</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CZ Architecture &amp; Evolution</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3CZArchitectureEvolution.html">3 CZ Architecture and Evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31Geomorphology.html">3.1 Geology and Geomorphology</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.2 Landforms and Remote Sensing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Land Atmosphere Exchange</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4LandAtmosphere.html">4 Land-Atmosphere Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41EnergyBudget.html">4.1 Energy Budget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42CarbonBudget.html">4.2 Carbon Budget</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Water Transfer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5WaterTransfer.html">5 Water Transfer Through the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51WaterBalanceTree.html">5.1 Water Balance of a Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52WaterBalanceImpacts.html">5.2 Water Balance Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Biogeochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Biogeochem.html">6 Geochemistry and Biogeochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Biogeochemistry.html">6.1 Biogeochemistry in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62BiogeochemicalCycles.html">6.2 Biogeochemical Cycles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Humans and the CZ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7HumansCZ.html">7 Humans in the CZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71HumanWatershed.html">7.1 Watershed Impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72ClimateCZ.html">7.2 Climate Change Impacts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="91papers.html">Literature Review</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/32LandformsRemoteSensing.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3.2 Landforms and Remote Sensing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soil-catena">Soil Catena</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-landforms">Types of Landforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fluvial-landforms">Fluvial Landforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eolian-landforms">Eolian Landforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#glacial-landforms">Glacial Landforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#karst-landforms">Karst Landforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shoreline-landforms">Shoreline Landforms</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-clearing-house">Data Clearing House</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="landforms-and-remote-sensing">
+<h1>3.2 Landforms and Remote Sensing<a class="headerlink" href="#landforms-and-remote-sensing" title="Link to this heading">#</a></h1>
+<p>A remarkable aspect of Earth’s surface is the seemingly infinite variety of landforms. However, some landforms possess certain characteristics that differentiate them from other landforms, a fact that is fundamental to <a class="reference external" href="http://en.wikipedia.org/wiki/Geomorphology">geomorphology</a>, the field-oriented study of landforms at the interface between geology and many other disciplines working to understand surface processes. The applications of geomorphic knowledge can range from engineering projects dealing with the physical properties of landforms to geological studies of the record of past climate change recorded by landforms. It is this overall lack of rigid philosophical boundaries that may be geomorphology’s greatest attribute—interdisciplinarity.</p>
+<p>Diversity in the Critical Zone is displayed by the distribution of soils across landforms, reflecting variable chemical and mechanical weathering processes as well as physical erosion and chemical denudation. These processes in turn control the internal structure of the Critical Zone and the feed-through reactor, through which changes in surface area, flow paths, and material residence time impact element and nutrient weathering fluxes.</p>
+<p>Consider of the relationship between the CZ as a feed-through reactor and <a class="reference external" href="http://en.wikipedia.org/wiki/Isostasy">isostasy</a>. Imagine a mountainous setting in which active erosion constantly removes weathered material from the summits: the unloading of weathered material allows the underlying crust to readjust by uplift, thereby physically raising unweathered rock rapidly into the feed-through reactor. Eventually the landscape may mature to one with low topography and little relief as the deep crustal root has been exposed, weathered, and brought toward isostatic equilibrium with the underlying mantle. Thick soil profiles develop and blanket underlying unweathered rock, slowing the rate at which the unweathered rock is processed through the reactor. <em>Topography</em> is the configuration of the land surface described in terms of elevation, slope, and landscape position differences, and that topography can hasten or retard the effects of climate on parent material-weathering by creating a balance between erosion and pedogenesis. Because topography often reflects the distribution of different parent materials in many landscapes, detailed soil maps can be useful for interpreting geology, and geological maps can in places be made directly from soil maps. Mappable soil bodies typically display patterns of distribution based on underlying bedrock and <em>landforms</em>—to fully understand the Critical Zone and soils one must make an in-depth assessment of geomorphic settings.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/2uL8LX4LmbA" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>The goals of this module are:</p>
+<ol class="arabic simple">
+<li><p>to further introduce the geological processes that control the development, architecture and many processes in the CZ; and,</p></li>
+<li><p>to assess readily available remote sensing and aerial photography products to begin to learn to interpret landforms in the CZ.</p></li>
+</ol>
+<section id="soil-catena">
+<h2>Soil Catena<a class="headerlink" href="#soil-catena" title="Link to this heading">#</a></h2>
+<p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Catena_(soil)">soil catena</a> is a sequence of distinct but co-evolving soils arrayed down a slope, all occurring in the same climate and on the same underlying parent material. The variation in soil types is due to factors such as precipitation, infiltration, runoff, and slope gradient. Each soil type differs somewhat from its neighbors, and a mature catena is in equilibrium as the processes of deposition and erosion are in balance. The soil down a hill slope is rarely uniform, with factors such as soil erosion, accumulation, and water drainage leading to the development of different soils from the hilltop to the valley floor. The concept of a soil catena is important for understanding the variation of soils across a small area such as a slope and can facilitate the mapping of soils across a given region. It is also useful for studying the influence of soil hydrology on soil formation and for analyzing the regular variation of soils across a slope. The variations in soil profile that occur down a slope are largely the result of changes in slope gradient, soil erosion, accumulation, and water drainage.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/tNDg-P20Z5c" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>The history of the development of the soil catena concept is described in <a class="reference external" href="https://doi.org/10.1016/j.catena.2019.104291">this review article</a>.</p>
+</section>
+<section id="types-of-landforms">
+<h2>Types of Landforms<a class="headerlink" href="#types-of-landforms" title="Link to this heading">#</a></h2>
+<section id="fluvial-landforms">
+<h3>Fluvial Landforms<a class="headerlink" href="#fluvial-landforms" title="Link to this heading">#</a></h3>
+<p>Fluvial systems are dominated by rivers and streams. Stream erosion may be the most important geomorphic agent. Fluvial processes sculpt the landscape, eroding landforms, transporting sediment, and depositing it to create new landforms. Human civilization and ecosystems alike are dependent on fluvial systems. Rivers provide water for hydroelectric power and shipping, as well as supporting stream-side wetlands (riparian areas) that are critical for clean water and provide rich habitat.</p>
+<figure class="margin-caption align-default" id="fluvial-nps">
+<img alt="https://www.nps.gov/subjects/geology/images/3Zones_Fluvial_1204-2018_tte-01.jpg?maxwidth=1200&amp;autorotate=false&amp;quality=78&amp;format=webp" src="https://www.nps.gov/subjects/geology/images/3Zones_Fluvial_1204-2018_tte-01.jpg?maxwidth=1200&amp;autorotate=false&amp;quality=78&amp;format=webp" />
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">The drainage basin or watershed is a fundamental landscape unit in fluvial geomorphology. A dranage basin contains a primary, or trunk, river and its tributaries. Watersheds are separated from their neighbors by a divide; a highpoint where water flows in different directions on either side. Image source: <a class="reference external" href="https://www.nps.gov/subjects/geology/fluvial-landforms.htm">River Systems and Fluvial Landforms - Geology (U.S. National Park Service) (nps.gov)</a></span><a class="headerlink" href="#fluvial-nps" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In addition to the streams themselves, the depositional habits of fluvial systems produce striking landforms. Fluvial deposits are sediments deposited by the flowing water of a stream.</p>
+<p>A floodplain is the relatively flat surface adjacent to the river or stream. During floods, when the stream overflows its banks, water flows over the floodplain and deposits sediment. Through fluvial processes, streams construct floodplains that accommodate their maximum flood capacity. Geomorphic features of the floodplain include natural levees, oxbow lakes, point bars, terraces, etc. depending on the geological setting.</p>
+<figure class="margin-caption align-default" id="chaco-nps">
+<img alt="https://www.nps.gov/subjects/geology/images/CHCU_GeomorphicChacoCanyon_0721-2014_tte.jpg?maxwidth=1200&amp;autorotate=false&amp;quality=78&amp;format=webp" src="https://www.nps.gov/subjects/geology/images/CHCU_GeomorphicChacoCanyon_0721-2014_tte.jpg?maxwidth=1200&amp;autorotate=false&amp;quality=78&amp;format=webp" />
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Illustration of channel features from Chaco Culture National Historical Park geologic report. Image source: <a class="reference external" href="https://www.nps.gov/subjects/geology/fluvial-landforms.htm">River Systems and Fluvial Landforms - Geology (U.S. National Park Service) (nps.gov)</a></span><a class="headerlink" href="#chaco-nps" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-12019542.0068%2C4308479.4278%2C-12017362.3572%2C4309464.7489%2C102100"></iframe>
+<p>A meandering stream has a single channel that winds snakelike through its valley, so that the distance ‘as the stream flows’ is greater than ‘as the crow flies.’ As water flows around these curves, the outer edge of water is moving faster than the inner. This creates an erosional surface on the outer edge (a <strong>cut bank</strong>) and a depositional surface on the inner edge (a <strong>point bar</strong>). Where the bends of two meanders meet, they bypass the curve of river, creating an <strong>oxbow lake</strong> which may then be infilled with overwash sediment.</p>
+<p>Meanders change position by eroding sideways and slightly downstream. The sideways movement occurs because the maximum velocity of the stream shifts toward the outside of the bend, causing erosion of the outer bank. At the same time the reduced current at the inside of the meander results in the deposition of coarse sediment, especially sand. Thus by eroding its outer bank and depositing material along its inner bank, a stream moves sideways without changing its channel size. Due to the slope of the channel, erosion is more effective on the downstream side of a meander. Therefore, in addition to growing laterally, the bends also gradually migrate down the valley.</p>
+<p><a class="reference external" href="https://www.nps.gov/subjects/geology/fluvial-landforms.htm">River Systems and Fluvial Landforms - Geology (U.S. National Park Service) (nps.gov)</a></p>
+<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-16896673.5186%2C10035214.4373%2C-16826924.7303%2C10066744.7114%2C102100"></iframe>
+</section>
+<section id="eolian-landforms">
+<h3>Eolian Landforms<a class="headerlink" href="#eolian-landforms" title="Link to this heading">#</a></h3>
+<p>Aeolian landforms are shaped by the wind and create a number of distinct features, through both erosion and deposition of sediment, including sand dunes, loess deposits, ventifact, deflation hollow or blowout, and desert pavement</p>
+<p>Aeolian processes involve erosion, transportation, and deposition of sediment by the wind. These processes occur in a variety of environments, including the coastal zone, cold and hot deserts, and agricultural fields. Common features of these environments are a sparse or nonexistent vegetation cover, a supply of fine sediment (clay, silt, and sand), and strong winds. Aeolian processes are responsible for the emission and/or mobilization of dust and the formation of areas of sand dunes. They largely depend on other geologic agents, such as rivers, glaciers, and waves, to supply sediment for transport.</p>
+<p>Sand dunes (both active and stabilized by vegetation) can be found along beaches, and in arid or semi-arid regions. Dunes are mounds of loose sand created by wind and are the most well known aeolian features. There are a variety of types of dunes, depending on their shape. Most dunes share a common profile, or cross section, with a long shallow angle (stoss) facing into the wind, a peak (crest), and a steep lee side.</p>
+<p>Coastal dunes are critical to the health and sustainability of sandy beaches. The primary dune ridge (foredunes) lies adjacent to the shoreline. Secondary dune fields may lie further inland. Dunes may form anywhere that eolian processes (wind transportation) occur. Dunes provide much-needed protection to back-barrier environments (including human development) against severe wave, wind, and storm events. In addition, these geomorphic features provide critical habitat to a variety of migratory birds and mammals. Dune vegetation is very important for the formation and stabilization of dune complexes on barrier islands. Both the root system and exposed vegetation restrict sand movement around plants, helping to secure the dune.</p>
+<p><a class="reference external" href="https://www.nps.gov/subjects/geology/aeolian-landforms.htm">Aeolian (Dunes) Landforms - Geology (U.S. National Park Service) (nps.gov)</a></p>
+<figure class="margin-caption align-default" id="white-sands-nps">
+<img alt="https://www.nps.gov/subjects/geology/images/WHSA_dune_types_fig_24_compressed.jpg?maxwidth=650&amp;autorotate=false&amp;quality=78&amp;format=webp" src="https://www.nps.gov/subjects/geology/images/WHSA_dune_types_fig_24_compressed.jpg?maxwidth=650&amp;autorotate=false&amp;quality=78&amp;format=webp" />
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Illustration of dune types, White Sands National Monument, New Mexico. Image source: <a class="reference external" href="https://www.nps.gov/subjects/geology/aeolian-landforms.htm">Aeolian (Dunes) Landforms - Geology (U.S. National Park Service) (nps.gov)</a></span><a class="headerlink" href="#white-sands-nps" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="glacial-landforms">
+<h3>Glacial Landforms<a class="headerlink" href="#glacial-landforms" title="Link to this heading">#</a></h3>
+<p>Glaciers are moving bodies of ice that can change entire landscapes. They sculpt mountains, carve valleys, and move vast quantities of rock and sediment.</p>
+<p>Glaciers carve a set of distinctive, steep-walled, flat-bottomed valleys. U-shaped valleys, fjords, and hanging valleys are examples of the kinds of valleys glaciers can erode. Cirques are bowl-shaped, amphitheater-like depressions that glaciers carve into mountains and valley sidewalls at high elevations. Nunataks, arêtes, and horns are the result of glacial erosion in areas where multiple glaciers flow in multiple directions. When the ice is present, they form stark, rocky outcrops above it, adding to the beauty of these harsh landscapes. Once the ice retreats, these uniquely-shaped features provide clear evidence of past glacier flow</p>
+<p>Lateral and medial moraines consist of glacially-transported rock and debris. They form on the sides of glaciers (lateral moraines) or at the boundary between two tributary glaciers (medial moraines). Terminal and recessional moraines mark the farthest reaches of a glacier—its terminus—at a given point in time. The sediments produced through glacial grinding are very distinctive. Glacial till contains sediments of every size, from tiny particles smaller than a grain of sand to large boulders, all jumbled together. Glacial flour is that smallest size of sediment (much smaller than sand) and is responsible for the milky, colored water in the rivers, streams, and lakes that are fed by glaciers.</p>
+<p>Glaciers can pick up chunks of rocks and transport them over long distances. When they drop these rocks, they are often far from their origin—the outcrop or bedrock from which they were plucked. These rocks are known as glacial erratics.</p>
+<p>As glaciers flow over land, they incorporate pieces of rock and sediment into the ice. These inclusions make the glacier sole (the bottom of the glacier) into a kind of coarse sandpaper that is capable of scratching bedrock. Over time, the glacier moves over rock and sediment, leaving striations or striae, on the rock surfaces that can reveal the direction that the glacier was flowing.</p>
+<p><a class="reference external" href="https://www.nps.gov/subjects/geology/glacial-landforms.htm">Glaciers and Glacial Landforms - Geology (U.S. National Park Service) (nps.gov)</a></p>
+<p>Navigate and explore the Glacier National Park in the map below:</p>
+<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-12686575.6666%2C6210503.9789%2C-12616826.8783%2C6242034.253%2C102100"></iframe>
+<p>Navigate and explore the Swiss Alps (Matterhorn and Zermatt) in the 3D map below:</p>
+<iframe src='https://map.geo.admin.ch/embed.html?lang=en&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=ch.swisstopo.swissnames3d,ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.astra.wanderland-sperrungen_umleitungen&layers_opacity=1,1,1,1,0.8,0.8&layers_visibility=true,false,false,false,false,false&layers_timestamp=,18641231,,,,&lon=7.70635&lat=46.02510&elevation=11084&heading=255.271&pitch=-50.000' width='800' height='600' frameborder='0' style='border:0' allow='geolocation'></iframe>
+</section>
+<section id="karst-landforms">
+<h3>Karst Landforms<a class="headerlink" href="#karst-landforms" title="Link to this heading">#</a></h3>
+<p>Karst is a type of landscape where the dissolving of the bedrock has created sinkholes, sinking streams, caves, springs, and other characteristic features. Karst is associated with soluble rock types such as limestone, marble, and gypsum. In general, a typical karst landscape forms when much of the water falling on the surface interacts with and enters the subsurface through cracks, fractures, and holes that have been dissolved into the bedrock. After traveling underground, sometimes for long distances, this water is then discharged from springs, many of which are cave entrances.</p>
+<p>A sinkhole is a depression or hole formed when the land surface sinks due to underground bedrock dissolution or cave collapse. In developed areas, catastrophic sinkhole collapse can cause significant damage and loss of life.</p>
+<p>Karst is ideal for storing water as an aquifer and provides vast amounts of clean drinking water to people, plants, and animals. Because of the porous (Swiss cheese-like) nature of karst, water flows quickly through it and receives little filtration. Therefore, contaminants that enter a karst aquifer are rapidly transported creating water quality problems. About 20% of the United States is underlain by karst landscapes and 40% of groundwater used for drinking comes from karst aquifers. It is imperative for our health and safety to protect karst landscapes.</p>
+<p><a class="reference external" href="https://www.nps.gov/subjects/caves/karst-landscapes.htm">Karst Landscapes - Caves and Karst (U.S. National Park Service) (nps.gov)</a></p>
+<figure class="margin-caption align-default" id="karst-nps">
+<img alt="https://www.nps.gov/subjects/caves/images/karst_landscape_development_WEB.jpg?maxwidth=1200&amp;maxheight=1200&amp;autorotate=false" src="https://www.nps.gov/subjects/caves/images/karst_landscape_development_WEB.jpg?maxwidth=1200&amp;maxheight=1200&amp;autorotate=false" />
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Series of generalized cross-sectional views of the development of a karst landscape. Image source: <a class="reference external" href="https://www.nps.gov/subjects/caves/karst-landscapes.htm">Karst Landscapes - Caves and Karst (U.S. National Park Service) (nps.gov)</a></span><a class="headerlink" href="#karst-nps" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-9092988.852%2C2911163.4576%2C-8953491.2754%2C2974224.006%2C102100"></iframe>
+</section>
+<section id="shoreline-landforms">
+<h3>Shoreline Landforms<a class="headerlink" href="#shoreline-landforms" title="Link to this heading">#</a></h3>
+<p>In general, the coastal environment can be defined as that area lying at the interface between land and Oceans (or other large body of water). It includes both the zone of shallow water within which waves are able to move sediment, and the area landward of this zone, including beaches, cliffs, and coastal dunes, which is affected to some degree by the direct or indirect effects of waves, tides, and currents. The coastal environment itself may extend inland for many miles.</p>
+<p>A variety of factors—including wave energy, tidal range, sediment supply, beach materials, continental-shelf slope and width, and past geologic history (e.g., glaciation, volcanism, and plate movement)—characterize coastal environments.</p>
+<p>The coastal zone is one of the most dynamic regions on earth. Think of it, 70% of our planet is covered in water possessing enormous energy!</p>
+<p><a class="reference external" href="https://www.nps.gov/articles/sandy-coast-landforms.htm">Sandy Coast Landforms (U.S. National Park Service) (nps.gov)</a></p>
+<p>Navigate to the sandy and marshy coastline along the Santee River delta in the map below:</p>
+<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-8862552.1479%2C3900150.4072%2C-8799988.4402%2C3930648.7815%2C102100"></iframe>
+<p><a class="reference external" href="https://www.nps.gov/articles/rocky-coast-landforms.htm">Rocky Coast Landforms (U.S. National Park Service) (nps.gov)</a></p>
+<p>Navigate to the rocky coastline at the Point Reyes National Seashore in the map below:</p>
+<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-13693832.8438%2C4577530.7064%2C-13689473.5445%2C4579501.3485%2C102100"></iframe>
+<p><a class="reference external" href="https://www.nps.gov/articles/delta-landforms.htm?utm_source=article&amp;amp;utm_medium=website&amp;amp;utm_campaign=experience_more&amp;amp;utm_content=small">Delta Landforms (U.S. National Park Service) (nps.gov)</a></p>
+<p>Navigate to the Mississippi River delta (bird’s foot pattern - river-dominated) in the map below:</p>
+<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-10086486.948%2C3365594.6381%2C-9836232.1174%2C3487588.1353%2C102100"></iframe>
+</section>
+</section>
+<section id="remote-sensing">
+<h2>Remote Sensing<a class="headerlink" href="#remote-sensing" title="Link to this heading">#</a></h2>
+<p>Remote sensing is the science of obtaining information about the Earth’s surface, atmosphere, and oceans from sensors that are not in direct contact with the target area. Remote sensing techniques rely on the interaction of electromagnetic signals with the Earth’s surface and atmosphere to generate images and data that can be used to study the environment. Remote sensing data can be obtained from a variety of sources, including satellites, airplanes, and ground-based sensors.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/rA_VCLzvbvM" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Remote sensing can be applied in various fields, including geography, geology, agriculture, environmental science, and urban planning.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/IvfkP1h9pFU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>NASA has a fleet of Earth observation satellites that gather remote sensing data through a variety of instruments. Here’s a general overview of how this data is acquired using NASA satellites:</p>
+<ol class="arabic simple">
+<li><p>The satellite orbits the Earth and collects data using its sensors, such as cameras, spectrometers, or radar.</p></li>
+<li><p>The data is transmitted from the satellite to one of several ground stations around the world.</p></li>
+<li><p>The ground station processes the data and then sends it to one of several data centers that NASA operates.</p></li>
+<li><p>The data centers process and archive the data, making it available to researchers, government agencies, and the public.</p></li>
+</ol>
+<p>NASA has a number of different Earth observation satellites, each with its own suite of instruments and capabilities. For example, the Landsat series of satellites, jointly operated by NASA and the U.S. Geological Survey, primarily gather multispectral imagery of the Earth’s surface. The MODIS (Moderate Resolution Imaging Spectroradiometer) instrument, which is flown on several NASA satellites, measures a wide range of environmental variables, including land and ocean surface temperature, vegetation cover, and atmospheric aerosols.</p>
+<p>In addition to these well-known instruments, NASA also operates a number of other sensors and instruments that gather remote sensing data, such as the Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observation (CALIPSO) and the Gravity Recovery and Climate Experiment (GRACE).</p>
+<p>Remote sensing data is processed in multiple stages to convert the raw data into useful information. Here are the general steps involved in processing remote sensing data:</p>
+<ol class="arabic simple">
+<li><p>Preprocessing: This involves calibrating the raw data and correcting for various types of errors. For example, atmospheric correction is applied to remove the effect of the atmosphere on the data, which can affect the accuracy of the results.</p></li>
+<li><p>Image Enhancement: This step aims to improve the visual quality of the image and highlight important features of interest. Techniques used in image enhancement include contrast stretching, color balancing, and filtering.</p></li>
+<li><p>Image Classification: In this step, the image is divided into different classes based on the spectral signatures of the pixels. This allows the identification of different features on the image, such as vegetation, water bodies, and urban areas. Supervised and unsupervised classification methods are commonly used.</p></li>
+<li><p>Change Detection: Change detection is the process of identifying changes that have occurred between two or more images. This is useful in monitoring land use changes, natural disasters, and other types of environmental changes.</p></li>
+<li><p>Data Fusion: This step involves integrating data from multiple sensors or sources to create a more comprehensive dataset. This can improve the accuracy of the results and provide a more complete picture of the area of interest.</p></li>
+<li><p>Analysis and Interpretation: The final step involves analyzing and interpreting the processed data to derive information and insights about the area of interest. This can include identifying trends, patterns, and anomalies that may be useful in a variety of fields, such as agriculture, forestry, and urban planning.</p></li>
+</ol>
+<p>The specific methods used can vary depending on the type of data and the application.</p>
+<p><a class="reference external" href="https://appliedsciences.nasa.gov/get-involved/training/english/arset-fundamentals-remote-sensing">NASA ARSET program provides training to users on the fundamentals and applications of remote sensing</a></p>
+<p>The lectures below provide a nice introduction to how remote sensing data is collected and processed for specific applications.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Hgf3k981Cvw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/pqvGfLp1SEU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<section id="data-clearing-house">
+<h3>Data Clearing House<a class="headerlink" href="#data-clearing-house" title="Link to this heading">#</a></h3>
+<p>Below are some common warehouses where remote sensing data can be obtained or studied for different applications.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing">What is Remote Sensing? | Earthdata (nasa.gov)</a></p></li>
+<li><p><a class="reference external" href="https://worldview.earthdata.nasa.gov/">EOSDIS Worldview (nasa.gov)</a></p></li>
+<li><p><a class="reference external" href="https://earthengine.google.com/timelapse/">Timelapse – Google Earth Engine</a></p></li>
+<li><p><a class="reference external" href="https://www.planet.com/explorer/">Planet Explorer</a></p></li>
+</ol>
+</section>
+</section>
+<section id="readings-and-resources-for-this-section">
+<h2>Readings and resources for this section<a class="headerlink" href="#readings-and-resources-for-this-section" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://appliedsciences.nasa.gov/sites/default/files/2023-01/OnlineResourceGuide_v2_2023.pdf">Applied Remote Sensing Training (ARSET) Program Online Resource Guide (nasa.gov)</a></p></li>
+<li><p><a class="reference external" href="https://appliedsciences.nasa.gov/sites/default/files/2023-02/Fundamentals_of_RS.pdf">ARSET - Fundamentals of Remote Sensing Training Slides</a></p></li>
+<li><p><a class="reference external" href="https://learn.arcgis.com/en/paths/map-in-a-minute/">Make a map in a minute (arcgis.com)</a></p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="31Geomorphology.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">3.1 Geology and Geomorphology</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="4LandAtmosphere.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4 Land-Atmosphere Exchange</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soil-catena">Soil Catena</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-landforms">Types of Landforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fluvial-landforms">Fluvial Landforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eolian-landforms">Eolian Landforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#glacial-landforms">Glacial Landforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#karst-landforms">Karst Landforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shoreline-landforms">Shoreline Landforms</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-clearing-house">Data Clearing House</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources-for-this-section">Readings and resources for this section</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
