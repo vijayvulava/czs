@@ -165,40 +165,6 @@ To access and view data, see [USGS | National Water Dashboard](https://dashboard
 More information about common measurements, including a matrix showing which observatories currently collect various measurements, can be found in the 2015 CZO common measurements white paper [CZO common measurements white paper](https://d32ogoqmya1dw8.cloudfront.net/files/integrate/teaching_materials/critical_zone/czo_common_measurements_white.pdf). 
 
 
-```{admonition} Mini-Project #3
-
-**Part A:**
-
-Complete an annotated bibliography of the research topic you selected. Your bibliography should include the following:
-
-(1) Select a general, CZ-related topic you want to investigate. This topic should be in the form of a question. For example, a reasonable question could be, “How does vegetation affect soil formation in different ecosystems?”
-
-(2) Once you have selected a topic, you should find **five** research articles that relate to your chosen topic. Once you have settled on the most appropriate sources that relate to your topic, you should complete these tasks for each of the five sources only where they relate directly to your topic:
-
-- List the sources as you would in a bibliography using a consistent format such as the Chicago Manual of Style format.
-- Identify and list the related research question(s) the author(s) are investigating.
-- Identify the related methods used to investigate the question and how those methods relate to your research question.
-- Identify the type of data the authors generated and how they interpreted them. Identify what relevant conclusions the authors drew from their data.
-    
-
-(3) After completing this analysis, refine your research question. For example, based on the question above, you might ask: “How does vegetation litter affect the base status of soils in high-elevation coniferous forests?”
-
-**Part B:**
-
-Visit your assigned CZO site, select, and download a time series of data collected at this site.  Typically, they are available for a stream site.
-
-Use this link to go to your site and filter the different types of data available: [CUAHSI HydroClient](https://data.cuahsi.org/)
-
-Using data from the CZO database, produce:
-
-- A simple line graph with a best-fit slope trendline and the equation of slope
-- A bar graph with a paired data set that calculates and plots the average and standard deviation.
-- An XY graph with an appropriate trendline
-- A data histogram
-
-Each graph should be laid out and labeled. Each data set should be at least 48 rows. Briefly summarize the source of the data, what your graph illustrates, and what insight your graphical analysis has given you.
-
-```
 
 
 ## Readings and resources for this section

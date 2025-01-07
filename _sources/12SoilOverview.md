@@ -173,33 +173,3 @@ What aspects of the cultural zone (CZ), besides soil, are affected by soil erosi
 
 
 
-```{admonition} Mini-Project #2
-
-Investigate the site you were assigned to study. See [Observatories | National CZ Observatory](https://czo-archive.criticalzone.org/national/infrastructure/observatories-1national/). These sites represent CZ Observatory sites across the US and its territories. 
-
-1. Boulder Creek CZO 
-2. Calhoun CZO 
-3. Christina River Basin CZO
-4. Catalina Mountain & Jemez River Basin CZO 
-5. Eel River CZO 
-6. Intensively Managed Landscapes CZO 
-7. Luquillo CZO 
-8. Reynolds Creek CZO 
-9. Shale Hills CZO
-10. Southern Sierra CZO
-
-Write a review of the information derived from the [NRCS Web Soil Survey](https://websoilsurvey.nrcs.usda.gov/app/WebSoilSurvey.aspx) to assess the following information. 
-
-1. The dominant soils and features at the study site (not just names - but common dominant features). Include information about dominant soil orders and suborders.
-2. Any characteristics of the dominant soil that affect land use and whether or not the effect is positive or negative.
-3. Determine if the state soil exists at the study site and if not, where is the closest location where the state soil is mapped. Compare the characteristics of the state soil with the dominant soil found at your site. ([State Soils | Natural Resources Conservation Service](https://www.nrcs.usda.gov/resources/education-and-teaching-materials/state-soils))
-4. A brief description of the major factors that likely led to the formation of the dominant soil at the CZ study site.
-5. What are the primary threats to soil at the site?
-
-Include an overview map of the general area (can be a map made using Google Earth) and the CZO site. 
-
-Include a soil map of the chosen study site with a description of the site location or a larger scale map in which the site can be located.
-
-Cite all references when answering these questions.
-
-```

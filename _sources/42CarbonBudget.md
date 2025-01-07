@@ -181,50 +181,6 @@ Here are some of the key equations used to quantify the carbon budget:
 	- $f$ and $g$ represent the functional relationships between these variables and the carbon fluxes
 
 
-```{admonition} Mini-Project #5
-**Part A**
-
-Now that you are familiar with using the ArcGIS online version to make basic maps, make a comprehensive portfolio of maps of your CZO. Start at [SCGIS Laboratory - College of Charleston](https://scgis.maps.arcgis.com/home/organization.html#overview "SCGIS Laboratory - CofC").
-
-Task 1: Click on Map at the top to start a new map. Remember to Save the map after each of the following tasks. To Print a map, click the Print icon on the left, add an appropriate title, and change “File format” to JPG. Click “Advanced Options” and add your name. Check the “Include Legend” box. Click “Export”. This step takes a minute, and the map link appears below the “Exported Files.”
-
-Task 2: Click the Base Map tool on the left and add the USGS National Map from the Living Atlas dropdown menu. This very detailed map shows water and topographical features in very high resolution. Make this your Base Map.
-
-Task 3: Go to [StreamStats | U.S. Geological Survey](https://www.usgs.gov/streamstats) and create a watershed for your site. Study existing information for your CZO to identify the general boundary of the areas of interest. Download the Layer to your computer and import it into the map you created. Print this map. Make this layer's transparency 25% so that the underlying base map is visible.
-
-Task 4: Add the following layers to your map, one at a time, and print a map:
-
-- ESRI Hydro Reference Overlay
-- Live Stream Gages
-- Predominant Major Forest Carbon Pools of the Continental United States
-- Sentinel-2 10m Land Use/Land Cover Change from 2018 to 2021
-- State Geologic Map Compilation
-- StreamStats Layer for the main watershed (imported from StreamStats)
-- Terrain Slope Map
-- USA Flood Hazard Areas
-- USA NAIP Imagery: Natural Color
-- USA NAIP Imagery: NDVI
-- USA Soil Map Units
-
-Task 5: Copy and paste each map in Word on a separate sheet. Below each map, include a summary (~100 words) of the main information from each map.
-
-Task 6: Given all the information from these maps, describe how they help explain the nature of the CZ at these sites.
-
-**Part B**
-
-Go to [AmeriFlux](https://ameriflux.lbl.gov/) and Sign In using the username and password you created.
-
-Navigate to the sites closest to the CZO you are studying. Click on the “Site Publication” to identify the major publications for this site.
-
-Identify TWO recent journal articles addressing this site's carbon/land-atmosphere fluxes. For each article, do the following:
-
-Task 1: Include the full citation and write a 150-200 word article summary.
-
-Task 2: Identify the primary data collected and the mass and energy balance equations used to make connections to the data collected in this study.
-
-Task 3: Include one or two figures that best summarize the papers' primary data and briefly describe their importance.
-
-```
 
 ## Readings and resources for this section
 

@@ -25,15 +25,3 @@ frameborder="0" allowfullscreen class="video"></iframe>
 4. [R.M. Lee, B. Shoshitaishvili, R.L. Wood, J. Bekker, B.W. Abbott. 2023. The meanings of the Critical Zone. Anthropocene, 42:100377](https://doi.org/10.1016/j.ancene.2023.100377)
 
 
-```{admonition} Mini-Project #1 
-
-Write a one-page statement (~500 words) of four aspects of the CZ:
-
-* define what it is;
-* explain where it is;
-* describe how it functions; and,
-* why it is important to society.
-
-Cite all your references consistently (e.g., APA, Chicago style).
-
-```

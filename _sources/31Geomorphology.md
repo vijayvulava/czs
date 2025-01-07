@@ -294,37 +294,6 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
 
-```{admonition} Mini-Project #4
-**Part A**
-
-Make a list of infrastructure installed at the CZO site you are investigating. What kind of data is this infrastructure collecting? Show examples of data collected.
-
-
-**Part B**
-
-Go to [National Geologic Map Database (usgs.gov)](https://ngmdb.usgs.gov/ngm-bin/ngm_compsearch.pl)
-
-Choose: “Map Catalog” from the menu bar or Choose “MapView” to explore available maps.
-
-In “Map Catalog,” search for your study location by typing in keywords or using the map, state, or county filters. If zooming in on the map, click the “Use Area Shown on the Map” to set bounding coordinates for the search. Click “Search” at the bottom of the page once filters are set. In “Map View,” perform a “Go to Location” by clicking on the crosshair symbol in the far right toolbar to zoom to your study site as the location.
-
-In “Map Catalog”, use the “Themes” section to select bedrock and surficial from the “Geology” drop-down menu, then click Search. Conduct similar searches using the “Resources” and “Hazards” drop-down menus.
-
-Click on the most relevant maps from the search results to assess the available mapping resources for your study site.
-
-(1) Find and download the following four maps from your study site. For each map, briefly describe where it is from, the scale, and what it shows about the area's geology.
-
-1. Bedrock geology map
-2. Surficial geology map
-3. Resource map
-4. Hazards map
-
-(2) Is your study site area well covered by geologic maps or are there gaps in coverage?
-
-(3) What do the maps you found tell you about CZ architecture at your site? How would the geology at your site influence soil formation rates?
-
-```
-
 
 ## Readings and resources for this section
 
