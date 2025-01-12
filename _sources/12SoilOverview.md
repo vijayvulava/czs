@@ -6,12 +6,12 @@ We will use online resources to examine the distribution of soils at a site of y
 
 The function of the CZ is characterized by interconnected physical, biological, and chemical processes, which are studied by experts in various fields such as geology, soil science, biology, ecology, geochemistry, geomorphology, and hydrology, among others.
 
-```{figure} https://www.e-education.psu.edu/earth530/sites/www.e-education.psu.edu.earth530/files/image/SCZ.png
+```{figure} assets/soilcritzone.png
 ---
 figclass: margin
 name: soil-crit-zone
 ---
-The soil CZ concept is perhaps best illustrated by a four-leaf clover-like emblem of yellow (at the top, representing atmosphere), green (right, biosphere), blue (left, hydrosphere), and brown (bottom, lithosphere) arcs surrounding the acronym SoilCritZone; the design of the logo symbolizes how soil and the CZ exist within the overlapping region between the four arcs or "spheres."
+The soil CZ concept is perhaps best illustrated by a four-leaf clover-like emblem of yellow (representing atmosphere), green (biosphere), blue (hydrosphere), and brown (lithosphere) surrounding the acronym SoilCritZone; the design of the logo symbolizes how soil and the CZ exist within the overlapping region between the four "spheres."
 ```
 
 While these disciplines are equally crucial for understanding the CZ, they are linked by the presence of soil, which many consider the central component of the CZ. This concept is illustrated by a four-leaf clover-like emblem in {numref}`soil-crit-zone`.  The spheres shown in {numref}`soil-crit-zone` closely overlap with the state factors of soil formation you will be introduced to later in this lesson: parent material, climate, topography, biota, and age.
