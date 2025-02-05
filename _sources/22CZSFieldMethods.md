@@ -55,7 +55,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 Carbon from dead, decaying animals and rotting leaves eventually enters the atmosphere. To understand this crucial carbon cycling process, we must explore three key aspects of soil: what lives in it, what it is made of, and how it behaves under different environmental conditions.
 
-When we stand on soil, we are standing on a significant reservoir of the carbon cycle, which can release large amounts of carbon into the atmosphere if global temperatures continue to rise. On the other hand, many ranchers, farmers, and soil scientists believe that soil could also help mitigate the increasing levels of atmospheric CO2.
+When we stand on soil, we are standing on a significant reservoir of the carbon cycle, which can release large amounts of carbon into the atmosphere if global temperatures continue to rise. On the other hand, many ranchers, farmers, and soil scientists believe that soil could also help mitigate the increasing levels of atmospheric $\ce{CO2}$.
 
 Like oceans, soils are highly complex ecosystems where carbon interacts with other biogeochemical cycles, such as nitrogen, phosphorus, and sulfur. Adding to this complexity, the microbes living in the soil mediate many of these biogeochemical interactions and play a vital role in driving key carbon cycle processes.
 
@@ -170,12 +170,12 @@ More information about common measurements, including a matrix showing which obs
 ## Readings and resources for this section
 
 For examples of how these techniques were used to characterize the CZ, see:
-1. [Toward Better Understanding of Terrestrial Processes through Long‐Term Hydrological Observatories - Bogena - 2018 - Vadose Zone Journal - Wiley Online Library](https://acsess.onlinelibrary.wiley.com/doi/10.2136/vzj2018.10.0194)
-2. [The Intensively Managed Landscape CZ Observatory: A Scientific Testbed for Understanding CZ Processes in Agroecosystems - Wilson - 2018 - Vadose Zone Journal - Wiley Online Library](https://acsess.onlinelibrary.wiley.com/doi/full/10.2136/vzj2018.04.0088)
-3. [Reynolds Creek Experimental Watershed and CZ Observatory - Seyfried - 2018 - Vadose Zone Journal - Wiley Online Library](https://acsess.onlinelibrary.wiley.com/doi/full/10.2136/vzj2018.07.0129)
-4. [Geophysical Reconnaissance for Siting Dryland Critical-Zone Monitoring Experiments in Southern New Mexico, USA | Journal of Environmental and Engineering Geophysics | GeoScienceWorld](https://pubs.geoscienceworld.org/jeeg/article-abstract/26/4/255/611414/Geophysical-Reconnaissance-for-Siting-Dryland)
-5. [Digging deeper: what the CZ perspective adds to the study of plant ecophysiology - Dawson - 2020 - New Phytologist - Wiley Online Library](https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.16410)
-6. [Soil Biogeochemical Processes within the CZ | Elements | GeoScienceWorld](https://pubs.geoscienceworld.org/msa/elements/article-abstract/3/5/321/137745/Soil-Biogeochemical-Processes-within-the-Critical)
-7. [BG - Where microorganisms meet rocks in the Earth's CZ (copernicus.org)](https://bg.copernicus.org/articles/8/3531/2011/)
-8. [Soil Functions: Connecting Earth's CZ | Annual Review of Earth and Planetary Sciences (annualreviews.org)](https://www.annualreviews.org/doi/abs/10.1146/annurev-earth-063016-020544)
-9. [Links between physical and chemical weathering inferred from a 65-m-deep borehole through Earth’s CZ | Scientific Reports (nature.com)](https://www.nature.com/articles/s41598-019-40819-9)
+1. Bogena, H. R. et al. (2018). Toward Better Understanding of Terrestrial Processes through Long-Term Hydrological Observatories. Vadose Zone Journal, 17(1), 1–10. [https://doi.org/10.2136/VZJ2018.10.0194](https://acsess.onlinelibrary.wiley.com/doi/10.2136/vzj2018.10.0194)
+2. Wilson, C. G. et al. (2018). The Intensively Managed Landscape Critical Zone Observatory: A Scientific Testbed for Understanding Critical Zone Processes in Agroecosystems. Vadose Zone Journal, 17(1), 1–21. [https://doi.org/10.2136/VZJ2018.04.0088](https://acsess.onlinelibrary.wiley.com/doi/full/10.2136/vzj2018.04.0088)
+3. Seyfried, M. et al. (2018). Reynolds Creek Experimental Watershed and Critical Zone Observatory. Vadose Zone Journal, 17(1), 1–20. [https://doi.org/10.2136/VZJ2018.07.0129](https://acsess.onlinelibrary.wiley.com/doi/full/10.2136/vzj2018.07.0129)
+4. Doser, D. I., & Baker, M. R. (2021). Geophysical Reconnaissance for Siting Dryland Critical-Zone Monitoring Experiments in Southern New Mexico, USA. Journal of Environmental and Engineering Geophysics, 26(4), 255–266. [https://doi.org/10.32389/JEEG21-022](https://pubs.geoscienceworld.org/jeeg/article-abstract/26/4/255/611414/Geophysical-Reconnaissance-for-Siting-Dryland)
+5. Dawson, T. E. et al. (2020). Digging deeper: what the critical zone perspective adds to the study of plant ecophysiology. New Phytologist, 226(3), 666–671. [https://doi.org/10.1111/NPH.16410](https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.16410)
+6. Chorover, J. et al. (2007). Soil Biogeochemical Processes within the Critical Zone. Elements, 321–326. [https://doi.org/10.2113/gselements.3.5.321](https://pubs.geoscienceworld.org/msa/elements/article-abstract/3/5/321/137745/Soil-Biogeochemical-Processes-within-the-Critical)
+7. Akob, D. M., & Küsel, K. (2011). Where microorganisms meet rocks in the Earth’s Critical Zone. Biogeosciences, 8(12), 3531–3543. [https://doi.org/10.5194/BG-8-3531-2011](https://bg.copernicus.org/articles/8/3531/2011/)
+8. Banwart, S. A. et al. (2019). Soil functions: Connecting earth’s critical zone. Annual Review of Earth and Planetary Sciences, 47, 333–359. [https://doi.org/10.1146/ANNUREV-EARTH-063016-020544/1](https://www.annualreviews.org/doi/abs/10.1146/annurev-earth-063016-020544)
+9. Holbrook, W. S. et al. (2019). Links between physical and chemical weathering inferred from a 65-m-deep borehole through Earth’s critical zone. Scientific Reports, 9(1), 1–11. [https://doi.org/10.1038/s41598-019-40819-9](https://www.nature.com/articles/s41598-019-40819-9)
