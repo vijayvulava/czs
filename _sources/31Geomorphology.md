@@ -28,7 +28,7 @@ Pegmatite dikes exposed in Painted Wall cliff face. The light-colored dikes are 
 
 James Hutton’s observations related to uniformitarianism also serve as the foundation for another essential geological principle known as cross-cutting relationships. This technique is used in relative age dating. In brief, an intrusive rock body is younger than the rocks it disrupts. 
 
-For instance, Salisbury Crag, a well-known landmark in Edinburgh that Hutton studied, owes its distinct shape to a thick layer of resistant basalt. Through his observations of the heated contacts above and below the basalt and where the basalt intruded into the underlying and overlying sedimentary layers, Hutton demonstrated that this thick basalt body was not simply a flow that had formed in succession. Instead, it was intruded as hot magma into the surrounding sedimentary rocks long after those rocks had been deposited (Eicher 1976).
+For instance, Salisbury Crag, a well-known landmark in Edinburgh that Hutton studied, owes its distinct shape to a thick layer of resistant basalt. Through his observations of the heated contacts above and below the basalt and where the basalt intruded into the underlying and overlying sedimentary layers, Hutton demonstrated that this thick basalt body was not simply a flow that had formed in succession. Instead, it was intruded as hot magma into the surrounding sedimentary rocks long after those rocks had been deposited ([Eicher 1976](https://archive.org/details/geologictime0000eich_z7h8)).
 
 Similar relationships include faults younger than the rock layers they cut through and erosional surfaces younger than the eroded rocks.
 
@@ -82,7 +82,7 @@ Jurassic Dinosaur bones of the Morrison formation at the Quarry Exhibit Hall. Di
 
 For over 300 years, naturalists have recognized that fossils are the remains of once-living plants and animals. They proposed that particular species formerly existing were no longer alive; in other words, they had become extinct. However, the concept of extinction took some time to gain acceptance among the majority. The main reason for this hesitance was that the most well-known fossils were marine invertebrates. While these fossils are just as valid as terrestrial organisms in demonstrating extinction, little was understood about ocean life at the beginning of the 19th century. Aware of the significant gaps in their knowledge, naturalists of that era were reluctant to assert that certain marine animals represented by fossils no longer existed anywhere on Earth; they considered the possibility that these organisms might still be living in some deeper, unexplored part of the ocean (Eicher 1976).
 
-Following William Smith's work on faunal succession, George Cuvier (1769–1832), a French zoologist, developed the stratigraphic sequences of terrestrial vertebrates and marine invertebrates in the strata of the Paris Basin. In 1812, Cuvier conclusively demonstrated that many fossil vertebrates had no known living counterparts, and people acknowledged that it was improbable for such large land animals to go undiscovered (Eicher 1976).
+Following William Smith's work on faunal succession, George Cuvier (1769–1832), a French zoologist, developed the stratigraphic sequences of terrestrial vertebrates and marine invertebrates in the strata of the Paris Basin. In 1812, Cuvier conclusively demonstrated that many fossil vertebrates had no known living counterparts, and people acknowledged that it was improbable for such large land animals to go undiscovered ([Eicher 1976](https://archive.org/details/geologictime0000eich_z7h8)).
 
 Like William Smith, Cuvier recognized distinctive fossils, but he placed greater emphasis on the changes in these fossils over time. As Cuvier meticulously mapped the succession of different faunas in the strata of the Paris Basin, he observed that the younger deposits contained creatures more similar to modern-day species than the older deposits (Eicher 1976). Thus, Cuvier not only proved the extinction of species but also showed that each changing sequence of faunas corresponds to a specific period in the geological past.
 
@@ -163,7 +163,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 Rocks and minerals are all around us! They are essential for developing new technologies and have various applications in our daily lives. We use rocks and minerals in building materials, cosmetics, cars, roads, and appliances. Humans must consume minerals daily to maintain a healthy lifestyle and strengthen our bodies. Additionally, rocks and minerals play a valuable role in natural systems; for example, they provide habitats like the cliffs in Grand Canyon National Park, where endangered condors nest, and contribute nutrients to the soil in Redwoods, where the tallest trees in the world grow.
 
-Studying rocks and minerals is essential for learning about Earth’s materials, structure, and systems. This field of study encompasses various disciplines, including earth science, chemistry, physics, and mathematics. Learners can understand crystal geometry, develop the ability to visualize three-dimensional objects and learn about crystallization rates.
+Studying rocks and minerals is essential for learning about Earth’s materials, structure, and systems. This field of study encompasses various disciplines, including earth science, chemistry, physics, and mathematics. Learners can understand crystal geometry, develop the ability to visualize three-dimensional objects, and learn about crystallization rates.
 
 
 <div class="container">
@@ -193,7 +193,7 @@ Geologic time scale shows the geologic eons, eras, periods, epochs, and associat
 
 Before geologists had the means to determine the actual ages of rocks, they based correlations on the principle of superposition, which states that older rocks are deposited before younger rocks. Geological time was divided into a hierarchy of chronostratigraphic units with unknown durations. The advent of radiometric dating techniques to ascertain the absolute ages of rocks gave rise to the discipline of geochronology and enabled the establishment of geological time scales.
 
-No single location on Earth has experienced a continuous accumulation of sediments or rocks that can be dated to yield an ideal reference time scale. A chronostratigraphic scale is not simply discovered; it is established by consensus among numerous geologists and is based on a composite of various sections. An ideal chronostratigraphic section, which would contribute to a larger composite, would have the following attributes: a nearly continuous sequence of marine deposition; fossils that are abundant, distinctive, diverse, cosmopolitan, well-preserved, and free from significant paleoenvironmental changes; minerals suitable for isotopic age determinations; and a record of geomagnetic polarity reversals. Additionally, these "type" sections should be well-exposed, easily accessible, and readily correlatable to other sections.
+No single location on Earth has experienced a continuous accumulation of sediments or rocks that can be dated to yield an ideal reference time scale. A chronostratigraphic scale is not simply discovered; it is established by consensus among numerous geologists and is based on a composite of various sections. An ideal chronostratigraphic section, which would contribute to a larger composite, would have the following attributes: a nearly continuous sequence of marine deposition; fossils that are abundant, distinctive, diverse, cosmopolitan, well-preserved, and free from significant paleoenvironmental changes; minerals suitable for isotopic age determinations; and a record of geomagnetic polarity reversals. Additionally, these ``type'' sections should be well-exposed, easily accessible, and readily correlatable to other sections.
 
 Once a chronostratigraphic scale is agreed upon, it serves as a recognized standard that remains unchanged until it is reevaluated and modified based on better stratigraphic sections or improved analytical techniques. Consequently, no chronostratigraphic scale is ever wholly finalized.
 
@@ -227,25 +227,25 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
 ```{admonition} In-class Project 
-1. The Critical Zone can be considered a "feed-through reactor" in which physical denudation and erosion are closely tied to chemical weathering. Discuss the following questions based on your reading of the article: Anderson et al, 2007, [Physical and chemical controls on the Critical Zone](https://doi.org/10.2113/gselements.3.5.315), Elements, 3(5), 315-319. [Access article here.](https://www.elementsmagazine.org/wp-content/uploads/archivearticles/e3_5/anderson.pdf)
+1. The Critical Zone can be considered a "feed-through reactor" in which physical denudation and erosion are closely tied to chemical weathering. Discuss the following questions based on the article: Anderson et al., 2007, Physical and chemical controls on the Critical Zone, [Elements, 3(5), 315-319.](https://doi.org/10.2113/gselements.3.5.315) [Access article here.](https://www.elementsmagazine.org/wp-content/uploads/archivearticles/e3_5/anderson.pdf)
  
 - Do you think all soil parent materials were subject to erosion and deposition?
-- Are some soils the result of weathering of bedrock in place that is not subjected to erosion and deposition?
-- If so, how do soils developed directly from bedrock differ from soils developed on unconsolidated material, if at all?
+- Are some soils formed from in-place bedrock weathering and not subjected to erosion and deposition?
+- If so, how do soils developed directly from bedrock differ from soils developed on unconsolidated material?
 
-2. Landscape position can significantly affect Critical Zone (and soil) formation, particularly in actively uplifting systems. Discuss the following questions based on your reading of the article: Goodfellow et al, 2016, [The chemical, mechanical, and hydrological evolution of weathering granitoid](https://doi.org/10.1002/2016JF003822), J. Geophys. Res. Earth Surf., 121, 1410-1435.
+2. Landscape position can significantly affect Critical Zone (and soil) formation, particularly in actively uplifting systems. Discuss the following questions based on the article: Goodfellow et al., 2016, The chemical, mechanical, and hydrological evolution of weathering granitoid, [J. Geophys. Res. Earth Surf., 121, 1410-1435.](https://doi.org/10.1002/2016JF003822)
  
 - What is the progression of chemical weathering in an uplifting system?
 - What links exist between rock chemistry and physical properties as a function of weathering?
 - How do changes in rock physical properties affect chemical weathering?
 
-3. Biota exert a fundamental role in landscape evolution and development of Critical Zone architecture. Discuss the following questions based on your reading of the article - Dietrich, W., and Perron, T., 2006, [The search for a topographic signature of life](https://doi.org/10.1038/nature04452), Nature, 439/26, 411-418.
+3. Biota exert a fundamental role in landscape evolution and development of Critical Zone architecture. Discuss the following questions based on the article - Dietrich, W., and Perron, T., 2006, The search for a topographic signature of life, [Nature, 439/26, 411-418.](https://doi.org/10.1038/nature04452)
 
 - How does life impact CZ architecture on long and short time scales?
 - What biotic mechanisms can be linked to various processes of erosion?
 - Do slope-dependent versus water-flow processes produce different landscapes?
 
-4. Bedrock disintegration into erodable soil declines with increasing soil mantle thickness. Discuss the following questions based on your reading of the article: Heimsath, A., Dietrich, W., Nishiizumi, K., and Finkel, R., 1997, [The soil production function and landscape equilibrium](https://doi.org/10.1038/41056), Nature, 388, 358-361.
+4. Bedrock disintegration into erodible soil declines with increasing soil mantle thickness. Discuss the following questions based on the article: Heimsath, A., et al. 1997. The soil production function and landscape equilibrium, [Nature, 388, 358-361.](https://doi.org/10.1038/41056)
  
 - What is the relationship between soil depth and hillslope curvature?
 - What is a cosmogenic nuclide, and how might one be used to study soil production rates?
@@ -282,7 +282,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Mapping Bedrock and Surficial Geology
 
-Geologists utilize and create various types of maps to present the results of their work. Among the simplest are bedrock and surficial geology maps. Bedrock maps illustrate the different rock types found in a region. They are best understood when you envision removing all the unconsolidated sediment, soil, and vegetation from the solid rock. It's important to note that bedrock maps do not indicate a specific rock type at a particular location; instead, they show what lies beneath the subsurface's soil, sediment, and vegetation. In some areas, particularly in the western United States, rocks may be visible at the surface, in which case the bedrock map reflects the rock type found there.
+Geologists utilize and create various types of maps to present the results of their work. Among the simplest are bedrock and surficial geology maps. Bedrock maps illustrate the different rock types found in a region. They are best understood when you envision removing all the unconsolidated sediment, soil, and vegetation from the solid rock. It's important to note that bedrock maps do not indicate a specific rock type at a particular location; instead, they show what lies beneath the subsurface soil, sediment, and vegetation. In some areas, particularly in the western United States, rocks may be visible at the surface, in which case the bedrock map reflects the rock type found there.
 
 Surficial geologic maps, on the other hand, focus on the sediments that cover the bedrock. In some locations, there may be no sediment; thus, the surficial map will reveal the underlying bedrock. However, surficial geologic maps distinguish between the various materials brought into the region by glaciation in northeastern and northwestern Pennsylvania, where multiple glaciers deposited sediment over the past several hundred thousand years. They may even identify deposits from different ice ages.
 
@@ -297,8 +297,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## Readings and resources for this section
 
-1. [Geoscience Concepts - Geology (U.S. National Park Service) (nps.gov)](https://www.nps.gov/subjects/geology/geology-concepts.htm)
-2. [Physical and Chemical Controls on the CZ | Elements | GeoScienceWorld](https://pubs.geoscienceworld.org/msa/elements/article-abstract/3/5/315/137743/Physical-and-Chemical-Controls-on-the-Critical?redirectedFrom=fulltext) [Click here to access the PDF article](http://geomorphology.sese.asu.edu/Papers/Anderson_Elements_07.pdf)
-3. [The chemical, mechanical, and hydrological evolution of weathering granitoid - Goodfellow - 2016 - Journal of Geophysical Research: Earth Surface - Wiley Online Library](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016JF003822)
-4. [Where fast weathering creates thin regolith and slow weathering creates thick regolith - Bazilevskaya - 2013 - Earth Surface Processes and Landforms - Wiley Online Library](https://onlinelibrary.wiley.com/doi/10.1002/esp.3369)
-5. [The contribution of living organisms to rock weathering in the CZ | npj Materials Degradation (nature.com)](https://www.nature.com/articles/s41529-022-00312-7)
+1. National Park Service, US. 2023. [“Geoscience Concepts - Geology (U.S. National Park Service).”](https://www.nps.gov/subjects/geology/geology-concepts.htm)
+2. Anderson, S.P., et al. 2007. “Physical and Chemical Controls on the Critical Zone.” [Elements 3: 315–19.](https://pubs.geoscienceworld.org/msa/elements/article-abstract/3/5/315/137743/Physical-and-Chemical-Controls-on-the-Critical?redirectedFrom=fulltext) [Click here to access the PDF article](http://geomorphology.sese.asu.edu/Papers/Anderson_Elements_07.pdf)
+3. Goodfellow, B. W., et al. 2016. “The Chemical, Mechanical, and Hydrological Evolution of Weathering Granitoid.” Journal of Geophysical Research: Earth Surface 121 (8): 1410–35. [https://doi.org/10.1002/2016JF003822.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016JF003822)
+4. Bazilevskaya, E., et al. 2013. “Where Fast Weathering Creates Thin Regolith and Slow Weathering Creates Thick Regolith.” Earth Surface Processes and Landforms 38 (8): 847–58. [https://doi.org/10.1002/ESP.3369](https://onlinelibrary.wiley.com/doi/10.1002/esp.3369)
+5. Wild, B., et al. 2022. “The Contribution of Living Organisms to Rock Weathering in the Critical Zone.” Npj Materials Degradation 2022 6:1 6 (1): 1–16. [https://doi.org/10.1038/s41529-022-00312-7](https://www.nature.com/articles/s41529-022-00312-7)
