@@ -53,6 +53,7 @@ Fluvial systems create streams and shape striking landforms through their deposi
 
 A floodplain is a relatively flat area adjacent to a river or stream. During floods, when the stream overflows its banks, water spreads out over the floodplain and deposits sediment. Through fluvial processes, streams build floodplains that can accommodate their maximum flood capacity. Depending on the geological setting, the geomorphic features of a floodplain may include natural levees, oxbow lakes, point bars, and terraces.
 
+
 ```{figure} https://www.nps.gov/subjects/geology/images/CHCU_GeomorphicChacoCanyon_0721-2014_tte.jpg?maxwidth=1200&autorotate=false&quality=78&format=webp
 ---
 name: chaco-nps
@@ -61,7 +62,9 @@ figclass: margin-caption
 Illustration of channel features from Chaco Culture National Historical Park geologic report. Image source: [River Systems and Fluvial Landforms - Geology (U.S. National Park Service) (nps.gov)](https://www.nps.gov/subjects/geology/fluvial-landforms.htm)
 ```
 
-<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-12019542.0068%2C4308479.4278%2C-12017362.3572%2C4309464.7489%2C102100"></iframe>
+[Chaco Canyon Link](https://apps.nationalmap.gov/viewer-3D-beta/?z=15&y=36.060766596854926&x=-107.96501699378663&basemap=ad12830d2557436a8c84b2518d5dc18e&layerIds=)
+
+<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer-3D-beta/?z=15&y=36.060766596854926&x=-107.96501699378663&basemap=ad12830d2557436a8c84b2518d5dc18e&layerIds="></iframe>
 
 A meandering stream has a single channel that winds like a snake through its valley, causing the distance “as the stream flows” to be greater than “as the crow flies.” As water flows around these curves, the water on the outer edge moves faster than on the inner edge. This difference in flow creates an erosional surface on the outer edge, known as a **cut bank**, and a depositional surface on the inner edge, called a **point bar**. When the bends of two meanders meet, they can bypass the river’s curve, forming an **oxbow lake**, which may eventually fill with sediment.
 
