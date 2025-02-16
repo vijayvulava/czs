@@ -62,9 +62,9 @@ figclass: margin-caption
 Illustration of channel features from Chaco Culture National Historical Park geologic report. Image source: [River Systems and Fluvial Landforms - Geology (U.S. National Park Service) (nps.gov)](https://www.nps.gov/subjects/geology/fluvial-landforms.htm)
 ```
 
-[Chaco Canyon Link](https://apps.nationalmap.gov/viewer-3D-beta/?z=15&y=36.060766596854926&x=-107.96501699378663&basemap=ad12830d2557436a8c84b2518d5dc18e&layerIds=)
+[Chaco Canyon Map Link](https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-12020455.6682%2C4307876.2919%2C-12016292.2388%2C4310004.5854%2C102100)
 
-<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer-3D-beta/?z=15&y=36.060766596854926&x=-107.96501699378663&basemap=ad12830d2557436a8c84b2518d5dc18e&layerIds="></iframe>
+<iframe width="800" height="600" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-12020455.6682%2C4307876.2919%2C-12016292.2388%2C4310004.5854%2C102100"></iframe>
 
 A meandering stream has a single channel that winds like a snake through its valley, causing the distance “as the stream flows” to be greater than “as the crow flies.” As water flows around these curves, the water on the outer edge moves faster than on the inner edge. This difference in flow creates an erosional surface on the outer edge, known as a **cut bank**, and a depositional surface on the inner edge, called a **point bar**. When the bends of two meanders meet, they can bypass the river’s curve, forming an **oxbow lake**, which may eventually fill with sediment.
 
