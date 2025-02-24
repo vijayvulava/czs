@@ -25,7 +25,7 @@ The energy released by the Sun is known as *radiant energy*, which travels in wa
 
 The term *electromagnetic energy* encompasses all forms of energy that travel in waves through space, including light, heat, X-rays, radar, and radio waves. Each type of wave has a specific *wavelength* and *frequency*. The complete range of all possible wavelengths of electromagnetic energy is referred to as the electromagnetic spectrum.
 
-The Sun emits radiant energy composed of 8% ultraviolet, X-ray, and gamma-ray wavelengths, 47% visible light wavelengths, and 45% infrared wavelengths.
+The Sun emits radiant energy that consists of $\pu{8 \%}$ ultraviolet, X-ray, and gamma-ray wavelengths, $\pu{47 \%}$ visible light wavelengths, and $\pu{45 \%}$ infrared wavelengths.
 
 ```{figure} https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/1920px-EM_Spectrum_Properties_edit.svg.png
 ---
@@ -123,6 +123,15 @@ Heat is transferred in and across most soil surfaces mainly through conduction. 
 
 An integrated framework based on thermodynamic theory characterizes the critical zone (CZ) as a system open to energy and mass fluxes, influenced by radiant, geochemical, and elevational gradients. [Rasmussen et al. (2011)](https://doi.org/10.1007/s10533-010-9476-8) demonstrated the relative importance of solar radiation, water, carbon, and physical/chemical denudation mass fluxes in the CZ energy balance. They used rates of effective energy and mass transfer ($EEMT$, $\pu{W m-2}$) measured in watts per square meter (W m⁻²) to quantify the relevant flux-gradient relationships.
 
+```{figure} https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10533-010-9476-8/MediaObjects/10533_2010_9476_Fig1_HTML.gif?as=webp
+---
+name: cz-flux
+figclass: margin-caption
+---
+Conceptual model of the critical zone system; the dashed line indicates the open system boundary as defined for the model derivation. The relative energy and mass transfer components include (i) energy and mass flux into the critical zone, (ii) energy storage within the critical zone, and (iii) export of dissipative products from the system to its surrounding environment. Image source: [Rasmussen et al. (2011)](https://doi.org/10.1007/s10533-010-9476-8)
+```
+
+
 $EEMT$ includes inputs of energy associated with reduced carbon from primary production ($E_{BIO}$) and heat influx to the soil from precipitation minus evapotranspiration and surface runoff ($E_{PPT}$):
 
 $$
@@ -151,7 +160,7 @@ $$
 E_{PPT} = F \cdot c_w \cdot \Delta T
 $$
 
-Here, $F$ is the mass flux of precipitation to base flow from the water balance (in $\pu{kg m-2 s-1}$), $c_w$ is the specific heat of water (in $\pu{J kg-1 K-1}$), and $\Delta T = T_{ambient} - T_{ref}$, where $T_{ambient}$ refers to the ambient water temperature at the time of water flux (assumed to be equal to the ambient air temperature), and $T_{ref}$ is a reference temperature (273 K). When $T_{ref} > T_{ambient}$, then $E_{PPT} = 0\).
+Here, $F$ is the mass flux of precipitation to base flow from the water balance (in $\pu{kg m-2 s-1}$), $c_w$ is the specific heat of water (in $\pu{J kg-1 K-1}$), and $\Delta T = T_{ambient} - T_{ref}$, where $T_{ambient}$ refers to the ambient water temperature at the time of water flux (assumed to be equal to the ambient air temperature), and $T_{ref}$ is a reference temperature ($\pu{273 K}$). When $T_{ref} > T_{ambient}$, then $E_{PPT} = 0$.
 
 The carbon mass flux, represented as $NPP$, can also be converted to energy flux and is denoted as $E_{BIO}$ (in $\pu{W m-2}$):
 
@@ -181,7 +190,7 @@ The term $\xi$ encompasses the net energy flux associated with any additional ma
 
 Generally, some energetic fluxes may be negligible relative to other terms but can be relevant for specific ecosystems. Over annual timescales, the relative magnitude of the individual fluxes indicates that latent heat transfer by evapotranspiration is the most significant energy flux. However, as noted, this energy is transferred mainly from the CZ back to the atmosphere, resulting in a less direct impact on subsurface development.
 
-Considering the range of values, the key parameters for quantifying the flux of energy into and through the subsurface CZ are $E_{PPT}$ and $E_{BIO}\). These parameters describe the fraction of energy and mass effectively transferred into and through the subsurface CZ and are among the two parameters initially included in the $EEMT$ term.
+Considering the range of values, the key parameters for quantifying the flux of energy into and through the subsurface CZ are $E_{PPT}$ and $E_{BIO}$. These parameters describe the fraction of energy and mass effectively transferred into and through the subsurface CZ and are among the two parameters initially included in the $EEMT$ term.
 
 
 ## Water Budget
@@ -239,6 +248,6 @@ You can also create runoff simulations at [Model My Watershed® - WikiWatershed]
 ## Readings and resources for this section
 
 1. [Climate and Earth’s Energy Budget (nasa.gov)](https://earthobservatory.nasa.gov/features/EnergyBalance/page1.php)
-2. [An open system framework for integrating CZ structure and function | SpringerLink](https://link.springer.com/article/10.1007/s10533-010-9476-8)
-3. [CZ Services: Expanding Context, Constraints, and Currency beyond Ecosystem Services | Vadose Zone Journal | GeoScienceWorld](https://pubs.geoscienceworld.org/vzj/article/14/1/vzj2014.10.0142/91405/Critical-Zone-Services-Expanding-Context)
-4. [USGS Circular 1308: Water Budgets: Foundations for Effective Water-Resources and Environmental Management](https://pubs.usgs.gov/circ/2007/1308/)
+2. Rasmussen, C. et al. 2011. “An Open System Framework for Integrating Critical Zone Structure and Function.” [Biogeochemistry 102 (1): 15–29.](https://doi.org/10.1007/S10533-010-9476-8)
+3. Field, J. P. et al. 2015. “Critical Zone Services: Expanding Context, Constraints, and Currency beyond Ecosystem Services.” [Vadose Zone Journal 14 (1): vzj2014.10.0142.](https://doi.org/10.2136/VZJ2014.10.0142/91405)
+4. Healy, R. W. et al. 2007. “Water Budgets: Foundations for Effective Water-Resources and Environmental Management.” [USGS Circular 1308](https://pubs.usgs.gov/circ/2007/1308/)

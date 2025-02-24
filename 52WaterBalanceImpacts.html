@@ -31,7 +31,7 @@
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -404,7 +404,7 @@ P &amp;= \sum_{i=1}^n w_i P_i\\
 <p>A simple arithmetic average is sufficient when the rain gauges are evenly distributed. However, other methods must be considered to ensure accurate measurements if the gauges are unevenly distributed.</p>
 <section id="thiessen-polygon-method">
 <h3>Thiessen Polygon Method<a class="headerlink" href="#thiessen-polygon-method" title="Link to this heading">#</a></h3>
-<p>The Thiessen polygon method is one of the most commonly used methods for calculating aerial precipitation. The process of using this method is illustrated in <a class="reference internal" href="#thiessen-polygon"><span class="std std-numref">Fig. 36</span></a>. To apply this technique, the locations of each rain gauge, both within and adjacent to the area of interest, are marked on a map. The rainfall amount recorded at each gauge is noted.</p>
+<p>The Thiessen polygon method is one of the most commonly used methods for calculating aerial precipitation. The process of using this method is illustrated in <a class="reference internal" href="#thiessen-polygon"><span class="std std-numref">Fig. 37</span></a>. To apply this technique, the locations of each rain gauge, both within and adjacent to the area of interest, are marked on a map. The rainfall amount recorded at each gauge is noted.</p>
 <p>Next, dashed lines are drawn to connect each adjacent gauge site, and solid perpendicular bisectors are constructed along these lines. This creates an area around each gauge, enclosed by the bisectors, referred to as a Thiessen polygon. The entire area within each polygon is closer to the rain gauge in that polygon than any other gauge. Therefore, the rainfall amount measured by the gauge in each polygon is assumed to represent the rainfall for that polygon.</p>
 <p>The areas of each polygon are calculated using geometric methods, a planimeter, graph paper, or computer-aided design software. To find the average rainfall for the entire area, a weighted average of the observed rainfalls is then calculated, as outlined below:</p>
 <div class="math notranslate nohighlight" id="equation-thiessen-eq">
@@ -413,7 +413,7 @@ P &amp;= \sum_{i=1}^n w_i P_i\\
 <figure class="margin-caption align-default" id="thiessen-polygon">
 <img alt="https://www.weather.gov/images/abrfc/map/map_thie.gif" src="https://www.weather.gov/images/abrfc/map/map_thie.gif" />
 <figcaption>
-<p><span class="caption-number">Fig. 36 </span><span class="caption-text">This graphical technique calculates station weights based on the relative areas of each measurement station in the Thiessen polygon network. The individual weights are multiplied by the station observation, and the values are summed to obtain the average precipitation.</span><a class="headerlink" href="#thiessen-polygon" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">This graphical technique calculates station weights based on the relative areas of each measurement station in the Thiessen polygon network. The individual weights are multiplied by the station observation, and the values are summed to obtain the average precipitation.</span><a class="headerlink" href="#thiessen-polygon" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://www.weather.gov/abrfc/map">Precipitation Measurements (weather.gov)</a></p>
 </div>
@@ -575,7 +575,7 @@ P_\text{Basin} = \sum (P_\text{Met Station} \times \text{Area})
 <figure class="margin-caption align-default" id="idw-fig">
 <img alt="https://gisgeography.com/wp-content/uploads/2016/05/IDW-3Points-768x384.png" src="https://gisgeography.com/wp-content/uploads/2016/05/IDW-3Points-768x384.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Interpolation between three known values involves identifying the closest neighbor or centroid between the three values that best captures the</span><a class="headerlink" href="#idw-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Interpolation between three known values involves identifying the closest neighbor or centroid between the three values that best captures the</span><a class="headerlink" href="#idw-fig" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://gisgeography.com/inverse-distance-weighting-idw-interpolation/">Inverse Distance Weighting (IDW) Interpolation - GIS Geography</a></p>
 </div>
@@ -641,14 +641,14 @@ P_\text{Basin} = \sum (P_\text{Met Station} \times \text{Area})
 <ul class="simple">
 <li><p class="sd-card-text">Step 3: Calculate the IDWs for each pixel as follows.</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-e5cb255e-1297-429f-977b-1574b6356a77">
-<span class="eqno">(5)<a class="headerlink" href="#equation-e5cb255e-1297-429f-977b-1574b6356a77" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-eb937c04-c31f-4350-8d26-ad782ae645fc">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eb937c04-c31f-4350-8d26-ad782ae645fc" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 	P_{extent} &amp;=&amp; \dfrac{\sum (w_i \times P_{annual})}{\sum w_i}\\
 	\text{where,}\ w_i &amp;=&amp; \frac{1}{\text{distance}_i}
 \end{eqnarray}\]</div>
 <p class="sd-card-text">For Pixel 1: Example calculation for an upper left corner pixel using neighbors 1, 2, and 4:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2e8c437d-db71-4b81-83ae-472f25e3e080">
-<span class="eqno">(6)<a class="headerlink" href="#equation-2e8c437d-db71-4b81-83ae-472f25e3e080" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d83cb276-ec60-4340-b0eb-e1c5fad4f342">
+<span class="eqno">(6)<a class="headerlink" href="#equation-d83cb276-ec60-4340-b0eb-e1c5fad4f342" title="Permalink to this equation">#</a></span>\[\begin{equation}
 	\dfrac{\dfrac{1}{1.2}\times 985 + \dfrac{1}{3.8} \times 1015 + \dfrac{1}{6.4} \times 1101}{\dfrac{1}{1.2}+\dfrac{1}{3.8}+\dfrac{1}{6.4}} = \pu{1005.8 mm}
 \end{equation}\]</div>
 <ul class="simple">
@@ -740,7 +740,7 @@ P_\text{Basin} = \sum (P_\text{Met Station} \times \text{Area})
 <figure class="margin-caption align-default" id="ipcc-ar6-spm-2">
 <img alt="https://www.ipcc.ch/report/ar6/syr/downloads/figures/summary-for-policymakers/IPCC_AR6_SYR_SPM_Figure2.png" src="https://www.ipcc.ch/report/ar6/syr/downloads/figures/summary-for-policymakers/IPCC_AR6_SYR_SPM_Figure2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 38 </span><span class="caption-text"><strong>Projected changes of annual maximum daily maximum temperature, annual mean total column soil moisture, and annual maximum 1-day precipitation at global warming levels of 1.5°C, 2°C, 3°C, and 4°C relative to 1850–1900.</strong> Projected <strong>(a)</strong> annual maximum daily temperature change (°C), <strong>(b)</strong> annual mean total column soil moisture (standard deviation), (c) annual maximum 1-day precipitation change (%). The panels show CMIP6 multi-model median changes. In panels (b) and (c), large positive relative changes in dry regions may correspond to small absolute changes. In panel (b), the unit is the standard deviation of interannual variability in soil moisture during 1850–1900. Standard deviation is a widely used metric in characterizing drought severity. A projected reduction in mean soil moisture by one standard deviation corresponds to soil moisture conditions typical of droughts that occurred about once every six years during 1850–1900.</span><a class="headerlink" href="#ipcc-ar6-spm-2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text"><strong>Projected changes of annual maximum daily maximum temperature, annual mean total column soil moisture, and annual maximum 1-day precipitation at global warming levels of 1.5°C, 2°C, 3°C, and 4°C relative to 1850–1900.</strong> Projected <strong>(a)</strong> annual maximum daily temperature change (°C), <strong>(b)</strong> annual mean total column soil moisture (standard deviation), (c) annual maximum 1-day precipitation change (%). The panels show CMIP6 multi-model median changes. In panels (b) and (c), large positive relative changes in dry regions may correspond to small absolute changes. In panel (b), the unit is the standard deviation of interannual variability in soil moisture during 1850–1900. Standard deviation is a widely used metric in characterizing drought severity. A projected reduction in mean soil moisture by one standard deviation corresponds to soil moisture conditions typical of droughts that occurred about once every six years during 1850–1900.</span><a class="headerlink" href="#ipcc-ar6-spm-2" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://www.ipcc.ch/report/ar6/syr/figures/">Figures: AR6 Synthesis Report (ipcc.ch)</a></p>
 </div>
