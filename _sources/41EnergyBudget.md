@@ -249,5 +249,5 @@ You can also create runoff simulations at [Model My Watershed® - WikiWatershed]
 
 1. [Climate and Earth’s Energy Budget (nasa.gov)](https://earthobservatory.nasa.gov/features/EnergyBalance/page1.php)
 2. Rasmussen, C. et al. 2011. “An Open System Framework for Integrating Critical Zone Structure and Function.” [Biogeochemistry 102 (1): 15–29.](https://doi.org/10.1007/S10533-010-9476-8)
-3. Field, J. P. et al. 2015. “Critical Zone Services: Expanding Context, Constraints, and Currency beyond Ecosystem Services.” [Vadose Zone Journal 14 (1): vzj2014.10.0142.](https://doi.org/10.2136/VZJ2014.10.0142/91405)
+3. Field, J. P. et al. 2015. “Critical Zone Services: Expanding Context, Constraints, and Currency beyond Ecosystem Services.” [Vadose Zone Journal 14 (1): vzj2014.10.0142.](https://doi.org/10.2136/vzj2014.10.0142)
 4. Healy, R. W. et al. 2007. “Water Budgets: Foundations for Effective Water-Resources and Environmental Management.” [USGS Circular 1308](https://pubs.usgs.gov/circ/2007/1308/)
