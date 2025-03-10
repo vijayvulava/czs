@@ -60,8 +60,6 @@
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '42CarbonBudget';</script>
@@ -475,7 +473,7 @@ NPP = GPP – Re
 <section id="controls-on-npp">
 <h3>Controls on <em>NPP</em><a class="headerlink" href="#controls-on-npp" title="Link to this heading">#</a></h3>
 <p>The main controls on <span class="math notranslate nohighlight">\(NPP\)</span> can be categorized into environmental and biological factors.</p>
-<p>Environmental Factors:</p>
+<p><strong>Environmental Factors</strong>:</p>
 <ol class="arabic simple">
 <li><p>Light availability: Photosynthesis is driven by the energy from sunlight, so the amount of available light is a critical factor for <span class="math notranslate nohighlight">\(NPP\)</span>. Light availability is influenced by latitude, season, cloud cover, and forest canopy structure.</p></li>
 <li><p>Temperature: Photosynthesis and respiration rates are temperature-dependent, with an optimum range for most plant species. Temperatures that are too low or too high can limit <span class="math notranslate nohighlight">\(NPP\)</span>.</p></li>
@@ -483,7 +481,7 @@ NPP = GPP – Re
 <li><p>Nutrient availability: Plants require nitrogen, phosphorus, and potassium for growth and development. Nutrient limitations in the soil can constrain <span class="math notranslate nohighlight">\(NPP\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\ce{CO2}\)</span> concentration: Higher atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> concentrations can increase photosynthetic rates and potentially boost <span class="math notranslate nohighlight">\(NPP\)</span>, although other factors may limit the response.</p></li>
 </ol>
-<p>Biological Factors:</p>
+<p><strong>Biological Factors</strong>:</p>
 <ol class="arabic simple">
 <li><p>Plant species composition: Different plants have varying photosynthetic efficiencies, growth rates, and resource requirements, which can influence <span class="math notranslate nohighlight">\(NPP\)</span> at the ecosystem level.</p></li>
 <li><p>Plant functional traits: Traits such as leaf area, leaf lifespan, root architecture, and wood density can affect the efficiency of resource acquisition and utilization, impacting <span class="math notranslate nohighlight">\(NPP\)</span>.</p></li>
@@ -543,7 +541,10 @@ NPP = GPP – Re
 </li>
 <li><p>Climate-Carbon Cycle Feedback Relationship:</p>
 <div class="math notranslate nohighlight">
-\[NPP = f(T, P, \ce{CO2}) R_h = g(T, P, \ce{CO2})\]</div>
+\[\begin{split}\align{
+   NPP = f(T, P, \ce{CO2}) \\
+   R_h = g(T, P, \ce{CO2})
+   }\end{split}\]</div>
 <p>Where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(NPP\)</span> and <span class="math notranslate nohighlight">\(R_h\)</span> are functions of temperature (<span class="math notranslate nohighlight">\(T\)</span>), precipitation (<span class="math notranslate nohighlight">\(P\)</span>), and atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> concentration</p></li>
@@ -557,11 +558,11 @@ NPP = GPP – Re
 <h2>Readings and resources for this section<a class="headerlink" href="#readings-and-resources-for-this-section" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://www.earthobservatory.nasa.gov/features/CarbonCycle">The Carbon Cycle (nasa.gov)</a></p></li>
-<li><p><a class="reference external" href="https://essd.copernicus.org/articles/12/3269/2020/">ESSD - Global Carbon Budget 2020 (copernicus.org)</a></p></li>
-<li><p><a class="reference external" href="https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2486.2007.01439.x">CO2 balance of boreal, temperate, and tropical forests derived from a global database - LUYSSAERT - 2007 - Global Change Biology - Wiley Online Library</a></p></li>
-<li><p><a class="reference external" href="https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.16757">Plant carbon allocation in a changing world – challenges and progress: introduction to a Virtual Issue on carbon allocation - Hartmann - 2020 - New Phytologist - Wiley Online Library</a></p></li>
-<li><p><a class="reference external" href="https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.13338">‘One physical system’: Tansley’s ecosystem as Earth’s CZ - Richter - 2015 - New Phytologist - Wiley Online Library</a></p></li>
-<li><p><a class="reference external" href="https://www.licor.com/env/products/eddy_covariance/ec-book">Eddy Covariance Book by George Burba | LI-COR Environmental (licor.com)</a></p></li>
+<li><p>Friedlingstein, P., et al. 2024. “Global Carbon Budget 2024.” (<a class="reference external" href="https://doi.org/10.5194/ESSD-2024-519">https://doi.org/10.5194/ESSD-2024-519</a>).</p></li>
+<li><p>Luyssaert, S., et al. 2007. “CO2 Balance of Boreal, Temperate, and Tropical Forests Derived from a Global Database.” <a class="reference external" href="https://doi.org/10.1111/J.1365-2486.2007.01439.X">Global Change Biology 13 (12): 2509–37.</a></p></li>
+<li><p>Hartmann, H., et al. 2020. “Plant Carbon Allocation in a Changing World – Challenges and Progress: Introduction to a Virtual Issue on Carbon Allocation.” <a class="reference external" href="https://doi.org/10.1111/NPH.16757">New Phytologist 227 (4): 981–88.</a></p></li>
+<li><p>Richter, D., and Billings, S. 2015. “‘One Physical System’: Tansley’s Ecosystem as Earth’s Critical Zone.” <a class="reference external" href="https://doi.org/10.1111/NPH.13338">New Phytologist 206 (3): 900–912.</a></p></li>
+<li><p>Burba, George. 2022. <a class="reference external" href="https://www.licor.com/products/eddy-covariance/ec-book">Eddy Covariance Book | LI-COR Environmental.</a>.</p></li>
 </ol>
 </section>
 </section>

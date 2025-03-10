@@ -120,14 +120,16 @@ Environmental factors such as temperature, precipitation, and atmospheric concen
 
 The main controls on $NPP$ can be categorized into environmental and biological factors.
 
-Environmental Factors:
+**Environmental Factors**:
+
 1. Light availability: Photosynthesis is driven by the energy from sunlight, so the amount of available light is a critical factor for $NPP$. Light availability is influenced by latitude, season, cloud cover, and forest canopy structure.
 2. Temperature: Photosynthesis and respiration rates are temperature-dependent, with an optimum range for most plant species. Temperatures that are too low or too high can limit $NPP$.
 3. Water availability: Water is essential for photosynthesis and plant growth. Drought conditions can severely limit $NPP$, while excessive water can also be detrimental.
 4. Nutrient availability: Plants require nitrogen, phosphorus, and potassium for growth and development. Nutrient limitations in the soil can constrain $NPP$.
 5. $\ce{CO2}$ concentration: Higher atmospheric $\ce{CO2}$ concentrations can increase photosynthetic rates and potentially boost $NPP$, although other factors may limit the response.
 
-Biological Factors:
+**Biological Factors**:
+
 1. Plant species composition: Different plants have varying photosynthetic efficiencies, growth rates, and resource requirements, which can influence $NPP$ at the ecosystem level.
 2. Plant functional traits: Traits such as leaf area, leaf lifespan, root architecture, and wood density can affect the efficiency of resource acquisition and utilization, impacting $NPP$.
 3. Plant age and development: $NPP$ generally increases as plants mature, reaches a maximum at an intermediate age, and then declines as plants senesce.
@@ -151,6 +153,7 @@ Here are some of the key equations used to quantify the carbon budget:
     - $E_{luc}$ is the emission from land-use change (e.g., deforestation)
     - $S_{ocean}$ is the uptake of carbon by the oceans
     - $S_{land}$ is the uptake of carbon by terrestrial ecosystems
+
 2. Ocean Carbon Uptake: 
    
    $$S_{ocean} = k_g \times (p\ce{CO2}_{,atm} - p\ce{CO2}_{, ocean})$$
@@ -158,6 +161,7 @@ Here are some of the key equations used to quantify the carbon budget:
     - $k_g$ is the gas transfer coefficient
     - $p\ce{CO2}_{, atm}$ is the partial pressure of $\ce{CO2}$ in the atmosphere
     - $p\ce{CO2}_{, ocean}$ is the partial pressure of $\ce{CO2}$ in the ocean surface waters
+
 3. Terrestrial Biosphere Carbon Uptake: 
    
    $$S_{land} = NPP - R_h - D$$
@@ -165,6 +169,7 @@ Here are some of the key equations used to quantify the carbon budget:
     - $NPP$ is the net primary production (the amount of carbon fixed by plants through photosynthesis)
     - $R_h$ is the heterotrophic respiration (the release of carbon from the decomposition of organic matter)
     - $D$ is the disturbance flux (e.g., fires, deforestation)
+
 4. Geological Carbon Reservoir Balance: 
    
    $$\frac{dC_{geo}}{dt} = F_{burial} - F_{weathering} - E_{ff}$$
@@ -173,9 +178,13 @@ Here are some of the key equations used to quantify the carbon budget:
     - $F_{burial}$ is the flux of carbon burial in sedimentary rocks
     - $F_{weathering}$ is the flux of carbon release through rock weathering processes
     - $E_{ff}$ is the emission from fossil fuel combustion
+
 5. Climate-Carbon Cycle Feedback Relationship: 
    
-   $$NPP = f(T, P, \ce{CO2}) R_h = g(T, P, \ce{CO2})$$
+   $$\align{
+   NPP = f(T, P, \ce{CO2}) \\
+   R_h = g(T, P, \ce{CO2})
+   }$$
     Where:
 	- $NPP$ and $R_h$ are functions of temperature ($T$), precipitation ($P$), and atmospheric $\ce{CO2}$ concentration
 	- $f$ and $g$ represent the functional relationships between these variables and the carbon fluxes
@@ -185,8 +194,8 @@ Here are some of the key equations used to quantify the carbon budget:
 ## Readings and resources for this section
 
 1. [The Carbon Cycle (nasa.gov)](https://www.earthobservatory.nasa.gov/features/CarbonCycle)
-3. [ESSD - Global Carbon Budget 2020 (copernicus.org)](https://essd.copernicus.org/articles/12/3269/2020/)
-4. [CO2 balance of boreal, temperate, and tropical forests derived from a global database - LUYSSAERT - 2007 - Global Change Biology - Wiley Online Library](https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2486.2007.01439.x)
-5. [Plant carbon allocation in a changing world – challenges and progress: introduction to a Virtual Issue on carbon allocation - Hartmann - 2020 - New Phytologist - Wiley Online Library](https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.16757)
-6. [‘One physical system’: Tansley's ecosystem as Earth's CZ - Richter - 2015 - New Phytologist - Wiley Online Library](https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.13338)
-7. [Eddy Covariance Book by George Burba | LI-COR Environmental (licor.com)](https://www.licor.com/env/products/eddy_covariance/ec-book)
+2. Friedlingstein, P., et al. 2024. “Global Carbon Budget 2024.” (https://doi.org/10.5194/ESSD-2024-519).
+3. Luyssaert, S., et al. 2007. “CO2 Balance of Boreal, Temperate, and Tropical Forests Derived from a Global Database.” [Global Change Biology 13 (12): 2509–37.](https://doi.org/10.1111/J.1365-2486.2007.01439.X)
+4. Hartmann, H., et al. 2020. “Plant Carbon Allocation in a Changing World – Challenges and Progress: Introduction to a Virtual Issue on Carbon Allocation.” [New Phytologist 227 (4): 981–88.](https://doi.org/10.1111/NPH.16757)
+5. Richter, D., and Billings, S. 2015. “‘One Physical System’: Tansley’s Ecosystem as Earth’s Critical Zone.” [New Phytologist 206 (3): 900–912.](https://doi.org/10.1111/NPH.13338)
+6. Burba, George. 2022. [Eddy Covariance Book | LI-COR Environmental.](https://www.licor.com/products/eddy-covariance/ec-book).
