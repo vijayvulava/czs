@@ -181,10 +181,10 @@ Here are some of the key equations used to quantify the carbon budget:
 
 5. Climate-Carbon Cycle Feedback Relationship: 
    
-   $$\align{
-   NPP = f(T, P, \ce{CO2}) \\
-   R_h = g(T, P, \ce{CO2})
-   }$$
+   $$\begin{align}
+   NPP &= f(T, P, \ce{CO2}) \\
+   R_h &= g(T, P, \ce{CO2})
+   \end{align}$$
     Where:
 	- $NPP$ and $R_h$ are functions of temperature ($T$), precipitation ($P$), and atmospheric $\ce{CO2}$ concentration
 	- $f$ and $g$ represent the functional relationships between these variables and the carbon fluxes
