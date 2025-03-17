@@ -322,7 +322,9 @@ Several factors influence evapotranspiration in a critical zone (or ecosystem):
 ## Readings and resources for this section
 
 1. [Surface Water Information by Topic | U.S. Geological Survey (usgs.gov)](https://www.usgs.gov/special-topics/water-science-school/science/surface-water-information-topic)
-2. [30.5 Transport of Water and Solutes in Plants - Biology 2e | OpenStax](https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants)
-3. [Estimates of the Global Water Budget and Its Annual Cycle Using Observational and Model Data in: Journal of Hydrometeorology Volume 8 Issue 4 (2007) (ametsoc.org)](https://journals.ametsoc.org/view/journals/hydr/8/4/jhm600_1.xml)
-4. [Soil Moisture Response to Snowmelt and Rainfall in a Sierra Nevada Mixed‐Conifer Forest - Bales - 2011 - Vadose Zone Journal - Wiley Online Library](https://acsess.onlinelibrary.wiley.com/doi/abs/10.2136/vzj2011.0001)
-5. [Physical Hydrology, Third Edition, by S. Lawrence Dingman](https://www.waveland.com/browse.php?t=382) - See OAKS for Chapters 1 and 2.
+2. [Physical Hydrology, Third Edition, by S. Lawrence Dingman](https://www.waveland.com/browse.php?t=382) - See OAKS for Chapters 1 and 2.
+3. [30.5 Transport of Water and Solutes in Plants - Biology 2e | OpenStax](https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants)
+4. Godoy, V., et al. 2021. “The Global Water Cycle Budget: A Chronological Review.” [Surveys in Geophysics 2021 42:5 42 (5): 1075–1107.](https://doi.org/10.1007/S10712-021-09652-6)
+5. Trenberth, K.E., et al. 2007. “Estimates of the Global Water Budget and Its Annual Cycle Using Observational and Model Data.” [Journal of Hydrometeorology 8 (4): 758–69.](https://doi.org/10.1175/JHM600.1)
+6. Bales, R.C., et al. 2011. “Soil Moisture Response to Snowmelt and Rainfall in a Sierra Nevada Mixed-Conifer Forest.” [Vadose Zone Journal 10 (3): 786–99.](https://doi.org/10.2136/VZJ2011.0001)
+7. Abbott, B.W. et al. 2019. “Human Domination of the Global Water Cycle Absent from Depictions and Perceptions.” [Nature Geoscience 2019 12:7 12 (7): 533–40.](https://doi.org/10.1038/s41561-019-0374-y)
