@@ -314,27 +314,6 @@ As water stress increases, wildfires are also expected to rise. Wildfires releas
 Fire suppression can also have a considerable impact on water quality. Runoff from fire suppression can contaminate soil and water with toxic or hazardous materials. Direct exposure to soil and water from hazardous materials, which may spill due to fire, can lead to air contamination through smoke plumes and their subsequent dispersal. This can result in the deposition of particulates and other contaminants, further compromising soil and water quality [(Martin et al., 2016)](https://firesciencereviews.springeropen.com/articles/10.1186/s40038-016-0014-1).
 
 
-```{admonition} Mini-Project #6
-**Part A**
-
-Read [Mountain runoff vulnerability to increased evapotranspiration with vegetation expansion](https://www.pnas.org/doi/10.1073/pnas.1319316111)
-
-Cooperatively and collaboratively present the main findings from this paper for the Southern Sierra Nevada CZO.  See the breakdown of tasks for the format. Use good screenshots of the figures and graphs and add text. 
-
-Add your name to one part and take ownership of the appropriate slides. The Results and Discussion sections can be worked on with a partner.
-
-1.  Main goals, hypotheses, and objectives
-2.  Site information - include maps
-3.  Methods - summary w/ representative pictures of methods
-4.  Main Results - select a few (not all)
-5.  Discussion of Data
-6.  Conclusions
-
-**Part B**
-
-Complete the SimWater exercise posted on OAKS.
-
-```
 
 ## Readings and resources for this section
 

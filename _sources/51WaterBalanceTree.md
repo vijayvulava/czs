@@ -309,6 +309,7 @@ Several factors influence evapotranspiration in a critical zone (or ecosystem):
 - **Light**: Higher light levels (e.g., full sun) usually increase transpiration as stomata open wider.
 - **Water Availability**: Transpiration rates decrease when soil water is limited, helping to prevent excessive water loss.
 
+
 ```{admonition} Water Balance of a Tree
 
 1. Consider the water balance at the scale of a single tree. What pools (reservoirs) are present? What processes change fluxes into and out of the reservoirs?
@@ -317,6 +318,21 @@ Several factors influence evapotranspiration in a critical zone (or ecosystem):
 4. If you are designing a study to estimate water yield at a given climate ([Köppen climate classification - Wikipedia](https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification)), what data do you need to collect to create a water balance for a tree here?
 5. Write a general equation to calculate water yield or discharge from this system.
 ```
+
+
+### Lysimeters
+
+Lysimeters are cylindrical containers filled with soil, which can be used to study the transport of water and material through the soil. They can be equipped with different measuring probes at different depths (e.g., soil temperature, tensiometer for measuring water tension). The soil contained in the field lysimeter can either be collected as a monolith (i.e., in one piece) or be reconstructed from the different layers present at the sampling site. Most lysimeters contain an opening at the bottom allowing the leachate to be collected and analyzed over time.
+
+Lysimeters can be used to measure the amount of actual evapotranspiration which is released by plants (usually crops or trees). By recording the amount of precipitation that an area receives and the amount lost through the soil, the amount of water lost to evapotranspiration can be calculated. There are multiple types of lysimeters, with each designed for specific purposes; the choice of lysimeter depends on project objectives, parameters to be measured, and the environmental conditions under investigation.
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/viCeFnMie2Y" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+
+
 
 
 ## Readings and resources for this section
@@ -328,3 +344,4 @@ Several factors influence evapotranspiration in a critical zone (or ecosystem):
 5. Trenberth, K.E., et al. 2007. “Estimates of the Global Water Budget and Its Annual Cycle Using Observational and Model Data.” [Journal of Hydrometeorology 8 (4): 758–69.](https://doi.org/10.1175/JHM600.1)
 6. Bales, R.C., et al. 2011. “Soil Moisture Response to Snowmelt and Rainfall in a Sierra Nevada Mixed-Conifer Forest.” [Vadose Zone Journal 10 (3): 786–99.](https://doi.org/10.2136/VZJ2011.0001)
 7. Abbott, B.W. et al. 2019. “Human Domination of the Global Water Cycle Absent from Depictions and Perceptions.” [Nature Geoscience 2019 12:7 12 (7): 533–40.](https://doi.org/10.1038/s41561-019-0374-y)
+8. Meinzer, F.C., et al. 2004. “Dynamics of Transpiration, Sap Flow and Use of Stored Water in Tropical Forest Canopy Trees.” [Tree Physiology 24 (8): 901–9.](https://doi.org/10.1093/TREEPHYS/24.8.901)
