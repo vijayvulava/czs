@@ -397,7 +397,7 @@
 P &amp;= \sum_{i=1}^n w_i P_i\\
 \sum_{i=1}^n w_i &amp;= 1
 \end{align}\end{split}\]</div>
-<p>In this context, let ( P ) represent the precipitation measured at a gauge ( i ), ( n ) denote the total number of gauges, and ( w ) signify the weight assigned to each gauge. The most common methods for estimating the spatial average from multiple gauges involve assigning weights to the gauges. For instance, we could calculate a direct average of all the gauges. In this case, each gauge is assigned an equal weight. If ( n = 3 ), each gauge would receive a weight of (\frac{1}{3}). This approach is equivalent to summing all the measurements ( P ) and dividing by the total number of gauges.</p>
+<p>In this context, let <span class="math notranslate nohighlight">\(P\)</span> represent the precipitation measured at a gauge <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(n\)</span> denote the total number of gauges, and <span class="math notranslate nohighlight">\(w\)</span> signify the weight assigned to each gauge. The most common methods for estimating the spatial average from multiple gauges involve assigning weights to the gauges. For instance, we could calculate a direct average of all the gauges. In this case, each gauge is assigned an equal weight. If <span class="math notranslate nohighlight">\(n = 3\)</span>, each gauge would receive a weight of <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span>. This approach is equivalent to summing all the measurements <span class="math notranslate nohighlight">\(P\)</span> and dividing by the total number of gauges.</p>
 <p>However, a significant drawback of the direct averaging method is that it assumes the gauges are positioned in a manner that adequately captures the actual spatial variability of precipitation. For example, in mountainous regions, precipitation is often greater at higher elevations within a watershed. If all the gauges are located at high elevations, this method could overestimate the average precipitation. Conversely, suppose the gauges are distributed throughout the watershed in a way that accurately reflects the relationship between precipitation and elevation. In that case, the direct average will yield a more reliable estimate.</p>
 <p>A simple arithmetic average is sufficient when the rain gauges are evenly distributed. However, other methods must be considered to ensure accurate measurements if the gauges are unevenly distributed.</p>
 <section id="thiessen-polygon-method">
@@ -639,14 +639,14 @@ P_\text{Basin} = \sum (P_\text{Met Station} \times \text{Area})
 <ul class="simple">
 <li><p class="sd-card-text">Step 3: Calculate the IDWs for each pixel as follows.</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-18778cf6-7409-4d2a-85cd-85cce9fe4585">
-<span class="eqno">(5)<a class="headerlink" href="#equation-18778cf6-7409-4d2a-85cd-85cce9fe4585" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-0f75fac3-c675-44b6-8e5f-a379af93b0a0">
+<span class="eqno">(5)<a class="headerlink" href="#equation-0f75fac3-c675-44b6-8e5f-a379af93b0a0" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 	P_{extent} &amp;=&amp; \dfrac{\sum (w_i \times P_{annual})}{\sum w_i}\\
 	\text{where,}\ w_i &amp;=&amp; \frac{1}{\text{distance}_i}
 \end{eqnarray}\]</div>
 <p class="sd-card-text">For Pixel 1: Example calculation for an upper left corner pixel using neighbors 1, 2, and 4:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a9e771df-9fb1-4bde-bbb6-bb15a84994af">
-<span class="eqno">(6)<a class="headerlink" href="#equation-a9e771df-9fb1-4bde-bbb6-bb15a84994af" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b311e663-96cd-43b3-9cf8-45981fa4b074">
+<span class="eqno">(6)<a class="headerlink" href="#equation-b311e663-96cd-43b3-9cf8-45981fa4b074" title="Permalink to this equation">#</a></span>\[\begin{equation}
 	\dfrac{\dfrac{1}{1.2}\times 985 + \dfrac{1}{3.8} \times 1015 + \dfrac{1}{6.4} \times 1101}{\dfrac{1}{1.2}+\dfrac{1}{3.8}+\dfrac{1}{6.4}} = \pu{1005.8 mm}
 \end{equation}\]</div>
 <ul class="simple">
@@ -753,7 +753,7 @@ P_\text{Basin} = \sum (P_\text{Met Station} \times \text{Area})
 <section id="readings-and-resources-for-this-section">
 <h2>Readings and resources for this section<a class="headerlink" href="#readings-and-resources-for-this-section" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://www.pnas.org/doi/10.1073/pnas.1319316111">Mountain runoff vulnerability to increased evapotranspiration with vegetation expansion | PNAS</a></p></li>
+<li><p>Goulden, Michael L., and Roger C. Bales. 2014. “Mountain Runoff Vulnerability to Increased Evapotranspiration with Vegetation Expansion.” <a class="reference external" href="https://www.pnas.org/doi/10.1073/pnas.1319316111">Proceedings of the National Academy of Sciences of the United States of America 111 (39): 14071–75.</a></p></li>
 <li><p><a class="reference external" href="https://www.waveland.com/browse.php?t=382">Physical Hydrology, Third Edition, by S. Lawrence Dingman</a> - See OAKS for Chapters 1 and 2.</p></li>
 <li><p><a class="reference external" href="https://www.weather.gov/abrfc/map">Precipitation Measurements (weather.gov)</a></p></li>
 </ol>

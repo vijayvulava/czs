@@ -22,7 +22,7 @@ P &= \sum_{i=1}^n w_i P_i\\
 \end{align}
 ```
 
-In this context, let \( P \) represent the precipitation measured at a gauge \( i \), \( n \) denote the total number of gauges, and \( w \) signify the weight assigned to each gauge. The most common methods for estimating the spatial average from multiple gauges involve assigning weights to the gauges. For instance, we could calculate a direct average of all the gauges. In this case, each gauge is assigned an equal weight. If \( n = 3 \), each gauge would receive a weight of \(\frac{1}{3}\). This approach is equivalent to summing all the measurements \( P \) and dividing by the total number of gauges.
+In this context, let $P$ represent the precipitation measured at a gauge $i$, $n$ denote the total number of gauges, and $w$ signify the weight assigned to each gauge. The most common methods for estimating the spatial average from multiple gauges involve assigning weights to the gauges. For instance, we could calculate a direct average of all the gauges. In this case, each gauge is assigned an equal weight. If $n = 3$, each gauge would receive a weight of $\frac{1}{3}$. This approach is equivalent to summing all the measurements $P$ and dividing by the total number of gauges.
 
 However, a significant drawback of the direct averaging method is that it assumes the gauges are positioned in a manner that adequately captures the actual spatial variability of precipitation. For example, in mountainous regions, precipitation is often greater at higher elevations within a watershed. If all the gauges are located at high elevations, this method could overestimate the average precipitation. Conversely, suppose the gauges are distributed throughout the watershed in a way that accurately reflects the relationship between precipitation and elevation. In that case, the direct average will yield a more reliable estimate.
 
@@ -317,6 +317,6 @@ Fire suppression can also have a considerable impact on water quality. Runoff fr
 
 ## Readings and resources for this section
 
-1. [Mountain runoff vulnerability to increased evapotranspiration with vegetation expansion | PNAS](https://www.pnas.org/doi/10.1073/pnas.1319316111)
+1. Goulden, Michael L., and Roger C. Bales. 2014. “Mountain Runoff Vulnerability to Increased Evapotranspiration with Vegetation Expansion.” [Proceedings of the National Academy of Sciences of the United States of America 111 (39): 14071–75.](https://www.pnas.org/doi/10.1073/pnas.1319316111)
 2. [Physical Hydrology, Third Edition, by S. Lawrence Dingman](https://www.waveland.com/browse.php?t=382) - See OAKS for Chapters 1 and 2.
 3. [Precipitation Measurements (weather.gov)](https://www.weather.gov/abrfc/map)
