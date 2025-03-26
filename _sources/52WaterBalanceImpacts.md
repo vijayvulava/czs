@@ -290,7 +290,7 @@ The method is relatively simple to implement and can be used to calculate averag
 
 Climate change is intensifying the water cycle, leading to an increase in the evaporation rate worldwide due to rising global temperatures. This heightened evaporation in one area of the Earth results in increased precipitation in another. Extreme weather events are causing significant water scarcity, excessive rainfall, and degraded water environments. [These effects on the water cycle pose serious threats to sustainable development, biodiversity, and people's access to water and sanitation](https://scied.ucar.edu/learning-zone/climate-change-impacts/water-cycle-climate-change).
 
-According to the [latest IPCC Assessment Report](https://report.ipcc.ch/ar6syr/pdf/IPCC_AR6_SYR_SPM.pdf),, managing water resources is a top priority in adaptation strategies.
+According to the [latest IPCC Assessment Report](https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_SPM.pdf), managing water resources is a top priority in adaptation strategies.
 
 
 ```{figure} https://www.ipcc.ch/report/ar6/syr/downloads/figures/summary-for-policymakers/IPCC_AR6_SYR_SPM_Figure2.png
