@@ -403,11 +403,12 @@ Consider the following questions:
 
 ## Readings and resources for this section
 
-1. [Cronan, Soil Biogeochemistry | SpringerLink](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_2)
-2. [Cronan, Biogeochemical Models | SpringerLink](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_11)
-3. [Chapin et al, Principles of Terrestrial Ecosystem Ecology | SpringerLink](https://link.springer.com/book/10.1007/978-1-4419-9504-9)
-4. [Akob and Küsel, Where microorganisms meet rocks in the Earth's Critical Zone](https://doi.org/10.5194/bg-8-3531-2011)
-5. [Gioda et al, Chemical constituents in clouds and rainwater in the Puerto Rican rainforest: Potential sources and seasonal drivers - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1352231012010643)
-6. [Blair et al, The C-biogeochemistry of a Midwestern USA agricultural impoundment in context: Lake Decatur in the intensively managed landscape critical zone observatory | SpringerLink](https://link.springer.com/article/10.1007/s10533-018-0439-9)
-7. [Küsel et al, How Deep Can Surface Signals Be Traced in the Critical Zone? Merging Biodiversity with Biogeochemistry Research in a Central German Muschelkalk Landscape (frontiersin.org)](https://www.frontiersin.org/articles/10.3389/feart.2016.00032/full)
-8. [Bianchi et al, Fjords as Aquatic Critical Zones (ACZs) - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0012825219305847)
+1. [Cronan, Soil Biogeochemistry](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_2)
+2. [Cronan, Biogeochemical Models](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_11)
+3. Wymore, A.S., et al. 2022. [Biogeochemistry of the Critical Zone. Advances in Critical Zone Science. Springer International Publishing.](https://doi.org/10.1007/978-3-030-95921-0)
+3. [Chapin et al, Principles of Terrestrial Ecosystem Ecology](https://link.springer.com/book/10.1007/978-1-4419-9504-9)
+4. Akob, D. M., and K. Küsel. 2011. “Where Microorganisms Meet Rocks in the Earth’s Critical Zone.” [Biogeosciences 8 (12): 3531–43.](https://doi.org/10.5194/BG-8-3531-2011
+5. Gioda, A., et al. 2013. “Chemical Constituents in Clouds and Rainwater in the Puerto Rican Rainforest: Potential Sources and Seasonal Drivers.” [Atmospheric Environment 68 (April): 208–20.](https://doi.org/10.1016/J.ATMOSENV.2012.11.017).
+6. Blair, N.E., et al. 2018. “The C-Biogeochemistry of a Midwestern USA Agricultural Impoundment in Context: Lake Decatur in the Intensively Managed Landscape Critical Zone Observatory.” [Biogeochemistry 2018 138:2 138 (2): 171–95.](https://doi.org/10.1007/S10533-018-0439-9)
+7. Küsel, K., et al. 2016. “How Deep Can Surface Signals Be Traced in the Critical Zone? Merging Biodiversity with Biogeochemistry Research in a Central German Muschelkalk Landscape.” [Frontiers in Earth Science 4 (April): 178144.](https://doi.org/10.3389/FEART.2016.00032)
+8.  Bianchi, T.S., et al. 2020. “Fjords as Aquatic Critical Zones (ACZs).” [Earth-Science Reviews 203 (April): 103145.](https://doi.org/10.1016/J.EARSCIREV.2020.103145)
