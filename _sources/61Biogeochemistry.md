@@ -403,11 +403,11 @@ Consider the following questions:
 
 ## Readings and resources for this section
 
-1. [Cronan, Soil Biogeochemistry](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_2)
-2. [Cronan, Biogeochemical Models](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_11)
-3. Wymore, A.S., et al. 2022. [Biogeochemistry of the Critical Zone. Advances in Critical Zone Science. Springer International Publishing.](https://doi.org/10.1007/978-3-030-95921-0)
-3. [Chapin et al, Principles of Terrestrial Ecosystem Ecology](https://link.springer.com/book/10.1007/978-1-4419-9504-9)
-4. Akob, D. M., and K. Küsel. 2011. “Where Microorganisms Meet Rocks in the Earth’s Critical Zone.” [Biogeosciences 8 (12): 3531–43.](https://doi.org/10.5194/BG-8-3531-2011
+1. Cronan, C.S. 2017. [Soil Biogeochemistry, Springer International Publishing.](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_2)
+2. Cronan, C.S. 2017. [Biogeochemical Models. Springer International Publishing.](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_11)
+3. Wymore, A.S., et al. 2022. [Biogeochemistry of the Critical Zone. Springer International Publishing.](https://doi.org/10.1007/978-3-030-95921-0)
+3. Chapin, F.S., et al. 2011. [Principles of Terrestrial Ecosystem Ecology](https://link.springer.com/book/10.1007/978-1-4419-9504-9)
+4. Akob, D. M., and K. Küsel. 2011. “Where Microorganisms Meet Rocks in the Earth’s Critical Zone.” [Biogeosciences 8 (12): 3531–43.](https://doi.org/10.5194/BG-8-3531-2011)
 5. Gioda, A., et al. 2013. “Chemical Constituents in Clouds and Rainwater in the Puerto Rican Rainforest: Potential Sources and Seasonal Drivers.” [Atmospheric Environment 68 (April): 208–20.](https://doi.org/10.1016/J.ATMOSENV.2012.11.017).
 6. Blair, N.E., et al. 2018. “The C-Biogeochemistry of a Midwestern USA Agricultural Impoundment in Context: Lake Decatur in the Intensively Managed Landscape Critical Zone Observatory.” [Biogeochemistry 2018 138:2 138 (2): 171–95.](https://doi.org/10.1007/S10533-018-0439-9)
 7. Küsel, K., et al. 2016. “How Deep Can Surface Signals Be Traced in the Critical Zone? Merging Biodiversity with Biogeochemistry Research in a Central German Muschelkalk Landscape.” [Frontiers in Earth Science 4 (April): 178144.](https://doi.org/10.3389/FEART.2016.00032)
