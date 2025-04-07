@@ -163,10 +163,10 @@ Answer the following questions:
 
 ## Readings and resources for this section
 
-1. 1. Cronan, C.S. 2017. [Soil Biogeochemistry, Springer International Publishing.](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_2)
+1. Cronan, C.S. 2017. [Soil Biogeochemistry, Springer International Publishing.](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_2)
 2. Cronan, C.S. 2017. [Biogeochemical Models. Springer International Publishing.](https://link.springer.com/chapter/10.1007/978-3-319-66444-6_11)
 3. Wymore, A.S., et al. 2022. [Biogeochemistry of the Critical Zone. Springer International Publishing.](https://doi.org/10.1007/978-3-030-95921-0)
 4. Chapin, F.S., et al. 2011. [Principles of Terrestrial Ecosystem Ecology. Springer International Publishing.](https://link.springer.com/book/10.1007/978-1-4419-9504-9)
-4. [20.2 Biogeochemical Cycles - Concepts of Biology | OpenStax](https://openstax.org/books/concepts-biology/pages/20-2-biogeochemical-cycles)
-5. [Nutrient Pollution | US EPA](https://www.epa.gov/nutrientpollution)
-6. [The Culprit Behind Dead Zones and the Threat to Our Water Supply — ProPublica](https://www.propublica.org/article/phosphorus-the-culprit-behind-dead-zones-threat-to-water-supply)
+5. [20.2 Biogeochemical Cycles - Concepts of Biology | OpenStax](https://openstax.org/books/concepts-biology/pages/20-2-biogeochemical-cycles)
+6. [Nutrient Pollution | US EPA](https://www.epa.gov/nutrientpollution)
+7. [The Culprit Behind Dead Zones and the Threat to Our Water Supply — ProPublica](https://www.propublica.org/article/phosphorus-the-culprit-behind-dead-zones-threat-to-water-supply)
