@@ -28,21 +28,29 @@ In this section, you will:
 
 A watershed is an area of land where all the water that falls or flows within it drains into a single body of water, such as a river, lake, or ocean. The boundaries of a watershed are determined by the landscape's topography, with higher elevations forming ridges or divides that separate one watershed from another.
 
-```{figure} https://cwp.org/wp-content/uploads/2019/05/cwp_watershed_04.30.19.2.png
+```{figure} https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/watershed_map.png
 ---
-name: cwp-watershed
+name: watershed
 figclass: margin-caption
 ---
 A watershed is the land area that drains to a common body of water, such as a stream, lake, bay, or even the ocean.
 
-Image source: [Watershed 101 - Center for Watershed Protection (cwp.org)](https://cwp.org/watershed101/)
+Image source: [USGS Watersheds and Drainage Basins](https://www.usgs.gov/special-topics/water-science-school/science/watersheds-and-drainage-basins)
 ```
 
 Watersheds can vary in size, ranging from small first-order streams to large river basins that cover extensive areas of land, even at a continental scale. They play a crucial role in the hydrological cycle by capturing and storing precipitation and gradually releasing it over time. This process provides water for human consumption, irrigation, and industrial uses and supports aquatic ecosystems. Understanding the boundaries, characteristics, and functions of watersheds is essential for effective land and water management, as well as for conservation and restoration efforts.
 
-Explore the watersheds of the southeastern US in the USGS National Map below (turn on the Watershed Boundary Dataset in the layers button):
+Explore the watersheds of the southeastern US in the [USGS National Map](https://apps.nationalmap.gov/viewer-3D-beta/?z=5&y=37.91337546515161&x=-86.21093750000227&basemap=null&layerIds=wbd_2395).
 
-<iframe width="500" height="300" frameborder="0" scrolling="no" allowfullscreen src="https://apps.nationalmap.gov/viewer/viewer/index.html?extent=-9524278.7223%2C3666643.0447%2C-8414413.0716%2C4171127.4314%2C102100"></iframe>
+```{figure} assets/watershed_map_conus.png
+---
+name: usgs_watershed
+figclass: margin-caption
+---
+USGS watershed designations for the continental United States.
+
+Image source: [USGS National Map.](https://apps.nationalmap.gov/viewer/)
+```
 
 ## What's in our Watersheds
 
